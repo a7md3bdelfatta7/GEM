@@ -10,4 +10,8 @@
     <color name="pageColor2">#ffffff</color>
     <color name="pageColor3">#ffffff</color>
 
+    <!-- Application themes colos -->
+
+    <color name="defaultColor">#FF1E1E</color>
+
 </resources>

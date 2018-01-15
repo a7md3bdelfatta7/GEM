@@ -18,8 +18,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.LinearLayout;
 
 import brainwaves.gem.fragments.Page1Fragment;
 import brainwaves.gem.fragments.Page2Fragment;
@@ -79,6 +81,8 @@ public class MainActivity extends AppCompatActivity
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
         mViewPager.setAdapter(new MyPagerAdapter(getFragmentManager()));
 
+        final View navHeaderView=navigationView.getHeaderView(0);
+
         // Connect the tabs with the ViewPager (the setupWithViewPager method does this for us in
         // both directions, i.e. when a new tab is selected, the ViewPager switches to this page,
         // and when the ViewPager switches to a new page, the corresponding tab is selected)
@@ -133,6 +137,7 @@ public class MainActivity extends AppCompatActivity
                                 break;
                         }
                         appBarLayout.setBackgroundColor(color);
+                        navHeaderView.setBackgroundColor(color);
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                             window.setStatusBarColor(color);
                         }
