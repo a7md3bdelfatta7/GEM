@@ -36,7 +36,7 @@ public class ChooseLangActivity extends AppCompatActivity implements AdapterView
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(ChooseLangActivity.this,MainActivity.class);
+                Intent intent=new Intent(ChooseLangActivity.this,ChooseUserType.class);
                 startActivity(intent);
             }
         });

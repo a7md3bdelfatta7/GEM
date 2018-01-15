@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/defaultColor"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/choose_lang_activity_horizontal_margin"
+    android:paddingRight="@dimen/choose_lang_activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="brainwaves.gem.ChooseUserType"
+    android:gravity="center"
+    android:weightSum="1">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gem_word"
+        android:padding="0dp"
+        android:scaleType="fitEnd"
+        android:layout_marginTop="-120dp"
+        android:layout_marginBottom="10dp"
+        />
+
+    <Button
+        android:text="SIGN IN"
+        android:layout_width="173dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/signin_button"
+        android:background="@android:color/white"
+        android:textColor="@color/defaultColor"
+        android:textSize="15sp"
+        android:letterSpacing="0.2"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center" />
+    <Button
+        android:text="NEW VISITOR"
+        android:layout_width="173dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/new_visitor_button"
+        android:background="@android:color/white"
+        android:textColor="@color/defaultColor"
+        android:textSize="15sp"
+        android:letterSpacing="0.2"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center" />
+
+
+</LinearLayout>
