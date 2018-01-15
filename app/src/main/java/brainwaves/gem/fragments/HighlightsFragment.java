@@ -9,11 +9,11 @@ import android.view.ViewGroup;
 import brainwaves.gem.R;
 
 /* Fragment used as page 2 */
-public class Page2Fragment extends Fragment {
+public class HighlightsFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_page2, container, false);
+        View rootView = inflater.inflate(R.layout.highlights_page, container, false);
         return rootView;
     }
 

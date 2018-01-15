@@ -7,7 +7,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.TabLayout;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.design.widget.NavigationView;
 import android.support.v13.app.FragmentPagerAdapter;
@@ -21,10 +20,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.LinearLayout;
 
-import brainwaves.gem.fragments.Page1Fragment;
-import brainwaves.gem.fragments.Page2Fragment;
+import brainwaves.gem.fragments.StaffPicksFragment;
+import brainwaves.gem.fragments.VisitFragment;
+import brainwaves.gem.fragments.HighlightsFragment;
 import brainwaves.gem.fragments.Page3Fragment;
 
 public class MainActivity extends AppCompatActivity
@@ -46,11 +45,11 @@ public class MainActivity extends AppCompatActivity
 
     // The fragments that are used as the individual pages
     private final Fragment[] PAGES = new Fragment[] {
-            new Page1Fragment(),
-            new Page2Fragment(),
+            new VisitFragment(),
+            new HighlightsFragment(),
             new Page3Fragment(),
             new Page3Fragment(),
-            new Page3Fragment(),
+            new StaffPicksFragment(),
             new Page3Fragment(),
             new Page3Fragment(),
             new Page3Fragment()
