@@ -28,15 +28,11 @@
                 android:paddingBottom="15dip"
                 android:paddingRight="30dip">
 
-                <TextView
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textAlignment="center"
-                    android:layout_gravity="center_horizontal"
-                    android:text="GEM"
-                    android:textColor="@color/cardview_light_background"
-                    android:textSize="25dp"
-                    />
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gem_word"/>
+
             </FrameLayout>
             </android.support.v7.widget.Toolbar>
 
