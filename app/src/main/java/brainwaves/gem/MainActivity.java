@@ -3,9 +3,11 @@ package brainwaves.gem;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.TabLayout;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.design.widget.NavigationView;
 import android.support.v13.app.FragmentPagerAdapter;
@@ -16,6 +18,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
+import android.view.WindowManager;
+
 import brainwaves.gem.fragments.Page1Fragment;
 import brainwaves.gem.fragments.Page2Fragment;
 import brainwaves.gem.fragments.Page3Fragment;
@@ -82,39 +87,54 @@ public class MainActivity extends AppCompatActivity
         tabLayout.setupWithViewPager(mViewPager);
 
         final AppBarLayout appBarLayout=(AppBarLayout)findViewById(R.id.appbar);
+
+        final Window window = MainActivity.this.getWindow();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            // clear FLAG_TRANSLUCENT_STATUS flag:
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            // add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.parseColor("#FF1E1E"));
+        }
+
+
         tabLayout.setOnTabSelectedListener(
                 new TabLayout.ViewPagerOnTabSelectedListener(mViewPager) {
 
                     @Override
                     public void onTabSelected(TabLayout.Tab tab) {
                         super.onTabSelected(tab);
-                     //   Toast.makeText(MainActivity.this,PAGE_TITLES[tab.getPosition()], Toast.LENGTH_SHORT).show();
                         int tabIndex=tab.getPosition();
+                        int color=Color.parseColor("#FF1E1E");
                         switch (tabIndex){
                             case 0:
-                                appBarLayout.setBackgroundColor(Color.parseColor("#FF1E1E"));
+                                 color=Color.parseColor("#FF1E1E");
                                 break;
                             case 1:
-                                appBarLayout.setBackgroundColor(Color.parseColor("#6E0000"));
+                                 color=Color.parseColor("#6E0000");
                                 break;
                             case 2:
-                                appBarLayout.setBackgroundColor(Color.parseColor("#DC0051"));
+                                color=Color.parseColor("#DC0051");
                                 break;
                             case 3:
-                                appBarLayout.setBackgroundColor(Color.parseColor("#7A0031"));
+                                color=Color.parseColor("#7A0031");
                                 break;
                             case 4:
-                                appBarLayout.setBackgroundColor(Color.parseColor("#670050"));
+                                color=Color.parseColor("#670050");
                                 break;
                             case 5:
-                                appBarLayout.setBackgroundColor(Color.parseColor("#290348"));
+                                color=Color.parseColor("#290348");
                                 break;
                             case 6:
-                                appBarLayout.setBackgroundColor(Color.parseColor("#476ACB"));
+                                color=Color.parseColor("#476ACB");
                                 break;
                             case 7:
-                                appBarLayout.setBackgroundColor(Color.parseColor("#017F72"));
+                                color=Color.parseColor("#017F72");
                                 break;
+                        }
+                        appBarLayout.setBackgroundColor(color);
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                            window.setStatusBarColor(color);
                         }
                     }
                 }
