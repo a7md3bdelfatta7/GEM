@@ -8,12 +8,13 @@ import android.view.ViewGroup;
 
 import brainwaves.gem.R;
 
-/* Fragment used as page 1 */
-public class Page1Fragment extends Fragment {
+/* Fragment used as page 2 */
+public class StaffPicksFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.visit_page, container, false);
+        View rootView = inflater.inflate(R.layout.staffpicks_page, container, false);
         return rootView;
     }
+
 }
