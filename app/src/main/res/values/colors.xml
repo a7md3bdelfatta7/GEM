@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <!-- For pages of ViewPager -->
+    <color name="pageColor1">#ffffff</color>
+    <color name="pageColor2">#ffffff</color>
+    <color name="pageColor3">#ffffff</color>
+
+</resources>
