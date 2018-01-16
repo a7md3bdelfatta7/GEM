@@ -23,7 +23,7 @@
         android:padding="0dp"
         android:scaleType="fitEnd"
         android:layout_marginTop="-120dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="30dp"
         />
 
     <Button
@@ -33,10 +33,14 @@
         android:id="@+id/signin_button"
         android:background="@android:color/white"
         android:textColor="@color/defaultColor"
-        android:textSize="15sp"
-        android:letterSpacing="0.2"
+        android:textSize="18sp"
+        android:letterSpacing="0.1"
         android:layout_marginTop="10dp"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginBottom="15dp"
+        />
     <Button
         android:text="NEW VISITOR"
         android:layout_width="173dp"
@@ -44,10 +48,14 @@
         android:id="@+id/new_visitor_button"
         android:background="@android:color/white"
         android:textColor="@color/defaultColor"
-        android:textSize="15sp"
-        android:letterSpacing="0.2"
+        android:textSize="18sp"
+        android:letterSpacing="0.1"
         android:layout_marginTop="10dp"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        />
+
 
 
 </LinearLayout>

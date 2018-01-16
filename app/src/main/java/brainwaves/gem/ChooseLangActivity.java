@@ -1,6 +1,7 @@
 package brainwaves.gem;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,6 +21,7 @@ public class ChooseLangActivity extends AppCompatActivity implements AdapterView
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.choose_lang);
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/gothicb0_bold.ttf");
 
         Spinner spinner = (Spinner) findViewById(R.id.lang_spinner);
 
@@ -33,6 +35,8 @@ public class ChooseLangActivity extends AppCompatActivity implements AdapterView
         spinner.setOnItemSelectedListener(this);
 
         Button nextButton=(Button)findViewById(R.id.nextButton);
+        nextButton.setTypeface(custom_font);
+
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

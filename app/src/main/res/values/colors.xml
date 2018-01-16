@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FF1E1E</color>
+    <color name="colorPrimary">#c5002e</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
@@ -12,6 +12,6 @@
 
     <!-- Application themes colos -->
 
-    <color name="defaultColor">#FF1E1E</color>
+    <color name="defaultColor">#c5002e</color>
 
 </resources>
