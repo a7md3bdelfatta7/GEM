@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
@@ -23,7 +24,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import brainwaves.gem.HelperMenu.CollectionActivity;
-import brainwaves.gem.HelperMenu.ShopActivity;
+import brainwaves.gem.HelperMenu.QuizActivity;
 import brainwaves.gem.fragments.StaffPicksFragment;
 import brainwaves.gem.fragments.VisitFragment;
 import brainwaves.gem.fragments.HighlightsFragment;
@@ -189,11 +190,15 @@ public class MainActivity extends AppCompatActivity
             // Handle the camera action
 
         } else if (id == R.id.nav_gallery) {
-            Intent visit = new Intent(MainActivity.this,
-                    ShopActivity.class);
-            startActivity(visit);
+            Uri uri = Uri.parse("http://www.statue.com/Products/Egyptian-Decor/");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+
 
         } else if (id == R.id.nav_slideshow) {
+            Intent visit = new Intent(MainActivity.this,
+                    QuizActivity.class);
+            startActivity(visit);
 
         } else if (id == R.id.nav_manage) {
 
