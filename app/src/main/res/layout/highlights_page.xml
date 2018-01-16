@@ -16,9 +16,16 @@
             android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
-                android:text="asdasdasdasdsa"
+                android:text="@string/highlights_must_see"
+                android:textStyle="bold"
                 android:textSize="20dp"
                 android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/highlights_must_see_items"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"/>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -31,10 +38,28 @@
                     <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:src="@drawable/image"
+                        android:src="@drawable/highlight_i"
+                        android:background="@color/cardview_light_background"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitEnd"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/cardview_light_background"
+
+                        android:src="@drawable/highlight_ii"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
-                        android:scaleType="centerInside"/>
+                        android:scaleType="fitEnd"/>
 
                 </LinearLayout>
                 <LinearLayout
@@ -45,13 +70,17 @@
                     <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:src="@drawable/image"
+                        android:background="@color/cardview_light_background"
+                        android:src="@drawable/highlight_iii"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
-                        android:scaleType="centerInside"/>
+                        android:scaleType="fitEnd"/>
 
                 </LinearLayout>
             </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -64,11 +93,26 @@
                     <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:src="@drawable/image"
+                        android:src="@drawable/highlight_iv"
+                        android:background="@color/cardview_light_background"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitEnd"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/cardview_light_background"
+                        android:src="@drawable/highlight_v"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
-                        android:scaleType="centerInside"/>
-
+                        android:scaleType="fitEnd"/>
 
                 </LinearLayout>
                 <LinearLayout
@@ -79,82 +123,15 @@
                     <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:src="@drawable/image"
+                        android:background="@color/cardview_light_background"
+                        android:src="@drawable/highlight_xv"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
-                        android:scaleType="centerInside"/>
-
+                        android:scaleType="fitEnd"/>
 
                 </LinearLayout>
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/image"
-                        android:layout_weight="1"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerInside"/>
 
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/image"
-                        android:layout_weight="1"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerInside"/>
-
-
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/image"
-                        android:layout_weight="1"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerInside"/>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/image"
-                        android:layout_weight="1"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerInside"/>
-
-                </LinearLayout>
-            </LinearLayout>
 
 
 
@@ -166,9 +143,69 @@
             android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
-                android:text="aasbdasbdjaskdbkjasbdkasjbdkasjbdkjasdjkasbj"
+                android:text="@string/highlights_family_favorites"
+                android:textStyle="bold"
                 android:textSize="20dp"
                 android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/highlights_family_favorites_items"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1.8">
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/highlight__i"
+                        android:background="@color/cardview_light_background"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitEnd"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1.5">
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/cardview_light_background"
+                        android:src="@drawable/highlight__ii"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitEnd"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1.2">
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/cardview_light_background"
+                        android:src="@drawable/highlight__iii"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitEnd"/>
+
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -181,144 +218,60 @@
                     <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:src="@drawable/image"
+                        android:src="@drawable/highlight__iv"
+                        android:background="@color/cardview_light_background"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitEnd"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight=".95">
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/cardview_light_background"
+                        android:src="@drawable/highlight__v"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
-                        android:scaleType="centerInside"/>
-
+                        android:scaleType="fitEnd"/>
 
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_weight="1">
+                    android:layout_weight=".7">
                     <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:src="@drawable/image"
+                        android:background="@color/cardview_light_background"
+                        android:src="@drawable/highlight__xv"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
-                        android:scaleType="centerInside"/>
-
+                        android:scaleType="fitEnd"/>
 
                 </LinearLayout>
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/image"
-                        android:layout_weight="1"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerInside"/>
 
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/image"
-                        android:layout_weight="1"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerInside"/>
-
-
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/image"
-                        android:layout_weight="1"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerInside"/>
-
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/image"
-                        android:layout_weight="1"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerInside"/>
-
-
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/image"
-                        android:layout_weight="1"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerInside"/>
-
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/image"
-                        android:layout_weight="1"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerInside"/>
-
-                </LinearLayout>
-            </LinearLayout>
 
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="80dp">
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/image"/>
+                android:background="@color/cardview_light_background"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/highlights_nextbutton"/>
         </LinearLayout>
     </LinearLayout>
 
