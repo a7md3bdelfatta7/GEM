@@ -34,13 +34,12 @@ public class MainActivity extends AppCompatActivity
     // Titles of the individual pages (displayed in tabs)
     private final String[] PAGE_TITLES = new String[] {
             "Visit",
-            "EXHIBITION",
             "HIGHLIGHTS",
             "TODAY'S EVENT",
-            "STAFF PICKS",
             "FOR MEMBERS",
+            "STAFF PICKS",
             "FEATURED EVENTS",
-            "THE LATEST"
+
     };
 
     // The fragments that are used as the individual pages
@@ -50,8 +49,6 @@ public class MainActivity extends AppCompatActivity
             new Page3Fragment(),
             new Page3Fragment(),
             new StaffPicksFragment(),
-            new Page3Fragment(),
-            new Page3Fragment(),
             new Page3Fragment()
     };
 
