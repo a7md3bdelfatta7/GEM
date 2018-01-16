@@ -17,10 +17,17 @@
     <string name="staff_favorite_selection_items">You may want to check some\nof the favories\n</string>
     <string name="highlights_family_favorites">\nFamily Favorites</string>
     <string name="highlights_family_favorites_items">You may want to check some\nof the most family vaforites\n</string>
+    <string name="collection_str">Collections/</string>
+    <string name="itemsNumber">50,000 record</string>
+    <string name="filter_button">Filter</string>
+    <string name="collection_kings">KINGS COLLECTIONS \n</string>
+    <string name="collection_status">\nSTATUES COLLECTIONS \n</string>
     <string-array name="lang_array">
         <item>ENGLISH</item>
         <item>العربيه</item>
     </string-array>
+    <string name="title_activity_collection">Collections</string>
+    <string name="title_activity_shop">Shop</string>
 
 
     <!-- login activity -->

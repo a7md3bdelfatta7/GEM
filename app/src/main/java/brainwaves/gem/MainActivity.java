@@ -2,6 +2,7 @@ package brainwaves.gem;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -21,6 +22,8 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
+import brainwaves.gem.HelperMenu.CollectionActivity;
+import brainwaves.gem.HelperMenu.ShopActivity;
 import brainwaves.gem.fragments.StaffPicksFragment;
 import brainwaves.gem.fragments.VisitFragment;
 import brainwaves.gem.fragments.HighlightsFragment;
@@ -179,8 +182,16 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
+
+            Intent visit = new Intent(MainActivity.this,
+                    CollectionActivity.class);
+            startActivity(visit);
             // Handle the camera action
+
         } else if (id == R.id.nav_gallery) {
+            Intent visit = new Intent(MainActivity.this,
+                    ShopActivity.class);
+            startActivity(visit);
 
         } else if (id == R.id.nav_slideshow) {
 

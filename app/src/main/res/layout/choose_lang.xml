@@ -18,11 +18,10 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/gem_word"
             android:padding="0dp"
-            android:scaleType="fitEnd"
-            android:layout_marginTop="-150dp"
             android:layout_marginBottom="10dp"
+            android:src="@drawable/gem_word"
+            android:scaleType="centerInside"
             />
 
         <LinearLayout
@@ -48,7 +47,7 @@
             android:id="@+id/nextButton"
             android:background="@android:color/white"
             android:textColor="@color/defaultColor"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:letterSpacing="0.1"
             android:layout_marginTop="10dp"
             android:layout_gravity="end"
