@@ -2,6 +2,7 @@
 
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/pageColor1">
@@ -11,21 +12,81 @@
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="350dp"
+            android:layout_height="240dp"
             android:orientation="vertical">
             <ImageButton
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/image"
+                android:layout_height="wrap_content"
+                android:src="@drawable/visit_i"
+                android:background="@color/cardview_light_background"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:scaleType="centerInside"/>
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
+                android:layout_height="0dp"
+                android:layout_weight="4"
                 android:background="@color/cardview_light_background"
-                android:text="asdasd"/>
+                android:textAlignment="viewStart"
+                android:text="@string/main_hall" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/visit_ii"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@color/cardview_light_background"
+                    android:scaleType="centerInside"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@color/cardview_light_background"
+                    android:textAlignment="viewStart"
+                    android:textSize="22px"
+                    android:text="@string/second_hall"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2.2"></LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="@color/cardview_light_background">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/visit_iii"
+                    android:background="@color/cardview_light_background"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@color/cardview_light_background"
+                    android:textAlignment="viewStart"
+                    android:textSize="22px"
+                    android:text="@string/third_hall"/>
+
+            </LinearLayout>
 
         </LinearLayout>
         <LinearLayout
@@ -40,7 +101,8 @@
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:src="@drawable/image"
+                    android:src="@drawable/visit_iv"
+                    android:background="@color/cardview_light_background"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
                     android:scaleType="centerInside"/>
@@ -49,53 +111,9 @@
                     android:layout_height="match_parent"
                     android:layout_weight="3"
                     android:background="@color/cardview_light_background"
-                    android:text="asdasd"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_weight="1">
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/image"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="centerInside"/>
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:background="@color/cardview_light_background"
-                    android:text="asdasd"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:orientation="horizontal">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_weight="1">
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/image"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="centerInside"/>
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:background="@color/cardview_light_background"
-                    android:text="asdasd"/>
+                    android:textAlignment="viewStart"
+                    android:textSize="22px"
+                    android:text="@string/fourth_hall"/>
 
             </LinearLayout>
             <LinearLayout
@@ -114,7 +132,10 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/image"/>
+                android:src="@drawable/visit_nextbutton"
+                android:adjustViewBounds="true"
+                android:background="@color/cardview_light_background"
+                android:scaleType="centerInside"/>
         </LinearLayout>
     </LinearLayout>
 
