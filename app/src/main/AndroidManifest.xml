@@ -28,6 +28,11 @@
             android:label="@string/title_activity_collection"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name=".HelperMenu.ShopActivity"
+            android:label="@string/title_activity_shop"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

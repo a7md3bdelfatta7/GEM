@@ -27,5 +27,6 @@
         <item>العربيه</item>
     </string-array>
     <string name="title_activity_collection">Collections</string>
+    <string name="title_activity_shop">Shop</string>
 
 </resources>
