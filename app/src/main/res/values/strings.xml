@@ -6,6 +6,7 @@
 
     <string name="action_settings">Settings</string>
     <string name="main_hall">Main Hall\nopen today untill 6:00PM</string>
+    <string name="main_hall_i">MAIN HALL</string>
     <string name="second_hall">Main 2\nopen today untill 6:00PM</string>
     <string name="third_hall">Main 3\nopen today untill 6:00PM</string>
     <string name="fourth_hall">Main 4\nopen today untill 6:00PM</string>
@@ -26,6 +27,7 @@
         <item>ENGLISH</item>
         <item>العربيه</item>
     </string-array>
+    <string name="title_activity_visit">Visit</string>
     <string name="title_activity_collections">Collections</string>
     <string name="title_activity_shop">Shop</string>
     <string name="title_activity_quiz">Quiz</string>

@@ -22,10 +22,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import brainwaves.gem.HelperMenu.CollectionsActivity;
 import brainwaves.gem.HelperMenu.MembershipActivity;
 import brainwaves.gem.HelperMenu.QuizActivity;
+import brainwaves.gem.HelperMenu.VisitDetailsActivity;
 import brainwaves.gem.fragments.ForMembersFragment;
 import brainwaves.gem.fragments.StaffPicksFragment;
 import brainwaves.gem.fragments.VisitFragment;
@@ -109,26 +112,26 @@ public class MainActivity extends AppCompatActivity
                     @Override
                     public void onTabSelected(TabLayout.Tab tab) {
                         super.onTabSelected(tab);
-                        int tabIndex=tab.getPosition();
-                        int color=Color.parseColor(getResources().getString(0+R.color.visiColor));
-                        switch (tabIndex){
+                        int tabIndex = tab.getPosition();
+                        int color = Color.parseColor(getResources().getString(0 + R.color.visiColor));
+                        switch (tabIndex) {
                             case 0:
-                                 color=Color.parseColor(getResources().getString(0+R.color.visiColor));
+                                color = Color.parseColor(getResources().getString(0 + R.color.visiColor));
                                 break;
                             case 1:
-                                 color=Color.parseColor(getResources().getString(0+R.color.highlightColor));
+                                color = Color.parseColor(getResources().getString(0 + R.color.highlightColor));
                                 break;
                             case 2:
-                                color=Color.parseColor(getResources().getString(0+R.color.todayEventColor));
+                                color = Color.parseColor(getResources().getString(0 + R.color.todayEventColor));
                                 break;
                             case 3:
-                                color=Color.parseColor(getResources().getString(0+R.color.forMemberColor));
+                                color = Color.parseColor(getResources().getString(0 + R.color.forMemberColor));
                                 break;
                             case 4:
-                                color=Color.parseColor(getResources().getString(0+R.color.staffPicksColor));
+                                color = Color.parseColor(getResources().getString(0 + R.color.staffPicksColor));
                                 break;
                             case 5:
-                                color=Color.parseColor(getResources().getString(0+R.color.featuredEventsColor));
+                                color = Color.parseColor(getResources().getString(0 + R.color.featuredEventsColor));
                                 break;
                         }
                         appBarLayout.setBackgroundColor(color);
@@ -140,7 +143,11 @@ public class MainActivity extends AppCompatActivity
                 }
         );
     }
-
+    public void onClick(View v) {
+        Intent visit = new Intent(MainActivity.this,
+                VisitDetailsActivity.class);
+        startActivity(visit);
+    }
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

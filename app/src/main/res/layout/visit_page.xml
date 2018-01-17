@@ -20,14 +20,14 @@
                 android:src="@drawable/visit_i"
                 android:background="@color/cardview_light_background"
                 android:layout_weight="1"
+                android:onClick="onClick"
                 android:adjustViewBounds="true"
-                android:id="@+id/MainHallbutton"
                 android:scaleType="centerInside"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="4"
-                android:id="@id/MainHallbutton"
+                android:onClick="onClick"
                 android:background="@color/cardview_light_background"
                 android:textAlignment="viewStart"
                 android:text="@string/main_hall" />
@@ -48,7 +48,7 @@
                     android:layout_height="match_parent"
                     android:src="@drawable/visit_ii"
                     android:layout_weight="1"
-                    android:id="@+id/MainSecondHallbutton"
+                    android:onClick="onClick"
                     android:adjustViewBounds="true"
                     android:background="@color/cardview_light_background"
                     android:scaleType="centerInside"/>
@@ -56,9 +56,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
-                    android:id="@id/MainSecondHallbutton"
                     android:background="@color/cardview_light_background"
                     android:textAlignment="viewStart"
+                    android:onClick="onClick"
                     android:textSize="12dp"
                     android:text="@string/second_hall"/>
 
@@ -75,7 +75,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/visit_iii"
-                    android:id="@+id/MainThirdHallbutton"
+                    android:onClick="onClick"
                     android:background="@color/cardview_light_background"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
@@ -84,7 +84,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
-                    android:id="@id/MainThirdHallbutton"
+                    android:onClick="onClick"
                     android:background="@color/cardview_light_background"
                     android:textAlignment="viewStart"
                     android:textSize="12dp"
@@ -108,16 +108,16 @@
                     android:src="@drawable/visit_iv"
                     android:background="@color/cardview_light_background"
                     android:layout_weight="1"
-                    android:id="@+id/MainFourthHallbutton"
+                    android:onClick="onClick"
                     android:adjustViewBounds="true"
                     android:scaleType="centerInside"/>
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
-                    android:id="@id/MainFourthHallbutton"
                     android:background="@color/cardview_light_background"
                     android:textAlignment="viewStart"
+                    android:onClick="onClick"
                     android:textSize="12dp"
                     android:text="@string/fourth_hall"/>
 

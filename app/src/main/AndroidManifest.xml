@@ -44,7 +44,11 @@
             android:name=".HelperMenu.MembershipActivity"
             android:label="@string/title_activity_membership" >
         </activity>
-        <activity android:name=".HelperMenu.CollectionsActivity" android:label="@string/title_activity_collections" >
+        <activity
+            android:name=".HelperMenu.CollectionsActivity"
+            android:label="@string/title_activity_collections" >
+        </activity>
+        <activity android:name=".HelperMenu.VisitDetailsActivity" android:label="@string/title_activity_visit">
         </activity>
     </application>
 
