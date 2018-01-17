@@ -28,6 +28,7 @@
         <item>العربيه</item>
     </string-array>
     <string name="title_activity_visit">Visit</string>
+    <string name="title_activity_artifacts">Details</string>
     <string name="title_activity_collections">Collections</string>
     <string name="title_activity_shop">Shop</string>
     <string name="title_activity_quiz">Quiz</string>
@@ -49,7 +50,7 @@
     <string name="membership_duration_items_i">3 Months</string>
     <string name="membership_duration_items_ii">6 Months</string>
     <string name="membership_duration_items_iii">1 Year</string>
-
+    <string name="related_Links">RELATED</string>
     <!-- login activity -->
     <string name="login">LOGIN</string>
     <string name="username">User Name</string>

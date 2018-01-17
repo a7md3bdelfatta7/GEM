@@ -25,6 +25,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import brainwaves.gem.HelperMenu.ArtefactsActivity;
 import brainwaves.gem.HelperMenu.CollectionsActivity;
 import brainwaves.gem.HelperMenu.MembershipActivity;
 import brainwaves.gem.HelperMenu.QuizActivity;
@@ -143,11 +144,23 @@ public class MainActivity extends AppCompatActivity
                 }
         );
     }
-    public void onClick(View v) {
+    public void VisitDetailsonClick(View v) {
         Intent visit = new Intent(MainActivity.this,
                 VisitDetailsActivity.class);
+        visit.putExtra("id",1);
         startActivity(visit);
     }
+    public void HighlightsDetailsonClick(View v) {
+        Intent visit = new Intent(MainActivity.this,
+                ArtefactsActivity.class);
+        visit.putExtra("id",1);
+        startActivity(visit);
+    }
+    public void HighlightsAddToTouronClick(View v) {
+        ImageButton flashButtonOn = (ImageButton) findViewById(v.getId());
+        flashButtonOn.setImageResource(R.drawable.add_button_ii);
+    }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

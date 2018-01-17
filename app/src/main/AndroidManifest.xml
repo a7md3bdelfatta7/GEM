@@ -48,7 +48,11 @@
             android:name=".HelperMenu.CollectionsActivity"
             android:label="@string/title_activity_collections" >
         </activity>
-        <activity android:name=".HelperMenu.VisitDetailsActivity" android:label="@string/title_activity_visit">
+        <activity
+            android:name=".HelperMenu.VisitDetailsActivity"
+            android:label="@string/title_activity_visit" >
+        </activity>
+        <activity android:name=".HelperMenu.ArtefactsActivity" android:label="@string/title_activity_artifacts">
         </activity>
     </application>
 
