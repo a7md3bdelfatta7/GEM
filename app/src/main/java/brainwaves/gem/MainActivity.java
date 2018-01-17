@@ -22,11 +22,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.ImageButton;
 
-import brainwaves.gem.HelperMenu.CollectionActivity;
+import brainwaves.gem.HelperMenu.ArtefactsActivity;
+import brainwaves.gem.HelperMenu.CollectionsActivity;
+import brainwaves.gem.HelperMenu.MembershipActivity;
 import brainwaves.gem.HelperMenu.QuizActivity;
 import brainwaves.gem.fragments.FeaturedEventsFragment;
-import brainwaves.gem.fragments.ForMembersFragment;
+import brainwaves.gem.HelperMenu.VisitDetailsActivity;import brainwaves.gem.fragments.ForMembersFragment;
 import brainwaves.gem.fragments.StaffPicksFragment;
 import brainwaves.gem.fragments.VisitFragment;
 import brainwaves.gem.fragments.HighlightsFragment;
@@ -109,26 +113,26 @@ public class MainActivity extends AppCompatActivity
                     @Override
                     public void onTabSelected(TabLayout.Tab tab) {
                         super.onTabSelected(tab);
-                        int tabIndex=tab.getPosition();
-                        int color=Color.parseColor(getResources().getString(0+R.color.visiColor));
-                        switch (tabIndex){
+                        int tabIndex = tab.getPosition();
+                        int color = Color.parseColor(getResources().getString(0 + R.color.visiColor));
+                        switch (tabIndex) {
                             case 0:
-                                 color=Color.parseColor(getResources().getString(0+R.color.visiColor));
+                                color = Color.parseColor(getResources().getString(0 + R.color.visiColor));
                                 break;
                             case 1:
-                                 color=Color.parseColor(getResources().getString(0+R.color.highlightColor));
+                                color = Color.parseColor(getResources().getString(0 + R.color.highlightColor));
                                 break;
                             case 2:
-                                color=Color.parseColor(getResources().getString(0+R.color.todayEventColor));
+                                color = Color.parseColor(getResources().getString(0 + R.color.todayEventColor));
                                 break;
                             case 3:
-                                color=Color.parseColor(getResources().getString(0+R.color.forMemberColor));
+                                color = Color.parseColor(getResources().getString(0 + R.color.forMemberColor));
                                 break;
                             case 4:
-                                color=Color.parseColor(getResources().getString(0+R.color.staffPicksColor));
+                                color = Color.parseColor(getResources().getString(0 + R.color.staffPicksColor));
                                 break;
                             case 5:
-                                color=Color.parseColor(getResources().getString(0+R.color.featuredEventsColor));
+                                color = Color.parseColor(getResources().getString(0 + R.color.featuredEventsColor));
                                 break;
                         }
                         appBarLayout.setBackgroundColor(color);
@@ -139,6 +143,22 @@ public class MainActivity extends AppCompatActivity
                     }
                 }
         );
+    }
+    public void VisitDetailsonClick(View v) {
+        Intent visit = new Intent(MainActivity.this,
+                VisitDetailsActivity.class);
+        visit.putExtra("id",1);
+        startActivity(visit);
+    }
+    public void HighlightsDetailsonClick(View v) {
+        Intent visit = new Intent(MainActivity.this,
+                ArtefactsActivity.class);
+        visit.putExtra("id",1);
+        startActivity(visit);
+    }
+    public void HighlightsAddToTouronClick(View v) {
+        ImageButton flashButtonOn = (ImageButton) findViewById(v.getId());
+        flashButtonOn.setImageResource(R.drawable.add_button_ii);
     }
 
     @Override
@@ -178,25 +198,28 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.collections_menu) {
 
             Intent visit = new Intent(MainActivity.this,
-                    CollectionActivity.class);
+                    CollectionsActivity.class);
             startActivity(visit);
             // Handle the camera action
 
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.shop_menu) {
             Uri uri = Uri.parse("http://www.statue.com/Products/Egyptian-Decor/");
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(intent);
 
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.quiz_menu) {
             Intent visit = new Intent(MainActivity.this,
                     QuizActivity.class);
             startActivity(visit);
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.membership_menu) {
+            Intent visit = new Intent(MainActivity.this,
+                    MembershipActivity.class);
+            startActivity(visit);
 
         } else if (id == R.id.nav_share) {
 
@@ -230,5 +253,11 @@ public class MainActivity extends AppCompatActivity
             return PAGE_TITLES[position];
         }
 
+    }
+    @Override
+    protected  void onDestroy() {
+        super.onDestroy();
+        Runtime.getRuntime().gc();
+        System.gc();
     }
 }

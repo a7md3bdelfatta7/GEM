@@ -33,4 +33,10 @@ public class Splash extends Activity {
             }
         }, SPLASH_DISPLAY_LENGTH);
     }
+    @Override
+    protected  void onDestroy() {
+        super.onDestroy();
+        Runtime.getRuntime().gc();
+        System.gc();
+    }
 }

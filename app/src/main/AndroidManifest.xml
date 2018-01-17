@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="brainwaves.gem">
+    package="brainwaves.gem" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,39 +10,53 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".ChooseLangActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Splash">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".ChooseUserType"
-            android:theme="@style/AppTheme.NoActionBar">
-            >
-        </activity>
-        <activity
-            android:name=".LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".RegisterationActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".HelperMenu.CollectionActivity"
-            android:label="@string/title_activity_collection"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".HelperMenu.QuizActivity"
-            android:label="@string/title_activity_quiz"></activity>
-        <activity android:name=".fragments.FeaturedEventsFragment"></activity>
+    <activity
+        android:name=".MainActivity"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".ChooseLangActivity"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity android:name=".Splash">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+    <activity
+        android:name=".ChooseUserType"
+        android:theme="@style/AppTheme.NoActionBar">
+        >
+    </activity>
+    <activity
+        android:name=".LoginActivity"
+        android:theme="@style/AppTheme.NoActionBar">
+    </activity>
+    <activity
+        android:name=".RegisterationActivity"
+        android:theme="@style/AppTheme.NoActionBar">
+    </activity>
+    <activity
+        android:name=".HelperMenu.QuizActivity"
+        android:label="@string/title_activity_quiz" >
+    </activity>
+    <activity
+        android:name=".HelperMenu.MembershipActivity"
+        android:label="@string/title_activity_membership" >
+    </activity>
+    <activity
+        android:name=".HelperMenu.CollectionsActivity"
+        android:label="@string/title_activity_collections" >
+    </activity>
+    <activity
+        android:name=".HelperMenu.VisitDetailsActivity"
+        android:label="@string/title_activity_visit" >
+    </activity>
+    <activity android:name=".HelperMenu.ArtefactsActivity" android:label="@string/title_activity_artifacts">
+    </activity>
+
     </application>
 
 </manifest>
