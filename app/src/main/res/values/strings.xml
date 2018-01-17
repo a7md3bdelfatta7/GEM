@@ -29,9 +29,24 @@
     <string name="title_activity_collection">Collections</string>
     <string name="title_activity_shop">Shop</string>
     <string name="title_activity_quiz">Quiz</string>
+    <string name="title_activity_membership">Membership</string>
     <string name="quiz_word">QUIZ NO.1</string>
     <string name="quiz">How old was Tutankamun when died?</string>
-
+    <string name="membership_benefits">Membership Benefits</string>
+    <string name="membership_benefits_items"><itme>&#8226; Free express admission for you and children under 18.</itme>
+        <itme>\n&#8226; Free admission for your guest(s) on every visit.</itme>
+        <itme>\n&#8226; Early access to exhibitions and special viewing hours.</itme>
+        <itme>\n&#8226; Invitation to buy ticket to members only events and parties.</itme>
+        <itme>\n&#8226; 10% off at the Dining room at GEM.</itme>
+        <itme>\n&#8226; 10% off at GEM store.</itme>
+    </string>
+    <string name="choose_category">Choose Category</string>
+    <string name="membership_count_word">Membership Count</string>
+    <string name="membership_count">$100 - $600</string>
+    <string name="membership_duration">Duration</string>
+    <string name="membership_duration_items_i">3 Months</string>
+    <string name="membership_duration_items_ii">6 Months</string>
+    <string name="membership_duration_items_iii">1 Year</string>
 
     <!-- login activity -->
     <string name="login">LOGIN</string>

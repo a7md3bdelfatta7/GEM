@@ -55,7 +55,6 @@
             android:layout_height="match_parent"
             android:text="19 YEARS OLD"
             android:id="@+id/thirdAnswer"
-            android:onClick=""
             android:background="@color/defaultColor"
             android:layout_marginTop="5dp"
             android:layout_marginRight="25dp"

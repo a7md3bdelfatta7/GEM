@@ -24,6 +24,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import brainwaves.gem.HelperMenu.CollectionActivity;
+import brainwaves.gem.HelperMenu.MembershipActivity;
 import brainwaves.gem.HelperMenu.QuizActivity;
 import brainwaves.gem.fragments.ForMembersFragment;
 import brainwaves.gem.fragments.StaffPicksFragment;
@@ -196,6 +197,9 @@ public class MainActivity extends AppCompatActivity
             startActivity(visit);
 
         } else if (id == R.id.nav_manage) {
+            Intent visit = new Intent(MainActivity.this,
+                    MembershipActivity.class);
+            startActivity(visit);
 
         } else if (id == R.id.nav_share) {
 
