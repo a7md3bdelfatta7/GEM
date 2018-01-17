@@ -31,4 +31,10 @@ public class VisitDetailsActivity extends AppCompatActivity {
 //                break;
 //        }
     }
+    @Override
+    protected  void onDestroy() {
+        super.onDestroy();
+        Runtime.getRuntime().gc();
+        System.gc();
+    }
 }

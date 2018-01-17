@@ -56,4 +56,10 @@ public class ChooseLangActivity extends AppCompatActivity implements AdapterView
     public void onNothingSelected(AdapterView<?> adapterView) {
 
     }
+    @Override
+    protected  void onDestroy() {
+        super.onDestroy();
+        Runtime.getRuntime().gc();
+        System.gc();
+    }
 }

@@ -15,4 +15,10 @@ public class CollectionsActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_collections);
     }
+    @Override
+    protected  void onDestroy() {
+        super.onDestroy();
+        Runtime.getRuntime().gc();
+        System.gc();
+    }
 }

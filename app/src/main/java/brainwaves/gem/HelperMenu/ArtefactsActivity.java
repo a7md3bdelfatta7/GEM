@@ -15,4 +15,10 @@ public class ArtefactsActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_artefacts);
     }
+    @Override
+    protected  void onDestroy() {
+        super.onDestroy();
+        Runtime.getRuntime().gc();
+        System.gc();
+    }
 }
