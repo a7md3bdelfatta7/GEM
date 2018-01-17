@@ -52,7 +52,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/event1_topic"
                         android:textSize="20dp"
-                        android:textStyle="bold|italic"
+                        android:textStyle="bold"
                         android:textColor="@android:color/black"
                         android:layout_marginBottom="10dp"
                         />
@@ -113,7 +113,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/event2_topic"
                         android:textSize="20dp"
-                        android:textStyle="bold|italic"
+                        android:textStyle="bold"
                         android:textColor="@android:color/black"
                         android:layout_marginBottom="10dp"
                         />
@@ -174,7 +174,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/event3_topic"
                         android:textSize="20dp"
-                        android:textStyle="bold|italic"
+                        android:textStyle="bold"
                         android:textColor="@android:color/black"
                         android:layout_marginBottom="10dp"
                         />
@@ -235,7 +235,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/event4_topic"
                         android:textSize="20dp"
-                        android:textStyle="bold|italic"
+                        android:textStyle="bold"
                         android:textColor="@android:color/black"
                         android:layout_marginBottom="10dp"
                         />
@@ -296,7 +296,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/event5_topic"
                         android:textSize="20dp"
-                        android:textStyle="bold|italic"
+                        android:textStyle="bold"
                         android:textColor="@android:color/black"
                         android:layout_marginBottom="10dp"
                         />
@@ -357,7 +357,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/event6_topic"
                         android:textSize="20dp"
-                        android:textStyle="bold|italic"
+                        android:textStyle="bold"
                         android:textColor="@android:color/black"
                         android:layout_marginBottom="10dp"
                         />
@@ -384,22 +384,14 @@
 
 
 
-
-
-
         <ImageButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/today_next_button"
+            android:src="@drawable/members_next_button"
             android:adjustViewBounds="true"
             android:background="@color/cardview_light_background"
             android:scaleType="fitXY"/>
 
     </LinearLayout>
-
-
-
-
-
 
 </ScrollView>

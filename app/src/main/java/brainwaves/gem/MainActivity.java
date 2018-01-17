@@ -25,6 +25,7 @@ import android.view.WindowManager;
 
 import brainwaves.gem.HelperMenu.CollectionActivity;
 import brainwaves.gem.HelperMenu.QuizActivity;
+import brainwaves.gem.fragments.ForMembersFragment;
 import brainwaves.gem.fragments.StaffPicksFragment;
 import brainwaves.gem.fragments.VisitFragment;
 import brainwaves.gem.fragments.HighlightsFragment;
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity
             new VisitFragment(),
             new HighlightsFragment(),
             new TodayEventFragment(),
-            new TodayEventFragment(),
+            new ForMembersFragment(),
             new StaffPicksFragment(),
             new TodayEventFragment()
     };
@@ -108,31 +109,25 @@ public class MainActivity extends AppCompatActivity
                     public void onTabSelected(TabLayout.Tab tab) {
                         super.onTabSelected(tab);
                         int tabIndex=tab.getPosition();
-                        int color=Color.parseColor("#FF1E1E");
+                        int color=Color.parseColor(getResources().getString(0+R.color.visiColor));
                         switch (tabIndex){
                             case 0:
-                                 color=Color.parseColor("#FF1E1E");
+                                 color=Color.parseColor(getResources().getString(0+R.color.visiColor));
                                 break;
                             case 1:
-                                 color=Color.parseColor("#6E0000");
+                                 color=Color.parseColor(getResources().getString(0+R.color.highlightColor));
                                 break;
                             case 2:
-                                color=Color.parseColor("#DC0051");
+                                color=Color.parseColor(getResources().getString(0+R.color.todayEventColor));
                                 break;
                             case 3:
-                                color=Color.parseColor("#7A0031");
+                                color=Color.parseColor(getResources().getString(0+R.color.forMemberColor));
                                 break;
                             case 4:
-                                color=Color.parseColor("#670050");
+                                color=Color.parseColor(getResources().getString(0+R.color.staffPicksColor));
                                 break;
                             case 5:
-                                color=Color.parseColor("#290348");
-                                break;
-                            case 6:
-                                color=Color.parseColor("#476ACB");
-                                break;
-                            case 7:
-                                color=Color.parseColor("#017F72");
+                                color=Color.parseColor(getResources().getString(0+R.color.featuredEventsColor));
                                 break;
                         }
                         appBarLayout.setBackgroundColor(color);

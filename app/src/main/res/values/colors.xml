@@ -14,4 +14,12 @@
 
     <color name="defaultColor">#c5002e</color>
 
+    <color name="visiColor">#c5002e</color>
+    <color name="highlightColor">#9e0025</color>
+    <color name="todayEventColor">#c40158</color>
+    <color name="forMemberColor">#9d0094</color>
+    <color name="staffPicksColor">#6f009d</color>
+    <color name="featuredEventsColor">#3b009d</color>
+
+
 </resources>

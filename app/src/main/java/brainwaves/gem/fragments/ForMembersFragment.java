@@ -9,11 +9,11 @@ import android.view.ViewGroup;
 import brainwaves.gem.R;
 
 /* Fragment used as page 3 */
-public class TodayEventFragment extends Fragment {
+public class ForMembersFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.today_event_fragment, container, false);
+        View rootView = inflater.inflate(R.layout.for_member_fragment, container, false);
         return rootView;
     }
 }
