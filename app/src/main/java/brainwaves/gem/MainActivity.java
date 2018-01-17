@@ -25,6 +25,7 @@ import android.view.WindowManager;
 
 import brainwaves.gem.HelperMenu.CollectionActivity;
 import brainwaves.gem.HelperMenu.QuizActivity;
+import brainwaves.gem.fragments.FeaturedEventsFragment;
 import brainwaves.gem.fragments.ForMembersFragment;
 import brainwaves.gem.fragments.StaffPicksFragment;
 import brainwaves.gem.fragments.VisitFragment;
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity
             new TodayEventFragment(),
             new ForMembersFragment(),
             new StaffPicksFragment(),
-            new TodayEventFragment()
+            new FeaturedEventsFragment()
     };
 
     // The ViewPager is responsible for sliding pages (fragments) in and out upon user input

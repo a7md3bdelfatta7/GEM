@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 
 import brainwaves.gem.R;
 
-/* Fragment used as page 3 */
 public class TodayEventFragment extends Fragment {
 
     @Override

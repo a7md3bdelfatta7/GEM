@@ -81,9 +81,49 @@
     <string name="event6_note">Guided Tour</string>
 
 
+    <!-- for member  fragment -->
+
+    <!-- event 1-->
+    <string name="member_event1_time">Nov 04</string>
+    <string name="member_event1_topic">Shopping Event</string>
+    <string name="member_event1_note">For Members Only</string>
+
+    <!-- event 2-->
+    <string name="member_event2_time">Nov 06</string>
+    <string name="member_event2_topic">Private Guided Tour</string>
+    <string name="member_event2_note">For Members Only</string>
 
 
+    <!-- event 3-->
+    <string name="member_event3_time">Nov 12</string>
+    <string name="member_event3_topic">Private Guided Tour</string>
+    <string name="member_event3_note">For Members Only</string>
 
+
+    <!-- featured events  fragment -->
+
+    <!-- event 1-->
+    <string name="featured_event1_time">DEC 05</string>
+    <string name="featured_event1_topic">Ancient Egyptian Art</string>
+    <string name="featured_event1_note">Guided Tour</string>
+
+
+    <!-- event 2-->
+    <string name="featured_event2_time">DEC 10</string>
+    <string name="featured_event2_topic">Music in Old Egypt</string>
+    <string name="featured_event2_note">Guided Tour</string>
+
+
+    <!-- event 3-->
+    <string name="featured_event3_time">DEC 15</string>
+    <string name="featured_event3_topic">King Khufu Tour</string>
+    <string name="featured_event3_note">Guided Tour</string>
+
+
+    <!-- event 4-->
+    <string name="featured_event4_time">DEC 18</string>
+    <string name="featured_event4_topic">King Tutankhamun Tour</string>
+    <string name="featured_event4_note">Guided Tour</string>
 
 
 

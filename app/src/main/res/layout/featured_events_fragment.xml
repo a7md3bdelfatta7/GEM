@@ -6,40 +6,37 @@
     android:layout_height="match_parent"
     android:background="@color/pageColor3"
     android:padding="0dp"
-    android:fillViewport="true"
+
     >
-
-
-
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:paddingTop="20dp"
-        android:clipToPadding="false"
-
         >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="5dp"
             >
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center"
+                android:gravity="center_horizontal"
                 >
 
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/event1_time"
+                    android:text="@string/featured_event1_time"
                     android:layout_weight="2"
                     android:textAlignment="center"
                     />
@@ -52,10 +49,21 @@
                     android:layout_weight="7"
                     >
 
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/member_shape3"
+                        android:scaleType="fitStart"
+                        android:adjustViewBounds="true"
+                        android:layout_marginBottom="10dp"
+                        />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/event1_topic"
+                        android:text="@string/featured_event1_topic"
                         android:textSize="20dp"
                         android:textStyle="bold"
                         android:textColor="@android:color/black"
@@ -66,41 +74,46 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/event1_note"
+                        android:text="@string/featured_event1_note"
                         />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/today_event_seprator_margin_top"
+                        android:layout_marginBottom="5dp"
+                        android:background="@android:color/darker_gray"
+                        />
+
                 </LinearLayout>
 
             </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="@dimen/today_event_seprator_margin_top"
-                android:layout_marginBottom="5dp"
-                android:background="@android:color/darker_gray"
-                />
+
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="5dp"
             >
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center"
+                android:gravity="center_horizontal"
                 >
 
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/event2_time"
+                    android:text="@string/featured_event2_time"
                     android:layout_weight="2"
                     android:textAlignment="center"
                     />
@@ -113,10 +126,21 @@
                     android:layout_weight="7"
                     >
 
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/featured_shape2"
+                        android:scaleType="fitStart"
+                        android:adjustViewBounds="true"
+                        android:layout_marginBottom="10dp"
+                        />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/event2_topic"
+                        android:text="@string/featured_event2_topic"
                         android:textSize="20dp"
                         android:textStyle="bold"
                         android:textColor="@android:color/black"
@@ -127,41 +151,46 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/event2_note"
+                        android:text="@string/featured_event2_note"
                         />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/today_event_seprator_margin_top"
+                        android:layout_marginBottom="5dp"
+                        android:background="@android:color/darker_gray"
+                        />
+
                 </LinearLayout>
 
             </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="@dimen/today_event_seprator_margin_top"
-                android:layout_marginBottom="5dp"
-                android:background="@android:color/darker_gray"
-                />
+
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="5dp"
             >
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center"
+                android:gravity="center_horizontal"
                 >
 
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/event3_time"
+                    android:text="@string/featured_event3_time"
                     android:layout_weight="2"
                     android:textAlignment="center"
                     />
@@ -174,10 +203,21 @@
                     android:layout_weight="7"
                     >
 
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/featured_shape3"
+                        android:scaleType="fitStart"
+                        android:adjustViewBounds="true"
+                        android:layout_marginBottom="10dp"
+                        />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/event3_topic"
+                        android:text="@string/featured_event3_topic"
                         android:textSize="20dp"
                         android:textStyle="bold"
                         android:textColor="@android:color/black"
@@ -188,41 +228,46 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/event3_note"
+                        android:text="@string/featured_event3_note"
                         />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/today_event_seprator_margin_top"
+                        android:layout_marginBottom="5dp"
+                        android:background="@android:color/darker_gray"
+                        />
+
                 </LinearLayout>
 
             </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="@dimen/today_event_seprator_margin_top"
-                android:layout_marginBottom="5dp"
-                android:background="@android:color/darker_gray"
-                />
+
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="5dp"
             >
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center"
+                android:gravity="center_horizontal"
                 >
 
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/event4_time"
+                    android:text="@string/featured_event4_time"
                     android:layout_weight="2"
                     android:textAlignment="center"
                     />
@@ -235,10 +280,21 @@
                     android:layout_weight="7"
                     >
 
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/featured_shape4"
+                        android:scaleType="fitStart"
+                        android:adjustViewBounds="true"
+                        android:layout_marginBottom="10dp"
+                        />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/event4_topic"
+                        android:text="@string/featured_event4_topic"
                         android:textSize="20dp"
                         android:textStyle="bold"
                         android:textColor="@android:color/black"
@@ -249,159 +305,38 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/event4_note"
+                        android:text="@string/featured_event4_note"
                         />
-                </LinearLayout>
 
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="@dimen/today_event_seprator_margin_top"
-                android:layout_marginBottom="5dp"
-                android:background="@android:color/darker_gray"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="5dp"
-            >
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                >
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/event5_time"
-                    android:layout_weight="2"
-                    android:textAlignment="center"
-                    />
-
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="7"
-                    >
-
-                    <TextView
+                    <View
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/event5_topic"
-                        android:textSize="20dp"
-                        android:textStyle="bold"
-                        android:textColor="@android:color/black"
-                        android:layout_marginBottom="10dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/today_event_seprator_margin_top"
+                        android:layout_marginBottom="5dp"
+                        android:background="@android:color/darker_gray"
                         />
 
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/event5_note"
-                        />
                 </LinearLayout>
 
             </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="@dimen/today_event_seprator_margin_top"
-                android:layout_marginBottom="5dp"
-                android:background="@android:color/darker_gray"
-                />
+
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="5dp"
-            >
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                >
 
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/event6_time"
-                    android:layout_weight="2"
-                    android:textAlignment="center"
-                    />
 
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="7"
-                    >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/event6_topic"
-                        android:textSize="20dp"
-                        android:textStyle="bold"
-                        android:textColor="@android:color/black"
-                        android:layout_marginBottom="10dp"
-                        />
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/event6_note"
-                        />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="@dimen/today_event_seprator_margin_top"
-                android:layout_marginBottom="5dp"
-                android:background="@android:color/darker_gray"
-                />
-
-        </LinearLayout>
 
 
         <ImageButton
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:src="@drawable/today_next_button"
-            android:background="@color/cardview_light_background"
-            android:scaleType="fitEnd"
-            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:src="@drawable/featured_next_button"
             android:adjustViewBounds="true"
-            android:cropToPadding="false"
-            android:layout_weight="0.23"
-
-            />
+            android:background="@color/cardview_light_background"
+            android:scaleType="fitXY"/>
 
     </LinearLayout>
-
 
 </ScrollView>
