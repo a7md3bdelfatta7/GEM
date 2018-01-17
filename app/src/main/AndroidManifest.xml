@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="brainwaves.gem">
+
+    package="brainwaves.gem" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -29,15 +32,9 @@
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".RegisterationActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            >
-        </activity>
-        <activity
-            android:name=".HelperMenu.ShopActivity"
-            android:label="@string/title_activity_shop"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
@@ -45,7 +42,8 @@
             android:label="@string/title_activity_collection"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-
+        <activity android:name=".HelperMenu.QuizActivity" android:label="@string/title_activity_quiz">
+        </activity>
     </application>
 
 </manifest>
