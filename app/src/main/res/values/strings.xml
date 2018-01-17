@@ -48,6 +48,46 @@
     <string name="go">GO</string>
 
 
+    <!-- today's event fragment -->
+
+    <!-- event 1-->
+    <string name="event1_time">1:00PM</string>
+    <string name="event1_topic">King Tutankhamun</string>
+    <string name="event1_note">Guided Tour</string>
+
+    <!-- event 2-->
+    <string name="event2_time">3:00PM</string>
+    <string name="event2_topic">Art and Decoration in Ancient Egypt</string>
+    <string name="event2_note">lecture</string>
+
+    <!-- event 3-->
+    <string name="event3_time">5:00PM</string>
+    <string name="event3_topic">3D Movie of Tutankamun</string>
+    <string name="event3_note">Fo rKids</string>
+
+    <!-- event 4-->
+    <string name="event4_time">6:00PM</string>
+    <string name="event4_topic">Nefertiti</string>
+    <string name="event4_note">Guided Tour</string>
+
+    <!-- event 5-->
+    <string name="event5_time">8:00PM</string>
+    <string name="event5_topic">Narmer</string>
+    <string name="event5_note">Guided Tour</string>
+
+    <!-- event 6-->
+    <string name="event6_time">8:00PM</string>
+    <string name="event6_topic">Hor-Aha</string>
+    <string name="event6_note">Guided Tour</string>
+
+
+
+
+
+
+
+
+
 
 
 </resources>

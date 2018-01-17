@@ -8,4 +8,8 @@
     <dimen name="fab_margin">16dp</dimen>
 
     <dimen name="choose_lang_activity_horizontal_margin">20dp</dimen>
+
+    <dimen name="today_event_seprator_margin_top">20dp</dimen>
+
+
 </resources>

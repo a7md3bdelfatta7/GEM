@@ -28,7 +28,7 @@ import brainwaves.gem.HelperMenu.QuizActivity;
 import brainwaves.gem.fragments.StaffPicksFragment;
 import brainwaves.gem.fragments.VisitFragment;
 import brainwaves.gem.fragments.HighlightsFragment;
-import brainwaves.gem.fragments.Page3Fragment;
+import brainwaves.gem.fragments.TodayEventFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -50,10 +50,10 @@ public class MainActivity extends AppCompatActivity
     private final Fragment[] PAGES = new Fragment[] {
             new VisitFragment(),
             new HighlightsFragment(),
-            new Page3Fragment(),
-            new Page3Fragment(),
+            new TodayEventFragment(),
+            new TodayEventFragment(),
             new StaffPicksFragment(),
-            new Page3Fragment()
+            new TodayEventFragment()
     };
 
     // The ViewPager is responsible for sliding pages (fragments) in and out upon user input

@@ -21,7 +21,7 @@ public class ChooseLangActivity extends AppCompatActivity implements AdapterView
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.choose_lang);
-        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/gothicb0_bold.TTF");
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/gothicb0_bold.ttf");
 
         Spinner spinner = (Spinner) findViewById(R.id.lang_spinner);
 

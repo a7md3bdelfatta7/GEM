@@ -18,7 +18,7 @@ public class ChooseUserType extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_choose_user_type);
-        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/gothicb0_bold.TTF");
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/gothicb0_bold.ttf");
 
         Button signinButton=(Button)findViewById(R.id.signin_button);
         Button newVisitorButton=(Button)findViewById(R.id.new_visitor_button);

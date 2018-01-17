@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import brainwaves.gem.R;
 
 /* Fragment used as page 3 */
-public class Page3Fragment extends Fragment {
+public class TodayEventFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

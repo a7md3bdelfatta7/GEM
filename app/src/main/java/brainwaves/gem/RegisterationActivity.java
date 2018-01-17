@@ -25,7 +25,7 @@ public class RegisterationActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_registeration);
 
-        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/gothicb0_bold.TTF");
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/gothicb0_bold.ttf");
 
         Button signUpButton=(Button)findViewById(R.id.signup_button);
         signUpButton.setTypeface(custom_font);
