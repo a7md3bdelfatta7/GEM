@@ -35,13 +35,27 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:layout_weight="1">
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/highlight_i"
-                        android:background="@color/cardview_light_background"
-                        android:adjustViewBounds="true"
-                        android:scaleType="fitEnd"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/highlight_i"
+                            android:background="@color/cardview_light_background"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitStart"/>
+                        <ImageButton
+                            android:layout_width="25dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_height="40dp"
+                            android:background="@null"
+                            android:src="@drawable/add_button_i"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:layout_marginBottom="0dp"/>
+
+                    </RelativeLayout>
 
 
                 </LinearLayout>
@@ -51,15 +65,29 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:layout_weight="1">
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/cardview_light_background"
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/cardview_light_background"
 
-                        android:src="@drawable/highlight_ii"
-                        android:layout_weight="1"
-                        android:adjustViewBounds="true"
-                        android:scaleType="fitEnd"/>
+                            android:src="@drawable/highlight_ii"
+                            android:layout_weight="1"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitStart"/>
+                        <ImageButton
+                            android:layout_width="25dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_height="40dp"
+                            android:background="@null"
+                            android:src="@drawable/add_button_i"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:layout_marginBottom="0dp"/>
+                    </RelativeLayout>
+
 
                 </LinearLayout>
                 <LinearLayout
@@ -67,14 +95,28 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:layout_weight="1">
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@color/cardview_light_background"
-                        android:src="@drawable/highlight_iii"
-                        android:layout_weight="1"
-                        android:adjustViewBounds="true"
-                        android:scaleType="fitEnd"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@color/cardview_light_background"
+                            android:src="@drawable/highlight_iii"
+                            android:layout_weight="1"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitStart"/>
+                        <ImageButton
+                            android:layout_width="25dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_height="40dp"
+                            android:background="@null"
+                            android:src="@drawable/add_button_i"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:layout_marginBottom="0dp"/>
+                    </RelativeLayout>
+
 
                 </LinearLayout>
             </LinearLayout>
@@ -90,13 +132,26 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:layout_weight="1">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
                     <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:src="@drawable/highlight_iv"
                         android:background="@color/cardview_light_background"
                         android:adjustViewBounds="true"
-                        android:scaleType="fitEnd"/>
+                        android:scaleType="fitStart"/>
+                        <ImageButton
+                            android:layout_width="25dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_height="40dp"
+                            android:background="@null"
+                            android:src="@drawable/add_button_i"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:layout_marginBottom="0dp"/>
+                    </RelativeLayout>
 
                 </LinearLayout>
 
@@ -105,6 +160,9 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:layout_weight="1">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
                     <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -112,7 +170,17 @@
                         android:src="@drawable/highlight_v"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
-                        android:scaleType="fitEnd"/>
+                        android:scaleType="fitStart"/>
+                        <ImageButton
+                            android:layout_width="25dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_height="40dp"
+                            android:background="@null"
+                            android:src="@drawable/add_button_i"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:layout_marginBottom="0dp"/>
+                    </RelativeLayout>
 
                 </LinearLayout>
                 <LinearLayout
@@ -120,14 +188,28 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:layout_weight="1">
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@color/cardview_light_background"
-                        android:src="@drawable/highlight_xv"
-                        android:layout_weight="1"
-                        android:adjustViewBounds="true"
-                        android:scaleType="fitEnd"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@color/cardview_light_background"
+                            android:src="@drawable/highlight_xv"
+                            android:layout_weight="1"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitStart"/>
+                        <ImageButton
+                            android:layout_width="25dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_height="40dp"
+                            android:background="@null"
+                            android:src="@drawable/add_button_i"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:layout_marginBottom="0dp"/>
+                    </RelativeLayout>
+
 
                 </LinearLayout>
             </LinearLayout>
@@ -162,13 +244,26 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:layout_weight="1.8">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
                     <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:src="@drawable/highlight__i"
                         android:background="@color/cardview_light_background"
                         android:adjustViewBounds="true"
-                        android:scaleType="fitEnd"/>
+                        android:scaleType="fitStart"/>
+                    <ImageButton
+                        android:layout_width="25dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_height="40dp"
+                        android:background="@null"
+                        android:src="@drawable/add_button_i"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="0dp"/>
+                </RelativeLayout>
 
                 </LinearLayout>
 
@@ -177,6 +272,9 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:layout_weight="1.5">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
                     <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -184,7 +282,17 @@
                         android:src="@drawable/highlight__ii"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
-                        android:scaleType="fitEnd"/>
+                        android:scaleType="fitStart"/>
+                    <ImageButton
+                        android:layout_width="25dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_height="40dp"
+                        android:background="@null"
+                        android:src="@drawable/add_button_i"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="0dp"/>
+                </RelativeLayout>
 
                 </LinearLayout>
                 <LinearLayout
@@ -192,6 +300,9 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:layout_weight="1.2">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
                     <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -199,7 +310,17 @@
                         android:src="@drawable/highlight__iii"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
-                        android:scaleType="fitEnd"/>
+                        android:scaleType="fitStart"/>
+                    <ImageButton
+                        android:layout_width="25dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_height="40dp"
+                        android:background="@null"
+                        android:src="@drawable/add_button_i"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="0dp"/>
+                </RelativeLayout>
 
                 </LinearLayout>
             </LinearLayout>
@@ -215,13 +336,26 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:layout_weight="1">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
                     <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:src="@drawable/highlight__iv"
                         android:background="@color/cardview_light_background"
                         android:adjustViewBounds="true"
-                        android:scaleType="fitEnd"/>
+                        android:scaleType="fitStart"/>
+                    <ImageButton
+                        android:layout_width="25dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_height="40dp"
+                        android:background="@null"
+                        android:src="@drawable/add_button_i"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="0dp"/>
+                </RelativeLayout>
 
                 </LinearLayout>
 
@@ -230,6 +364,9 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:layout_weight=".95">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
                     <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -237,7 +374,17 @@
                         android:src="@drawable/highlight__v"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
-                        android:scaleType="fitEnd"/>
+                        android:scaleType="fitStart"/>
+                    <ImageButton
+                        android:layout_width="25dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_height="40dp"
+                        android:background="@null"
+                        android:src="@drawable/add_button_i"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="0dp"/>
+                </RelativeLayout>
 
                 </LinearLayout>
                 <LinearLayout
@@ -245,6 +392,9 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:layout_weight=".7">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
                     <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -252,7 +402,17 @@
                         android:src="@drawable/highlight__xv"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
-                        android:scaleType="fitEnd"/>
+                        android:scaleType="fitStart"/>
+                    <ImageButton
+                        android:layout_width="25dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_height="40dp"
+                        android:background="@null"
+                        android:src="@drawable/add_button_i"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="0dp"/>
+                </RelativeLayout>
 
                 </LinearLayout>
             </LinearLayout>
@@ -270,6 +430,7 @@
                 android:layout_height="match_parent"
                 android:background="@color/cardview_light_background"
                 android:adjustViewBounds="true"
+                android:layout_marginTop="11dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/highlights_nextbutton"/>
         </LinearLayout>

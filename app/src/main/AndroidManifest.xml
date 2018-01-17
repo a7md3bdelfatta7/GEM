@@ -37,15 +37,14 @@
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".HelperMenu.CollectionActivity"
-            android:label="@string/title_activity_collection"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
-        <activity
             android:name=".HelperMenu.QuizActivity"
             android:label="@string/title_activity_quiz" >
         </activity>
-        <activity android:name=".HelperMenu.MembershipActivity" android:label="@string/title_activity_membership" >
+        <activity
+            android:name=".HelperMenu.MembershipActivity"
+            android:label="@string/title_activity_membership" >
+        </activity>
+        <activity android:name=".HelperMenu.CollectionsActivity" android:label="@string/title_activity_collections" >
         </activity>
     </application>
 

@@ -26,7 +26,7 @@
         <item>ENGLISH</item>
         <item>العربيه</item>
     </string-array>
-    <string name="title_activity_collection">Collections</string>
+    <string name="title_activity_collections">Collections</string>
     <string name="title_activity_shop">Shop</string>
     <string name="title_activity_quiz">Quiz</string>
     <string name="title_activity_membership">Membership</string>

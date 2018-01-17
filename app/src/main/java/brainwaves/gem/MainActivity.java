@@ -23,7 +23,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-import brainwaves.gem.HelperMenu.CollectionActivity;
+import brainwaves.gem.HelperMenu.CollectionsActivity;
 import brainwaves.gem.HelperMenu.MembershipActivity;
 import brainwaves.gem.HelperMenu.QuizActivity;
 import brainwaves.gem.fragments.ForMembersFragment;
@@ -181,7 +181,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_camera) {
 
             Intent visit = new Intent(MainActivity.this,
-                    CollectionActivity.class);
+                    CollectionsActivity.class);
             startActivity(visit);
             // Handle the camera action
 
