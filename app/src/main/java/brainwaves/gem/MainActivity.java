@@ -178,25 +178,25 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.collections_menu) {
 
             Intent visit = new Intent(MainActivity.this,
                     CollectionsActivity.class);
             startActivity(visit);
             // Handle the camera action
 
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.shop_menu) {
             Uri uri = Uri.parse("http://www.statue.com/Products/Egyptian-Decor/");
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(intent);
 
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.quiz_menu) {
             Intent visit = new Intent(MainActivity.this,
                     QuizActivity.class);
             startActivity(visit);
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.membership_menu) {
             Intent visit = new Intent(MainActivity.this,
                     MembershipActivity.class);
             startActivity(visit);
