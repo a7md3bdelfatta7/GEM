@@ -20,20 +20,34 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:popupTheme="@style/AppTheme.PopupOverlay"
-            >
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="15dip"
-                android:paddingBottom="15dip"
-                android:paddingRight="30dip">
+            android:title=""
+            android:weightSum="1">
+
 
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/gem_word"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/gem_word"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
 
-            </FrameLayout>
+                    />
+
+
+
+                <ImageView
+                    android:id="@+id/mapIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/map_icon"
+                    android:layout_gravity="right|end"
+                    android:adjustViewBounds="true"
+                    android:padding="10dp"
+
+                    />
+
             </android.support.v7.widget.Toolbar>
 
         <android.support.design.widget.TabLayout

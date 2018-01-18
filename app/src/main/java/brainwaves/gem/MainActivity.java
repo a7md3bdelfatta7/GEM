@@ -9,6 +9,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.TabLayout;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.design.widget.NavigationView;
 import android.support.v13.app.FragmentPagerAdapter;
@@ -24,11 +25,13 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import brainwaves.gem.HelperMenu.ArtefactsActivity;
 import brainwaves.gem.HelperMenu.CollectionsActivity;
 import brainwaves.gem.HelperMenu.MembershipActivity;
 import brainwaves.gem.HelperMenu.QuizActivity;
+import brainwaves.gem.HelperMenu.Tour;
 import brainwaves.gem.fragments.FeaturedEventsFragment;
 import brainwaves.gem.HelperMenu.VisitDetailsActivity;import brainwaves.gem.fragments.ForMembersFragment;
 import brainwaves.gem.fragments.StaffPicksFragment;
@@ -70,8 +73,8 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
-
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -143,6 +146,16 @@ public class MainActivity extends AppCompatActivity
                     }
                 }
         );
+
+        ImageView imageView=(ImageView)findViewById(R.id.mapIcon);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,Map.class);
+                startActivity(intent);
+            }
+        });
+
     }
     public void VisitDetailsonClick(View v) {
         Intent visit = new Intent(MainActivity.this,
@@ -171,26 +184,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -221,10 +215,14 @@ public class MainActivity extends AppCompatActivity
                     MembershipActivity.class);
             startActivity(visit);
 
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        } else if (id == R.id.tour_menu) {
+            Intent tour = new Intent(MainActivity.this,
+                    Tour.class);
+            startActivity(tour);
+        } else if (id == R.id.ticket_menu) {
+            Uri uri = Uri.parse("https://www.mi4biz.com/");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

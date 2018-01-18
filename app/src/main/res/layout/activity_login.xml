@@ -122,7 +122,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:orientation="vertical"
             android:gravity="center_vertical"
             >
@@ -139,18 +139,19 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="3"
+            android:layout_weight="5"
             android:orientation="vertical">
             <Button
-                android:text="@string/enter"
-                android:layout_width="wrap_content"
-                android:maxWidth="70dp"
-                android:layout_height="30dp"
+                android:text="Enter"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
                 android:id="@+id/signin_button"
                 android:background="@android:color/white"
                 android:textColor="@color/defaultColor"
                 android:textSize="18sp"
+                android:textAlignment="center"
                 android:letterSpacing="0.1"
+                android:layout_marginTop="10dp"
                 android:layout_gravity="end"
                 />
         </LinearLayout>

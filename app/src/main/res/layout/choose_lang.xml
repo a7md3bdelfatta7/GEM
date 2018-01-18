@@ -48,7 +48,7 @@
             android:id="@+id/nextButton"
             android:background="@android:color/white"
             android:textColor="@color/defaultColor"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:letterSpacing="0.1"
             android:layout_marginTop="10dp"
             android:layout_gravity="end"

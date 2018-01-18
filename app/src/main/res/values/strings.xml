@@ -143,7 +143,8 @@
     <string name="featured_event4_topic">King Tutankhamun Tour</string>
     <string name="featured_event4_note">Guided Tour</string>
 
-
+    <string name="map_activity_title">Museum Map</string>
+    <string name="tour_activity_title">My Tours</string>
 
 
 

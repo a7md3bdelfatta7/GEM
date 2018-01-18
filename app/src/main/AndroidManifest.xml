@@ -57,6 +57,10 @@
     <activity android:name=".HelperMenu.ArtefactsActivity" android:label="@string/title_activity_artifacts">
     </activity>
 
+        <activity android:name=".Map" android:label="@string/map_activity_title"></activity>
+        <activity android:name=".HelperMenu.Tour" android:label="@string/tour_activity_title"></activity>
+
+
     </application>
 
 </manifest>

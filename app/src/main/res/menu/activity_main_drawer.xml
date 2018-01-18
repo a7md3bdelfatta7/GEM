@@ -14,18 +14,17 @@
         <item
             android:id="@+id/membership_menu"
             android:title="MEMBERSHIP" />
+
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:id="@+id/tour_menu"
+                android:title="My Tour" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:id="@+id/ticket_menu"
+                android:title="Get Ticket" />
         </menu>
     </item>
 
