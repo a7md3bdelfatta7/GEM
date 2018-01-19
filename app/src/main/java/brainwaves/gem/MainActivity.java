@@ -32,6 +32,7 @@ import brainwaves.gem.HelperMenu.CollectionsActivity;
 import brainwaves.gem.HelperMenu.MembershipActivity;
 import brainwaves.gem.HelperMenu.QuizActivity;
 import brainwaves.gem.HelperMenu.Tour;
+import brainwaves.gem.ShoppingSystem.ShoppingActivity;
 import brainwaves.gem.fragments.FeaturedEventsFragment;
 import brainwaves.gem.HelperMenu.VisitDetailsActivity;import brainwaves.gem.fragments.ForMembersFragment;
 import brainwaves.gem.fragments.StaffPicksFragment;
@@ -158,16 +159,15 @@ public class MainActivity extends AppCompatActivity
 
     }
     public void VisitDetailsonClick(View v) {
-        Intent visit = new Intent(MainActivity.this,
+        Intent intent = new Intent(MainActivity.this,
                 VisitDetailsActivity.class);
-        visit.putExtra("id",1);
-        startActivity(visit);
+        intent.putExtra("id",1);
+        startActivity(intent);
     }
     public void HighlightsDetailsonClick(View v) {
-        Intent visit = new Intent(MainActivity.this,
+        Intent intent = new Intent(MainActivity.this,
                 ArtefactsActivity.class);
-        visit.putExtra("id",1);
-        startActivity(visit);
+        startActivity(intent);
     }
     public void HighlightsAddToTouronClick(View v) {
         ImageButton flashButtonOn = (ImageButton) findViewById(v.getId());
@@ -194,15 +194,15 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.collections_menu) {
 
-            Intent visit = new Intent(MainActivity.this,
+            Intent itent = new Intent(MainActivity.this,
                     CollectionsActivity.class);
-            startActivity(visit);
+            startActivity(itent);
             // Handle the camera action
 
         } else if (id == R.id.shop_menu) {
-            Uri uri = Uri.parse("http://www.statue.com/Products/Egyptian-Decor/");
-            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-            startActivity(intent);
+            Intent itent = new Intent(MainActivity.this,
+                    ShoppingActivity.class);
+            startActivity(itent);
 
 
         } else if (id == R.id.quiz_menu) {

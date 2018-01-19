@@ -28,9 +28,12 @@
         <item>العربيه</item>
     </string-array>
     <string name="title_activity_visit">Visit</string>
-    <string name="title_activity_artifacts">Details</string>
+    <string name="title_activity_artifactsDetails">Details</string>
     <string name="title_activity_collections">Collections</string>
     <string name="title_activity_shop">Shop</string>
+    <string name="title_activity_clothes">Clothes</string>
+    <string name="title_activity_artifacts">Artifacts</string>
+    <string name="title_activity_books">Books</string>
     <string name="title_activity_quiz">Quiz</string>
     <string name="title_activity_membership">Membership</string>
     <string name="quiz_word">QUIZ NO.1</string>

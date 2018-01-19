@@ -9,58 +9,72 @@
         android:icon="@drawable/gem"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ChooseLangActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Splash" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-    <activity
-        android:name=".MainActivity"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme.NoActionBar" />
-    <activity
-        android:name=".ChooseLangActivity"
-        android:theme="@style/AppTheme.NoActionBar" />
-    <activity android:name=".Splash">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-    <activity
-        android:name=".ChooseUserType"
-        android:theme="@style/AppTheme.NoActionBar">
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ChooseUserType"
+            android:theme="@style/AppTheme.NoActionBar" >
         >
-    </activity>
-    <activity
-        android:name=".LoginActivity"
-        android:theme="@style/AppTheme.NoActionBar">
-    </activity>
-    <activity
-        android:name=".RegisterationActivity"
-        android:theme="@style/AppTheme.NoActionBar">
-    </activity>
-    <activity
-        android:name=".HelperMenu.QuizActivity"
-        android:label="@string/title_activity_quiz" >
-    </activity>
-    <activity
-        android:name=".HelperMenu.MembershipActivity"
-        android:label="@string/title_activity_membership" >
-    </activity>
-    <activity
-        android:name=".HelperMenu.CollectionsActivity"
-        android:label="@string/title_activity_collections" >
-    </activity>
-    <activity
-        android:name=".HelperMenu.VisitDetailsActivity"
-        android:label="@string/title_activity_visit" >
-    </activity>
-    <activity android:name=".HelperMenu.ArtefactsActivity" android:label="@string/title_activity_artifacts">
-    </activity>
-
-        <activity android:name=".Map" android:label="@string/map_activity_title"></activity>
-        <activity android:name=".HelperMenu.Tour" android:label="@string/tour_activity_title"></activity>
-
-
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".RegisterationActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".HelperMenu.QuizActivity"
+            android:label="@string/title_activity_quiz" >
+        </activity>
+        <activity
+            android:name=".HelperMenu.MembershipActivity"
+            android:label="@string/title_activity_membership" >
+        </activity>
+        <activity
+            android:name=".HelperMenu.CollectionsActivity"
+            android:label="@string/title_activity_collections" >
+        </activity>
+        <activity
+            android:name=".HelperMenu.VisitDetailsActivity"
+            android:label="@string/title_activity_visit" >
+        </activity>
+        <activity
+            android:name=".HelperMenu.ArtefactsActivity"
+            android:label="@string/title_activity_artifactsDetails" >
+        </activity>
+        <activity
+            android:name=".Map"
+            android:label="@string/map_activity_title" />
+        <activity
+            android:name=".HelperMenu.Tour"
+            android:label="@string/tour_activity_title" />
+        <activity
+            android:name=".ShoppingSystem.ShoppingActivity"
+            android:label="@string/title_activity_shop" >
+        </activity>
+        <activity
+            android:name=".ShoppingSystem.ClothesActivity"
+            android:label="@string/title_activity_clothes" >
+        </activity>
+        <activity android:name=".ShoppingSystem.ArtifactsActivity" android:label="@string/title_activity_artifacts">
+        </activity>
+        <activity android:name=".ShoppingSystem.BooksActivity" android:label="@string/title_activity_books">
+        </activity>
     </application>
 
 </manifest>
