@@ -22,7 +22,7 @@
                 android:layout_weight="1"
                 android:onClick="VisitDetailsonClick"
                 android:adjustViewBounds="true"
-                android:scaleType="centerInside"/>
+                android:scaleType="fitCenter"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="0dp"

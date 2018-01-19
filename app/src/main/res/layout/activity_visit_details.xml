@@ -13,7 +13,7 @@
             android:src="@drawable/visit_i"
             android:adjustViewBounds="true"
             android:id="@+id/visit_details_img"
-            android:scaleType="centerInside"/>
+            android:scaleType="fitCenter"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
