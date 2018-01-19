@@ -56,6 +56,7 @@
                             android:scaleType="fitCenter"
                             android:id="@+id/add_tour_1"
                             android:onClick="HighlightsAddToTouronClick"
+                            android:layout_alignParentRight="true"
                             android:layout_marginBottom="0dp"/>
 
                     </RelativeLayout>
@@ -67,7 +68,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
@@ -90,6 +93,7 @@
                             android:scaleType="fitCenter"
                             android:id="@+id/add_tour_2"
                             android:onClick="HighlightsAddToTouronClick"
+                            android:layout_alignParentRight="true"
                             android:layout_marginBottom="0dp"/>
                     </RelativeLayout>
 
@@ -122,6 +126,7 @@
                             android:scaleType="fitCenter"
                             android:id="@+id/add_tour_3"
                             android:onClick="HighlightsAddToTouronClick"
+                            android:layout_alignParentRight="true"
                             android:layout_marginBottom="0dp"/>
                     </RelativeLayout>
 
@@ -161,6 +166,7 @@
                             android:scaleType="fitCenter"
                             android:id="@+id/add_tour_4"
                             android:onClick="HighlightsAddToTouronClick"
+                            android:layout_alignParentRight="true"
                             android:layout_marginBottom="0dp"/>
                     </RelativeLayout>
 
@@ -170,7 +176,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
@@ -193,6 +201,7 @@
                             android:scaleType="fitCenter"
                             android:id="@+id/add_tour_5"
                             android:onClick="HighlightsAddToTouronClick"
+                            android:layout_alignParentRight="true"
                             android:layout_marginBottom="0dp"/>
                     </RelativeLayout>
 
@@ -224,6 +233,7 @@
                             android:scaleType="fitCenter"
                             android:id="@+id/add_tour_6"
                             android:onClick="HighlightsAddToTouronClick"
+                            android:layout_alignParentRight="true"
                             android:layout_marginBottom="0dp"/>
                     </RelativeLayout>
 
@@ -260,7 +270,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_weight="1.8">
+                    android:layout_weight="1">
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
@@ -282,6 +292,7 @@
                         android:scaleType="fitCenter"
                         android:id="@+id/add_tour_7"
                         android:onClick="HighlightsAddToTouronClick"
+                        android:layout_alignParentRight="true"
                         android:layout_marginBottom="0dp"/>
                 </RelativeLayout>
 
@@ -291,7 +302,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_weight="1.5">
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
@@ -314,6 +327,7 @@
                         android:scaleType="fitCenter"
                         android:id="@+id/add_tour_8"
                         android:onClick="HighlightsAddToTouronClick"
+                        android:layout_alignParentRight="true"
                         android:layout_marginBottom="0dp"/>
                 </RelativeLayout>
 
@@ -322,7 +336,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_weight="1.2">
+                    android:layout_weight="1.18">
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
@@ -345,6 +359,7 @@
                         android:scaleType="fitCenter"
                         android:id="@+id/add_tour_9"
                         android:onClick="HighlightsAddToTouronClick"
+                        android:layout_alignParentRight="true"
                         android:layout_marginBottom="0dp"/>
                 </RelativeLayout>
 
@@ -383,6 +398,7 @@
                         android:scaleType="fitCenter"
                         android:id="@+id/add_tour_10"
                         android:onClick="HighlightsAddToTouronClick"
+                        android:layout_alignParentRight="true"
                         android:layout_marginBottom="0dp"/>
                 </RelativeLayout>
 
@@ -392,7 +408,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_weight=".95">
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
@@ -415,6 +433,7 @@
                         android:scaleType="fitCenter"
                         android:id="@+id/add_tour_11"
                         android:onClick="HighlightsAddToTouronClick"
+                        android:layout_alignParentRight="true"
                         android:layout_marginBottom="0dp"/>
                 </RelativeLayout>
 
@@ -423,7 +442,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_weight=".7">
+                    android:layout_weight="1">
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
@@ -446,6 +465,7 @@
                         android:scaleType="fitCenter"
                         android:id="@+id/add_tour_12"
                         android:onClick="HighlightsAddToTouronClick"
+                        android:layout_alignParentRight="true"
                         android:layout_marginBottom="0dp"/>
                 </RelativeLayout>
 
