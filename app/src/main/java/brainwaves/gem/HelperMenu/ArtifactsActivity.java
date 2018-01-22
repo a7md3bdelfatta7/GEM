@@ -15,7 +15,7 @@ public class ArtifactsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_artefacts);
+        setContentView(R.layout.activity_artifacts_details);
         Intent intent = getIntent();
         String id = intent.getStringExtra("id");
         ImageView img = (ImageView) findViewById(R.id.artifact_details);
