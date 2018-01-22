@@ -21,6 +21,7 @@
                 android:background="@color/cardview_light_background"
                 android:layout_weight="1"
                 android:onClick="VisitDetailsonClick"
+                android:id="@+id/visit_img_1"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"/>
             <Button
@@ -50,6 +51,7 @@
                     android:layout_weight="1"
                     android:onClick="VisitDetailsonClick"
                     android:adjustViewBounds="true"
+                    android:id="@+id/visit_img_2"
                     android:background="@color/cardview_light_background"
                     android:scaleType="centerInside"/>
                 <Button
@@ -79,6 +81,7 @@
                     android:background="@color/cardview_light_background"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
+                    android:id="@+id/visit_img_3"
                     android:scaleType="centerInside"/>
                 <Button
                     android:layout_width="wrap_content"
@@ -110,6 +113,7 @@
                     android:layout_weight="1"
                     android:onClick="VisitDetailsonClick"
                     android:adjustViewBounds="true"
+                    android:id="@+id/visit_img_4"
                     android:scaleType="centerInside"/>
                 <Button
                     android:layout_width="wrap_content"

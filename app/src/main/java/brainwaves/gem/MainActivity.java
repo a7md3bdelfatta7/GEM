@@ -9,7 +9,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.TabLayout;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.design.widget.NavigationView;
 import android.support.v13.app.FragmentPagerAdapter;
@@ -18,16 +17,14 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-import brainwaves.gem.HelperMenu.ArtefactsActivity;
+import brainwaves.gem.HelperMenu.ArtifactsActivity;
 import brainwaves.gem.HelperMenu.CollectionsActivity;
 import brainwaves.gem.HelperMenu.MembershipActivity;
 import brainwaves.gem.HelperMenu.QuizActivity;
@@ -161,12 +158,14 @@ public class MainActivity extends AppCompatActivity
     public void VisitDetailsonClick(View v) {
         Intent intent = new Intent(MainActivity.this,
                 VisitDetailsActivity.class);
-        intent.putExtra("id",1);
+        intent.putExtra("id",""+v.getId());
         startActivity(intent);
     }
-    public void HighlightsDetailsonClick(View v) {
+
+    public void artifactsDetailsonClick(View v) {
         Intent intent = new Intent(MainActivity.this,
-                ArtefactsActivity.class);
+                ArtifactsActivity.class);
+        intent.putExtra("id",""+v.getId());
         startActivity(intent);
     }
     public void HighlightsAddToTouronClick(View v) {

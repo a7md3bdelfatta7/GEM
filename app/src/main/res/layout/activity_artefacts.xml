@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="brainwaves.gem.HelperMenu.ArtefactsActivity">
+    tools:context="brainwaves.gem.HelperMenu.ArtifactsActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -12,7 +12,7 @@
             android:layout_height="match_parent"
             android:src="@drawable/quiz_i"
             android:adjustViewBounds="true"
-            android:id="@+id/visit_details_img"
+            android:id="@+id/artifact_details"
             android:scaleType="fitCenter"/>
         <TextView
             android:layout_width="wrap_content"

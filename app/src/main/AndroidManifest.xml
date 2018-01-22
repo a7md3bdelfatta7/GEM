@@ -54,7 +54,7 @@
             android:label="@string/title_activity_visit" >
         </activity>
         <activity
-            android:name=".HelperMenu.ArtefactsActivity"
+            android:name=".HelperMenu.ArtifactsActivity"
             android:label="@string/title_activity_artifactsDetails" >
         </activity>
         <activity
