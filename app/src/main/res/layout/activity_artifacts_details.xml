@@ -7,13 +7,36 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <ImageView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/quiz_i"
-            android:adjustViewBounds="true"
-            android:id="@+id/artifact_details"
-            android:scaleType="fitCenter"/>
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/quiz_i"
+                android:adjustViewBounds="true"
+                android:id="@+id/artifact_details"
+                android:scaleType="fitCenter"/>
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@null"
+                android:adjustViewBounds="true"
+                android:scaleType="fitEnd"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/add_button_i"/>
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:adjustViewBounds="true"
+                android:scaleType="fitEnd"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/logo_share"/>
+
+        </RelativeLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
