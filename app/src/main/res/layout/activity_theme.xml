@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:padding="40dp"
+    android:gravity="center"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_theme"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:layout_margin="5dp"
+        />
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/visiColor"
+        android:layout_marginBottom="10dp"
+        />
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/highlightColor"
+        android:layout_marginBottom="10dp"
+        />
+
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/todayEventColor"
+        android:layout_marginBottom="10dp"
+        />
+
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/forMemberColor"
+        android:layout_marginBottom="10dp"
+        />
+
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/staffPicksColor"
+        android:layout_marginBottom="10dp"
+        />
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/featuredEventsColor"
+        android:layout_marginBottom="10dp"
+        />
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
