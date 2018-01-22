@@ -1,5 +1,6 @@
 package brainwaves.gem.HelperMenu;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,8 +9,14 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import brainwaves.gem.R;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class VisitDetailsActivity extends AppCompatActivity {
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

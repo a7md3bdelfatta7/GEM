@@ -2,6 +2,7 @@ package brainwaves.gem;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
@@ -36,6 +37,7 @@ import brainwaves.gem.fragments.StaffPicksFragment;
 import brainwaves.gem.fragments.VisitFragment;
 import brainwaves.gem.fragments.HighlightsFragment;
 import brainwaves.gem.fragments.TodayEventFragment;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -65,6 +67,11 @@ public class MainActivity extends AppCompatActivity
 
     // The ViewPager is responsible for sliding pages (fragments) in and out upon user input
     private ViewPager mViewPager;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

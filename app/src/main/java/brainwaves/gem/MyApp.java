@@ -9,7 +9,8 @@ import android.util.Log;
 import java.lang.reflect.Field;
 import java.util.HashMap;
 
-import static brainwaves.gem.TypefaceUtil.*;
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
+
 
 /**
  * Created by AhmedMiohamed on 1/22/2018.
@@ -22,6 +23,12 @@ public class MyApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        TypefaceUtil.overrideFont(getApplicationContext(), "SERIF", "fonts/gothicb0_bold.ttf");
+
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                .setDefaultFontPath("fonts/century_gothic_regular.ttf")
+                .setFontAttrId(R.attr.fontPath)
+                .build()
+        );
+
     }
 }

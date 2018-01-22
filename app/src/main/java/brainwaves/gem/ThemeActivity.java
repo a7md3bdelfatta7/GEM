@@ -1,15 +1,23 @@
 package brainwaves.gem;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 public class ThemeActivity extends Activity {
 
     /** Duration of wait **/
     private final int SPLASH_DISPLAY_LENGTH = 2000;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     /** Called when the activity is first created. */
     @Override

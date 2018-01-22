@@ -1,5 +1,6 @@
 package brainwaves.gem;
 
+import android.content.Context;
 import android.graphics.Typeface;
 import java.util.Calendar;
 import android.os.Build;
@@ -15,7 +16,14 @@ import android.widget.Spinner;
 
 import java.util.ArrayList;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 public class RegisterationActivity extends AppCompatActivity {
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
