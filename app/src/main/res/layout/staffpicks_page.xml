@@ -293,18 +293,18 @@
 
         </LinearLayout>
 
-        <LinearLayout
+
+        <ImageButton
+            android:onClick="nextPage"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <ImageButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/cardview_light_background"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:layout_marginTop="11dp"
-                android:src="@drawable/staff_nextbutton"/>
-        </LinearLayout>
+            android:layout_height="wrap_content"
+            android:src="@drawable/staff_nextbutton"
+            android:adjustViewBounds="true"
+            android:background="@color/cardview_light_background"
+            android:scaleType="fitXY"
+            android:layout_gravity="bottom"
+            />
+
     </LinearLayout>
 
 </ScrollView>

@@ -161,6 +161,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+
     }
     public void VisitDetailsonClick(View v) {
         Intent intent = new Intent(MainActivity.this,
@@ -272,9 +273,20 @@ public class MainActivity extends AppCompatActivity
         intent.putExtra("EVENT_ID",""+eventId);
         startActivity(intent);
 
+    }
 
+
+    public void nextPage(View v){
+
+        mViewPager.setCurrentItem(mViewPager.getCurrentItem()+1);
 
     }
+
+
+
+
+
+
 
 
 }
