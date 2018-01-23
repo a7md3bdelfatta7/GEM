@@ -66,7 +66,6 @@ public class CollectionsActivity extends AppCompatActivity {
 
         switch (artifactsIndex){
             case 1:
-
                 //searchResultImgBtn.setImageDrawable(getResources().getDrawable(R.drawable.highlight_i));
                 searchResultImgBtn.setImageResource(R.drawable.highlight_i);
                 searchResultImgBtn.setId(R.id.artifact_1);
