@@ -25,6 +25,8 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 public class MembershipActivity extends AppCompatActivity {
     ExpandableListAdapter listAdapter;
     ExpandableListView expListView;
+    ExpandableListView expListView1;
+    ExpandableListView expListView2;
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
     @Override
@@ -40,7 +42,9 @@ public class MembershipActivity extends AppCompatActivity {
         setContentView(R.layout.activity_membership);
 
         Button submitButton = (Button) findViewById(R.id.membership_submit);
-
+        final Button childrenButton = (Button) findViewById(R.id.Children_btn);
+        Button egyptainButton = (Button) findViewById(R.id.Egyptain_btn);
+        Button foreignButton = (Button) findViewById(R.id.Foreign_btn);
 
 
         // get the listview
@@ -53,10 +57,35 @@ public class MembershipActivity extends AppCompatActivity {
         // setting list adapter
         expListView.setAdapter(listAdapter);
 
-        expListView.expandGroup(1);
-        expListView.expandGroup(2);
+        expListView.expandGroup(0);
+        //expListView.expandGroup(2);
 
+        // get the listview
+        expListView1 = (ExpandableListView) findViewById(R.id.lvExp2);
+        // preparing list data
+        prepareListData();
 
+        listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
+
+        // setting list adapter
+        expListView1.setAdapter(listAdapter);
+
+        expListView1.expandGroup(0);
+
+        // get the listview
+        expListView2 = (ExpandableListView) findViewById(R.id.lvExp3);
+        // preparing list data
+        prepareListData();
+
+        listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
+
+        // setting list adapter
+        expListView2.setAdapter(listAdapter);
+
+        expListView2.expandGroup(0);
+
+        expListView1.setVisibility(View.GONE);
+        expListView2.setVisibility(View.GONE);
         submitButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(MembershipActivity.this,
@@ -66,7 +95,36 @@ public class MembershipActivity extends AppCompatActivity {
                 // Code here executes on main thread after user presses button
             }
         });
+        childrenButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
 
+                expListView.setVisibility(View.VISIBLE);
+                expListView1.setVisibility(View.GONE);
+                expListView2.setVisibility(View.GONE);
+
+                // Code here executes on main thread after user presses button
+            }
+        });
+        egyptainButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                expListView.setVisibility(View.GONE);
+                expListView1.setVisibility(View.VISIBLE);
+                expListView2.setVisibility(View.GONE);
+
+                // Code here executes on main thread after user presses button
+            }
+        });
+        foreignButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                expListView.setVisibility(View.GONE);
+                expListView1.setVisibility(View.GONE);
+                expListView2.setVisibility(View.VISIBLE);
+
+                // Code here executes on main thread after user presses button
+            }
+        });
 
     }
     public void onRadioButtonClicked(View view) {
@@ -100,9 +158,9 @@ public class MembershipActivity extends AppCompatActivity {
         listDataChild = new HashMap<String, List<String>>();
 
         // Adding child data
-        listDataHeader.add("Children membership");
-        listDataHeader.add("Egyptian membership");
-        listDataHeader.add("Foreign membership");
+        listDataHeader.add("Silver membership");
+        listDataHeader.add("Golden membership");
+        listDataHeader.add("Platinum membership");
 
         // Adding child data
         List<String> level0 = new ArrayList<String>();
@@ -111,11 +169,13 @@ public class MembershipActivity extends AppCompatActivity {
 
 
         List<String> level1 = new ArrayList<String>();
+        level1.add("Silver membership plus.");
         level1.add("Early access to exhibitions and special viewing hours.");
         level1.add("Invitation to buy ticket to members only events and parties.");
 
 
         List<String> level2 = new ArrayList<String>();
+        level2.add("Golden membership plus.");
         level2.add("10% off at the Dining room at GEM.");
         level2.add("10% off at GEM store.");
 

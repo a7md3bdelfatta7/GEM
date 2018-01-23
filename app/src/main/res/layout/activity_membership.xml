@@ -26,8 +26,105 @@
             android:textColor="@color/defaultColor"
             android:textStyle="bold"
             android:text="@string/choose_category"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="students"
+                android:textAlignment="textStart"
+                android:textSize="20dp"
+                android:background="@null"
+                android:textColor="@color/defaultColor"
+                android:layout_weight="1"
+                android:id="@+id/Children_btn"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="12"
+                android:layout_marginTop="5dp"
+                android:text="+"
+                android:background="@null"
+                android:textAlignment="center"
+                android:id="@id/Children_btn"
+                android:textSize="30dp"/>
+        </LinearLayout>
+
         <ExpandableListView
             android:id="@+id/lvExp"
+            android:layout_height="300dp"
+            android:layout_width="match_parent"
+            android:layoutDirection="rtl"
+            android:nestedScrollingEnabled="true"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="12dp"
+            android:background="@android:color/darker_gray"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Egyptain"
+                android:textAlignment="textStart"
+                android:textSize="20dp"
+                android:background="@null"
+                android:textColor="@color/defaultColor"
+                android:layout_weight="1"
+                android:id="@+id/Egyptain_btn"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="12"
+                android:layout_marginTop="5dp"
+                android:text="+"
+                android:background="@null"
+                android:textAlignment="center"
+                android:id="@id/Egyptain_btn"
+                android:textSize="30dp"/>
+        </LinearLayout>
+        <ExpandableListView
+            android:id="@+id/lvExp2"
+            android:layout_height="300dp"
+            android:layout_width="match_parent"
+            android:layoutDirection="rtl"
+            android:nestedScrollingEnabled="true"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="12dp"
+            android:background="@android:color/darker_gray"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Foreign"
+                android:textAlignment="textStart"
+                android:textSize="20dp"
+                android:background="@null"
+                android:textColor="@color/defaultColor"
+                android:layout_weight="1"
+                android:id="@+id/Foreign_btn"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="12"
+                android:layout_marginTop="5dp"
+                android:text="+"
+                android:background="@null"
+                android:textAlignment="center"
+                android:id="@id/Foreign_btn"
+                android:textSize="30dp"/>
+        </LinearLayout>
+        <ExpandableListView
+            android:id="@+id/lvExp3"
             android:layout_height="300dp"
             android:layout_width="match_parent"
             android:layoutDirection="rtl"

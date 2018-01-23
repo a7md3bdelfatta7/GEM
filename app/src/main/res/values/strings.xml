@@ -34,6 +34,7 @@
     <string name="title_activity_clothes">Clothes</string>
     <string name="title_activity_artifacts">Artifacts</string>
     <string name="title_activity_books">Books</string>
+    <string name="title_activity_checkout">Checkout</string>
     <string name="title_activity_quiz">Quiz</string>
     <string name="title_activity_membership">Membership</string>
     <string name="quiz_word">QUIZ NO.1</string>
