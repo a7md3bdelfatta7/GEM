@@ -46,8 +46,7 @@ public class Tour extends AppCompatActivity {
 
         expListView.expandGroup(1);
         expListView.expandGroup(2);
-
-
+        
 
     }
 

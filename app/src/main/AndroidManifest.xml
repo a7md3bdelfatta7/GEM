@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="brainwaves.gem" >
+    package="brainwaves.gem">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,7 +10,7 @@
         android:icon="@drawable/gem"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -18,7 +18,7 @@
         <activity
             android:name=".ChooseLangActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Splash" >
+        <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,37 +27,30 @@
         </activity>
         <activity
             android:name=".ChooseUserType"
-            android:theme="@style/AppTheme.NoActionBar" >
-        >
+            android:theme="@style/AppTheme.NoActionBar">
+            >
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".RegisterationActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".HelperMenu.QuizActivity"
-            android:label="@string/title_activity_quiz" >
-        </activity>
+            android:label="@string/title_activity_quiz"></activity>
         <activity
             android:name=".HelperMenu.MembershipActivity"
-            android:label="@string/title_activity_membership" >
-        </activity>
+            android:label="@string/title_activity_membership"></activity>
         <activity
             android:name=".HelperMenu.CollectionsActivity"
-            android:label="@string/title_activity_collections" >
-        </activity>
+            android:label="@string/title_activity_collections"></activity>
         <activity
             android:name=".HelperMenu.VisitDetailsActivity"
-            android:label="@string/title_activity_visit" >
-        </activity>
+            android:label="@string/title_activity_visit"></activity>
         <activity
             android:name=".HelperMenu.ArtifactsActivity"
-            android:label="@string/title_activity_artifactsDetails" >
-        </activity>
+            android:label="@string/title_activity_artifactsDetails"></activity>
         <activity
             android:name=".Map"
             android:label="@string/map_activity_title" />
@@ -66,19 +59,18 @@
             android:label="@string/tour_activity_title" />
         <activity
             android:name=".ShoppingSystem.ShoppingActivity"
-            android:label="@string/title_activity_shop" >
-        </activity>
+            android:label="@string/title_activity_shop"></activity>
         <activity
             android:name=".ShoppingSystem.ClothesActivity"
-            android:label="@string/title_activity_clothes" >
-        </activity>
-        <activity android:name=".ShoppingSystem.ArtifactsActivity" android:label="@string/title_activity_artifacts">
-        </activity>
-        <activity android:name=".ShoppingSystem.BooksActivity" android:label="@string/title_activity_books">
-        </activity>
-        <activity android:name=".ThemeActivity">
-        </activity>
-
+            android:label="@string/title_activity_clothes"></activity>
+        <activity
+            android:name=".ShoppingSystem.ArtifactsActivity"
+            android:label="@string/title_activity_artifacts"></activity>
+        <activity
+            android:name=".ShoppingSystem.BooksActivity"
+            android:label="@string/title_activity_books"></activity>
+        <activity android:name=".ThemeActivity"></activity>
+        <activity android:name=".EventDetailsActivity"></activity>
     </application>
 
 </manifest>
