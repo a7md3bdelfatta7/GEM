@@ -14,24 +14,7 @@
             android:background="@color/cardview_light_background"
             android:adjustViewBounds="true"
             android:scaleType="centerInside"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="22dp"
-            android:layout_marginRight="6dp"
-            android:layout_marginLeft="6dp"
-            android:layout_marginTop="13dp"
-            android:layout_marginBottom="13dp"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            android:text="@string/membership_benefits"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="13dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:text="@string/membership_benefits_items"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -43,77 +26,17 @@
             android:textColor="@color/defaultColor"
             android:textStyle="bold"
             android:text="@string/choose_category"/>
-        <View
+        <ExpandableListView
+            android:id="@+id/lvExp"
+            android:layout_height="300dp"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/darker_gray"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="18dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="6dp"
-            android:text="@string/membership_count_word"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="18dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginLeft="12dp"
-            android:layout_marginBottom="12dp"
-            android:textColor="#000000"
-            android:text="@string/membership_count"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/darker_gray"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="18dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="6dp"
-            android:text="@string/membership_count_word"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="18dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginLeft="12dp"
-            android:layout_marginBottom="12dp"
-            android:textColor="#000000"
-            android:text="@string/membership_count"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/darker_gray"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="18dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="6dp"
-            android:text="@string/membership_count_word"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="18dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginLeft="12dp"
-            android:layout_marginBottom="12dp"
-            android:textColor="#000000"
-            android:text="@string/membership_count"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/darker_gray"/>
-
+            android:layoutDirection="rtl"
+            android:nestedScrollingEnabled="true"
+            />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -124,49 +47,25 @@
             android:layout_marginBottom="13dp"
             android:textColor="@color/defaultColor"
             android:text="@string/membership_duration"/>
-        <LinearLayout
+        <RadioGroup
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="9dp"
-            android:layout_marginRight="9dp">
-            <CheckBox
+            android:layout_height="match_parent">
+            <RadioButton android:id="@+id/membership_three_months"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
-                android:id="@+id/membership_checkbox_i"/>
-            <TextView
+                android:text="3 months"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/membership_six_months"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/membership_duration_items_i"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="9dp"
-            android:layout_marginRight="9dp">
-            <CheckBox
+                android:text="6 months"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/membership_one_year"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/membership_checkbox_ii"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/membership_duration_items_ii"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="9dp"
-            android:layout_marginRight="9dp">
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/membership_checkbox_iii"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/membership_duration_items_iii"/>
-        </LinearLayout>
+                android:text="1 year"
+                android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -176,5 +75,7 @@
             android:layout_margin="9dp"
             android:id="@+id/membership_submit"
             android:background="@color/defaultColor"/>
+    </LinearLayout>
+
     </LinearLayout>
 </ScrollView>
