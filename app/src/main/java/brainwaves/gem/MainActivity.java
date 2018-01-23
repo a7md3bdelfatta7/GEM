@@ -51,8 +51,7 @@ public class MainActivity extends AppCompatActivity
             "TODAY'S EVENT",
             "FOR MEMBERS",
             "STAFF PICKS",
-            "FEATURED EVENTS",
-
+            "Future EVENTS",
     };
 
     // The fragments that are used as the individual pages
@@ -265,4 +264,17 @@ public class MainActivity extends AppCompatActivity
         Runtime.getRuntime().gc();
         System.gc();
     }
+
+    public void eventOnClick(View v) {
+
+        int eventId=v.getId();
+        Intent intent = new Intent(getApplicationContext(),EventDetailsActivity.class);
+        intent.putExtra("EVENT_ID",""+eventId);
+        startActivity(intent);
+
+
+
+    }
+
+
 }

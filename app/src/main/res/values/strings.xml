@@ -74,23 +74,23 @@
     <!-- event 1-->
     <string name="event1_time">1:00PM</string>
     <string name="event1_topic">King Tutankhamun</string>
-    <string name="event1_note">Guided Tour</string>
+    <string name="event1_note">Free Event</string>
 
     <!-- event 2-->
     <string name="event2_time">3:00PM</string>
     <string name="event2_topic">Art and Decoration in Ancient Egypt</string>
-    <string name="event2_note">lecture</string>
+    <string name="event2_note">Paid Event</string>
 
     <!-- event 3-->
     <string name="event3_time">5:00PM</string>
     <string name="event3_topic">3D Movie of Tutankamun</string>
-    <string name="event3_note">Fo rKids</string>
+    <string name="event3_note">For Kids</string>
 
     <!-- event 4-->
     <string name="event4_time">6:00PM</string>
     <string name="event4_topic">Nefertiti</string>
     <string name="event4_note">Guided Tour</string>
-
+ `
     <!-- event 5-->
     <string name="event5_time">8:00PM</string>
     <string name="event5_topic">Narmer</string>
@@ -151,5 +151,9 @@
 
     <string name="app_theme">Select Theme</string>
 
+    <string name="temp_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</string>
+
+    <string name="become_member">Become A MEMBER</string>
+    <string name="subscribe">Subscribe</string>
 
 </resources>

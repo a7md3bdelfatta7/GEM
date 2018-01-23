@@ -70,7 +70,11 @@
             android:name=".ShoppingSystem.BooksActivity"
             android:label="@string/title_activity_books"></activity>
         <activity android:name=".ThemeActivity"></activity>
+
         <activity android:name=".HelperMenu.ShippingCheckoutActivity"></activity>
+
+        <activity android:name=".EventDetailsActivity"></activity>
+
     </application>
 
 </manifest>
