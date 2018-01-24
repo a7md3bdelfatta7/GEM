@@ -26,6 +26,7 @@ public class CollectionsActivity extends AppCompatActivity {
     LinearLayout collectionResultLayout;
     LinearLayout collectionFilterLayout;
     static boolean filteredchecked = false;
+
     Button filterButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,68 +86,74 @@ public class CollectionsActivity extends AppCompatActivity {
 
 
         int artifactsIndex = 0;
-        for(int i=0;i<artifacts.size();i++){
-            if (artifacts.get(i).contains(searchData)) {
-                artifactsIndex = i+1;
-                break;
+        if(searchData.trim().isEmpty()){
+            collectionFilterLayout.setVisibility(View.GONE);
+            collectionResultLayout.setVisibility(View.GONE);
+            collectionFirstLayout.setVisibility(View.VISIBLE);
+            collectionSecondLayout.setVisibility(View.VISIBLE);
+        }else {
+            for (int i = 0; i < artifacts.size(); i++) {
+                if (artifacts.get(i).contains(searchData.trim())) {
+                    artifactsIndex = i + 1;
+                    break;
+                }
+            }
+            collectionFirstLayout.setVisibility(View.GONE);
+            collectionSecondLayout.setVisibility(View.GONE);
+            collectionResultLayout.setVisibility(View.VISIBLE);
+
+            switch (artifactsIndex) {
+                case 1:
+                    //searchResultImgBtn.setImageDrawable(getResources().getDrawable(R.drawable.highlight_i));
+                    searchResultImgBtn.setImageResource(R.drawable.highlight_i);
+                    searchResultImgBtn.setId(R.id.artifact_1);
+                    break;
+                case 2:
+                    searchResultImgBtn.setImageResource(R.drawable.highlight_ii);
+                    searchResultImgBtn.setId(R.id.artifact_2);
+                    break;
+                case 3:
+                    searchResultImgBtn.setImageResource(R.drawable.highlight_iii);
+                    searchResultImgBtn.setId(R.id.artifact_3);
+                    break;
+                case 4:
+                    searchResultImgBtn.setImageResource(R.drawable.highlight_iv);
+                    searchResultImgBtn.setId(R.id.artifact_4);
+                    break;
+                case 5:
+                    searchResultImgBtn.setImageResource(R.drawable.highlight_v);
+                    searchResultImgBtn.setId(R.id.artifact_5);
+                    break;
+                case 6:
+                    searchResultImgBtn.setImageResource(R.drawable.highlight_xv);
+                    searchResultImgBtn.setId(R.id.artifact_6);
+                    break;
+                case 7:
+                    searchResultImgBtn.setImageResource(R.drawable.highlight__i);
+                    searchResultImgBtn.setId(R.id.artifact_7);
+                    break;
+                case 8:
+                    searchResultImgBtn.setImageResource(R.drawable.highlight__ii);
+                    searchResultImgBtn.setId(R.id.artifact_8);
+                    break;
+                case 9:
+                    searchResultImgBtn.setImageResource(R.drawable.highlight__iii);
+                    searchResultImgBtn.setId(R.id.artifact_9);
+                    break;
+                case 10:
+                    searchResultImgBtn.setImageResource(R.drawable.highlight__iv);
+                    searchResultImgBtn.setId(R.id.artifact_10);
+                    break;
+                case 11:
+                    searchResultImgBtn.setImageResource(R.drawable.highlight__v);
+                    searchResultImgBtn.setId(R.id.artifact_11);
+                    break;
+                case 12:
+                    searchResultImgBtn.setImageResource(R.drawable.highlight__xv);
+                    searchResultImgBtn.setId(R.id.artifact_12);
+                    break;
             }
         }
-        collectionFirstLayout.setVisibility(View.GONE);
-        collectionSecondLayout.setVisibility(View.GONE);
-        collectionResultLayout.setVisibility(View.VISIBLE);
-
-        switch (artifactsIndex){
-            case 1:
-                //searchResultImgBtn.setImageDrawable(getResources().getDrawable(R.drawable.highlight_i));
-                searchResultImgBtn.setImageResource(R.drawable.highlight_i);
-                searchResultImgBtn.setId(R.id.artifact_1);
-                break;
-            case 2:
-                searchResultImgBtn.setImageResource(R.drawable.highlight_ii);
-                searchResultImgBtn.setId(R.id.artifact_2);
-                break;
-            case 3:
-                searchResultImgBtn.setImageResource(R.drawable.highlight_iii);
-                searchResultImgBtn.setId(R.id.artifact_3);
-                break;
-            case 4:
-                searchResultImgBtn.setImageResource(R.drawable.highlight_iv);
-                searchResultImgBtn.setId(R.id.artifact_4);
-                break;
-            case 5:
-                searchResultImgBtn.setImageResource(R.drawable.highlight_v);
-                searchResultImgBtn.setId(R.id.artifact_5);
-                break;
-            case 6:
-                searchResultImgBtn.setImageResource(R.drawable.highlight_xv);
-                searchResultImgBtn.setId(R.id.artifact_6);
-                break;
-            case 7:
-                searchResultImgBtn.setImageResource(R.drawable.highlight__i);
-                searchResultImgBtn.setId(R.id.artifact_7);
-                break;
-            case 8:
-                searchResultImgBtn.setImageResource(R.drawable.highlight__ii);
-                searchResultImgBtn.setId(R.id.artifact_8);
-                break;
-            case 9:
-                searchResultImgBtn.setImageResource(R.drawable.highlight__iii);
-                searchResultImgBtn.setId(R.id.artifact_9);
-                break;
-            case 10:
-                searchResultImgBtn.setImageResource(R.drawable.highlight__iv);
-                searchResultImgBtn.setId(R.id.artifact_10);
-                break;
-            case 11:
-                searchResultImgBtn.setImageResource(R.drawable.highlight__v);
-                searchResultImgBtn.setId(R.id.artifact_11);
-                break;
-            case 12:
-                searchResultImgBtn.setImageResource(R.drawable.highlight__xv);
-                searchResultImgBtn.setId(R.id.artifact_12);
-                break;
-        }
-
     }
     public void onFilterRadioButtonClicked(View view) {
         // Is the button now checked?
