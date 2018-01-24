@@ -2,8 +2,6 @@ package brainwaves.gem;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.support.v4.app.ActivityCompat;
@@ -15,9 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import brainwaves.gem.data.GemDbHelper;
 import brainwaves.gem.data.UserContract;
-import brainwaves.gem.data.UserContract.UserEntry;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class LoginActivity extends AppCompatActivity {
@@ -49,13 +45,9 @@ public class LoginActivity extends AppCompatActivity {
                 EditText password=(EditText)findViewById(R.id.password_edittext);
                 UserContract user= new UserContract(getApplicationContext());
 
-                boolean userExist=user.isExist(userName.getText().toString(),password.getText().toString());
+                boolean userExist=user.login(userName.getText().toString(),password.getText().toString());
                 if(userExist){
                     Intent intent=new Intent(LoginActivity.this,MainActivity.class);
-                    SharedPreferences sharedPref = getSharedPreferences("login_pref",MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedPref.edit();
-                    editor.putBoolean("LOGGED_IN",true);
-                    editor.commit();
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                     ActivityCompat.finishAffinity(LoginActivity.this);

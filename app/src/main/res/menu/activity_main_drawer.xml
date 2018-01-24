@@ -14,9 +14,19 @@
         <item
             android:id="@+id/membership_menu"
             android:title="MEMBERSHIP" />
+        <item
+            android:id="@+id/tour_menu"
+            android:title="My Tour" />
+        <item
+            android:id="@+id/ticket_menu"
+            android:title="Get Ticket" />
+
+        <item
+            android:id="@+id/logout_menu"
+            android:title="LOGOUT" />
 
     </group>
-
+<!--
     <item android:title="">
         <menu>
             <item
@@ -25,12 +35,10 @@
             <item
                 android:id="@+id/ticket_menu"
                 android:title="Get Ticket" />
+
         </menu>
     </item>
 
-    <item
-        android:id="@+id/logout_menu"
-        android:title="LOGOUT" />
-
+-->
 
 </menu>

@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.os.Handler;
 import android.view.WindowManager;
 
+import brainwaves.gem.data.UserContract;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class Splash extends Activity {
@@ -38,11 +39,14 @@ public class Splash extends Activity {
             public void run() {
 
 
-                SharedPreferences sharedPref = getSharedPreferences("login_pref",MODE_PRIVATE);
-                boolean loggedIn = sharedPref.getBoolean("LOGGED_IN",false);
+                SharedPreferences sharedPref = getSharedPreferences(getResources().getString(R.string.gem_pref_key),MODE_PRIVATE);
+                boolean loggedIn = sharedPref.getBoolean(getResources().getString(R.string.logged_in_key),false);
                 Intent mainIntent;
                 if(loggedIn){
+                    UserContract user=new UserContract(getApplicationContext());
+                    user.loadSharedPreferences();
                     mainIntent = new Intent(Splash.this, MainActivity.class);
+
                 }else{
                     mainIntent= new Intent(Splash.this, ChooseLangActivity.class);
                 }

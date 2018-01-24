@@ -91,17 +91,19 @@ public class RegisterationActivity extends AppCompatActivity {
                 birthDate +="-"+ yearSpinner.getSelectedItem().toString();
 
                 UserContract user=new UserContract(getApplicationContext());
+
+
                 if(!user.isUserNameExist(userName.getText().toString())){
                     long result=user.addNewUser(userName.getText().toString(),password.getText().toString(),name.getText().toString(),
                     birthDate,nationality.getText().toString());
-                    Intent intent=new Intent(RegisterationActivity.this,MainActivity.class);
-                    SharedPreferences sharedPref = getSharedPreferences("login_pref",MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedPref.edit();
-                    editor.putBoolean("LOGGED_IN",true);
-                    editor.commit();
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(intent);
-                    ActivityCompat.finishAffinity(RegisterationActivity.this);
+                    if(result>0) {
+                        if(user.login(userName.getText().toString(),password.getText().toString())) {
+                            Intent intent = new Intent(RegisterationActivity.this, MainActivity.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            startActivity(intent);
+                            ActivityCompat.finishAffinity(RegisterationActivity.this);
+                        }
+                    }
                 }else{
                     TextView resultMessage=(TextView)findViewById(R.id.resultMessage);
                     resultMessage.setText("UserName is exist! try another one");

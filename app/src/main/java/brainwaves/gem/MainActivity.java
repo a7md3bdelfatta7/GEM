@@ -26,6 +26,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import brainwaves.gem.HelperMenu.ArtifactsActivity;
 import brainwaves.gem.HelperMenu.CollectionsActivity;
@@ -33,6 +34,7 @@ import brainwaves.gem.HelperMenu.MembershipActivity;
 import brainwaves.gem.HelperMenu.QuizActivity;
 import brainwaves.gem.HelperMenu.Tour;
 import brainwaves.gem.ShoppingSystem.ShoppingActivity;
+import brainwaves.gem.data.UserContract;
 import brainwaves.gem.fragments.FeaturedEventsFragment;
 import brainwaves.gem.HelperMenu.VisitDetailsActivity;import brainwaves.gem.fragments.ForMembersFragment;
 import brainwaves.gem.fragments.StaffPicksFragment;
@@ -163,7 +165,10 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-
+        TextView fullName=(TextView)navHeaderView.findViewById(R.id.full_name);
+        TextView userDetails=(TextView)navHeaderView.findViewById(R.id.user_details);
+        fullName.setText(UserContract.fullName);
+        userDetails.setText(UserContract.nationality+"-"+UserContract.birthDate);
     }
     public void VisitDetailsonClick(View v) {
         Intent intent = new Intent(MainActivity.this,
@@ -233,10 +238,8 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(intent);
         } else if (id == R.id.logout_menu) {
-            SharedPreferences sharedPref = getSharedPreferences("login_pref",MODE_PRIVATE);
-            SharedPreferences.Editor editor = sharedPref.edit();
-            editor.putBoolean("LOGGED_IN",false);
-            editor.commit();
+            UserContract user=new UserContract(getApplicationContext());
+            user.deleteSharedPreference();
             Intent intent=new Intent(MainActivity.this,ChooseLangActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);

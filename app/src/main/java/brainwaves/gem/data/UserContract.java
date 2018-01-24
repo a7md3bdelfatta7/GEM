@@ -2,9 +2,12 @@ package brainwaves.gem.data;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.provider.BaseColumns;
+
+import brainwaves.gem.R;
 
 /**
  * Created by Ahmed on 1/24/2018.
@@ -19,8 +22,9 @@ public class UserContract {
     public static String birthDate="";
     public static String nationality="";
 
-
+    Context context;
     public UserContract(Context context){
+        this.context=context;
         GemDbHelper dbHelper = new GemDbHelper(context);
         mDb = dbHelper.getWritableDatabase();
     }
@@ -35,10 +39,7 @@ public class UserContract {
 
     }
 
-    public boolean isExist(String userName,String password){
-
-
-
+    public boolean login(String userName, String password){
         String whereClause = ""+UserEntry.COLUMN_USER_NAME+" = ? AND "+UserEntry.COLUMN_PASSWORD+" = ?";
         String[] whereArgs = new String[] {
                 userName,
@@ -61,6 +62,7 @@ public class UserContract {
             fullName=cursor.getString(cursor.getColumnIndex(UserEntry.COLUMN_Full_NAME));
             birthDate=cursor.getString(cursor.getColumnIndex(UserEntry.COLUMN_BIRTH_DAY));
             nationality=cursor.getString(cursor.getColumnIndex(UserEntry.COLUMN_NATIONALITY));
+            saveSharedPreferences();
             return true;
         }
         return false;
@@ -79,8 +81,6 @@ public class UserContract {
     }
 
     public boolean isUserNameExist(String userName){
-
-
 
         String whereClause = ""+UserEntry.COLUMN_USER_NAME+" = ?";
         String[] whereArgs = new String[] {
@@ -102,6 +102,38 @@ public class UserContract {
         }
         return false;
     }
+
+    public void saveSharedPreferences(){
+        SharedPreferences sharedPref = context.getSharedPreferences(context.getResources().
+                getString(R.string.gem_pref_key),Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putBoolean(context.getResources().getString(R.string.logged_in_key),true);
+        editor.putString(context.getResources().getString(R.string.user_name_key),userName);
+        editor.putString(context.getResources().getString(R.string.full_name_key),fullName);
+        editor.putString(context.getResources().getString(R.string.birth_date_key),birthDate);
+        editor.putString(context.getResources().getString(R.string.nationality_key),nationality);
+        editor.commit();
+    }
+
+    public void loadSharedPreferences(){
+        SharedPreferences sharedPref = context.getSharedPreferences(context.getResources().
+                getString(R.string.gem_pref_key),Context.MODE_PRIVATE);
+        userName=sharedPref.getString(context.getResources().getString(R.string.user_name_key),userName);
+        fullName=sharedPref.getString(context.getResources().getString(R.string.full_name_key),fullName);
+        birthDate=sharedPref.getString(context.getResources().getString(R.string.birth_date_key),birthDate);
+        nationality=sharedPref.getString(context.getResources().getString(R.string.nationality_key),nationality);
+    }
+
+    public void deleteSharedPreference(){
+        SharedPreferences preferences = context.getSharedPreferences(context.getResources().getString(R.string.gem_pref_key),
+                Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.clear();
+        editor.commit();
+    }
+
+
+
 
 
 

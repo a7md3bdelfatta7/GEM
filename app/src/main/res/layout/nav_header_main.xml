@@ -13,7 +13,7 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
     android:weightSum="1"
     >
-
+<!--
     <android.support.v7.widget.CardView
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -25,18 +25,20 @@
         android:shape="ring"
         android:thicknessRatio="1.9"
         android:layout_gravity="center">
+    -->
         <ImageView
             android:layout_height="80dp"
             android:layout_width="90dp"
             android:id="@+id/imageView1"
-            android:src="@drawable/pp"
+            android:src="@drawable/man"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             >
         </ImageView>
-    </android.support.v7.widget.CardView>
-
+<!--
+</android.support.v7.widget.CardView>
+-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,14 +46,16 @@
         android:text="Ahmed Abdelfattah"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:layout_gravity="center"
+        android:id="@+id/full_name"
         />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/user_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ahmed.abdelfattah@mmegypt.net"
         android:layout_gravity="center"
+
         />
 
 </LinearLayout>

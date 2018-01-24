@@ -157,4 +157,11 @@
     <string name="become_member">Become A MEMBER</string>
     <string name="subscribe">Subscribe</string>
 
+    <string name="gem_pref_key">LOGGED_IN</string>
+    <string name="logged_in_key">LOGGED_IN</string>
+    <string name="user_name_key">USER_NAME_KEY</string>
+    <string name="full_name_key">full_NAME_KEY</string>
+    <string name="nationality_key">nationality_KEY</string>
+    <string name="birth_date_key">birth_date_KEY</string>
+
 </resources>
