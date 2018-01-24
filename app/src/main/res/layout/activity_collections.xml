@@ -35,18 +35,21 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight=".5"/>
+                android:layout_weight=".5"
+                android:id="@+id/collection_SearchTextView"/>
             <ImageButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/defaultColor"
                 android:src="@drawable/ic_search_24dp"
+                android:onClick="searchOnClick"
                 android:layout_weight="1.9"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:id="@+id/collection_FirstLayout">
             <TextView
                 android:layout_width="wrap_content"
                 android:text="@string/collection_kings"
@@ -69,6 +72,8 @@
                         android:src="@drawable/highlight_i"
                         android:background="@color/cardview_light_background"
                         android:adjustViewBounds="true"
+                        android:onClick="artifactsDetailsonClick"
+                        android:id="@+id/artifact_1"
                         android:scaleType="fitEnd"/>
 
 
@@ -89,6 +94,8 @@
                         android:src="@drawable/highlight_ii"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
+                        android:onClick="artifactsDetailsonClick"
+                        android:id="@+id/artifact_2"
                         android:scaleType="fitEnd"/>
 
                 </LinearLayout>
@@ -104,6 +111,8 @@
                         android:src="@drawable/highlight_iii"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
+                        android:onClick="artifactsDetailsonClick"
+                        android:id="@+id/artifact_3"
                         android:scaleType="fitEnd"/>
 
                 </LinearLayout>
@@ -126,6 +135,8 @@
                         android:src="@drawable/highlight_iv"
                         android:background="@color/cardview_light_background"
                         android:adjustViewBounds="true"
+                        android:onClick="artifactsDetailsonClick"
+                        android:id="@+id/artifact_4"
                         android:scaleType="fitEnd"/>
 
                 </LinearLayout>
@@ -144,6 +155,8 @@
                         android:src="@drawable/highlight_v"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
+                        android:onClick="artifactsDetailsonClick"
+                        android:id="@+id/artifact_5"
                         android:scaleType="fitEnd"/>
 
                 </LinearLayout>
@@ -159,6 +172,8 @@
                         android:src="@drawable/highlight_xv"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
+                        android:onClick="artifactsDetailsonClick"
+                        android:id="@+id/artifact_6"
                         android:scaleType="fitEnd"/>
 
                 </LinearLayout>
@@ -172,7 +187,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:id="@+id/collection_SecondLayout">
             <TextView
                 android:layout_width="wrap_content"
                 android:text="@string/collection_status"
@@ -196,6 +212,8 @@
                         android:src="@drawable/highlight__i"
                         android:background="@color/cardview_light_background"
                         android:adjustViewBounds="true"
+                        android:onClick="artifactsDetailsonClick"
+                        android:id="@+id/artifact_7"
                         android:scaleType="fitEnd"/>
 
                 </LinearLayout>
@@ -214,6 +232,8 @@
                         android:src="@drawable/highlight__ii"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
+                        android:onClick="artifactsDetailsonClick"
+                        android:id="@+id/artifact_8"
                         android:scaleType="fitEnd"/>
 
                 </LinearLayout>
@@ -229,6 +249,8 @@
                         android:src="@drawable/highlight__iii"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
+                        android:onClick="artifactsDetailsonClick"
+                        android:id="@+id/artifact_9"
                         android:scaleType="fitEnd"/>
 
                 </LinearLayout>
@@ -251,6 +273,8 @@
                         android:src="@drawable/highlight__iv"
                         android:background="@color/cardview_light_background"
                         android:adjustViewBounds="true"
+                        android:onClick="artifactsDetailsonClick"
+                        android:id="@+id/artifact_10"
                         android:scaleType="fitEnd"/>
 
                 </LinearLayout>
@@ -269,6 +293,8 @@
                         android:src="@drawable/highlight__v"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
+                        android:onClick="artifactsDetailsonClick"
+                        android:id="@+id/artifact_11"
                         android:scaleType="fitEnd"/>
 
                 </LinearLayout>
@@ -284,6 +310,8 @@
                         android:src="@drawable/highlight__xv"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
+                        android:onClick="artifactsDetailsonClick"
+                        android:id="@+id/artifact_12"
                         android:scaleType="fitEnd"/>
 
                 </LinearLayout>
@@ -293,7 +321,31 @@
 
 
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/collection_SearchResultLV"
+            android:visibility="gone">
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:onClick="artifactsDetailsonClick"
+                android:background="@null"
+                android:id="@+id/collection_ResultImg"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        </LinearLayout>
 
     </LinearLayout>
+
 
 </ScrollView>

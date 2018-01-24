@@ -18,14 +18,15 @@
         android:orientation="vertical"
         android:paddingTop="20dp"
         android:clipToPadding="false"
-
         >
 
         <LinearLayout
+            android:id="@+id/today_event1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="5dp"
+            android:onClick="eventOnClick"
             >
 
             <LinearLayout
@@ -45,6 +46,8 @@
                     />
 
 
+
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -52,6 +55,14 @@
                     android:layout_weight="7"
                     >
 
+                    <ImageView
+                        android:id="@+id/firstImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/member_shape1"
+                        android:scaleType="fitStart"
+                        android:adjustViewBounds="true"
+                        />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -83,10 +94,12 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/today_event2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="5dp"
+            android:onClick="eventOnClick"
             >
 
             <LinearLayout
@@ -112,6 +125,14 @@
                     android:orientation="vertical"
                     android:layout_weight="7"
                     >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/member_shape1"
+                        android:scaleType="fitStart"
+                        android:adjustViewBounds="true"
+                        />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -144,10 +165,12 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/today_event3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="5dp"
+            android:onClick="eventOnClick"
             >
 
             <LinearLayout
@@ -173,6 +196,14 @@
                     android:orientation="vertical"
                     android:layout_weight="7"
                     >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/member_shape1"
+                        android:scaleType="fitStart"
+                        android:adjustViewBounds="true"
+                        />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -204,6 +235,7 @@
 
         </LinearLayout>
 
+<!--
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -387,18 +419,18 @@
 
         </LinearLayout>
 
+-->
+
 
         <ImageButton
+            android:onClick="nextPage"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:src="@drawable/today_next_button"
-            android:background="@color/cardview_light_background"
-            android:scaleType="fitEnd"
-            android:layout_gravity="center"
             android:adjustViewBounds="true"
-            android:cropToPadding="false"
-            android:layout_weight="0.23"
-
+            android:background="@color/cardview_light_background"
+            android:scaleType="fitXY"
+            android:layout_gravity="bottom"
             />
 
     </LinearLayout>

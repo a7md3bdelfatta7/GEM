@@ -1,41 +1,29 @@
 package brainwaves.gem.HelperMenu;
 
-import android.content.Context;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Toast;
 
 import brainwaves.gem.R;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
-public class QuizActivity extends AppCompatActivity {
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
-    }
+public class ShippingCheckoutActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_quiz);
-        final Button button = (Button) findViewById(R.id.thirdAnswer);
+        setContentView(R.layout.activity_shipping_checkout);
+        final Button button = (Button) findViewById(R.id.checkout_btn);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                button.setBackgroundColor(Color.GREEN);
+                Toast.makeText(getApplicationContext(),"Done.",Toast.LENGTH_LONG).show();
                 // Code here executes on main thread after user presses button
             }
         });
-    }
-    @Override
-    protected  void onDestroy() {
-        super.onDestroy();
-        Runtime.getRuntime().gc();
-        System.gc();
     }
 }

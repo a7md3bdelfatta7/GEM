@@ -1,5 +1,6 @@
 package brainwaves.gem;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
@@ -11,7 +12,14 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 public class ChooseLangActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

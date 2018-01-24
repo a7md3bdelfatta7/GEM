@@ -1,5 +1,6 @@
 package brainwaves.gem.HelperMenu;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import java.util.List;
 
 import brainwaves.gem.HelperClasses.ExpandableListAdapter;
 import brainwaves.gem.R;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class Tour extends AppCompatActivity {
 
@@ -19,6 +21,11 @@ public class Tour extends AppCompatActivity {
     ExpandableListView expListView;
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +46,7 @@ public class Tour extends AppCompatActivity {
 
         expListView.expandGroup(1);
         expListView.expandGroup(2);
-
-
+        
 
     }
 

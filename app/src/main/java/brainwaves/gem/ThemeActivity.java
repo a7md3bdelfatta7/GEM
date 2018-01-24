@@ -1,17 +1,15 @@
 package brainwaves.gem;
 
-import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
-public class Splash extends Activity {
+public class ThemeActivity extends Activity {
 
     /** Duration of wait **/
     private final int SPLASH_DISPLAY_LENGTH = 2000;
@@ -27,7 +25,7 @@ public class Splash extends Activity {
         super.onCreate(icicle);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_theme);
 
         /* New Handler to start the Menu-Activity
          * and close this Splash-Screen after some seconds.*/
@@ -35,9 +33,9 @@ public class Splash extends Activity {
             @Override
             public void run() {
                 /* Create an Intent that will start the Menu-Activity. */
-                Intent mainIntent = new Intent(Splash.this,ChooseLangActivity.class);
-                Splash.this.startActivity(mainIntent);
-                Splash.this.finish();
+                Intent mainIntent = new Intent(ThemeActivity.this,ChooseLangActivity.class);
+                ThemeActivity.this.startActivity(mainIntent);
+                ThemeActivity.this.finish();
             }
         }, SPLASH_DISPLAY_LENGTH);
     }

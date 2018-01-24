@@ -2,6 +2,7 @@ package brainwaves.gem;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
@@ -9,7 +10,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.TabLayout;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.design.widget.NavigationView;
 import android.support.v13.app.FragmentPagerAdapter;
@@ -18,16 +18,14 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-import brainwaves.gem.HelperMenu.ArtefactsActivity;
+import brainwaves.gem.HelperMenu.ArtifactsActivity;
 import brainwaves.gem.HelperMenu.CollectionsActivity;
 import brainwaves.gem.HelperMenu.MembershipActivity;
 import brainwaves.gem.HelperMenu.QuizActivity;
@@ -39,6 +37,7 @@ import brainwaves.gem.fragments.StaffPicksFragment;
 import brainwaves.gem.fragments.VisitFragment;
 import brainwaves.gem.fragments.HighlightsFragment;
 import brainwaves.gem.fragments.TodayEventFragment;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -52,8 +51,7 @@ public class MainActivity extends AppCompatActivity
             "TODAY'S EVENT",
             "FOR MEMBERS",
             "STAFF PICKS",
-            "FEATURED EVENTS",
-
+            "Future EVENTS",
     };
 
     // The fragments that are used as the individual pages
@@ -70,12 +68,18 @@ public class MainActivity extends AppCompatActivity
     private ViewPager mViewPager;
 
     @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
+
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -157,16 +161,19 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+
     }
     public void VisitDetailsonClick(View v) {
         Intent intent = new Intent(MainActivity.this,
                 VisitDetailsActivity.class);
-        intent.putExtra("id",1);
+        intent.putExtra("id",""+v.getId());
         startActivity(intent);
     }
-    public void HighlightsDetailsonClick(View v) {
+
+    public void artifactsDetailsonClick(View v) {
         Intent intent = new Intent(MainActivity.this,
-                ArtefactsActivity.class);
+                ArtifactsActivity.class);
+        intent.putExtra("id",""+v.getId());
         startActivity(intent);
     }
     public void HighlightsAddToTouronClick(View v) {
@@ -258,4 +265,28 @@ public class MainActivity extends AppCompatActivity
         Runtime.getRuntime().gc();
         System.gc();
     }
+
+    public void eventOnClick(View v) {
+
+        int eventId=v.getId();
+        Intent intent = new Intent(getApplicationContext(),EventDetailsActivity.class);
+        intent.putExtra("EVENT_ID",""+eventId);
+        startActivity(intent);
+
+    }
+
+
+    public void nextPage(View v){
+
+        mViewPager.setCurrentItem(mViewPager.getCurrentItem()+1);
+
+    }
+
+
+
+
+
+
+
+
 }
