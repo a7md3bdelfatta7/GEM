@@ -4,7 +4,7 @@
     android:id="@+id/activity_shipping_checkout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="brainwaves.gem.HelperMenu.ShippingCheckoutActivity"
+    tools:context="brainwaves.gem.HelperMenu.shoppingDetailsActivity$ShoppingCheckoutActivity"
     android:orientation="vertical">
     <TextView
         android:layout_width="wrap_content"

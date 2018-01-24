@@ -2,13 +2,11 @@ package brainwaves.gem.HelperMenu;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.ExpandableListView;
 import android.widget.RadioButton;
 import android.widget.Toast;
@@ -18,7 +16,6 @@ import java.util.HashMap;
 import java.util.List;
 
 import brainwaves.gem.HelperClasses.ExpandableListAdapter;
-import brainwaves.gem.MainActivity;
 import brainwaves.gem.R;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -89,7 +86,7 @@ public class MembershipActivity extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(MembershipActivity.this,
-                        ShippingCheckoutActivity.class);
+                        ShoppingCheckoutActivity.class);
                 intent.putExtra("id",""+v.getId());
                 startActivity(intent);
                 // Code here executes on main thread after user presses button
