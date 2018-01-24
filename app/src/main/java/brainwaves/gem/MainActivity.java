@@ -4,12 +4,14 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.design.widget.NavigationView;
 import android.support.v13.app.FragmentPagerAdapter;
@@ -230,6 +232,15 @@ public class MainActivity extends AppCompatActivity
             Uri uri = Uri.parse("https://www.mi4biz.com/");
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(intent);
+        } else if (id == R.id.logout_menu) {
+            SharedPreferences sharedPref = getSharedPreferences("login_pref",MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.putBoolean("LOGGED_IN",false);
+            editor.commit();
+            Intent intent=new Intent(MainActivity.this,ChooseLangActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            ActivityCompat.finishAffinity(MainActivity.this);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

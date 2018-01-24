@@ -1,6 +1,7 @@
 package brainwaves.gem;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -14,7 +15,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 public class Splash extends Activity {
 
     /** Duration of wait **/
-    private final int SPLASH_DISPLAY_LENGTH = 2000;
+    private final int SPLASH_DISPLAY_LENGTH = 1000;
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -31,13 +32,23 @@ public class Splash extends Activity {
 
         /* New Handler to start the Menu-Activity
          * and close this Splash-Screen after some seconds.*/
+
         new Handler().postDelayed(new Runnable(){
             @Override
             public void run() {
-                /* Create an Intent that will start the Menu-Activity. */
-                Intent mainIntent = new Intent(Splash.this,ChooseLangActivity.class);
+
+
+                SharedPreferences sharedPref = getSharedPreferences("login_pref",MODE_PRIVATE);
+                boolean loggedIn = sharedPref.getBoolean("LOGGED_IN",false);
+                Intent mainIntent;
+                if(loggedIn){
+                    mainIntent = new Intent(Splash.this, MainActivity.class);
+                }else{
+                    mainIntent= new Intent(Splash.this, ChooseLangActivity.class);
+                }
                 Splash.this.startActivity(mainIntent);
                 Splash.this.finish();
+
             }
         }, SPLASH_DISPLAY_LENGTH);
     }
