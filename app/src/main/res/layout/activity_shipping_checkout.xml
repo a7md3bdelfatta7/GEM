@@ -4,7 +4,7 @@
     android:id="@+id/activity_shipping_checkout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="brainwaves.gem.HelperMenu.ShippingCheckoutActivity"
+    tools:context="brainwaves.gem.HelperMenu.shoppingDetailsActivity$ShoppingCheckoutActivity"
     android:orientation="vertical">
     <TextView
         android:layout_width="wrap_content"
@@ -34,7 +34,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="$38.50"
+            android:text="$18.00"
             android:textStyle="bold"
             android:textSize="20dp"
             android:layout_weight=".2"

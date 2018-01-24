@@ -2,10 +2,12 @@ package brainwaves.gem.HelperMenu;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import brainwaves.gem.R;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
@@ -23,15 +25,23 @@ public class ArtifactsActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_artifacts_details);
+
+        ActionBar actionBar=getSupportActionBar();
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.artifacts_actionbar);
+
         Intent intent = getIntent();
         String id = intent.getStringExtra("id");
         ImageView img = (ImageView) findViewById(R.id.artifact_details);
+        TextView artifactActionBar = (TextView) findViewById(R.id.artifactNameActionBar);
         switch (Integer.parseInt(id)){
             case R.id.artifact_1:
                 img.setImageResource(R.drawable.highlight_i);
+                artifactActionBar.setText("TUT ANKAMUN MASK");
                 break;
             case R.id.artifact_2:
                 img.setImageResource(R.drawable.highlight_ii);
+                artifactActionBar.setText("RAMSIS");
                 break;
             case R.id.artifact_3:
                 img.setImageResource(R.drawable.highlight_iii);

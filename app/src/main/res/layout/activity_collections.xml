@@ -31,6 +31,7 @@
                 android:text="@string/filter_button"
                 android:textSize="15dp"
                 android:textColor="#ffffff"
+                android:id="@+id/collection_filterButton"
                 android:layout_weight="1.8"/>
             <EditText
                 android:layout_width="match_parent"
@@ -44,6 +45,36 @@
                 android:src="@drawable/ic_search_24dp"
                 android:onClick="searchOnClick"
                 android:layout_weight="1.9"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/collection_FilterLayout"
+            android:visibility="gone"
+            android:animateLayoutChanges="true">
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp">
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="KINGS COLLECTIONS"
+                    android:id="@+id/collections_filter_kings"
+                    android:onClick="onFilterRadioButtonClicked"/>
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="STATUS COLLECTIONS"
+                    android:id="@+id/collections_filter_status"
+                    android:onClick="onFilterRadioButtonClicked"/>
+            </RadioGroup>
+            <View
+                android:layout_height="1dp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="2dp"
+                android:background="@color/cardview_dark_background" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
