@@ -26,37 +26,78 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-                    <ImageButton
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@null"
-                        android:src="@drawable/shop_book_i"
-                        android:adjustViewBounds="true"
-                        android:scaleType="fitCenter"
-                        android:layout_weight="1"/>
-                    <ImageButton
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:id="@+id/shop_book_i"
+                        android:onClick="shoppingDetails">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:src="@drawable/shop_book_i"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:gravity="center"
+                            android:text="MEN T-SHIRT\nPRICE : $18"/>
+                    </LinearLayout>
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:id="@+id/shop_book_ii"
+                        android:onClick="shoppingDetails"
                         android:layout_marginLeft="11dp"
-                        android:layout_marginRight="11dp"
-                        android:background="@null"
-                        android:src="@drawable/shop_book_ii"
-                        android:adjustViewBounds="true"
-                        android:scaleType="fitCenter"
-                        android:layout_weight="1"/>
+                        android:layout_marginRight="11dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:src="@drawable/shop_book_ii"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:gravity="center"
+                            android:text="MEN T-SHIRT\nPRICE : $18"/>
+                    </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-                    <ImageButton
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="11dp"
-                        android:background="@null"
-                        android:src="@drawable/shop_book_iii"
-                        android:adjustViewBounds="true"
-                        android:scaleType="fitCenter"
-                        android:layout_weight="1"/>
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:id="@+id/shop_book_iii"
+                        android:onClick="shoppingDetails">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:src="@drawable/shop_book_iii"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:gravity="center"
+                            android:text="MEN T-SHIRT\nPRICE : $18"/>
+                    </LinearLayout>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
