@@ -15,12 +15,32 @@
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer" />
+        app:menu="@menu/activity_main_drawer"
+    >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="250dp"
+            android:adjustViewBounds="true"
+            android:layout_gravity="right|bottom"
+            android:src="@drawable/logo_bwaves"
+            android:layout_margin="5dp"
+            />
+
+        <ImageView
+            android:layout_width="6dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:src="@drawable/main_page_shadow"
+            />
 
 
+    </android.support.design.widget.NavigationView>
+
+1
 </android.support.v4.widget.DrawerLayout>
