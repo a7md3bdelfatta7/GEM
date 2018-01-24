@@ -7,9 +7,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -18,27 +21,55 @@ import brainwaves.gem.R;
 
 public class CollectionsActivity extends AppCompatActivity {
 
+    LinearLayout collectionFirstLayout;
+    LinearLayout collectionSecondLayout;
+    LinearLayout collectionResultLayout;
+    LinearLayout collectionFilterLayout;
+    static boolean filteredchecked = false;
+    Button filterButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_collections);
-        LinearLayout collectionResultLayout = (LinearLayout) findViewById(R.id.collection_SearchResultLV);
+        //result for research
+        collectionResultLayout = (LinearLayout) findViewById(R.id.collection_SearchResultLV);
         collectionResultLayout.setVisibility(View.GONE);
-        LinearLayout collectionFirstLayout = (LinearLayout) findViewById(R.id.collection_FirstLayout);
+        //Kings section
+        collectionFirstLayout = (LinearLayout) findViewById(R.id.collection_FirstLayout);
         collectionFirstLayout.setVisibility(View.VISIBLE);
-        LinearLayout collectionSecondLayout = (LinearLayout) findViewById(R.id.collection_FirstLayout);
+        //status section
+        collectionSecondLayout = (LinearLayout) findViewById(R.id.collection_SecondLayout);
         collectionSecondLayout.setVisibility(View.VISIBLE);
+        //filter section
+        collectionFilterLayout = (LinearLayout) findViewById(R.id.collection_FilterLayout);
+        collectionFilterLayout.setVisibility(View.GONE);
 
+
+        //when filter was clicked
+        filterButton = (Button) findViewById(R.id.collection_filterButton);
+        filterButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if(!filteredchecked) {
+                    collectionFilterLayout.setVisibility(View.VISIBLE);
+                    filteredchecked = true;
+                }else{
+                    collectionFilterLayout.setVisibility(View.GONE);
+                    collectionResultLayout.setVisibility(View.GONE);
+                    collectionFirstLayout.setVisibility(View.VISIBLE);
+                    collectionSecondLayout.setVisibility(View.VISIBLE);
+                    filteredchecked = false;
+                }
+                    // Code here executes on main thread after user presses button
+            }
+        });
 
     }
     public void searchOnClick(View v) {
         TextView searchTxtView = (TextView) findViewById(R.id.collection_SearchTextView);
         String searchData = searchTxtView.getText().toString();
-        LinearLayout collectionFirstLayout = (LinearLayout) findViewById(R.id.collection_FirstLayout);
-        LinearLayout collectionSecondLayout = (LinearLayout) findViewById(R.id.collection_SecondLayout);
-        LinearLayout collectionResultLayout = (LinearLayout) findViewById(R.id.collection_SearchResultLV);
+
         if(collectionResultLayout.getChildAt(0).getId() == R.id.artifact_1){
             ImageButton searchResultImgBtnasdas = (ImageButton) findViewById(collectionResultLayout.getChildAt(0).getId());
         }
@@ -116,6 +147,27 @@ public class CollectionsActivity extends AppCompatActivity {
                 break;
         }
 
+    }
+    public void onFilterRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        collectionResultLayout.setVisibility(View.GONE);
+        collectionFirstLayout.setVisibility(View.VISIBLE);
+        collectionSecondLayout.setVisibility(View.VISIBLE);
+        collectionFilterLayout.setVisibility(View.VISIBLE);
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.collections_filter_kings:
+                if (checked)
+                    collectionSecondLayout.setVisibility(View.GONE);
+                break;
+            case R.id.collections_filter_status:
+                if (checked)
+                    collectionFirstLayout.setVisibility(View.GONE);
+                break;
+        }
     }
     public void artifactsDetailsonClick(View v) {
         Intent intent = new Intent(CollectionsActivity.this,

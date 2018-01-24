@@ -2,6 +2,7 @@ package brainwaves.gem.HelperMenu;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.WindowManager;
@@ -23,6 +24,11 @@ public class ArtifactsActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_artifacts_details);
+
+        ActionBar actionBar=getSupportActionBar();
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.artifacts_actionbar);
+
         Intent intent = getIntent();
         String id = intent.getStringExtra("id");
         ImageView img = (ImageView) findViewById(R.id.artifact_details);
