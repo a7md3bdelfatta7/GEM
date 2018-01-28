@@ -43,6 +43,7 @@
         android:adjustViewBounds="true"
         android:background="@null"
         android:scaleType="fitCenter"
+        android:onClick="HighlightsAddToTouronClick"
         android:id="@+id/favouritesActionBar"/>
 
 </LinearLayout>

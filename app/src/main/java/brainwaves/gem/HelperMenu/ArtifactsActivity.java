@@ -5,11 +5,15 @@ import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import brainwaves.gem.R;
+import brainwaves.gem.data.ArtifactsContract;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class ArtifactsActivity extends AppCompatActivity {
@@ -305,6 +309,12 @@ public class ArtifactsActivity extends AppCompatActivity {
                 break;
         }
     }
+
+    public void HighlightsAddToTouronClick(View v) {
+        ImageButton flashButtonOn = (ImageButton) findViewById(v.getId());
+        flashButtonOn.setImageResource(R.drawable.favourite_red);
+    }
+
     @Override
     protected  void onDestroy() {
         super.onDestroy();
