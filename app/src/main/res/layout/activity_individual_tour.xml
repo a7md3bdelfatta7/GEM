@@ -70,7 +70,7 @@
                                     android:onClick="artifactsDetailsonClick"
                                     android:background="@color/cardview_light_background"
                                     android:adjustViewBounds="true"
-                                    android:id="@+id/artifact_1"
+                                    android:id="@+id/artifact_1" 
                                     android:scaleType="fitXY"
                                     android:tag="1"
                                     tools:visibility="gone" />
