@@ -2,6 +2,7 @@
 
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/pageColor1">
@@ -58,7 +59,8 @@
                             android:id="@+id/add_tour_1"
                             android:onClick="HighlightsAddToTouronClick"
                             android:layout_alignParentRight="true"
-                            android:layout_marginBottom="0dp"/>
+                            android:layout_marginBottom="0dp"
+                            android:tag="1" />
 
                     </RelativeLayout>
 
@@ -84,9 +86,9 @@
                             android:adjustViewBounds="true"
                             android:id="@+id/artifact_2"
                             android:scaleType="fitXY"/>
+
                         <ImageButton
                             android:layout_width="25dp"
-                            android:layout_alignParentTop="true"
                             android:layout_height="40dp"
                             android:background="@null"
                             android:src="@drawable/add_button_i"
@@ -94,8 +96,10 @@
                             android:scaleType="fitCenter"
                             android:id="@+id/add_tour_2"
                             android:onClick="HighlightsAddToTouronClick"
+                            android:layout_alignParentTop="true"
                             android:layout_alignParentRight="true"
-                            android:layout_marginBottom="0dp"/>
+                            android:layout_alignParentEnd="true"
+                            android:tag="2" />
                     </RelativeLayout>
 
 
@@ -128,7 +132,8 @@
                             android:id="@+id/add_tour_3"
                             android:onClick="HighlightsAddToTouronClick"
                             android:layout_alignParentRight="true"
-                            android:layout_marginBottom="0dp"/>
+                            android:layout_marginBottom="0dp"
+                            android:tag="3" />
                     </RelativeLayout>
 
 
@@ -169,7 +174,8 @@
                             android:id="@+id/add_tour_4"
                             android:onClick="HighlightsAddToTouronClick"
                             android:layout_alignParentRight="true"
-                            android:layout_marginBottom="0dp"/>
+                            android:layout_marginBottom="0dp"
+                            android:tag="4" />
                     </RelativeLayout>
 
                 </LinearLayout>
@@ -205,7 +211,8 @@
                             android:id="@+id/add_tour_5"
                             android:onClick="HighlightsAddToTouronClick"
                             android:layout_alignParentRight="true"
-                            android:layout_marginBottom="0dp"/>
+                            android:layout_marginBottom="0dp"
+                            android:tag="5" />
                     </RelativeLayout>
 
                 </LinearLayout>
@@ -237,7 +244,8 @@
                             android:id="@+id/add_tour_6"
                             android:onClick="HighlightsAddToTouronClick"
                             android:layout_alignParentRight="true"
-                            android:layout_marginBottom="0dp"/>
+                            android:layout_marginBottom="0dp"
+                            android:tag="6" />
                     </RelativeLayout>
 
 
@@ -297,7 +305,8 @@
                         android:id="@+id/add_tour_7"
                         android:onClick="HighlightsAddToTouronClick"
                         android:layout_alignParentRight="true"
-                        android:layout_marginBottom="0dp"/>
+                        android:layout_marginBottom="0dp"
+                        android:tag="7" />
                 </RelativeLayout>
 
                 </LinearLayout>
@@ -332,7 +341,8 @@
                         android:id="@+id/add_tour_8"
                         android:onClick="HighlightsAddToTouronClick"
                         android:layout_alignParentRight="true"
-                        android:layout_marginBottom="0dp"/>
+                        android:layout_marginBottom="0dp"
+                        android:tag="8" />
                 </RelativeLayout>
 
                 </LinearLayout>
@@ -364,7 +374,8 @@
                         android:id="@+id/add_tour_9"
                         android:onClick="HighlightsAddToTouronClick"
                         android:layout_alignParentRight="true"
-                        android:layout_marginBottom="0dp"/>
+                        android:layout_marginBottom="0dp"
+                        android:tag="9" />
                 </RelativeLayout>
 
                 </LinearLayout>
@@ -393,19 +404,21 @@
                         android:adjustViewBounds="true"
                         android:id="@+id/artifact_10"
                         android:scaleType="fitXY"/>
-                    <ImageButton
-                        android:layout_width="25dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_height="40dp"
-                        android:background="@null"
-                        android:src="@drawable/add_button_i"
-                        android:adjustViewBounds="true"
-                        android:scaleType="fitCenter"
-                        android:id="@+id/add_tour_10"
-                        android:onClick="HighlightsAddToTouronClick"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginBottom="0dp"/>
-                </RelativeLayout>
+
+                        <ImageButton
+                            android:layout_width="25dp"
+                            android:layout_height="40dp"
+                            android:background="@null"
+                            android:src="@drawable/add_button_i"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:id="@+id/add_tour_10"
+                            android:onClick="HighlightsAddToTouronClick"
+                            android:tag="10"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
 
                 </LinearLayout>
 
@@ -439,7 +452,8 @@
                         android:id="@+id/add_tour_11"
                         android:onClick="HighlightsAddToTouronClick"
                         android:layout_alignParentRight="true"
-                        android:layout_marginBottom="0dp"/>
+                        android:layout_marginBottom="0dp"
+                        android:tag="11" />
                 </RelativeLayout>
 
                 </LinearLayout>
@@ -471,7 +485,8 @@
                         android:id="@+id/add_tour_12"
                         android:onClick="HighlightsAddToTouronClick"
                         android:layout_alignParentRight="true"
-                        android:layout_marginBottom="0dp"/>
+                        android:layout_marginBottom="0dp"
+                        android:tag="12" />
                 </RelativeLayout>
 
                 </LinearLayout>

@@ -4,7 +4,6 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
@@ -27,6 +26,7 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import brainwaves.gem.HelperMenu.ArtifactsActivity;
 import brainwaves.gem.HelperMenu.CollectionsActivity;
@@ -34,6 +34,7 @@ import brainwaves.gem.HelperMenu.MembershipActivity;
 import brainwaves.gem.HelperMenu.QuizActivity;
 import brainwaves.gem.HelperMenu.Tour;
 import brainwaves.gem.ShoppingSystem.ShoppingActivity;
+import brainwaves.gem.data.ArtifactsContract;
 import brainwaves.gem.data.UserContract;
 import brainwaves.gem.fragments.FeaturedEventsFragment;
 import brainwaves.gem.HelperMenu.VisitDetailsActivity;import brainwaves.gem.fragments.ForMembersFragment;
@@ -186,6 +187,13 @@ public class MainActivity extends AppCompatActivity
     public void HighlightsAddToTouronClick(View v) {
         ImageButton flashButtonOn = (ImageButton) findViewById(v.getId());
         flashButtonOn.setImageResource(R.drawable.add_button_ii);
+
+        //Artifacts artifacts=new Artifacts();
+        //artifacts.tourArtifatcs.add();
+        Toast.makeText(this,v.getTag()+"", Toast.LENGTH_SHORT).show();
+        ArtifactsContract artifact=new ArtifactsContract(getApplicationContext());
+        long result= artifact.addNewArtifact(v.getTag()+"");
+        Toast.makeText(this, result+"", Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -286,7 +294,6 @@ public class MainActivity extends AppCompatActivity
         Intent intent = new Intent(getApplicationContext(),EventDetailsActivity.class);
         intent.putExtra("EVENT_ID",""+eventId);
         startActivity(intent);
-
     }
 
 

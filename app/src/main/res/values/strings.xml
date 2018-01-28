@@ -169,5 +169,6 @@
     <string name="select_artifacts">Add artifacts to your tour</string>
     <string name="view_map">View on map</string>
     <string name="start_tour">Start Tour</string>
+    <string name="tour_criteria">Build Tour Based On.</string>
 
 </resources>

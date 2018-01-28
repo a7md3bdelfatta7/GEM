@@ -4,6 +4,8 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import  brainwaves.gem.data.UserContract.UserEntry;
+import  brainwaves.gem.data.ArtifactsContract.ArtifactEntry;
+
 
 /**
  * Created by Ahmed on 1/24/2018.
@@ -24,7 +26,7 @@ public class GemDbHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
 
         // Create a table to hold waitlist data
-        final String SQL_CREATE_USER_TABLE = "CREATE TABLE " + UserEntry.TABLE_NAME + " (" +
+         String SQL_CREATE_USER_TABLE = "CREATE TABLE " + UserEntry.TABLE_NAME + " (" +
                 UserEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                 UserEntry.COLUMN_USER_NAME + " TEXT NOT NULL, " +
                 UserEntry.COLUMN_PASSWORD + " TEXT NOT NULL, " +
@@ -34,7 +36,14 @@ public class GemDbHelper extends SQLiteOpenHelper {
 
                 "); ";
 
+        String SQL_CREATE_ARTIFACT_TABLE ="CREATE TABLE "+ ArtifactEntry.TABLE_NAME+ " ("+
+                ArtifactEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                ArtifactEntry.COLUMN_USER_ID + " TEXT NOT NULL, " +
+                ArtifactEntry.COLUMN_ARTIFACT_ID + " TEXT NOT NULL" +
+                "); ";
+
         sqLiteDatabase.execSQL(SQL_CREATE_USER_TABLE);
+        sqLiteDatabase.execSQL(SQL_CREATE_ARTIFACT_TABLE);
     }
 
     @Override
