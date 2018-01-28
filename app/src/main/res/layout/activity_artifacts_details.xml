@@ -12,7 +12,7 @@
             android:layout_height="match_parent">
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:src="@drawable/quiz_i"
                 android:adjustViewBounds="true"
                 android:id="@+id/artifact_details"
@@ -44,12 +44,14 @@
             android:layout_margin="15dp"
             android:textSize="22dp"
             android:textStyle="bold"
+            android:id="@+id/artifact_details_title"
             android:text="TUTANKAMUM\'S MASK"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
+            android:id="@+id/artifact_details_text"
             android:textSize="15dp"
             android:text="This mask of Tutankhamun is an example of the high est artistic and technical achievements of the an-cient Egyptians in the New Kingdom.
             \nCovering the head of the wrapped mummy in its coffin and activated by a magical spell, no.151b from the Book of the Dead, the mask ensured more pro-tection for the king's body.
