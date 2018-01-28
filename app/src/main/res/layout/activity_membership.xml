@@ -13,7 +13,7 @@
             android:src="@drawable/visit_i"
             android:background="@color/cardview_light_background"
             android:adjustViewBounds="true"
-            android:scaleType="centerInside"/>
+            android:scaleType="fitXY"/>
 
         <TextView
             android:layout_width="match_parent"
