@@ -74,7 +74,8 @@
             android:name=".HelperMenu.ShoppingCheckoutActivity"
             android:label="@string/title_activity_checkout" />
         <activity android:name=".EventDetailsActivity" />
-        <activity android:name=".HelperMenu.shoppingDetailsActivity"></activity>
+        <activity android:name=".HelperMenu.shoppingDetailsActivity" />
+        <activity android:name=".HelperMenu.IndividualTourActivity"></activity>
     </application>
 
 </manifest>

@@ -7,12 +7,70 @@
 
     >
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        android:weightSum="2"
+        android:gravity="right"
+
+        >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/create_tour"
+            android:background="@color/forMemberColor"
+            android:textColor="@android:color/white"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_weight="1"
+            android:onClick="create_tour"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tour_type_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <Button
+            android:id="@+id/individual_tour_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Individual"
+            android:onClick="createTourDetails"
+            />
+
+        <Button
+            android:id="@+id/group_tour_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Group"
+            android:onClick="createTourDetails"
+            />
+
+        <Button
+            android:id="@+id/guide_tour_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tour Guide"
+            android:onClick="createTourDetails"
+            />
+
+
+
+    </LinearLayout>
+
     <ExpandableListView
         android:id="@+id/lvExp"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:layoutDirection="rtl"
-
         />
 
 </LinearLayout>

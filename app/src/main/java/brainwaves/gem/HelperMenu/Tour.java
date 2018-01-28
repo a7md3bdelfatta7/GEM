@@ -1,17 +1,21 @@
 package brainwaves.gem.HelperMenu;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.ExpandableListView;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 import brainwaves.gem.HelperClasses.ExpandableListAdapter;
+import brainwaves.gem.MainActivity;
 import brainwaves.gem.R;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -111,5 +115,32 @@ public class Tour extends AppCompatActivity {
         listDataChild.put(listDataHeader.get(4), level4);
 
 
+    }
+
+
+    public void create_tour(View v){
+
+        LinearLayout tourTypeContainer=(LinearLayout)findViewById(R.id.tour_type_container);
+        tourTypeContainer.setVisibility(View.VISIBLE);
+    }
+    
+    public void createTourDetails(View v){
+        
+        int id=v.getId();
+        
+        Intent intent = null;
+        
+        switch (id){
+            case R.id.individual_tour_button:
+                intent=new Intent(Tour.this, IndividualTourActivity.class);
+                break;
+            case R.id.group_tour_button:
+                break;
+            case R.id.guide_tour_button:
+                break;
+        }
+        
+        startActivity(intent);
+        
     }
 }
