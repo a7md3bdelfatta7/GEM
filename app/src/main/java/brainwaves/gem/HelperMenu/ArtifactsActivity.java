@@ -310,6 +310,7 @@ public class ArtifactsActivity extends AppCompatActivity {
         }
     }
 
+
     public void HighlightsAddToTouronClick(View v) {
         ImageButton flashButtonOn = (ImageButton) findViewById(v.getId());
         flashButtonOn.setImageResource(R.drawable.favourite_red);
