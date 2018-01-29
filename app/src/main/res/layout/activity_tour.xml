@@ -21,7 +21,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="@string/create_tour"
-            android:background="@color/forMemberColor"
+            android:background="@color/defaultColor"
             android:textColor="@android:color/white"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
@@ -66,11 +66,20 @@
 
     </LinearLayout>
 
-    <ExpandableListView
-        android:id="@+id/lvExp"
-        android:layout_height="match_parent"
+    <!--
+        <ExpandableListView
+            android:id="@+id/lvExp"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layoutDirection="rtl"
+            />
+    -->
+
+    <ListView
+        android:id="@+id/tour_list"
         android:layout_width="match_parent"
-        android:layoutDirection="rtl"
-        />
+        android:layout_height="wrap_content">
+
+    </ListView>
 
 </LinearLayout>

@@ -28,6 +28,7 @@
                 />
 
             <EditText
+                android:id="@+id/tour_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 />
@@ -67,15 +68,14 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:src="@drawable/highlight_i"
-                                    android:onClick="artifactsDetailsonClick"
+                                    android:onClick="addArtifactToTour"
                                     android:background="@color/cardview_light_background"
                                     android:adjustViewBounds="true"
                                     android:id="@+id/artifact_1" 
                                     android:scaleType="fitXY"
                                     android:tag="1"
-                                    tools:visibility="gone" />
+                                    android:visibility="gone" />
                         </LinearLayout>
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -88,7 +88,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:background="@color/cardview_light_background"
-                                android:onClick="artifactsDetailsonClick"
+                                android:onClick="addArtifactToTour"
                                 android:src="@drawable/highlight_ii"
                                 android:adjustViewBounds="true"
                                 android:id="@+id/artifact_2"
@@ -109,7 +109,7 @@
                                     android:layout_height="match_parent"
                                     android:background="@color/cardview_light_background"
                                     android:src="@drawable/highlight_iii"
-                                    android:onClick="artifactsDetailsonClick"
+                                    android:onClick="addArtifactToTour"
                                     android:adjustViewBounds="true"
                                     android:id="@+id/artifact_3"
                                     android:scaleType="fitXY"
@@ -123,9 +123,7 @@
                         </LinearLayout>
                     </LinearLayout>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -144,14 +142,14 @@
                                     android:layout_height="match_parent"
                                     android:src="@drawable/highlight_iv"
                                     android:background="@color/cardview_light_background"
-                                    android:onClick="artifactsDetailsonClick"
+                                    android:onClick="addArtifactToTour"
                                     android:adjustViewBounds="true"
                                     android:id="@+id/artifact_4"
                                     android:scaleType="fitXY"
+                                    android:tag="4"
                                     android:layout_alignParentTop="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
-                                    android:tag="4"
                                     android:visibility="gone" />
                             </RelativeLayout>
 
@@ -173,7 +171,7 @@
                                     android:background="@color/cardview_light_background"
                                     android:src="@drawable/highlight_v"
 
-                                    android:onClick="artifactsDetailsonClick"
+                                    android:onClick="addArtifactToTour"
                                     android:adjustViewBounds="true"
                                     android:id="@+id/artifact_5"
                                     android:scaleType="fitXY"
@@ -195,7 +193,7 @@
                                     android:layout_height="match_parent"
                                     android:background="@color/cardview_light_background"
                                     android:src="@drawable/highlight_xv"
-                                    android:onClick="artifactsDetailsonClick"
+                                    android:onClick="addArtifactToTour"
                                     android:adjustViewBounds="true"
                                     android:id="@+id/artifact_6"
                                     android:scaleType="fitXY"
@@ -237,7 +235,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:src="@drawable/highlight__i"
-                                    android:onClick="artifactsDetailsonClick"
+                                    android:onClick="addArtifactToTour"
                                     android:background="@color/cardview_light_background"
                                     android:adjustViewBounds="true"
                                     android:id="@+id/artifact_7"
@@ -261,7 +259,7 @@
                                 <ImageButton
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:onClick="artifactsDetailsonClick"
+                                    android:onClick="addArtifactToTour"
                                     android:background="@color/cardview_light_background"
                                     android:src="@drawable/highlight__ii"
                                     android:adjustViewBounds="true"
@@ -283,7 +281,7 @@
                                 <ImageButton
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:onClick="artifactsDetailsonClick"
+                                    android:onClick="addArtifactToTour"
                                     android:background="@color/cardview_light_background"
                                     android:src="@drawable/highlight__iii"
                                     android:adjustViewBounds="true"
@@ -314,7 +312,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:src="@drawable/highlight__iv"
-                                    android:onClick="artifactsDetailsonClick"
+                                    android:onClick="addArtifactToTour"
                                     android:background="@color/cardview_light_background"
                                     android:adjustViewBounds="true"
                                     android:id="@+id/artifact_10"
@@ -339,7 +337,7 @@
                                 <ImageButton
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:onClick="artifactsDetailsonClick"
+                                    android:onClick="addArtifactToTour"
                                     android:background="@color/cardview_light_background"
                                     android:src="@drawable/highlight__v"
                                     android:adjustViewBounds="true"
@@ -361,7 +359,7 @@
                                 <ImageButton
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:onClick="artifactsDetailsonClick"
+                                    android:onClick="addArtifactToTour"
                                     android:id="@+id/artifact_12"
                                     android:background="@color/cardview_light_background"
                                     android:src="@drawable/highlight__xv"
@@ -389,15 +387,33 @@
                 android:animateLayoutChanges="true"
                 android:layout_marginTop="10dp"
                 >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/added_artifacts"
+                    android:textSize="22sp"
+                    android:layout_margin="8dp"
+                    />
+
+                <TextView
+                    android:id="@+id/added_artifacts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_margin="8dp"
+                    android:layout_marginTop="15dp"
+                    />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/tour_criteria"
-                    android:textSize="25sp"
+                    android:textSize="22sp"
                     android:layout_margin="8dp"
-                    android:layout_marginTop="15dp"
                     />
                 <RadioGroup
+                    android:layout_marginTop="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp">

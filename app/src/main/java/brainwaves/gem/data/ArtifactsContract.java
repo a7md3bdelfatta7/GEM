@@ -36,18 +36,24 @@ public class ArtifactsContract {
     public long addNewArtifact(String artifactId){
 
         ContentValues cv = new ContentValues();
-        cv.put(ArtifactEntry.COLUMN_USER_ID,"1");
+        cv.put(ArtifactEntry.COLUMN_USER_ID,UserContract.userID);
         cv.put(ArtifactEntry.COLUMN_ARTIFACT_ID,artifactId);
 
-        return mDb.insert(ArtifactEntry.TABLE_NAME, null, cv);
+        if(!this.artifactExist(artifactId)){
+            return mDb.insert(ArtifactEntry.TABLE_NAME, null, cv);
+        }else{
+            return 0;
+        }
 
     }
+
+
 
     public ArrayList<String> getSelectedArtifacts(){
 
         String whereClause = ""+ ArtifactEntry.COLUMN_USER_ID+" = ?";
         String[] whereArgs = new String[] {
-                "1"
+                UserContract.userID
         };
 
         Cursor cursor=mDb.query(
@@ -69,7 +75,33 @@ public class ArtifactsContract {
             }
         }
         return selectedArtifacts;
+    }
 
+    public boolean artifactExist(String artifactId){
+
+        String whereClause = ""+ ArtifactEntry.COLUMN_USER_ID+" = ? and "+ArtifactEntry.COLUMN_ARTIFACT_ID+" = ?";
+        String[] whereArgs = new String[] {
+                UserContract.userID,
+                artifactId
+        };
+
+        Cursor cursor=mDb.query(
+                ArtifactEntry.TABLE_NAME,
+                null,
+                whereClause,
+                whereArgs,
+                null,
+                null,
+                null
+        );
+
+
+        ArrayList<String> selectedArtifacts=new ArrayList<String>();
+
+        if(cursor.getCount()>0) {
+           return true;
+        }
+        return false;
     }
 
 

@@ -148,7 +148,7 @@
     <string name="featured_event4_note">Guided Tour</string>
 
     <string name="map_activity_title">Museum Map</string>
-    <string name="tour_activity_title">My Tours</string>
+    <string name="tour_activity_title">Tour Planning</string>
 
     <string name="app_theme">Select Theme</string>
 
@@ -159,6 +159,7 @@
 
     <string name="gem_pref_key">LOGGED_IN</string>
     <string name="logged_in_key">LOGGED_IN</string>
+    <string name="user_id_key">USER_id_KEY</string>
     <string name="user_name_key">USER_NAME_KEY</string>
     <string name="full_name_key">full_NAME_KEY</string>
     <string name="nationality_key">nationality_KEY</string>
@@ -170,5 +171,8 @@
     <string name="view_map">View on map</string>
     <string name="start_tour">Start Tour</string>
     <string name="tour_criteria">Build Tour Based On.</string>
+    <string name="added_artifacts">Added Artifacts</string>
+    <string name="invite_users">Invite</string>
+
 
 </resources>

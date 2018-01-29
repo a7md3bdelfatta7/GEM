@@ -25,11 +25,11 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:maxHeight="250dp"
+            android:maxHeight="280dp"
             android:adjustViewBounds="true"
             android:layout_gravity="right|bottom"
             android:src="@drawable/logo_bwaves"
-            android:layout_margin="5dp"
+            android:layout_margin="8dp"
             />
 
         <ImageView
@@ -37,6 +37,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="right"
             android:src="@drawable/main_page_shadow"
+            android:scaleType="fitXY"
             />
 
 
