@@ -16,6 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import brainwaves.gem.HelperClasses.ExpandableListAdapter;
+import brainwaves.gem.MainActivity;
 import brainwaves.gem.R;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -39,9 +40,6 @@ public class MembershipActivity extends AppCompatActivity {
         setContentView(R.layout.activity_membership);
 
         Button submitButton = (Button) findViewById(R.id.membership_submit);
-        final Button childrenButton = (Button) findViewById(R.id.Children_btn);
-        Button egyptainButton = (Button) findViewById(R.id.Egyptain_btn);
-        Button foreignButton = (Button) findViewById(R.id.Foreign_btn);
 
 
         // get the listview
@@ -92,36 +90,8 @@ public class MembershipActivity extends AppCompatActivity {
                 // Code here executes on main thread after user presses button
             }
         });
-        childrenButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
 
-                expListView.setVisibility(View.VISIBLE);
-                expListView1.setVisibility(View.GONE);
-                expListView2.setVisibility(View.GONE);
 
-                // Code here executes on main thread after user presses button
-            }
-        });
-        egyptainButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-                expListView.setVisibility(View.GONE);
-                expListView1.setVisibility(View.VISIBLE);
-                expListView2.setVisibility(View.GONE);
-
-                // Code here executes on main thread after user presses button
-            }
-        });
-        foreignButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-                expListView.setVisibility(View.GONE);
-                expListView1.setVisibility(View.GONE);
-                expListView2.setVisibility(View.VISIBLE);
-
-                // Code here executes on main thread after user presses button
-            }
-        });
 
     }
     public void onRadioButtonClicked(View view) {
@@ -143,6 +113,21 @@ public class MembershipActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Thanks for submitting 1 Year",Toast.LENGTH_LONG).show();
                     break;
         }
+    }
+    public void childrenDetailsonClick(View v) {
+        expListView.setVisibility(View.VISIBLE);
+        expListView1.setVisibility(View.GONE);
+        expListView2.setVisibility(View.GONE);
+    }
+    public void egyptainDetailsonClick(View v) {
+        expListView.setVisibility(View.GONE);
+        expListView1.setVisibility(View.VISIBLE);
+        expListView2.setVisibility(View.GONE);
+    }
+    public void foreignDetailsonClick(View v) {
+        expListView.setVisibility(View.GONE);
+        expListView1.setVisibility(View.GONE);
+        expListView2.setVisibility(View.VISIBLE);
     }
     @Override
     protected  void onDestroy() {
