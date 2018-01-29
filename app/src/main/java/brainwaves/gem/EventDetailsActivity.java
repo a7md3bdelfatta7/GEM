@@ -112,21 +112,21 @@ public class EventDetailsActivity extends AppCompatActivity {
                 break;
 
             case R.id.today_event1:
-                eventDetailsImage.setImageResource(R.drawable.featured_shape4);
+                eventDetailsImage.setImageResource(R.drawable.todaysevent_i);
                 actionBarTitle.setText(R.string.event1_topic);
                 eventTitle.setText(R.string.event1_topic);
                 eventDetails.setText(R.string.temp_text);
                 break;
 
             case R.id.today_event2:
-                eventDetailsImage.setImageResource(R.drawable.featured_shape4);
+                eventDetailsImage.setImageResource(R.drawable.todaysevent_ii);
                 actionBarTitle.setText(R.string.event2_topic);
                 eventTitle.setText(R.string.event2_topic);
                 eventDetails.setText(R.string.temp_text);
                 break;
 
             case R.id.today_event3:
-                eventDetailsImage.setImageResource(R.drawable.featured_shape4);
+                eventDetailsImage.setImageResource(R.drawable.todaysevent_iii);
                 actionBarTitle.setText(R.string.event3_topic);
                 eventTitle.setText(R.string.event3_topic);
                 eventDetails.setText(R.string.temp_text);

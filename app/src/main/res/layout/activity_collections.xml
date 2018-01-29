@@ -89,8 +89,8 @@
                 android:layout_height="wrap_content"/>
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -98,14 +98,14 @@
                     android:orientation="vertical"
                     android:layout_weight="1">
                     <ImageButton
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/highlight_i"
                         android:background="@color/cardview_light_background"
                         android:adjustViewBounds="true"
                         android:onClick="artifactsDetailsonClick"
                         android:id="@+id/artifact_1"
-                        android:scaleType="fitEnd"/>
+                        android:scaleType="fitXY"/>
 
 
                 </LinearLayout>
@@ -118,8 +118,8 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp">
                     <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:background="@color/cardview_light_background"
 
                         android:src="@drawable/highlight_ii"
@@ -127,7 +127,7 @@
                         android:adjustViewBounds="true"
                         android:onClick="artifactsDetailsonClick"
                         android:id="@+id/artifact_2"
-                        android:scaleType="fitEnd"/>
+                        android:scaleType="fitXY"/>
 
                 </LinearLayout>
                 <LinearLayout
@@ -197,7 +197,7 @@
                     android:orientation="vertical"
                     android:layout_weight="1">
                     <ImageButton
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/cardview_light_background"
                         android:src="@drawable/highlight_xv"
@@ -229,23 +229,23 @@
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_weight="1.8">
+                    android:layout_weight="1">
                     <ImageButton
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/highlight__i"
                         android:background="@color/cardview_light_background"
                         android:adjustViewBounds="true"
                         android:onClick="artifactsDetailsonClick"
                         android:id="@+id/artifact_7"
-                        android:scaleType="fitEnd"/>
+                        android:scaleType="fitXY"/>
 
                 </LinearLayout>
 
@@ -253,28 +253,28 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_weight="1.5"
+                    android:layout_weight="1"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp">
                     <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:background="@color/cardview_light_background"
                         android:src="@drawable/highlight__ii"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
                         android:onClick="artifactsDetailsonClick"
                         android:id="@+id/artifact_8"
-                        android:scaleType="fitEnd"/>
+                        android:scaleType="fitXY"/>
 
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_weight="1.2">
+                    android:layout_weight="1">
                     <ImageButton
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/cardview_light_background"
                         android:src="@drawable/highlight__iii"
@@ -282,7 +282,7 @@
                         android:adjustViewBounds="true"
                         android:onClick="artifactsDetailsonClick"
                         android:id="@+id/artifact_9"
-                        android:scaleType="fitEnd"/>
+                        android:scaleType="fitXY"/>
 
                 </LinearLayout>
             </LinearLayout>
@@ -299,14 +299,14 @@
                     android:orientation="vertical"
                     android:layout_weight="1">
                     <ImageButton
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/highlight__iv"
                         android:background="@color/cardview_light_background"
                         android:adjustViewBounds="true"
                         android:onClick="artifactsDetailsonClick"
                         android:id="@+id/artifact_10"
-                        android:scaleType="fitEnd"/>
+                        android:scaleType="fitXY"/>
 
                 </LinearLayout>
 
@@ -318,24 +318,24 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp">
                     <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:background="@color/cardview_light_background"
                         android:src="@drawable/highlight__v"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
                         android:onClick="artifactsDetailsonClick"
                         android:id="@+id/artifact_11"
-                        android:scaleType="fitEnd"/>
+                        android:scaleType="fitXY"/>
 
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_weight=".8">
+                    android:layout_weight="1">
                     <ImageButton
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/cardview_light_background"
                         android:src="@drawable/highlight__xv"
@@ -343,7 +343,7 @@
                         android:adjustViewBounds="true"
                         android:onClick="artifactsDetailsonClick"
                         android:id="@+id/artifact_12"
-                        android:scaleType="fitEnd"/>
+                        android:scaleType="fitXY"/>
 
                 </LinearLayout>
             </LinearLayout>
