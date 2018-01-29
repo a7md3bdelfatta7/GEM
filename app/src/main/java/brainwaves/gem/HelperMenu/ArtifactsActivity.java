@@ -168,7 +168,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Height 21 cm\n");
                 break;
             case R.id.artifact_13:
-                img.setImageResource(R.drawable.highlight__xv);
+                img.setImageResource(R.drawable.staff_i);
                 aritfactDetailsTitle.setText("Sarcophagus of Isis");
                 artifactActionBar.setText("Sarcophagus of Isis");
                 aritfactDetailsText.setText("Isis was the daughter of Khonsu and probably a second wife of Khabekhnet. \n" +
@@ -180,7 +180,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Length 190 cm\n");
                 break;
             case R.id.artifact_14:
-                img.setImageResource(R.drawable.highlight__xv);
+                img.setImageResource(R.drawable.staff_ii);
                 aritfactDetailsTitle.setText("Sarcophagus with Cover Depicting the Deceased");
                 artifactActionBar.setText("Sarcophagus with Cover Depicting the Deceased");
                 aritfactDetailsText.setText("The sarcophagus is in the shape of a mummy. The cover portrays the deceased with all his accessories and his decorated shroud. \n" +
@@ -193,7 +193,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Height 70 cm  Length 250 cm  Width 90 cm\n");
                 break;
             case R.id.artifact_15:
-                img.setImageResource(R.drawable.highlight__xv);
+                img.setImageResource(R.drawable.staff_iii);
                 aritfactDetailsTitle.setText("Sarcophagus of Queen Kawit");
                 artifactActionBar.setText("Sarcophagus of Queen Kawit");
                 aritfactDetailsText.setText("The sarcophagus of Queen Kawit, who was the wife of King Montuhotep the Second, was one of the most noteworthy in terms of the low-relief sculpture in the Theban court. \n" +
@@ -205,7 +205,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Height 119 cm  Length 262 cm  Width 119 cm\n");
                 break;
             case R.id.artifact_16:
-                img.setImageResource(R.drawable.highlight__xv);
+                img.setImageResource(R.drawable.staff_iv);
                 aritfactDetailsTitle.setText("Amulet in the Shape of Winged Vulture");
                 artifactActionBar.setText("Amulet in the Shape of Winged Vulture");
                 aritfactDetailsText.setText("This amulet depicts the vulture Nekhbet, patron goddess of Upper Egypt. It is in the form of a miniature wide Usekh collar and is made of beaten gold with a counterweight. It was found among many pieces of jewelry belonging to King Psusennes the First. \n" +
@@ -217,7 +217,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Height 3.5 cm  Width 3.8 cm\n");
                 break;
             case R.id.artifact_17:
-                img.setImageResource(R.drawable.highlight__xv);
+                img.setImageResource(R.drawable.staff_v);
                 aritfactDetailsTitle.setText("Sphinx of Amenemhat the Third");
                 artifactActionBar.setText("Sphinx of Amenemhat the Third");
                 aritfactDetailsText.setText("Seven sphinxes of Amenemhat were found in Tanis in the eastern Delta. They were thus called the Tanite sphinxes. They evoke the superhuman power of the king and emphasize his fearful appearance. \n" +
@@ -226,7 +226,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Length 220 cm  Height 75 cm\n");
                 break;
             case R.id.artifact_18:
-                img.setImageResource(R.drawable.highlight__xv);
+                img.setImageResource(R.drawable.staff_xv);
                 aritfactDetailsTitle.setText("Meroitic Ba Statue of a Woman");
                 artifactActionBar.setText("Meroitic Ba Statue of a Woman");
                 aritfactDetailsText.setText("This Ba statue depicts the soul as a bird with a human head. The statue depicts a lady with long wings standing on a flat pedestal that is slipped into a roughly executed base. \n" +
@@ -238,7 +238,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Height 66 cm  Length 44 cm\n");
                 break;
             case R.id.artifact_19:
-                img.setImageResource(R.drawable.highlight__xv);
+                img.setImageResource(R.drawable.staff__i);
                 aritfactDetailsTitle.setText("Statue of In-Heret-Shu as a Mummy");
                 artifactActionBar.setText("Statue of In-Heret-Shu as a Mummy");
                 aritfactDetailsText.setText("The statue is one of several gilded wooden statues of deities found in the tomb of Tutankhamun. It depicts the god In-Heret-Shu standing on a rectangular base. \n" +
@@ -248,7 +248,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Height 74.5 cm\n");
                 break;
             case R.id.artifact_20:
-                img.setImageResource(R.drawable.highlight__xv);
+                img.setImageResource(R.drawable.staff__ii);
                 aritfactDetailsTitle.setText("Statue of Khufu-iam and his Wife");
                 artifactActionBar.setText("Statue of Khufu-iam and his Wife");
                 aritfactDetailsText.setText("Khufu-iam and his wife are shown seated on a backless seat. The husband's hands are on his knees and he holds a small staff in his left hand. He wears a short curly wig covering his ears and a short overlapping kilt with wavy pleats, which was a fashionable garment during his period. \n" +
@@ -259,7 +259,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Height 45 cm  Width 27.5 cm\n");
                 break;
             case R.id.artifact_21:
-                img.setImageResource(R.drawable.highlight__xv);
+                img.setImageResource(R.drawable.staff__iii);
                 aritfactDetailsTitle.setText("Statue of the God Anubis with His Young Ones");
                 artifactActionBar.setText("Statue of the God Anubis with His Young Ones");
                 aritfactDetailsText.setText("The jackal was the sacred animal of the god Wepwawet and Anubis, the god of mummification. The sculpture of this sacred animal with his young ones is unique. \n" +
@@ -271,7 +271,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Height 5 cm  Length 8 cm\n");
                 break;
             case R.id.artifact_22:
-                img.setImageResource(R.drawable.highlight__xv);
+                img.setImageResource(R.drawable.staff__iv);
                 aritfactDetailsTitle.setText("Statue of Goddess Hathor as a Cow");
                 artifactActionBar.setText("Statue of Goddess Hathor as a Cow");
                 aritfactDetailsText.setText("This statue of Hathor is a life-size depiction of a cow, her sacred animal. It was dedicated by Amenhotep the Second to Hathor and his father Tuthmosis the Third. \n" +
@@ -283,7 +283,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Height 2.2 cm  Length 2.3 cm\n");
                 break;
             case R.id.artifact_23:
-                img.setImageResource(R.drawable.highlight__xv);
+                img.setImageResource(R.drawable.staff__v);
                 aritfactDetailsTitle.setText("Statue of a Uraeus");
                 artifactActionBar.setText("Statue of a Uraeus");
                 aritfactDetailsText.setText("The uraeus, or royal cobra is fixed to a base. As always, the cobra is depicted with its hood extended, rearing up to powerfully strike any enemy of the king. \n" +
@@ -295,7 +295,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Length 121 cm\n");
                 break;
             case R.id.artifact_24:
-                img.setImageResource(R.drawable.highlight__xv);
+                img.setImageResource(R.drawable.staff__xv);
                 aritfactDetailsTitle.setText("Statue of King Khafra");
                 artifactActionBar.setText("Statue of King Khafra");
                 aritfactDetailsText.setText("Khafra was one of the most famous kings of the Old Kingdom. He had many statues made of hard stone, which exhibit the marvelous skill of the artists during that time. \n" +

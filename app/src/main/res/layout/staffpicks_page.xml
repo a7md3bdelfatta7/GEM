@@ -41,7 +41,7 @@
                         <ImageButton
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@drawable/highlight_i"
+                            android:src="@drawable/staff_i"
                             android:onClick="artifactsDetailsonClick"
                             android:background="@color/cardview_light_background"
                             android:adjustViewBounds="true"
@@ -69,7 +69,7 @@
                             android:layout_height="match_parent"
                             android:background="@color/cardview_light_background"
                             android:onClick="artifactsDetailsonClick"
-                            android:src="@drawable/highlight_ii"
+                            android:src="@drawable/staff_ii"
                             android:adjustViewBounds="true"
                             android:id="@+id/artifact_14"
                             android:scaleType="fitXY"/>
@@ -90,7 +90,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@color/cardview_light_background"
-                            android:src="@drawable/highlight_iii"
+                            android:src="@drawable/staff_iii"
                             android:onClick="artifactsDetailsonClick"
                             android:adjustViewBounds="true"
                             android:id="@+id/artifact_15"
@@ -119,7 +119,7 @@
                         <ImageButton
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@drawable/highlight_iv"
+                            android:src="@drawable/staff_iv"
                             android:background="@color/cardview_light_background"
                             android:onClick="artifactsDetailsonClick"
                             android:adjustViewBounds="true"
@@ -144,7 +144,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@color/cardview_light_background"
-                            android:src="@drawable/highlight_v"
+                            android:src="@drawable/staff_v"
 
                             android:onClick="artifactsDetailsonClick"
                             android:adjustViewBounds="true"
@@ -166,7 +166,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@color/cardview_light_background"
-                            android:src="@drawable/highlight_xv"
+                            android:src="@drawable/staff_xv"
                             android:onClick="artifactsDetailsonClick"
                             android:adjustViewBounds="true"
                             android:id="@+id/artifact_18"
@@ -215,7 +215,7 @@
                         <ImageButton
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@drawable/highlight__i"
+                            android:src="@drawable/staff__i"
                             android:onClick="artifactsDetailsonClick"
                             android:background="@color/cardview_light_background"
                             android:adjustViewBounds="true"
@@ -241,7 +241,7 @@
                             android:layout_height="match_parent"
                             android:onClick="artifactsDetailsonClick"
                             android:background="@color/cardview_light_background"
-                            android:src="@drawable/highlight__ii"
+                            android:src="@drawable/staff__ii"
                             android:adjustViewBounds="true"
                             android:id="@+id/artifact_20"
                             android:scaleType="fitXY"/>
@@ -262,7 +262,7 @@
                             android:layout_height="match_parent"
                             android:onClick="artifactsDetailsonClick"
                             android:background="@color/cardview_light_background"
-                            android:src="@drawable/highlight__iii"
+                            android:src="@drawable/staff__iii"
                             android:adjustViewBounds="true"
                             android:id="@+id/artifact_21"
                             android:scaleType="fitXY"/>
@@ -289,7 +289,7 @@
                         <ImageButton
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@drawable/highlight__iv"
+                            android:src="@drawable/staff__iv"
                             android:onClick="artifactsDetailsonClick"
                             android:background="@color/cardview_light_background"
                             android:adjustViewBounds="true"
@@ -315,7 +315,7 @@
                             android:layout_height="match_parent"
                             android:onClick="artifactsDetailsonClick"
                             android:background="@color/cardview_light_background"
-                            android:src="@drawable/highlight__v"
+                            android:src="@drawable/staff__v"
                             android:adjustViewBounds="true"
                             android:id="@+id/artifact_23"
                             android:scaleType="fitXY"/>
@@ -337,7 +337,7 @@
                             android:onClick="artifactsDetailsonClick"
                             android:id="@+id/artifact_24"
                             android:background="@color/cardview_light_background"
-                            android:src="@drawable/highlight__xv"
+                            android:src="@drawable/staff__xv"
                             android:adjustViewBounds="true"
                             android:scaleType="fitXY"/>
 

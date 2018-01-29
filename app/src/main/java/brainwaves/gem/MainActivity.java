@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity
         imageView=(ImageView)findViewById(R.id.mapIcon);
         //advertismentImage.startAnimation(hyperspaceJumpAnimation);
 
-        new CountDownTimer(9000000, 5000) {
+        new CountDownTimer(900000, 4000) {
 
             public void onTick(long millisUntilFinished) {
                 advertismentfn();
@@ -339,9 +339,10 @@ public class MainActivity extends AppCompatActivity
 
     public void advertismentfn(){
         if(advertismentImage.getVisibility() == View.GONE){
+            imageView.setVisibility(View.GONE);
             advertismentImage.setVisibility(View.VISIBLE);
             advertismentImage.startAnimation(hyperspaceJumpAnimation);
-            imageView.setVisibility(View.GONE);
+
         }
         else {
             advertismentImage.setVisibility(View.GONE);
