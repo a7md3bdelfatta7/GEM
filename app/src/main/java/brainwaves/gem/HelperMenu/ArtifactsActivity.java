@@ -53,7 +53,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "            \\n\\nDimensions: Height 54 cm Width 39.3 cm\n");
                 break;
             case R.id.artifact_2:
-                img.setImageResource(R.drawable.highlight_i);
+                img.setImageResource(R.drawable.highlight_ii);
                 aritfactDetailsTitle.setText("Sphinx of Amenhotep the Second");
                 artifactActionBar.setText("Sphinx of Amenhotep the Second");
                 aritfactDetailsText.setText("A sphinx has the body and strength of a lion and the head or face of a man, symbolizing wisdom and intelligence. \n" +
@@ -63,7 +63,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "The human heads or faces usually have the facial features of these kings. This sphinx portrays King Amenhotep the Second.\n");
                 break;
             case R.id.artifact_3:
-                img.setImageResource(R.drawable.highlight_ii);
+                img.setImageResource(R.drawable.highlight_iii);
                 aritfactDetailsTitle.setText("Anubis Carrying the Moon Disk");
                 artifactActionBar.setText("Anubis Carrying the Moon Disk");
                 aritfactDetailsText.setText("Anubis, the black jackal, was the animal that personified the deity who was believed to protect the cemetery, and thus became the patron deity of mummification. Anubis was depicted in funerary scenes guiding the deceased to Osiris in the court of justice. Embalmers performing the mummification of the corpses wore jackal masks. \n" +
@@ -74,7 +74,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Width 13.5 cm  Height 33.5 cm\n");
                 break;
             case R.id.artifact_4:
-                img.setImageResource(R.drawable.highlight_iii);
+                img.setImageResource(R.drawable.highlight_iv);
                 aritfactDetailsTitle.setText("Shawabti of Tutankhamun");
                 artifactActionBar.setText("Shawabti of Tutankhamun");
                 aritfactDetailsText.setText("The Shawabti, or funerary, figures were intended to perform work in the place of the deceased in the afterlife. They were usually made of faience, wood, or pottery and were various sizes. \n" +
@@ -84,7 +84,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "This Shawabti of gilded wood is an image of the young king wearing the Khepresh crown of ceremonies and processions and the uraeus. It is adorned with a broad collar cut in gold leaf and the two insignia of Osiris.\n");
                 break;
             case R.id.artifact_5:
-                img.setImageResource(R.drawable.highlight_iv);
+                img.setImageResource(R.drawable.highlight_v);
                 aritfactDetailsTitle.setText("Crocodile God Sobek");
                 artifactActionBar.setText("Crocodile God Sobek");
                 aritfactDetailsText.setText("The River Nile and the canals were the main roads of ancient Egypt, although sailing was a great risk because of the crocodiles and hippopotami. Egyptians, therefore, wanted to ward off the danger from crocodiles. They built temples for the cult of the crocodile god Sobek at Esna, Kom Ombo, the Faiyum region, and other places. Each temple had a pool or small underground chambers, in which a live crocodile was kept to receive the offerings and prayers. \n" +
@@ -93,7 +93,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Length 9 cm  Height 6.5 cm\n");
                 break;
             case R.id.artifact_6:
-                img.setImageResource(R.drawable.highlight_v);
+                img.setImageResource(R.drawable.highlight_xv);
                 aritfactDetailsTitle.setText("Goddess Isis Nursing Her Son Horus");
                 artifactActionBar.setText("Goddess Isis Nursing Her Son Horus");
                 aritfactDetailsText.setText("Isis was the wife of the god Osiris and mother of the falcon god Horus. The divine triad was one of the most important and famous groups of deities in ancient Egypt. Isis was often represented nursing her son Horus and became the symbol of motherhood and protection. She was also the goddess of charm and protected people from evil and from magic. \n" +
@@ -103,7 +103,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Height 32 cm\n");
                 break;
             case R.id.artifact_7:
-                img.setImageResource(R.drawable.highlight_xv);
+                img.setImageResource(R.drawable.highlight__i);
                 aritfactDetailsTitle.setText("Outer Coffin of Queen Meritamun");
                 artifactActionBar.setText("Outer Coffin of Queen Meritamun");
                 aritfactDetailsText.setText("This giant coffin of Queen Meritamun, wife of Amenhotep the First of the Eighteenth Dynasty, is considered to be one of the finest coffins ever made in Egypt. It depicts the deceased queen, wearing a long wig, the ends of which with their two locks almost reach her chest. \n" +
@@ -115,7 +115,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Length 3.1 cm  Width 87 cm\n");
                 break;
             case R.id.artifact_8:
-                img.setImageResource(R.drawable.highlight__i);
+                img.setImageResource(R.drawable.highlight__ii);
                 aritfactDetailsTitle.setText("Bust of Amenemhat the Third in Priestly Costume");
                 artifactActionBar.setText("Bust of Amenemhat the Third in Priestly Costume");
                 aritfactDetailsText.setText("This is the upper part of a gray granite, larger than life-size statue of King Amenemhat the Third. It depicts the king as a high priest wearing the panther skin. \n" +
@@ -128,7 +128,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Height 100 cm  Width 99 cm\n");
                 break;
             case R.id.artifact_9:
-                img.setImageResource(R.drawable.highlight__ii);
+                img.setImageResource(R.drawable.highlight__iii);
                 aritfactDetailsTitle.setText("Gold Mask Mummy Cover of King Psusennes the First");
                 artifactActionBar.setText("Gold Mask Mummy Cover of King Psusennes the First");
                 aritfactDetailsText.setText("In this gold mask mummy cover, Psusennes the First appears with the royal headdress surmounted by the uraeus, or royal cobra. He wears a divine plaited false beard. \n" +
@@ -141,7 +141,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Height 45 cm  Width 38 cm\n");
                 break;
             case R.id.artifact_10:
-                img.setImageResource(R.drawable.highlight__iii);
+                img.setImageResource(R.drawable.highlight__iv);
                 aritfactDetailsTitle.setText("Gold Cover of Psusennes' Mummy");
                 artifactActionBar.setText("Gold Cover of Psusennes' Mummy");
                 aritfactDetailsText.setText("This gold sheet covered the mummy of King Psusennes the first, who lived during the Twenty-First Dynasty. His tomb, which contained amazing treasures, was discovered at Tanis. \n" +
@@ -151,7 +151,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "The upper part of the cover, corresponding to the torso, is decorated with two hands holding the insignia of the god Osiris: the crook and the flail. The rest of the cover is decorated with simulated mummy bandages.\n");
                 break;
             case R.id.artifact_11:
-                img.setImageResource(R.drawable.highlight__iv);
+                img.setImageResource(R.drawable.highlight__v);
                 aritfactDetailsTitle.setText("Queen Hatshepsut Offering to Osiris");
                 artifactActionBar.setText("Queen Hatshepsut Offering to Osiris");
                 aritfactDetailsText.setText("On this flake, the artist intended to show respect for the queen's majesty and drew her as a masculine figure, kneeling and wearing the Khepresh helmet-like crown of ceremonies. She is offering two jars of wine and cool water to the god Osiris of the underworld (not shown). \n" +
@@ -160,7 +160,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Width 8 cm  Height 15 cm\n");
                 break;
             case R.id.artifact_12:
-                img.setImageResource(R.drawable.highlight__v);
+                img.setImageResource(R.drawable.highlight__xv);
                 aritfactDetailsTitle.setText("Fragments of Standing Statue of a King");
                 artifactActionBar.setText("Fragments of Standing Statue of a King");
                 aritfactDetailsText.setText("The statue portrays a king standing on a small base. His left leg is forward, in the tradition of Egyptian statuary. He wears the White Crown of Upper Egypt and the short royal kilt called the Shendyt. His left arm is by his side, the right arm is bent, and he is holding the royal mace. \n" +
