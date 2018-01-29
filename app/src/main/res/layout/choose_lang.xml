@@ -1,60 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/activity_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/defaultColor"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/choose_lang_activity_horizontal_margin"
-    android:paddingRight="@dimen/choose_lang_activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="brainwaves.gem.ChooseLangActivity"
-    android:gravity="center">
-
-
+    tools:context="brainwaves.gem.ChooseLangActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/chooseLangAd"
+    android:background="@color/defaultColor">
+        <VideoView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:id="@+id/mainSponsor"/>
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="0dp"
-            android:layout_marginBottom="10dp"
-            android:src="@drawable/gem_word"
-            android:scaleType="centerInside"
-            android:adjustViewBounds="true"
-            />
-
+            android:layout_height="match_parent"
+            android:src="@drawable/loginad"/>
+</LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/white">
-                <Spinner
-                    android:id="@+id/lang_spinner"
+            android:layout_height="match_parent"
+            android:id="@+id/activity_login"
+            android:background="@color/defaultColor"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/choose_lang_activity_horizontal_margin"
+            android:paddingRight="@dimen/choose_lang_activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:orientation="vertical"
+            tools:context="brainwaves.gem.ChooseLangActivity"
+            android:gravity="center"
+            android:visibility="gone">
+
+                <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingTop="5dip"
-                    android:paddingBottom="5dip"
-                    android:backgroundTint="@color/defaultColor"
-                    android:dropDownWidth="match_parent"
-                    android:spinnerMode="dropdown"
+                    android:padding="0dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/gem_word"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"
                     />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white">
+                        <Spinner
+                            android:id="@+id/lang_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dip"
+                            android:paddingBottom="5dip"
+                            android:backgroundTint="@color/defaultColor"
+                            android:dropDownWidth="match_parent"
+                            android:spinnerMode="dropdown"
+                            />
+                </LinearLayout>
+
+                <Button
+                    android:text="Enter"
+                    android:layout_width="70dip"
+                    android:layout_height="36dp"
+                    android:id="@+id/nextButton"
+                    android:background="@android:color/white"
+                    android:textColor="@color/defaultColor"
+                    android:textSize="18sp"
+                    android:letterSpacing="0.1"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="end"
+                    />
+
+
         </LinearLayout>
-
-        <Button
-            android:text="Enter"
-            android:layout_width="70dip"
-            android:layout_height="36dp"
-            android:id="@+id/nextButton"
-            android:background="@android:color/white"
-            android:textColor="@color/defaultColor"
-            android:textSize="18sp"
-            android:letterSpacing="0.1"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="end"
-            />
-
-
 
 
 

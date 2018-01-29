@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="0dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="20dp"
         android:src="@drawable/gem_word"
         android:scaleType="centerInside"
         android:adjustViewBounds="true"
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:background="@android:color/white"
         android:textSize="20sp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="20dp"
         />
 
     <LinearLayout
@@ -165,7 +165,10 @@
         android:textAlignment="center"
         android:textColor="@android:color/white"
         />
-    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/loginad"/>
 
 
 </LinearLayout>

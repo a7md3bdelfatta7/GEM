@@ -58,6 +58,15 @@ public class shoppingDetailsActivity extends AppCompatActivity {
             case R.id.shop_book_iii:
                 img.setImageResource(R.drawable.shop_book_iii);
                 break;
+            case R.id.shop_artifact_i:
+                img.setImageResource(R.drawable.highlight_i);
+                break;
+            case R.id.shop_artifact_ii:
+                img.setImageResource(R.drawable.highlight_ii);
+                break;
+            case R.id.shop_artifact_iii:
+                img.setImageResource(R.drawable.highlight_iii);
+                break;
         }
     }
     public void shoppingCheckout (View v){

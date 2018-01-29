@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.ActivityCompat;
@@ -23,6 +24,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -48,6 +51,9 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private final String LOG_TAG = MainActivity.class.getSimpleName();
+    ImageView advertismentImage;
+    Animation hyperspaceJumpAnimation;
+    ImageView imageView;
 
     // Titles of the individual pages (displayed in tabs)
     private final String[] PAGE_TITLES = new String[] {
@@ -101,6 +107,23 @@ public class MainActivity extends AppCompatActivity
 
         final View navHeaderView=navigationView.getHeaderView(0);
 
+        ////////////////actionbar///////////
+        advertismentImage = (ImageView) findViewById(R.id.advertisement);
+        hyperspaceJumpAnimation = AnimationUtils.loadAnimation(this, R.anim.animation);
+        imageView=(ImageView)findViewById(R.id.mapIcon);
+        //advertismentImage.startAnimation(hyperspaceJumpAnimation);
+
+        new CountDownTimer(900000, 4000) {
+
+            public void onTick(long millisUntilFinished) {
+                advertismentfn();
+            }
+
+            public void onFinish() {
+                //Restart timer if you want.
+            }
+        }.start();
+
         // Connect the tabs with the ViewPager (the setupWithViewPager method does this for us in
         // both directions, i.e. when a new tab is selected, the ViewPager switches to this page,
         // and when the ViewPager switches to a new page, the corresponding tab is selected)
@@ -128,26 +151,35 @@ public class MainActivity extends AppCompatActivity
                         super.onTabSelected(tab);
                         int tabIndex = tab.getPosition();
                         int color = Color.parseColor(getResources().getString(0 + R.color.visiColor));
+                        advertismentImage.setImageResource(R.drawable.coca);
                         switch (tabIndex) {
                             case 0:
                                 color = Color.parseColor(getResources().getString(0 + R.color.visiColor));
+                                advertismentImage.setImageResource(R.drawable.coca);
                                 break;
                             case 1:
                                 color = Color.parseColor(getResources().getString(0 + R.color.highlightColor));
+                                advertismentImage.setImageResource(R.drawable.vodafone);
                                 break;
                             case 2:
                                 color = Color.parseColor(getResources().getString(0 + R.color.todayEventColor));
+                                advertismentImage.setImageResource(R.drawable.adidas);
                                 break;
                             case 3:
                                 color = Color.parseColor(getResources().getString(0 + R.color.forMemberColor));
+                                advertismentImage.setImageResource(R.drawable.cadbury);
                                 break;
                             case 4:
                                 color = Color.parseColor(getResources().getString(0 + R.color.staffPicksColor));
+                                advertismentImage.setImageResource(R.drawable.pepsi);
                                 break;
                             case 5:
                                 color = Color.parseColor(getResources().getString(0 + R.color.featuredEventsColor));
+                                advertismentImage.setImageResource(R.drawable.etisalat);
                                 break;
+
                         }
+
                         appBarLayout.setBackgroundColor(color);
                         navHeaderView.setBackgroundColor(color);
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -157,7 +189,7 @@ public class MainActivity extends AppCompatActivity
                 }
         );
 
-        ImageView imageView=(ImageView)findViewById(R.id.mapIcon);
+
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -308,6 +340,18 @@ public class MainActivity extends AppCompatActivity
 
 
 
+    public void advertismentfn(){
+        if(advertismentImage.getVisibility() == View.GONE){
+            imageView.setVisibility(View.GONE);
+            advertismentImage.setVisibility(View.VISIBLE);
+            advertismentImage.startAnimation(hyperspaceJumpAnimation);
+
+        }
+        else {
+            advertismentImage.setVisibility(View.GONE);
+            imageView.setVisibility(View.VISIBLE);
+        }
+    }
 
 
 

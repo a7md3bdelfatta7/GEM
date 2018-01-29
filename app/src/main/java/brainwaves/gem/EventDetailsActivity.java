@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -22,6 +23,8 @@ public class EventDetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_event_details);
 
         ActionBar actionBar=getSupportActionBar();
@@ -109,21 +112,21 @@ public class EventDetailsActivity extends AppCompatActivity {
                 break;
 
             case R.id.today_event1:
-                eventDetailsImage.setImageResource(R.drawable.featured_shape4);
+                eventDetailsImage.setImageResource(R.drawable.todaysevent_i);
                 actionBarTitle.setText(R.string.event1_topic);
                 eventTitle.setText(R.string.event1_topic);
                 eventDetails.setText(R.string.temp_text);
                 break;
 
             case R.id.today_event2:
-                eventDetailsImage.setImageResource(R.drawable.featured_shape4);
+                eventDetailsImage.setImageResource(R.drawable.todaysevent_ii);
                 actionBarTitle.setText(R.string.event2_topic);
                 eventTitle.setText(R.string.event2_topic);
                 eventDetails.setText(R.string.temp_text);
                 break;
 
             case R.id.today_event3:
-                eventDetailsImage.setImageResource(R.drawable.featured_shape4);
+                eventDetailsImage.setImageResource(R.drawable.todaysevent_iii);
                 actionBarTitle.setText(R.string.event3_topic);
                 eventTitle.setText(R.string.event3_topic);
                 eventDetails.setText(R.string.temp_text);

@@ -70,7 +70,7 @@ public class Tour extends AppCompatActivity {
                 Intent intent =new Intent(Tour.this,ViewTourActivity.class);
                 intent.putExtra("tourName",itemValue);
                 startActivity(intent);
-                finish();
+               // finish();
             }
 
         });
@@ -111,6 +111,7 @@ public class Tour extends AppCompatActivity {
         }
         
         startActivity(intent);
+        finish();
         
     }
 }

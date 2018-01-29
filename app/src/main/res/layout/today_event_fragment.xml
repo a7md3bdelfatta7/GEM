@@ -59,7 +59,7 @@
                         android:id="@+id/firstImage"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/member_shape1"
+                        android:src="@drawable/todaysevent_i"
                         android:scaleType="fitStart"
                         android:adjustViewBounds="true"
                         />
@@ -129,7 +129,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/member_shape1"
+                        android:src="@drawable/todaysevent_ii"
                         android:scaleType="fitStart"
                         android:adjustViewBounds="true"
                         />
@@ -200,7 +200,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/member_shape1"
+                        android:src="@drawable/todaysevent_iii"
                         android:scaleType="fitStart"
                         android:adjustViewBounds="true"
                         />
