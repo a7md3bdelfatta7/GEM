@@ -30,6 +30,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -204,6 +205,7 @@ public class MainActivity extends AppCompatActivity
         TextView userDetails=(TextView)navHeaderView.findViewById(R.id.user_details);
         fullName.setText(UserContract.fullName);
         userDetails.setText(UserContract.nationality+"-"+UserContract.birthDate);
+
     }
     public void VisitDetailsonClick(View v) {
         Intent intent = new Intent(MainActivity.this,
@@ -218,6 +220,7 @@ public class MainActivity extends AppCompatActivity
         intent.putExtra("id",""+v.getId());
         startActivity(intent);
     }
+
     public void HighlightsAddToTouronClick(View v) {
         ImageButton flashButtonOn = (ImageButton) findViewById(v.getId());
         flashButtonOn.setImageResource(R.drawable.add_button_ii);

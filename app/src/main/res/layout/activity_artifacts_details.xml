@@ -27,6 +27,8 @@
                 android:adjustViewBounds="true"
                 android:scaleType="fitEnd"
                 android:layout_alignParentRight="true"
+                android:onClick="HighlightsAddToTouronClick"
+                android:id="@+id/add_tourBtn"
                 android:src="@drawable/add_button_i"/>
             <ImageButton
                 android:layout_width="50dp"
