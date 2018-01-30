@@ -173,6 +173,8 @@
     <string name="tour_criteria">Build Tour Based On.</string>
     <string name="added_artifacts">Added Artifacts</string>
     <string name="invite_users">Invite</string>
+    <string name="select_tour_guide">Select Tour Guide</string>
+    <string name="get_tour">Request Tour Guide</string>
 
 
 </resources>

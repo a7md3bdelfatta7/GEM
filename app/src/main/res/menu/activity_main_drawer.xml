@@ -16,7 +16,7 @@
             android:title="MEMBERSHIP" />
         <item
             android:id="@+id/tour_menu"
-            android:title="My Tour" />
+            android:title="@string/tour_activity_title" />
         <item
             android:id="@+id/ticket_menu"
             android:title="Get Ticket" />
@@ -28,7 +28,7 @@
             android:title="FAVOURITES" />
         <item
             android:id="@+id/logout_menu"
-            android:title="LOGOUT" />
+            android:title="Logout" />
 
 
     </group>

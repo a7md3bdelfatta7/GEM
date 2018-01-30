@@ -286,7 +286,8 @@ public class MainActivity extends AppCompatActivity
             Uri uri = Uri.parse("https://www.mi4biz.com/");
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(intent);
-        }else if (id == R.id.Favourite_menu) {
+        }
+        else if (id == R.id.Favourite_menu) {
             Intent Favourites = new Intent(MainActivity.this,
                     Favourites.class);
             startActivity(Favourites);

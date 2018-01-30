@@ -107,6 +107,7 @@ public class Tour extends AppCompatActivity {
                 intent=new Intent(Tour.this, GroupTourActivity.class);
                 break;
             case R.id.guide_tour_button:
+                intent=new Intent(Tour.this, TourGuideActivity.class);
                 break;
         }
         
