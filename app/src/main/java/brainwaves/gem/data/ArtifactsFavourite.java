@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.provider.BaseColumns;
-import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 
@@ -13,21 +12,21 @@ import java.util.ArrayList;
  * Created by AhmedMiohamed on 1/28/2018.
  */
 
-public class ArtifactsContract {
+public class ArtifactsFavourite {
 
     public static ArrayList<Integer> tourArtifatcs;
     private SQLiteDatabase mDb;
 
-    public class ArtifactEntry implements BaseColumns {
+    public class FavouriteEntry implements BaseColumns {
 
-        public static final String TABLE_NAME = "selected_artifacts";
+        public static final String TABLE_NAME = "FAVOURITE_ARTIFACTS";
         public static final String COLUMN_USER_ID = "userId";
         public static final String COLUMN_ARTIFACT_ID = "artifactId";
 
     }
 
     Context context;
-    public ArtifactsContract(Context context){
+    public ArtifactsFavourite(Context context){
         this.context=context;
         GemDbHelper dbHelper = new GemDbHelper(context);
         mDb = dbHelper.getWritableDatabase();
@@ -36,11 +35,11 @@ public class ArtifactsContract {
     public long addNewArtifact(String artifactId){
 
         ContentValues cv = new ContentValues();
-        cv.put(ArtifactEntry.COLUMN_USER_ID,UserContract.userID);
-        cv.put(ArtifactEntry.COLUMN_ARTIFACT_ID,artifactId);
+        cv.put(FavouriteEntry.COLUMN_USER_ID,UserContract.userID);
+        cv.put(FavouriteEntry.COLUMN_ARTIFACT_ID,artifactId);
 
         if(!this.artifactExist(artifactId)){
-            return mDb.insert(ArtifactEntry.TABLE_NAME, null, cv);
+            return mDb.insert(FavouriteEntry.TABLE_NAME, null, cv);
         }else{
             return 0;
         }
@@ -51,13 +50,13 @@ public class ArtifactsContract {
 
     public ArrayList<String> getSelectedArtifacts(){
 
-        String whereClause = ""+ ArtifactEntry.COLUMN_USER_ID+" = ?";
+        String whereClause = ""+ FavouriteEntry.COLUMN_USER_ID+" = ?";
         String[] whereArgs = new String[] {
                 UserContract.userID
         };
 
         Cursor cursor=mDb.query(
-                ArtifactEntry.TABLE_NAME,
+                FavouriteEntry.TABLE_NAME,
                 null,
                 whereClause,
                 whereArgs,
@@ -71,7 +70,7 @@ public class ArtifactsContract {
 
         if(cursor.getCount()>0) {
             while (cursor.moveToNext()) {
-                selectedArtifacts.add(cursor.getString(cursor.getColumnIndex(ArtifactEntry.COLUMN_ARTIFACT_ID)));
+                selectedArtifacts.add(cursor.getString(cursor.getColumnIndex(FavouriteEntry.COLUMN_ARTIFACT_ID)));
             }
         }
         return selectedArtifacts;
@@ -79,14 +78,14 @@ public class ArtifactsContract {
 
     public boolean artifactExist(String artifactId){
 
-        String whereClause = ""+ ArtifactEntry.COLUMN_USER_ID+" = ? and "+ArtifactEntry.COLUMN_ARTIFACT_ID+" = ?";
+        String whereClause = ""+ FavouriteEntry.COLUMN_USER_ID+" = ? and "+ FavouriteEntry.COLUMN_ARTIFACT_ID+" = ?";
         String[] whereArgs = new String[] {
                 UserContract.userID,
                 artifactId
         };
 
         Cursor cursor=mDb.query(
-                ArtifactEntry.TABLE_NAME,
+                FavouriteEntry.TABLE_NAME,
                 null,
                 whereClause,
                 whereArgs,
@@ -103,17 +102,17 @@ public class ArtifactsContract {
         }
         return false;
     }
+
     public int deleteArtifact(int artifactId){
 
-        String table = ArtifactsFavourite.FavouriteEntry.TABLE_NAME;
-        String whereClause = ArtifactsFavourite.FavouriteEntry.COLUMN_ARTIFACT_ID+"=?";
+        String table = FavouriteEntry.TABLE_NAME;
+        String whereClause = FavouriteEntry.COLUMN_ARTIFACT_ID+"=?";
         String[] whereArgs = new String[] { String.valueOf(artifactId) };
 
         int returned=mDb.delete(table, whereClause, whereArgs);
 
         return returned;
     }
-
 
 
 }

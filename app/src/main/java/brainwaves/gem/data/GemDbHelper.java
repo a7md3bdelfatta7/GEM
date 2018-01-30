@@ -56,12 +56,18 @@ public class GemDbHelper extends SQLiteOpenHelper {
                  "artifact_id TEXT NOT NULL" +
                 "); ";
 
+        String SQL_CREATE_FAVOURITE_TABLE ="CREATE TABLE "+ ArtifactsFavourite.FavouriteEntry.TABLE_NAME+ " ("+
+                ArtifactEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                ArtifactEntry.COLUMN_USER_ID + " TEXT NOT NULL, " +
+                ArtifactEntry.COLUMN_ARTIFACT_ID + " TEXT NOT NULL" +
+                "); ";
 
 
         sqLiteDatabase.execSQL(SQL_CREATE_USER_TABLE);
         sqLiteDatabase.execSQL(SQL_CREATE_ARTIFACT_TABLE);
         sqLiteDatabase.execSQL(SQL_CREATE_TOUR_TABLE);
         sqLiteDatabase.execSQL(SQL_CREATE_TOUR_ARTIFACTS_TABLE);
+        sqLiteDatabase.execSQL(SQL_CREATE_FAVOURITE_TABLE);
 
 
     }

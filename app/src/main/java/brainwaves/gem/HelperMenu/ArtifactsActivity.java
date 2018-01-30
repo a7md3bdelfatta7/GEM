@@ -21,10 +21,13 @@ import android.widget.Toast;
 import brainwaves.gem.MainActivity;
 import brainwaves.gem.R;
 import brainwaves.gem.data.ArtifactsContract;
+import brainwaves.gem.data.ArtifactsFavourite;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class ArtifactsActivity extends AppCompatActivity {
 
+    int artifact_num;
+    ImageButton artifactAddedToTourImgButton;
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
@@ -36,7 +39,7 @@ public class ArtifactsActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_artifacts_details);
-
+        artifactAddedToTourImgButton = (ImageButton) findViewById(R.id.add_tourBtn);
         ActionBar actionBar=getSupportActionBar();
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.artifacts_actionbar);
@@ -47,8 +50,10 @@ public class ArtifactsActivity extends AppCompatActivity {
         TextView artifactActionBar = (TextView) findViewById(R.id.artifactNameActionBar);
         TextView aritfactDetailsText = (TextView) findViewById(R.id.artifact_details_text);
         TextView aritfactDetailsTitle = (TextView) findViewById(R.id.artifact_details_title);
+        artifact_num=0;
         switch (Integer.parseInt(id)){
             case R.id.artifact_1:
+                artifact_num = 1;
                 img.setImageResource(R.drawable.highlight_i);
                 aritfactDetailsTitle.setText("TUT ANKAMUN MASK");
                 artifactActionBar.setText("TUT ANKAMUN MASK");
@@ -60,6 +65,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "            \\n\\nDimensions: Height 54 cm Width 39.3 cm\n");
                 break;
             case R.id.artifact_2:
+                artifact_num = 2;
                 img.setImageResource(R.drawable.highlight_ii);
                 aritfactDetailsTitle.setText("Sphinx of Amenhotep the Second");
                 artifactActionBar.setText("Sphinx of Amenhotep the Second");
@@ -70,6 +76,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "The human heads or faces usually have the facial features of these kings. This sphinx portrays King Amenhotep the Second.\n");
                 break;
             case R.id.artifact_3:
+                artifact_num = 3;
                 img.setImageResource(R.drawable.highlight_iii);
                 aritfactDetailsTitle.setText("Anubis Carrying the Moon Disk");
                 artifactActionBar.setText("Anubis Carrying the Moon Disk");
@@ -81,6 +88,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Width 13.5 cm  Height 33.5 cm\n");
                 break;
             case R.id.artifact_4:
+                artifact_num = 4;
                 img.setImageResource(R.drawable.highlight_iv);
                 aritfactDetailsTitle.setText("Shawabti of Tutankhamun");
                 artifactActionBar.setText("Shawabti of Tutankhamun");
@@ -91,6 +99,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "This Shawabti of gilded wood is an image of the young king wearing the Khepresh crown of ceremonies and processions and the uraeus. It is adorned with a broad collar cut in gold leaf and the two insignia of Osiris.\n");
                 break;
             case R.id.artifact_5:
+                artifact_num = 5;
                 img.setImageResource(R.drawable.highlight_v);
                 aritfactDetailsTitle.setText("Crocodile God Sobek");
                 artifactActionBar.setText("Crocodile God Sobek");
@@ -100,6 +109,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Length 9 cm  Height 6.5 cm\n");
                 break;
             case R.id.artifact_6:
+                artifact_num = 6;
                 img.setImageResource(R.drawable.highlight_xv);
                 aritfactDetailsTitle.setText("Goddess Isis Nursing Her Son Horus");
                 artifactActionBar.setText("Goddess Isis Nursing Her Son Horus");
@@ -110,6 +120,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Height 32 cm\n");
                 break;
             case R.id.artifact_7:
+                artifact_num = 7;
                 img.setImageResource(R.drawable.highlight__i);
                 aritfactDetailsTitle.setText("Outer Coffin of Queen Meritamun");
                 artifactActionBar.setText("Outer Coffin of Queen Meritamun");
@@ -122,6 +133,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Length 3.1 cm  Width 87 cm\n");
                 break;
             case R.id.artifact_8:
+                artifact_num = 8;
                 img.setImageResource(R.drawable.highlight__ii);
                 aritfactDetailsTitle.setText("Bust of Amenemhat the Third in Priestly Costume");
                 artifactActionBar.setText("Bust of Amenemhat the Third in Priestly Costume");
@@ -135,6 +147,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Height 100 cm  Width 99 cm\n");
                 break;
             case R.id.artifact_9:
+                artifact_num = 9;
                 img.setImageResource(R.drawable.highlight__iii);
                 aritfactDetailsTitle.setText("Gold Mask Mummy Cover of King Psusennes the First");
                 artifactActionBar.setText("Gold Mask Mummy Cover of King Psusennes the First");
@@ -148,6 +161,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Height 45 cm  Width 38 cm\n");
                 break;
             case R.id.artifact_10:
+                artifact_num = 10;
                 img.setImageResource(R.drawable.highlight__iv);
                 aritfactDetailsTitle.setText("Gold Cover of Psusennes' Mummy");
                 artifactActionBar.setText("Gold Cover of Psusennes' Mummy");
@@ -158,6 +172,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "The upper part of the cover, corresponding to the torso, is decorated with two hands holding the insignia of the god Osiris: the crook and the flail. The rest of the cover is decorated with simulated mummy bandages.\n");
                 break;
             case R.id.artifact_11:
+                artifact_num = 11;
                 img.setImageResource(R.drawable.highlight__v);
                 aritfactDetailsTitle.setText("Queen Hatshepsut Offering to Osiris");
                 artifactActionBar.setText("Queen Hatshepsut Offering to Osiris");
@@ -167,6 +182,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Width 8 cm  Height 15 cm\n");
                 break;
             case R.id.artifact_12:
+                artifact_num = 12;
                 img.setImageResource(R.drawable.highlight__xv);
                 aritfactDetailsTitle.setText("Fragments of Standing Statue of a King");
                 artifactActionBar.setText("Fragments of Standing Statue of a King");
@@ -175,6 +191,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Height 21 cm\n");
                 break;
             case R.id.artifact_13:
+                artifact_num = 13;
                 img.setImageResource(R.drawable.staff_i);
                 aritfactDetailsTitle.setText("Sarcophagus of Isis");
                 artifactActionBar.setText("Sarcophagus of Isis");
@@ -187,6 +204,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Length 190 cm\n");
                 break;
             case R.id.artifact_14:
+                artifact_num = 14;
                 img.setImageResource(R.drawable.staff_ii);
                 aritfactDetailsTitle.setText("Sarcophagus with Cover Depicting the Deceased");
                 artifactActionBar.setText("Sarcophagus with Cover Depicting the Deceased");
@@ -200,6 +218,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Height 70 cm  Length 250 cm  Width 90 cm\n");
                 break;
             case R.id.artifact_15:
+                artifact_num = 15;
                 img.setImageResource(R.drawable.staff_iii);
                 aritfactDetailsTitle.setText("Sarcophagus of Queen Kawit");
                 artifactActionBar.setText("Sarcophagus of Queen Kawit");
@@ -212,6 +231,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Height 119 cm  Length 262 cm  Width 119 cm\n");
                 break;
             case R.id.artifact_16:
+                artifact_num = 16;
                 img.setImageResource(R.drawable.staff_iv);
                 aritfactDetailsTitle.setText("Amulet in the Shape of Winged Vulture");
                 artifactActionBar.setText("Amulet in the Shape of Winged Vulture");
@@ -224,6 +244,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Height 3.5 cm  Width 3.8 cm\n");
                 break;
             case R.id.artifact_17:
+                artifact_num = 17;
                 img.setImageResource(R.drawable.staff_v);
                 aritfactDetailsTitle.setText("Sphinx of Amenemhat the Third");
                 artifactActionBar.setText("Sphinx of Amenemhat the Third");
@@ -233,6 +254,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Length 220 cm  Height 75 cm\n");
                 break;
             case R.id.artifact_18:
+                artifact_num = 18;
                 img.setImageResource(R.drawable.staff_xv);
                 aritfactDetailsTitle.setText("Meroitic Ba Statue of a Woman");
                 artifactActionBar.setText("Meroitic Ba Statue of a Woman");
@@ -245,6 +267,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Height 66 cm  Length 44 cm\n");
                 break;
             case R.id.artifact_19:
+                artifact_num = 19;
                 img.setImageResource(R.drawable.staff__i);
                 aritfactDetailsTitle.setText("Statue of In-Heret-Shu as a Mummy");
                 artifactActionBar.setText("Statue of In-Heret-Shu as a Mummy");
@@ -255,6 +278,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Height 74.5 cm\n");
                 break;
             case R.id.artifact_20:
+                artifact_num = 20;
                 img.setImageResource(R.drawable.staff__ii);
                 aritfactDetailsTitle.setText("Statue of Khufu-iam and his Wife");
                 artifactActionBar.setText("Statue of Khufu-iam and his Wife");
@@ -266,6 +290,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Height 45 cm  Width 27.5 cm\n");
                 break;
             case R.id.artifact_21:
+                artifact_num = 21;
                 img.setImageResource(R.drawable.staff__iii);
                 aritfactDetailsTitle.setText("Statue of the God Anubis with His Young Ones");
                 artifactActionBar.setText("Statue of the God Anubis with His Young Ones");
@@ -278,6 +303,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Height 5 cm  Length 8 cm\n");
                 break;
             case R.id.artifact_22:
+                artifact_num = 22;
                 img.setImageResource(R.drawable.staff__iv);
                 aritfactDetailsTitle.setText("Statue of Goddess Hathor as a Cow");
                 artifactActionBar.setText("Statue of Goddess Hathor as a Cow");
@@ -290,6 +316,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Height 2.2 cm  Length 2.3 cm\n");
                 break;
             case R.id.artifact_23:
+                artifact_num = 23;
                 img.setImageResource(R.drawable.staff__v);
                 aritfactDetailsTitle.setText("Statue of a Uraeus");
                 artifactActionBar.setText("Statue of a Uraeus");
@@ -302,6 +329,7 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Length 121 cm\n");
                 break;
             case R.id.artifact_24:
+                artifact_num = 24;
                 img.setImageResource(R.drawable.staff__xv);
                 aritfactDetailsTitle.setText("Statue of King Khafra");
                 artifactActionBar.setText("Statue of King Khafra");
@@ -315,6 +343,10 @@ public class ArtifactsActivity extends AppCompatActivity {
                         "Dimensions:  Height 120 cm\n");
                 break;
         }
+        if(artifact_num>12)
+            artifactAddedToTourImgButton.setVisibility(View.GONE);
+        highlightToFavourites();
+        highlightTotour();
     }
 
     public void shareonClick(View v) {
@@ -350,9 +382,59 @@ public class ArtifactsActivity extends AppCompatActivity {
         });
     }
 
+    public void HighlightsAddTofavouriteonClick(View v) {
+        ImageButton flashButtonOn = (ImageButton) findViewById(R.id.favouritesActionBar);
+        ArtifactsFavourite artifactFavourite=new ArtifactsFavourite(getApplicationContext());
+
+        if(artifactFavourite.artifactExist(artifact_num+"")){
+            artifactFavourite.deleteArtifact(artifact_num);
+            flashButtonOn.setImageResource(R.drawable.favourite_blank);
+        }
+        else {
+            flashButtonOn.setImageResource(R.drawable.favourite_red);
+            long result = artifactFavourite.addNewArtifact(artifact_num + "");
+            if (result == -1) {
+                Toast.makeText(this, "Failed to add! try again.", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Added Successfully", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+
     public void HighlightsAddToTouronClick(View v) {
-        ImageButton flashButtonOn = (ImageButton) findViewById(v.getId());
-        flashButtonOn.setImageResource(R.drawable.favourite_red);
+        ImageButton flashButtonOn = (ImageButton) findViewById(R.id.add_tourBtn);
+        ArtifactsContract artifact=new ArtifactsContract(getApplicationContext());
+
+        if(artifact.artifactExist(artifact_num+"")){
+            artifact.deleteArtifact(artifact_num);
+            flashButtonOn.setImageResource(R.drawable.add_button_i);
+        }
+        else {
+            flashButtonOn.setImageResource(R.drawable.add_button_ii);
+            long result = artifact.addNewArtifact(artifact_num + "");
+            if (result == -1) {
+                Toast.makeText(this, "Failed to add! try again.", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Added Successfully", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+
+    public void highlightToFavourites(){
+        ImageButton flashButtonOn = (ImageButton) findViewById(R.id.favouritesActionBar);
+        ArtifactsFavourite artifactFavourite=new ArtifactsFavourite(getApplicationContext());
+        if(artifactFavourite.artifactExist(artifact_num+"")){
+            flashButtonOn.setImageResource(R.drawable.favourite_red);
+        }
+    }
+    public void highlightTotour(){
+        ImageButton flashButtonOn = (ImageButton) findViewById(R.id.add_tourBtn);
+        ArtifactsContract artifact =new ArtifactsContract(getApplicationContext());
+        if(artifact.artifactExist(artifact_num+"")){
+            flashButtonOn.setImageResource(R.drawable.add_button_ii);
+        }
     }
 
     @Override
