@@ -5,6 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import  brainwaves.gem.data.UserContract.UserEntry;
 import  brainwaves.gem.data.ArtifactsContract.ArtifactEntry;
+import  brainwaves.gem.data.TourContract.TourEntry;
 
 
 /**
@@ -42,8 +43,27 @@ public class GemDbHelper extends SQLiteOpenHelper {
                 ArtifactEntry.COLUMN_ARTIFACT_ID + " TEXT NOT NULL" +
                 "); ";
 
+        String SQL_CREATE_TOUR_TABLE ="CREATE TABLE "+ TourEntry.TABLE_NAME+ " ("+
+                TourEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                TourEntry.COLUMN_TOUR_NAME + " TEXT NOT NULL, " +
+                TourEntry.COLUMN_USER_ID + " TEXT NOT NULL" +
+
+                "); ";
+
+        String SQL_CREATE_TOUR_ARTIFACTS_TABLE ="CREATE TABLE tourArtifacts ("+
+                 "id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                 "tour_id TEXT NOT NULL, " +
+                 "artifact_id TEXT NOT NULL" +
+                "); ";
+
+
+
         sqLiteDatabase.execSQL(SQL_CREATE_USER_TABLE);
         sqLiteDatabase.execSQL(SQL_CREATE_ARTIFACT_TABLE);
+        sqLiteDatabase.execSQL(SQL_CREATE_TOUR_TABLE);
+        sqLiteDatabase.execSQL(SQL_CREATE_TOUR_ARTIFACTS_TABLE);
+
+
     }
 
     @Override

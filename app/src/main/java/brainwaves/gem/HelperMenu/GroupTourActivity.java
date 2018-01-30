@@ -1,12 +1,11 @@
 package brainwaves.gem.HelperMenu;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,7 +17,7 @@ import brainwaves.gem.R;
 import brainwaves.gem.data.ArtifactsContract;
 import brainwaves.gem.data.TourContract;
 
-public class IndividualTourActivity extends AppCompatActivity {
+public class GroupTourActivity extends AppCompatActivity {
 
 
     int[] imgs={
@@ -46,7 +45,7 @@ public class IndividualTourActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_individual_tour);
+        setContentView(R.layout.activity_group_tour);
 
         ArtifactsContract artifact=new ArtifactsContract(getApplicationContext());
         ArrayList<String> arts=artifact.getSelectedArtifacts();
@@ -113,7 +112,7 @@ public class IndividualTourActivity extends AppCompatActivity {
 
 
     public void viewMap(View v){
-        Intent intent=new Intent(IndividualTourActivity.this,Map.class);
+        Intent intent=new Intent(GroupTourActivity.this,Map.class);
         startActivity(intent);
     }
 
@@ -130,7 +129,7 @@ public class IndividualTourActivity extends AppCompatActivity {
 
             if(result!=-1) {
 
-                Intent intent =new Intent(IndividualTourActivity.this,ViewTourActivity.class);
+                Intent intent =new Intent(GroupTourActivity.this,ViewTourActivity.class);
                 intent.putExtra("tourName",tourName.getText().toString());
                 startActivity(intent);
                 finish();
@@ -154,6 +153,23 @@ public class IndividualTourActivity extends AppCompatActivity {
         }else{
             Toast.makeText(this,x+" Aready Added!.", Toast.LENGTH_SHORT).show();
         }
+    }
+
+
+    public void inviteClient(View v){
+
+        EditText invitedUserNameEditText=(EditText)findViewById(R.id.invited_user_name);
+        String invitedUserName=invitedUserNameEditText.getText().toString();
+
+        if(invitedUserName.length()>0){
+            TextView invitedClients=(TextView)findViewById(R.id.invited_clients);
+            invitedClients.append(invitedUserName+"\n");
+            invitedUserNameEditText.setText("");
+
+        }else{
+            Toast.makeText(this,"Enter UserName", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
 

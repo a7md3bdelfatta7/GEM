@@ -21,5 +21,8 @@
     <color name="staffPicksColor">#6f009d</color>
     <color name="featuredEventsColor">#3b009d</color>
 
+    <color name="ediTextBg">#efefef</color>
+
+
 
 </resources>

@@ -16,6 +16,7 @@ import brainwaves.gem.R;
 public class UserContract {
 
     private SQLiteDatabase mDb;
+    public static String userID="";
     public static String userName="";
     public static String password="";
     public static String fullName="";
@@ -57,6 +58,7 @@ public class UserContract {
         );
 
         if(cursor.moveToFirst()){
+            userID=cursor.getString(cursor.getColumnIndex(UserEntry._ID));
             userName=cursor.getString(cursor.getColumnIndex(UserEntry.COLUMN_USER_NAME));
             password=cursor.getString(cursor.getColumnIndex(UserEntry.COLUMN_PASSWORD));
             fullName=cursor.getString(cursor.getColumnIndex(UserEntry.COLUMN_Full_NAME));
@@ -109,6 +111,7 @@ public class UserContract {
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putBoolean(context.getResources().getString(R.string.logged_in_key),true);
         editor.putString(context.getResources().getString(R.string.user_name_key),userName);
+        editor.putString(context.getResources().getString(R.string.user_id_key),userID);
         editor.putString(context.getResources().getString(R.string.full_name_key),fullName);
         editor.putString(context.getResources().getString(R.string.birth_date_key),birthDate);
         editor.putString(context.getResources().getString(R.string.nationality_key),nationality);
@@ -118,6 +121,7 @@ public class UserContract {
     public void loadSharedPreferences(){
         SharedPreferences sharedPref = context.getSharedPreferences(context.getResources().
                 getString(R.string.gem_pref_key),Context.MODE_PRIVATE);
+        userID=sharedPref.getString(context.getResources().getString(R.string.user_id_key),userID);
         userName=sharedPref.getString(context.getResources().getString(R.string.user_name_key),userName);
         fullName=sharedPref.getString(context.getResources().getString(R.string.full_name_key),fullName);
         birthDate=sharedPref.getString(context.getResources().getString(R.string.birth_date_key),birthDate);
