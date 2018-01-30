@@ -75,11 +75,12 @@
             android:label="@string/title_activity_checkout" />
         <activity android:name=".EventDetailsActivity" />
         <activity android:name=".HelperMenu.shoppingDetailsActivity" />
-        <activity android:name=".HelperMenu.Favourites"></activity>
-        <activity android:name=".HelperMenu.TourGuideActivity"></activity>
+        <activity android:name=".HelperMenu.Favourites" />
+        <activity android:name=".HelperMenu.TourGuideActivity" />
         <activity
             android:name=".HelperMenu.TourMap"
             android:label="@string/map_activity_title" />
+        <activity android:name=".HelperMenu.Ticket"></activity>
     </application>
 
 </manifest>
