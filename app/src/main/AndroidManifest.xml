@@ -75,10 +75,10 @@
             android:label="@string/title_activity_checkout" />
         <activity android:name=".EventDetailsActivity" />
         <activity android:name=".HelperMenu.shoppingDetailsActivity" />
-        <activity android:name=".HelperMenu.IndividualTourActivity"></activity>
-        <activity android:name=".HelperMenu.GroupTourActivity"></activity>
-        <activity android:name=".HelperMenu.ViewTourActivity"></activity>
-
+        <activity android:name=".HelperMenu.IndividualTourActivity" />
+        <activity android:name=".HelperMenu.GroupTourActivity" />
+        <activity android:name=".HelperMenu.ViewTourActivity" />
+        <activity android:name=".HelperMenu.Favourites"></activity>
     </application>
 
 </manifest>
