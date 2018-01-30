@@ -23,10 +23,13 @@
         <item
             android:id="@+id/AR_menu"
             android:title="Augmented reality" />
-
+        <item
+            android:id="@+id/Favourite_menu"
+            android:title="FAVOURITES" />
         <item
             android:id="@+id/logout_menu"
             android:title="LOGOUT" />
+
 
     </group>
 <!--
