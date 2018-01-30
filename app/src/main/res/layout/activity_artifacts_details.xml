@@ -14,8 +14,10 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/quiz_i"
+                android:maxHeight="500dp"
+                android:src="@drawable/highlight_i"
                 android:adjustViewBounds="true"
+                android:background="#000000"
                 android:id="@+id/artifact_details"
                 android:scaleType="fitCenter"/>
             <ImageButton

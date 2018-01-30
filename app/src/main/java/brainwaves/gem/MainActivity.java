@@ -2,8 +2,10 @@ package brainwaves.gem;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
@@ -277,7 +279,22 @@ public class MainActivity extends AppCompatActivity
             Uri uri = Uri.parse("https://www.mi4biz.com/");
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(intent);
-        } else if (id == R.id.logout_menu) {
+        } else if (id == R.id.AR_menu) {
+            PackageManager pm = this.getPackageManager();
+
+            try
+            {
+                Intent it = pm.getLaunchIntentForPackage("com.BrainWaves.GEM");
+
+                if (null != it)
+                    this.startActivity(it);
+            }
+
+            catch (ActivityNotFoundException e)
+            {
+            }
+
+        }else if (id == R.id.logout_menu) {
             UserContract user=new UserContract(getApplicationContext());
             user.deleteSharedPreference();
             Intent intent=new Intent(MainActivity.this,ChooseLangActivity.class);

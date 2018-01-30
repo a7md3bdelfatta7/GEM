@@ -12,10 +12,10 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/quiz_i"
+            android:src="@drawable/highlight_i"
             android:background="@color/cardview_light_background"
             android:adjustViewBounds="true"
-            android:scaleType="fitCenter"/>
+            android:scaleType="fitXY"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
