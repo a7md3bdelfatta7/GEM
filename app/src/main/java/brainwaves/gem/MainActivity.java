@@ -212,7 +212,7 @@ public class MainActivity extends AppCompatActivity
         startActivity(intent);
     }
 
-    public void artifactsDetailsonClick(View v) {
+    public void addArtifactToTour(View v) {
         Intent intent = new Intent(MainActivity.this,
                 ArtifactsActivity.class);
         intent.putExtra("id",""+v.getId());
@@ -222,12 +222,15 @@ public class MainActivity extends AppCompatActivity
         ImageButton flashButtonOn = (ImageButton) findViewById(v.getId());
         flashButtonOn.setImageResource(R.drawable.add_button_ii);
 
-        //Artifacts artifacts=new Artifacts();
-        //artifacts.tourArtifatcs.add();
-        Toast.makeText(this,v.getTag()+"", Toast.LENGTH_SHORT).show();
         ArtifactsContract artifact=new ArtifactsContract(getApplicationContext());
         long result= artifact.addNewArtifact(v.getTag()+"");
-        Toast.makeText(this, result+"", Toast.LENGTH_SHORT).show();
+        if(result==0){
+            Toast.makeText(this,"Already Added", Toast.LENGTH_SHORT).show();
+        }else if(result ==-1){
+            Toast.makeText(this,"Failed to add! try again.", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(this,"Added Successfully", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override

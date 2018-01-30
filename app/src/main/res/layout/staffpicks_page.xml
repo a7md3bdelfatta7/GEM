@@ -41,8 +41,10 @@
                         <ImageButton
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+
                             android:src="@drawable/staff_i"
-                            android:onClick="artifactsDetailsonClick"
+
+                            android:onClick="addArtifactToTour"
                             android:background="@color/cardview_light_background"
                             android:adjustViewBounds="true"
                             android:id="@+id/artifact_13"
@@ -68,7 +70,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@color/cardview_light_background"
-                            android:onClick="artifactsDetailsonClick"
+
+                            android:onClick="addArtifactToTour"
+
                             android:src="@drawable/staff_ii"
                             android:adjustViewBounds="true"
                             android:id="@+id/artifact_14"
@@ -90,8 +94,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@color/cardview_light_background"
+
                             android:src="@drawable/staff_iii"
-                            android:onClick="artifactsDetailsonClick"
+
+                            android:onClick="addArtifactToTour"
                             android:adjustViewBounds="true"
                             android:id="@+id/artifact_15"
                             android:scaleType="fitXY"/>
@@ -119,9 +125,11 @@
                         <ImageButton
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+
                             android:src="@drawable/staff_iv"
                             android:background="@color/cardview_light_background"
-                            android:onClick="artifactsDetailsonClick"
+
+                            android:onClick="addArtifactToTour"
                             android:adjustViewBounds="true"
                             android:id="@+id/artifact_16"
                             android:scaleType="fitXY"/>
@@ -144,9 +152,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@color/cardview_light_background"
+
                             android:src="@drawable/staff_v"
 
-                            android:onClick="artifactsDetailsonClick"
+
+                            android:onClick="addArtifactToTour"
                             android:adjustViewBounds="true"
                             android:id="@+id/artifact_17"
                             android:scaleType="fitXY"/>
@@ -166,8 +176,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@color/cardview_light_background"
+
                             android:src="@drawable/staff_xv"
-                            android:onClick="artifactsDetailsonClick"
+
+                            android:onClick="addArtifactToTour"
                             android:adjustViewBounds="true"
                             android:id="@+id/artifact_18"
                             android:scaleType="fitXY"/>
@@ -215,8 +227,10 @@
                         <ImageButton
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+
                             android:src="@drawable/staff__i"
-                            android:onClick="artifactsDetailsonClick"
+
+                            android:onClick="addArtifactToTour"
                             android:background="@color/cardview_light_background"
                             android:adjustViewBounds="true"
                             android:id="@+id/artifact_19"
@@ -239,8 +253,10 @@
                         <ImageButton
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:onClick="artifactsDetailsonClick"
+
+                            android:onClick="addArtifactToTour"
                             android:background="@color/cardview_light_background"
+
                             android:src="@drawable/staff__ii"
                             android:adjustViewBounds="true"
                             android:id="@+id/artifact_20"
@@ -260,8 +276,10 @@
                         <ImageButton
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:onClick="artifactsDetailsonClick"
+
+                            android:onClick="addArtifactToTour"
                             android:background="@color/cardview_light_background"
+
                             android:src="@drawable/staff__iii"
                             android:adjustViewBounds="true"
                             android:id="@+id/artifact_21"
@@ -289,8 +307,10 @@
                         <ImageButton
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+
                             android:src="@drawable/staff__iv"
-                            android:onClick="artifactsDetailsonClick"
+
+                            android:onClick="addArtifactToTour"
                             android:background="@color/cardview_light_background"
                             android:adjustViewBounds="true"
                             android:id="@+id/artifact_22"
@@ -313,8 +333,10 @@
                         <ImageButton
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:onClick="artifactsDetailsonClick"
+
+                            android:onClick="addArtifactToTour"
                             android:background="@color/cardview_light_background"
+
                             android:src="@drawable/staff__v"
                             android:adjustViewBounds="true"
                             android:id="@+id/artifact_23"
@@ -334,9 +356,11 @@
                         <ImageButton
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:onClick="artifactsDetailsonClick"
+
+                            android:onClick="addArtifactToTour"
                             android:id="@+id/artifact_24"
                             android:background="@color/cardview_light_background"
+
                             android:src="@drawable/staff__xv"
                             android:adjustViewBounds="true"
                             android:scaleType="fitXY"/>

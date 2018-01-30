@@ -76,6 +76,9 @@
         <activity android:name=".EventDetailsActivity" />
         <activity android:name=".HelperMenu.shoppingDetailsActivity" />
         <activity android:name=".HelperMenu.IndividualTourActivity"></activity>
+        <activity android:name=".HelperMenu.GroupTourActivity"></activity>
+        <activity android:name=".HelperMenu.ViewTourActivity"></activity>
+
     </application>
 
 </manifest>

@@ -176,7 +176,7 @@ public class CollectionsActivity extends AppCompatActivity {
                 break;
         }
     }
-    public void artifactsDetailsonClick(View v) {
+    public void addArtifactToTour(View v) {
         Intent intent = new Intent(CollectionsActivity.this,
                 ArtifactsActivity.class);
         intent.putExtra("id",""+v.getId());
