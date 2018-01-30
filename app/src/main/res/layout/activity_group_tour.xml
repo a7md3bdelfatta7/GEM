@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_individual_tour"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="brainwaves.gem.HelperMenu.IndividualTourActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/tour_details"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tour Name"
+                android:textSize="20sp"
+                android:layout_margin="5dp"
+                />
+
+            <EditText
+                android:id="@+id/tour_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ediTextBg"
+                android:padding="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/select_artifacts"
+                android:textSize="20sp"
+                android:layout_margin="5dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/artifact_content"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/highlight_i"
+                                    android:onClick="addArtifactToTour"
+                                    android:background="@color/cardview_light_background"
+                                    android:adjustViewBounds="true"
+                                    android:id="@+id/artifact_1" 
+                                    android:scaleType="fitXY"
+                                    android:tag="1"
+                                    android:visibility="gone" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10px"
+                            android:layout_marginRight="10px">
+
+                            <ImageButton
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/cardview_light_background"
+                                android:onClick="addArtifactToTour"
+                                android:src="@drawable/highlight_ii"
+                                android:adjustViewBounds="true"
+                                android:id="@+id/artifact_2"
+                                android:scaleType="fitXY"
+                                android:tag="2"
+                                android:visibility="gone" />
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/cardview_light_background"
+                                    android:src="@drawable/highlight_iii"
+                                    android:onClick="addArtifactToTour"
+                                    android:adjustViewBounds="true"
+                                    android:id="@+id/artifact_3"
+                                    android:scaleType="fitXY"
+                                    android:tag="3"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:visibility="gone" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/highlight_iv"
+                                    android:background="@color/cardview_light_background"
+                                    android:onClick="addArtifactToTour"
+                                    android:adjustViewBounds="true"
+                                    android:id="@+id/artifact_4"
+                                    android:scaleType="fitXY"
+                                    android:tag="4"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:visibility="gone" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10px"
+                            android:layout_marginRight="10px">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/cardview_light_background"
+                                    android:src="@drawable/highlight_v"
+
+                                    android:onClick="addArtifactToTour"
+                                    android:adjustViewBounds="true"
+                                    android:id="@+id/artifact_5"
+                                    android:scaleType="fitXY"
+                                    android:tag="5"
+                                    android:visibility="gone" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/cardview_light_background"
+                                    android:src="@drawable/highlight_xv"
+                                    android:onClick="addArtifactToTour"
+                                    android:adjustViewBounds="true"
+                                    android:id="@+id/artifact_6"
+                                    android:scaleType="fitXY"
+                                    android:tag="6"
+                                    android:visibility="gone" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp"
+                    >
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/highlight__i"
+                                    android:onClick="addArtifactToTour"
+                                    android:background="@color/cardview_light_background"
+                                    android:adjustViewBounds="true"
+                                    android:id="@+id/artifact_7"
+                                    android:scaleType="fitXY"
+                                    android:tag="7"
+                                    android:visibility="gone" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10px"
+                            android:layout_marginRight="10px">
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:onClick="addArtifactToTour"
+                                    android:background="@color/cardview_light_background"
+                                    android:src="@drawable/highlight__ii"
+                                    android:adjustViewBounds="true"
+                                    android:id="@+id/artifact_8"
+                                    android:scaleType="fitXY"
+                                    android:tag="8"
+                                    android:visibility="gone" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1.18">
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:onClick="addArtifactToTour"
+                                    android:background="@color/cardview_light_background"
+                                    android:src="@drawable/highlight__iii"
+                                    android:adjustViewBounds="true"
+                                    android:id="@+id/artifact_9"
+                                    android:scaleType="fitXY"
+                                    android:tag="9"
+                                    android:visibility="gone" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/highlight__iv"
+                                    android:onClick="addArtifactToTour"
+                                    android:background="@color/cardview_light_background"
+                                    android:adjustViewBounds="true"
+                                    android:id="@+id/artifact_10"
+                                    android:scaleType="fitXY"
+                                    android:tag="10"
+                                    android:visibility="gone" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10px"
+                            android:layout_marginRight="10px">
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:onClick="addArtifactToTour"
+                                    android:background="@color/cardview_light_background"
+                                    android:src="@drawable/highlight__v"
+                                    android:adjustViewBounds="true"
+                                    android:id="@+id/artifact_11"
+                                    android:scaleType="fitXY"
+                                    android:tag="11"
+                                    android:visibility="gone" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+                              <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:onClick="addArtifactToTour"
+                                    android:id="@+id/artifact_12"
+                                    android:background="@color/cardview_light_background"
+                                    android:src="@drawable/highlight__xv"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:tag="12"
+                                    android:visibility="gone" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/collection_FilterLayout"
+                android:animateLayoutChanges="true"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/added_artifacts"
+                    android:textSize="22sp"
+                    />
+
+                <TextView
+                    android:id="@+id/added_artifacts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/defaultColor"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/invite_users"
+                    android:textSize="22sp"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:padding="7dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/ediTextBg"
+                        android:id="@+id/invited_user_name"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_weight="1"
+                        android:onClick="inviteClient"
+                        />
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/invited_clients"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Add"
+                    android:textColor="@color/defaultColor"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tour_criteria"
+                    android:textSize="20sp"
+                    />
+                <RadioGroup
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp">
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Shortest Path"
+                        android:id="@+id/collections_filter_kings"
+                        android:textSize="15sp"
+                        />
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Oldest "
+                        android:id="@+id/collections_filter_status"
+                        android:textSize="15sp"
+                        />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="6dp"
+                android:weightSum="2"
+                >
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/build_tour"
+                    android:background="@color/defaultColor"
+                    android:textColor="@android:color/white"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:layout_weight="1"
+                    android:onClick="buildTour"
+                    />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

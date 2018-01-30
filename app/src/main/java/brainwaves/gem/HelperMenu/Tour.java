@@ -111,7 +111,6 @@ public class Tour extends AppCompatActivity {
         }
         
         startActivity(intent);
-        finish();
-        
+
     }
 }
