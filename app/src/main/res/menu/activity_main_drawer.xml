@@ -20,6 +20,9 @@
         <item
             android:id="@+id/ticket_menu"
             android:title="Get Ticket" />
+        <item
+            android:id="@+id/AR_menu"
+            android:title="Augmented reality" />
 
         <item
             android:id="@+id/logout_menu"

@@ -61,7 +61,7 @@ public class ChooseLangActivity extends AppCompatActivity implements AdapterView
             }
         });
         videoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() +"/"+R.raw.startupad));
-        videoView.setMediaController(new MediaController(this));
+        //videoView.setMediaController(new MediaController(this));
         videoView.requestFocus();
         videoView.start();
 
