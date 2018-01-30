@@ -18,7 +18,10 @@
             android:layout_height="match_parent"
             android:adjustViewBounds="true"
             android:scaleType="fitXY"
-            android:id="@+id/mainSponsor"/>
+            android:id="@+id/mainSponsor"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:contextClickable="false"/>
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
