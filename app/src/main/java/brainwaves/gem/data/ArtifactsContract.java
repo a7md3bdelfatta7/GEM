@@ -102,8 +102,8 @@ public class ArtifactsContract {
     }
     public int deleteArtifact(int artifactId){
 
-        String table = ArtifactsFavourite.FavouriteEntry.TABLE_NAME;
-        String whereClause = ArtifactsFavourite.FavouriteEntry.COLUMN_ARTIFACT_ID+"=?";
+        String table = ArtifactEntry.TABLE_NAME;
+        String whereClause = ArtifactEntry.COLUMN_ARTIFACT_ID+" = ?";
         String[] whereArgs = new String[] { String.valueOf(artifactId) };
 
         int returned=mDb.delete(table, whereClause, whereArgs);

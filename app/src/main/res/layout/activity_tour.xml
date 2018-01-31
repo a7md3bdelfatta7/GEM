@@ -76,7 +76,7 @@
     -->
 
     <ListView
-        android:id="@+id/tour_list"
+        android:id="@+id/user_tour_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 

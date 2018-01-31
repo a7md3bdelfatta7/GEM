@@ -44,8 +44,7 @@ public class Tour extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_tour);
 
-        tourListView=(ListView)findViewById(R.id.tour_list);
-
+        tourListView=(ListView)findViewById(R.id.user_tour_list);
 
         TourContract tours=new TourContract(getApplicationContext());
 
@@ -110,8 +109,6 @@ public class Tour extends AppCompatActivity {
                 intent=new Intent(Tour.this, TourGuideActivity.class);
                 break;
         }
-        
         startActivity(intent);
-
     }
 }
