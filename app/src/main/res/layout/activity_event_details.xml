@@ -32,6 +32,7 @@
                 android:scaleType="fitEnd"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
+                android:onClick="viewCalenderonClick"
                 android:src="@drawable/icon_calendar"/>
 
             <ImageButton
