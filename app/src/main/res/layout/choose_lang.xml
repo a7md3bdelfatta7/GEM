@@ -6,27 +6,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="brainwaves.gem.ChooseLangActivity">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:id="@+id/chooseLangAd"
-    android:background="@color/defaultColor">
-        <VideoView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            android:id="@+id/mainSponsor"
-            android:layout_gravity="center"
-            android:clickable="false"
-            android:contextClickable="false"/>
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/loginad"/>
-</LinearLayout>
+    tools:context="brainwaves.gem.ChooseLangActivity"
+    >
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/chooseLangAd"
+            >
+
+                <VideoView android:id="@+id/mainSponsor"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                </VideoView>
+
+        </RelativeLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"

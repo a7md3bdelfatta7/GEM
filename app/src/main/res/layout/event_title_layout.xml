@@ -11,6 +11,6 @@
         android:text="my Title"
         android:textColor="#ffffff"
         android:id="@+id/action_bar_title"
-        android:textSize="30sp" />
+        android:textSize="20sp" />
 
 </LinearLayout>

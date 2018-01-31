@@ -27,6 +27,8 @@ public class MembershipActivity extends AppCompatActivity {
     ExpandableListView expListView2;
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
+    boolean is_checked=false;
+
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
@@ -83,21 +85,28 @@ public class MembershipActivity extends AppCompatActivity {
         expListView2.setVisibility(View.GONE);
         submitButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(MembershipActivity.this,
-                        ShoppingCheckoutActivity.class);
-                intent.putExtra("id",""+v.getId());
-                startActivity(intent);
-                // Code here executes on main thread after user presses button
+
+                if(is_checked) {
+                    Intent intent = new Intent(MembershipActivity.this,
+                            ShoppingCheckoutActivity.class);
+                    intent.putExtra("id", "" + v.getId());
+                    startActivity(intent);
+                    // Code here executes on main thread after user presses button
+                }else{
+                    Toast.makeText(MembershipActivity.this, "Please Select Duration.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
 
 
     }
+
+
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
-
+        is_checked=true;
         // Check which radio button was clicked
         switch(view.getId()) {
             case R.id.membership_three_months:
@@ -112,6 +121,7 @@ public class MembershipActivity extends AppCompatActivity {
                 if (checked)
                     Toast.makeText(getApplicationContext(),"Thanks for submitting 1 Year",Toast.LENGTH_LONG).show();
                     break;
+
         }
     }
     public void childrenDetailsonClick(View v) {

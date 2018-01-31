@@ -32,6 +32,7 @@ public class TourContract {
 
     public long addNewTour(String tourName,ArrayList<String> tourArtifacts){
 
+        tourName=tourName.toUpperCase();
         ContentValues cv = new ContentValues();
         cv.put(TourEntry.COLUMN_TOUR_NAME,tourName);
         cv.put(TourEntry.COLUMN_USER_ID,UserContract.userID);
@@ -87,6 +88,7 @@ public class TourContract {
 
     public boolean tourNameExist(String tourName){
 
+        tourName=tourName.toUpperCase();
         String whereClause = ""+ TourEntry.COLUMN_USER_ID+" = ? and "+TourEntry.COLUMN_TOUR_NAME+" = ?";
         String[] whereArgs = new String[] {
                 UserContract.userID,
@@ -110,6 +112,7 @@ public class TourContract {
     }
 
     public String getTourByName(String tourName){
+        tourName=tourName.toUpperCase();
         String whereClause = ""+ TourEntry.COLUMN_USER_ID+" = ? and "+TourEntry.COLUMN_TOUR_NAME+" = ?";
         String[] whereArgs = new String[] {
                 UserContract.userID,

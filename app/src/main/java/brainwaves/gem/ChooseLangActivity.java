@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.MediaController;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.VideoView;
 
@@ -38,7 +39,7 @@ public class ChooseLangActivity extends AppCompatActivity implements AdapterView
 
         final VideoView videoView = (VideoView)findViewById(R.id.mainSponsor);
         final LinearLayout chooseLang = (LinearLayout) findViewById(R.id.activity_login);
-        final LinearLayout chooseLangAd = (LinearLayout) findViewById(R.id.chooseLangAd);
+        final RelativeLayout chooseLangAd = (RelativeLayout) findViewById(R.id.chooseLangAd);
         Spinner spinner = (Spinner) findViewById(R.id.lang_spinner);
 
         // Create an ArrayAdapter using the string array and a default spinner layout

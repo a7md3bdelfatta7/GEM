@@ -387,19 +387,19 @@
                     android:layout_marginTop="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="10dp">
+                    android:layout_margin="10dp"
+                    android:id="@+id/tour_type"
+                    >
                     <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="Shortest Path"
-                        android:id="@+id/collections_filter_kings"
                         android:textSize="15sp"
                         />
                     <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="Oldest "
-                        android:id="@+id/collections_filter_status"
                         android:textSize="15sp"
                         />
                 </RadioGroup>

@@ -19,16 +19,16 @@
             android:title="@string/tour_activity_title" />
         <item
             android:id="@+id/ticket_menu"
-            android:title="Get Ticket" />
+            android:title="GET TICKET" />
         <item
             android:id="@+id/AR_menu"
-            android:title="Augmented reality" />
+            android:title="AUGMENTED REALITY" />
         <item
             android:id="@+id/Favourite_menu"
             android:title="FAVOURITES" />
         <item
             android:id="@+id/logout_menu"
-            android:title="Logout" />
+            android:title="LOGOUT" />
 
 
     </group>
