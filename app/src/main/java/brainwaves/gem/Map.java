@@ -1,6 +1,7 @@
 package brainwaves.gem;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -38,6 +39,15 @@ public class Map extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_map);
+
+        Intent intent=getIntent();
+
+        String purpose=intent.getStringExtra("purpose");
+        if(purpose!=null &&purpose.equals("tour")){
+            ImageView img=(ImageView)findViewById(R.id.im_move_zoom_rotate);
+            img.setImageResource(R.drawable.map_tour);
+            getSupportActionBar().setTitle("Tour Map");
+        }
 
         init();
 

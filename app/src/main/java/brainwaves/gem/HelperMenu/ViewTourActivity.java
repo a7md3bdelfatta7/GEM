@@ -78,8 +78,10 @@ public class ViewTourActivity extends AppCompatActivity {
 
 
     public void viewMap(View v){
-        Intent intent=new Intent(ViewTourActivity.this,TourMap.class);
+        Intent intent=new Intent(ViewTourActivity.this,Map.class);
+        intent.putExtra("purpose","tour");
         startActivity(intent);
+
     }
 
     public void startTour(View v){

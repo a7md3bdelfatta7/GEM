@@ -22,6 +22,7 @@ public class TourMap extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.tour_map);
     }
+
     @Override
     protected  void onDestroy() {
         super.onDestroy();
