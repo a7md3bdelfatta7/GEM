@@ -47,13 +47,9 @@ public class Tour extends AppCompatActivity {
         tourListView=(ListView)findViewById(R.id.user_tour_list);
 
         TourContract tours=new TourContract(getApplicationContext());
-
         ArrayList<String> allTours =tours.getAllTours();
-
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, android.R.id.text1, allTours);
-
-
         tourListView.setAdapter(adapter);
 
         // ListView Item Click Listener
@@ -77,6 +73,17 @@ public class Tour extends AppCompatActivity {
 
     }
 
+
+    @Override
+    protected void onResume() {
+
+        TourContract tours=new TourContract(getApplicationContext());
+        ArrayList<String> allTours =tours.getAllTours();
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, android.R.id.text1, allTours);
+        tourListView.setAdapter(adapter);
+        super.onResume();
+    }
 
     @Override
     protected  void onDestroy() {

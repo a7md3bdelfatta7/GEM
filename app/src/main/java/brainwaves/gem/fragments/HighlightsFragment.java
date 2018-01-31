@@ -40,6 +40,11 @@ public class HighlightsFragment extends Fragment {
         ArtifactsContract artifact=new ArtifactsContract(getActivity());
         ArrayList<String> selectedArtifacts=artifact.getSelectedArtifacts();
 
+        for(int i=1;i<=12;i++){
+            ImageButton img=(ImageButton) rootView.findViewWithTag(String.valueOf(i));
+            img.setImageResource(R.drawable.add_button_i);
+        }
+
         for(String artifactId:selectedArtifacts){
             ImageButton img=(ImageButton) rootView.findViewWithTag(artifactId);
             img.setImageResource(R.drawable.add_button_ii);
