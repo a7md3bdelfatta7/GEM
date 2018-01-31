@@ -375,6 +375,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
                     android:textColor="@color/defaultColor"
+                    android:layout_marginTop="5dp"
                     />
                 <TextView
                     android:layout_width="match_parent"

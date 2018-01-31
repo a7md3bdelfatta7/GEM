@@ -8,14 +8,15 @@
         android:id="@+id/lblListItem"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="17dip"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
+        android:textSize="20sp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
         android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
         android:background="@android:color/white"
         android:textColor="@android:color/black"
         android:gravity="left"
         android:layoutDirection="ltr"
+        android:text="TUT ANKAMUN"
         />
 
 </LinearLayout>

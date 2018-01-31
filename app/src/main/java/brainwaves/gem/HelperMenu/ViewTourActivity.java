@@ -2,9 +2,12 @@ package brainwaves.gem.HelperMenu;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ExpandableListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -24,10 +27,13 @@ public class ViewTourActivity extends AppCompatActivity {
     List<String> listDataHeader;
     ArrayList<String> tourArtifacts;
     HashMap<String,List<String>> listDataChild;
+    int i;
 
     String []statues={
-            "Statue 1","Statue 2","Statue 3","Statue 4","Statue 5","Statue 6","Statue 7","Statue 8",
-            "Statue 9","Statue 10","Statue 11","Statue 12"
+            "TUT ANKAMUN MASK","Sphinx of Amenhotep the Second","Anubis Carrying the Moon Disk","Shawabti of Tutankhamun","Crocodile God Sobek",
+            "Goddess Isis Nursing Her Son Horus","Outer Coffin of Queen Meritamun","Bust of Amenemhat the Third in Priestly Costume",
+            "Gold Mask Mummy Cover of King Psusennes the First",
+            "Gold Cover of Psusennes' Mummy","Queen Hatshepsut Offering to Osiris","Fragments of Standing Statue of a King","Statue 12"
     };
 
     ArrayList<String> tour_artifacts=new ArrayList<>();
@@ -35,10 +41,21 @@ public class ViewTourActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_details_tour);
+
+        ActionBar actionBar=getSupportActionBar();
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.event_title_layout);
+        TextView actionBarTitle=(TextView)findViewById(R.id.action_bar_title);
 
         Intent intent=getIntent();
         String tourName=intent.getStringExtra("tourName");
+
+        actionBarTitle.setText(tourName);
+
+
         TourContract tour=new TourContract(getApplicationContext());
         String tourId=tour.getTourByName(tourName);
         tourArtifacts=tour.getTourArtifacts(tourId);
@@ -52,8 +69,9 @@ public class ViewTourActivity extends AppCompatActivity {
 
         // setting list adapter
         expListView.setAdapter(listAdapter);
-        expListView.expandGroup(0);
-
+        for(int j=0;j<i;j++) {
+            expListView.expandGroup(j);
+        }
 
     }
 
@@ -103,7 +121,7 @@ public class ViewTourActivity extends AppCompatActivity {
         }
 
 
-        int i=0;
+        i=0;
 
         if(hall1.size()>0) {
             listDataHeader.add("Hall 1");

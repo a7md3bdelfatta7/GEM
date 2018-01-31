@@ -1,9 +1,11 @@
 package brainwaves.gem.HelperMenu;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -17,6 +19,7 @@ import brainwaves.gem.Map;
 import brainwaves.gem.R;
 import brainwaves.gem.data.ArtifactsContract;
 import brainwaves.gem.data.TourContract;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class IndividualTourActivity extends AppCompatActivity {
 
@@ -46,8 +49,14 @@ public class IndividualTourActivity extends AppCompatActivity {
     ArrayList<String> tour_artifacts=new ArrayList<>();
 
     @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_individual_tour);
 
         ArtifactsContract artifact=new ArtifactsContract(getApplicationContext());
@@ -151,7 +160,7 @@ public class IndividualTourActivity extends AppCompatActivity {
             Toast.makeText(this, x, Toast.LENGTH_SHORT).show();
 
             TextView added_artifacts = (TextView) findViewById(R.id.added_artifacts);
-            added_artifacts.append(x + "\n");
+            added_artifacts.append("- "+x + "\n\n");
             tour_artifacts.add(v.getTag().toString());
         }else{
             Toast.makeText(this,x+" Aready Added!.", Toast.LENGTH_SHORT).show();

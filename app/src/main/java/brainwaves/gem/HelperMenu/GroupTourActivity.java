@@ -1,9 +1,11 @@
 package brainwaves.gem.HelperMenu;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -16,6 +18,7 @@ import brainwaves.gem.Map;
 import brainwaves.gem.R;
 import brainwaves.gem.data.ArtifactsContract;
 import brainwaves.gem.data.TourContract;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class GroupTourActivity extends AppCompatActivity {
 
@@ -45,8 +48,15 @@ public class GroupTourActivity extends AppCompatActivity {
     ArrayList<String> tour_artifacts=new ArrayList<>();
 
     @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_group_tour);
 
         ArtifactsContract artifact=new ArtifactsContract(getApplicationContext());
@@ -124,17 +134,22 @@ public class GroupTourActivity extends AppCompatActivity {
 
     public void buildTour(View v){
 
+
         EditText tourName=(EditText)findViewById(R.id.tour_name);
         if(tourName.getText().toString().length()>0) {
-            TourContract tour=new TourContract(getApplicationContext());
-            long result=tour.addNewTour(tourName.getText().toString(),tour_artifacts);
+            TourContract tour = new TourContract(getApplicationContext());
+            if(!tour.tourNameExist(tourName.getText().toString())) {
+                long result = tour.addNewTour(tourName.getText().toString(), tour_artifacts);
 
-            if(result!=-1) {
+                if (result != -1) {
 
-                Intent intent =new Intent(GroupTourActivity.this,ViewTourActivity.class);
-                intent.putExtra("tourName",tourName.getText().toString());
-                startActivity(intent);
-                finish();
+                    Intent intent = new Intent(GroupTourActivity.this, ViewTourActivity.class);
+                    intent.putExtra("tourName", tourName.getText().toString());
+                    startActivity(intent);
+                    finish();
+                }
+            }else{
+                Toast.makeText(this,tourName.getText().toString()+" Already Exist.", Toast.LENGTH_SHORT).show();
             }
 
         }else{
@@ -150,7 +165,7 @@ public class GroupTourActivity extends AppCompatActivity {
             Toast.makeText(this, x, Toast.LENGTH_SHORT).show();
 
             TextView added_artifacts = (TextView) findViewById(R.id.added_artifacts);
-            added_artifacts.append(x + "\n");
+            added_artifacts.append("- "+x + "\n\n");
             tour_artifacts.add(v.getTag().toString());
         }else{
             Toast.makeText(this,x+" Aready Added!.", Toast.LENGTH_SHORT).show();

@@ -100,6 +100,7 @@ public class ArtifactsContract {
         }
         return false;
     }
+
     public int deleteArtifact(int artifactId){
 
         String table = ArtifactEntry.TABLE_NAME;

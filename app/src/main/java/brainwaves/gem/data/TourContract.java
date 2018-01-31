@@ -19,7 +19,6 @@ public class TourContract {
         public static final String TABLE_NAME = "tour";
         public static final String COLUMN_TOUR_NAME = "tourName";
         public static final String COLUMN_USER_ID = "userId";
-
     }
 
 
@@ -85,6 +84,30 @@ public class TourContract {
 
     }
 
+
+    public boolean tourNameExist(String tourName){
+
+        String whereClause = ""+ TourEntry.COLUMN_USER_ID+" = ? and "+TourEntry.COLUMN_TOUR_NAME+" = ?";
+        String[] whereArgs = new String[] {
+                UserContract.userID,
+                tourName
+        };
+
+        Cursor cursor=mDb.query(
+                TourEntry.TABLE_NAME,
+                null,
+                whereClause,
+                whereArgs,
+                null,
+                null,
+                null
+        );
+
+        if(cursor.getCount()>0) {
+            return true;
+        }
+        return false;
+    }
 
     public String getTourByName(String tourName){
         String whereClause = ""+ TourEntry.COLUMN_USER_ID+" = ? and "+TourEntry.COLUMN_TOUR_NAME+" = ?";

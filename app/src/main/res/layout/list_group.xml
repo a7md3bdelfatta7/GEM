@@ -15,10 +15,12 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
-        android:textSize="17dp"
-        android:textColor="@android:color/black"
+        android:textSize="25sp"
+        android:textColor="@color/defaultColor"
         android:gravity="left"
         android:layoutDirection="ltr"
+        android:padding="10dp"
+        android:text="Hall 1"
 
         />
 
