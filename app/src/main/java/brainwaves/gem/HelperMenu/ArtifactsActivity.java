@@ -447,7 +447,7 @@ public class ArtifactsActivity extends AppCompatActivity {
         });
     }
     public void unlockVR(View v) {
-        File path = this.getFilesDir();
+        String path = "/storage/emulated/0/";
         File file = new File(path, "VR.txt");
         FileOutputStream stream = null;
         try {
