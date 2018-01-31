@@ -1,5 +1,6 @@
 package brainwaves.gem.HelperMenu;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -58,8 +59,16 @@ public class Favourites extends AppCompatActivity {
             for(int i=0;i<listedArtifacts.size();i++){
                 ImageButton imgBtn = (ImageButton) findViewById(artifactsIDs[i]);
                 imgBtn.setImageResource(artifactsSource[Integer.parseInt(listedArtifacts.get(i))-1]);
+                imgBtn.setTag(artifactsIDs[Integer.parseInt(listedArtifacts.get(i))-1]);
                 imgBtn.setVisibility(View.VISIBLE);
             }
         }
+    }
+    public void addArtifactDetails(View v) {
+        Intent intent = new Intent(Favourites.this,
+                ArtifactsActivity.class);
+
+        intent.putExtra("id",""+v.getTag());
+        startActivity(intent);
     }
 }
