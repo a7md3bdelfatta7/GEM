@@ -9,6 +9,7 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -58,6 +59,7 @@ public class GroupTourActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_group_tour);
+        getSupportActionBar().setTitle("Create Group Tour");
 
         ArtifactsContract artifact=new ArtifactsContract(getApplicationContext());
         ArrayList<String> arts=artifact.getSelectedArtifacts();
@@ -134,22 +136,30 @@ public class GroupTourActivity extends AppCompatActivity {
 
     public void buildTour(View v){
 
-
         EditText tourName=(EditText)findViewById(R.id.tour_name);
         if(tourName.getText().toString().length()>0) {
-            TourContract tour = new TourContract(getApplicationContext());
-            if(!tour.tourNameExist(tourName.getText().toString())) {
-                long result = tour.addNewTour(tourName.getText().toString(), tour_artifacts);
+            RadioGroup tour_type=(RadioGroup)findViewById(R.id.tour_type);
+            if(tour_type.getCheckedRadioButtonId()!=-1) {
+                if(tour_artifacts.size()>0) {
+                    TourContract tour = new TourContract(getApplicationContext());
+                    if(!tour.tourNameExist(tourName.getText().toString())) {
+                        long result = tour.addNewTour(tourName.getText().toString(), tour_artifacts);
 
-                if (result != -1) {
+                        if (result != -1) {
 
-                    Intent intent = new Intent(GroupTourActivity.this, ViewTourActivity.class);
-                    intent.putExtra("tourName", tourName.getText().toString());
-                    startActivity(intent);
-                    finish();
+                            Intent intent = new Intent(GroupTourActivity.this, ViewTourActivity.class);
+                            intent.putExtra("tourName", tourName.getText().toString());
+                            startActivity(intent);
+                            finish();
+                        }
+                    }else{
+                        Toast.makeText(this,tourName.getText().toString()+" Already Exist.", Toast.LENGTH_SHORT).show();
+                    }
+                }else{
+                    Toast.makeText(this, "Please Add Artifacts to Tour", Toast.LENGTH_SHORT).show();
                 }
             }else{
-                Toast.makeText(this,tourName.getText().toString()+" Already Exist.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Please Select Build Tour Based On", Toast.LENGTH_SHORT).show();
             }
 
         }else{

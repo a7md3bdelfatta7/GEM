@@ -59,6 +59,7 @@ public class IndividualTourActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_individual_tour);
+        getSupportActionBar().setTitle("Create Individual Tour");
 
         ArtifactsContract artifact=new ArtifactsContract(getApplicationContext());
         ArrayList<String> arts=artifact.getSelectedArtifacts();
