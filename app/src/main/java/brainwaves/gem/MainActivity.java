@@ -168,11 +168,11 @@ public class MainActivity extends AppCompatActivity
                                 break;
                             case 2:
                                 color = Color.parseColor(getResources().getString(0 + R.color.todayEventColor));
-                                advertismentImage.setImageResource(R.drawable.adidas);
+                                advertismentImage.setImageResource(R.drawable.cadbury);
                                 break;
                             case 3:
                                 color = Color.parseColor(getResources().getString(0 + R.color.forMemberColor));
-                                advertismentImage.setImageResource(R.drawable.cadbury);
+                                advertismentImage.setImageResource(R.drawable.we);
                                 break;
                             case 4:
                                 color = Color.parseColor(getResources().getString(0 + R.color.staffPicksColor));
