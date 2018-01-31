@@ -28,6 +28,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/highlight_i"
+                        android:visibility="gone"
                         android:background="@color/cardview_light_background"
                         android:adjustViewBounds="true"
                         android:onClick="addArtifactToTour"
@@ -48,7 +49,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/cardview_light_background"
-
+                        android:visibility="gone"
                         android:src="@drawable/highlight_ii"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
@@ -68,6 +69,7 @@
                         android:background="@color/cardview_light_background"
                         android:src="@drawable/highlight_iii"
                         android:layout_weight="1"
+                        android:visibility="gone"
                         android:adjustViewBounds="true"
                         android:onClick="addArtifactToTour"
                         android:id="@+id/artifact_3"
@@ -90,6 +92,7 @@
                         android:src="@drawable/highlight_iv"
                         android:background="@color/cardview_light_background"
                         android:adjustViewBounds="true"
+                        android:visibility="gone"
                         android:onClick="addArtifactToTour"
                         android:id="@+id/artifact_4"
                         android:scaleType="fitEnd"/>
@@ -109,6 +112,7 @@
                         android:background="@color/cardview_light_background"
                         android:src="@drawable/highlight_v"
                         android:layout_weight="1"
+                        android:visibility="gone"
                         android:adjustViewBounds="true"
                         android:onClick="addArtifactToTour"
                         android:id="@+id/artifact_5"
@@ -126,6 +130,7 @@
                         android:background="@color/cardview_light_background"
                         android:src="@drawable/highlight_xv"
                         android:layout_weight="1"
+                        android:visibility="gone"
                         android:adjustViewBounds="true"
                         android:onClick="addArtifactToTour"
                         android:id="@+id/artifact_6"
@@ -159,6 +164,7 @@
                         android:background="@color/cardview_light_background"
                         android:adjustViewBounds="true"
                         android:onClick="addArtifactToTour"
+                        android:visibility="gone"
                         android:id="@+id/artifact_7"
                         android:scaleType="fitXY"/>
 
@@ -179,6 +185,7 @@
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
                         android:onClick="addArtifactToTour"
+                        android:visibility="gone"
                         android:id="@+id/artifact_8"
                         android:scaleType="fitXY"/>
 
@@ -196,6 +203,7 @@
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
                         android:onClick="addArtifactToTour"
+                        android:visibility="gone"
                         android:id="@+id/artifact_9"
                         android:scaleType="fitXY"/>
 
@@ -218,6 +226,7 @@
                         android:background="@color/cardview_light_background"
                         android:adjustViewBounds="true"
                         android:onClick="addArtifactToTour"
+                        android:visibility="gone"
                         android:id="@+id/artifact_10"
                         android:scaleType="fitXY"/>
 
@@ -238,6 +247,7 @@
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
                         android:onClick="addArtifactToTour"
+                        android:visibility="gone"
                         android:id="@+id/artifact_11"
                         android:scaleType="fitXY"/>
 
@@ -255,6 +265,7 @@
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
                         android:onClick="addArtifactToTour"
+                        android:visibility="gone"
                         android:id="@+id/artifact_12"
                         android:scaleType="fitXY"/>
 
@@ -286,6 +297,7 @@
                         android:background="@color/cardview_light_background"
                         android:adjustViewBounds="true"
                         android:onClick="addArtifactToTour"
+                        android:visibility="gone"
                         android:id="@+id/artifact_13"
                         android:scaleType="fitXY"/>
 
@@ -306,6 +318,7 @@
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
                         android:onClick="addArtifactToTour"
+                        android:visibility="gone"
                         android:id="@+id/artifact_14"
                         android:scaleType="fitXY"/>
 
@@ -323,6 +336,7 @@
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
                         android:onClick="addArtifactToTour"
+                        android:visibility="gone"
                         android:id="@+id/artifact_15"
                         android:scaleType="fitXY"/>
 
@@ -345,6 +359,7 @@
                         android:background="@color/cardview_light_background"
                         android:adjustViewBounds="true"
                         android:onClick="addArtifactToTour"
+                        android:visibility="gone"
                         android:id="@+id/artifact_16"
                         android:scaleType="fitXY"/>
 
@@ -365,6 +380,7 @@
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
                         android:onClick="addArtifactToTour"
+                        android:visibility="gone"
                         android:id="@+id/artifact_17"
                         android:scaleType="fitXY"/>
 
@@ -382,6 +398,7 @@
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
                         android:onClick="addArtifactToTour"
+                        android:visibility="gone"
                         android:id="@+id/artifact_18"
                         android:scaleType="fitXY"/>
 
@@ -413,6 +430,7 @@
                         android:background="@color/cardview_light_background"
                         android:adjustViewBounds="true"
                         android:onClick="addArtifactToTour"
+                        android:visibility="gone"
                         android:id="@+id/artifact_19"
                         android:scaleType="fitXY"/>
 
@@ -433,6 +451,7 @@
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
                         android:onClick="addArtifactToTour"
+                        android:visibility="gone"
                         android:id="@+id/artifact_20"
                         android:scaleType="fitXY"/>
 
@@ -450,6 +469,7 @@
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
                         android:onClick="addArtifactToTour"
+                        android:visibility="gone"
                         android:id="@+id/artifact_21"
                         android:scaleType="fitXY"/>
 
@@ -472,6 +492,7 @@
                         android:background="@color/cardview_light_background"
                         android:adjustViewBounds="true"
                         android:onClick="addArtifactToTour"
+                        android:visibility="gone"
                         android:id="@+id/artifact_22"
                         android:scaleType="fitXY"/>
 
@@ -492,6 +513,7 @@
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
                         android:onClick="addArtifactToTour"
+                        android:visibility="gone"
                         android:id="@+id/artifact_23"
                         android:scaleType="fitXY"/>
 
@@ -508,6 +530,7 @@
                         android:src="@drawable/staff__xv"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
+                        android:visibility="gone"
                         android:onClick="addArtifactToTour"
                         android:id="@+id/artifact_24"
                         android:scaleType="fitXY"/>

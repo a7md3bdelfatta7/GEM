@@ -36,9 +36,9 @@ import android.widget.Toast;
 
 import brainwaves.gem.HelperMenu.ArtifactsActivity;
 import brainwaves.gem.HelperMenu.CollectionsActivity;
+import brainwaves.gem.HelperMenu.Favourites;
 import brainwaves.gem.HelperMenu.MembershipActivity;
 import brainwaves.gem.HelperMenu.QuizActivity;
-import brainwaves.gem.HelperMenu.Ticket;
 import brainwaves.gem.HelperMenu.Tour;
 import brainwaves.gem.ShoppingSystem.ShoppingActivity;
 import brainwaves.gem.data.ArtifactsContract;
@@ -283,9 +283,14 @@ public class MainActivity extends AppCompatActivity
                     Tour.class);
             startActivity(tour);
         } else if (id == R.id.ticket_menu) {
-            Intent visit = new Intent(MainActivity.this,
-                    Ticket.class);
-            startActivity(visit);
+            Uri uri = Uri.parse("https://www.mi4biz.com/");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+        }
+        else if (id == R.id.Favourite_menu) {
+            Intent Favourites = new Intent(MainActivity.this,
+                    Favourites.class);
+            startActivity(Favourites);
         } else if (id == R.id.AR_menu) {
             PackageManager pm = this.getPackageManager();
 
