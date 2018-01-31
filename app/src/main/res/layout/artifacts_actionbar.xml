@@ -12,6 +12,7 @@
         android:adjustViewBounds="true"
         android:background="@null"
         android:scaleType="fitCenter"
+        android:onClick="onButtonVRPopupWindowClick"
         android:id="@+id/vrButton"/>
 
     <TextView
@@ -34,6 +35,7 @@
         android:layout_marginRight="10px"
         android:background="@null"
         android:scaleType="fitCenter"
+        android:onClick="onButtonMapPopupWindowClick"
         android:id="@+id/showMapActionBar"/>
     <ImageButton
         android:layout_width="match_parent"

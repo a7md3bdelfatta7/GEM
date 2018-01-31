@@ -1,7 +1,9 @@
 package brainwaves.gem.HelperMenu;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,6 +19,11 @@ import android.widget.PopupWindow;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 import brainwaves.gem.MainActivity;
 import brainwaves.gem.R;
@@ -58,11 +65,11 @@ public class ArtifactsActivity extends AppCompatActivity {
                 aritfactDetailsTitle.setText("TUT ANKAMUN MASK");
                 artifactActionBar.setText("TUT ANKAMUN MASK");
                 aritfactDetailsText.setText("This mask of Tutankhamun is an example of the high est artistic and technical achievements of the an-cient Egyptians in the New Kingdom.\n" +
-                        "            \\nCovering the head of the wrapped mummy in its coffin and activated by a magical spell, no.151b from the Book of the Dead, the mask ensured more pro-tection for the king's body.\n" +
-                        "            \\nThe exact portrayal of the king's facial features achieved here made it possible for his soul to recog nize him and return to his mummified body, thus en uring his resurrection.\n" +
-                        "            \\nhe head is covered by the royal headdress and the forehead bears the emblems of kingship and protec tion: the vulture and uraeus, or cobra.\n" +
-                        "            \\nThe gold sheets used in this wonderful mask are joinec together by heating and hammering. The eyes are of obsidian and quartz and the eyebrows and eyelids are inlaid with lapis lazuli. The broad inlaid collar of semiprecious stones and colored glass ends in falcon heads.\n" +
-                        "            \\n\\nDimensions: Height 54 cm Width 39.3 cm\n");
+                        "            \nCovering the head of the wrapped mummy in its coffin and activated by a magical spell, no.151b from the Book of the Dead, the mask ensured more pro-tection for the king's body.\n" +
+                        "            \nThe exact portrayal of the king's facial features achieved here made it possible for his soul to recog nize him and return to his mummified body, thus en uring his resurrection.\n" +
+                        "            \nhe head is covered by the royal headdress and the forehead bears the emblems of kingship and protec tion: the vulture and uraeus, or cobra.\n" +
+                        "            \nThe gold sheets used in this wonderful mask are joinec together by heating and hammering. The eyes are of obsidian and quartz and the eyebrows and eyelids are inlaid with lapis lazuli. The broad inlaid collar of semiprecious stones and colored glass ends in falcon heads.\n" +
+                        "            \n\nDimensions: Height 54 cm Width 39.3 cm\n");
                 break;
             case R.id.artifact_2:
                 artifact_num = 2;
@@ -381,7 +388,99 @@ public class ArtifactsActivity extends AppCompatActivity {
             }
         });
     }
+    public void onButtonMapPopupWindowClick(View view) {
 
+        // get a reference to the already created main layout
+        ScrollView mainLayout = (ScrollView)
+                findViewById(R.id.colltections_main_layout);
+
+        // inflate the layout of the popup window
+        LayoutInflater inflater = (LayoutInflater)
+                getSystemService(LAYOUT_INFLATER_SERVICE);
+        View popupView = inflater.inflate(R.layout.popup_map, null);
+
+        // create the popup window
+        int width = LinearLayout.LayoutParams.WRAP_CONTENT;
+        int height = LinearLayout.LayoutParams.WRAP_CONTENT;
+        boolean focusable = true; // lets taps outside the popup also dismiss it
+        final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
+
+        // show the popup window
+        popupWindow.showAtLocation(mainLayout, Gravity.CENTER, 0, 0);
+
+        // dismiss the popup window when touched
+        popupView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                popupWindow.dismiss();
+                return true;
+            }
+        });
+    }
+    public void onButtonVRPopupWindowClick(View view) {
+
+        // get a reference to the already created main layout
+        ScrollView mainLayout = (ScrollView)
+                findViewById(R.id.colltections_main_layout);
+
+        // inflate the layout of the popup window
+        LayoutInflater inflater = (LayoutInflater)
+                getSystemService(LAYOUT_INFLATER_SERVICE);
+        View popupView = inflater.inflate(R.layout.popup_vrunlock, null);
+
+        // create the popup window
+        int width = LinearLayout.LayoutParams.WRAP_CONTENT;
+        int height = LinearLayout.LayoutParams.WRAP_CONTENT;
+        boolean focusable = true; // lets taps outside the popup also dismiss it
+        final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
+
+        // show the popup window
+        popupWindow.showAtLocation(mainLayout, Gravity.CENTER, 0, 0);
+
+        // dismiss the popup window when touched
+        popupView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                popupWindow.dismiss();
+                return true;
+            }
+        });
+    }
+    public void unlockVR(View v) {
+        File path = this.getFilesDir();
+        File file = new File(path, "VR.txt");
+        FileOutputStream stream = null;
+        try {
+            stream = new FileOutputStream(file);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        try {
+            stream.write("1".getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                stream.close();
+                PackageManager pm = this.getPackageManager();
+
+                try
+                {
+                    Intent it = pm.getLaunchIntentForPackage("com.BrainWaves.GEM");
+
+                    if (null != it)
+                        this.startActivity(it);
+                }
+
+                catch (ActivityNotFoundException e)
+                {
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
     public void HighlightsAddTofavouriteonClick(View v) {
         ImageButton flashButtonOn = (ImageButton) findViewById(R.id.favouritesActionBar);
         ArtifactsFavourite artifactFavourite=new ArtifactsFavourite(getApplicationContext());

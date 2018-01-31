@@ -77,14 +77,21 @@ public class CollectionsActivity extends AppCompatActivity {
         ImageButton searchResultImgBtn = (ImageButton) findViewById(collectionResultLayout.getChildAt(0).getId());
 
         ArrayList<String> artifacts = new ArrayList<String>();
-        artifacts.add("tutAnkAmum");
-        artifacts.add("ramsis");
-        artifacts.add("shit");
-        artifacts.add("fuck");
-        artifacts.add("Lol");
+        artifacts.add("tut ankamum mask");
+        artifacts.add("sphinx of amenhotep the second");
+        artifacts.add("anubis carrying the moon disk");
+        artifacts.add("shawabti of tutankhamun");
+        artifacts.add("crocodile god sobek");
+        artifacts.add("goddess isis nursing her son horus");
+        artifacts.add("outer coffin of queen meritamun");
+        artifacts.add("bust of amenemhat the third in priestly costume");
+        artifacts.add("gold mask mummy cover of king psusennes the First");
+        artifacts.add("gold cover of psusennes' mummy");
+        artifacts.add("queen hatshepsut offering to osiris");
+        artifacts.add("fragments of standing statue of a king");
 
 
-
+        searchData = searchData.toLowerCase();
         int artifactsIndex = 0;
         if(searchData.trim().isEmpty()){
             collectionFilterLayout.setVisibility(View.GONE);
@@ -106,51 +113,51 @@ public class CollectionsActivity extends AppCompatActivity {
                 case 1:
                     //searchResultImgBtn.setImageDrawable(getResources().getDrawable(R.drawable.highlight_i));
                     searchResultImgBtn.setImageResource(R.drawable.highlight_i);
-                    searchResultImgBtn.setId(R.id.artifact_1);
+                    //searchResultImgBtn.setId(R.id.artifact_1);
                     break;
                 case 2:
                     searchResultImgBtn.setImageResource(R.drawable.highlight_ii);
-                    searchResultImgBtn.setId(R.id.artifact_2);
+                    //searchResultImgBtn.setId(R.id.artifact_2);
                     break;
                 case 3:
                     searchResultImgBtn.setImageResource(R.drawable.highlight_iii);
-                    searchResultImgBtn.setId(R.id.artifact_3);
+                    //searchResultImgBtn.setId(R.id.artifact_3);
                     break;
                 case 4:
                     searchResultImgBtn.setImageResource(R.drawable.highlight_iv);
-                    searchResultImgBtn.setId(R.id.artifact_4);
+                    //searchResultImgBtn.setId(R.id.artifact_4);
                     break;
                 case 5:
                     searchResultImgBtn.setImageResource(R.drawable.highlight_v);
-                    searchResultImgBtn.setId(R.id.artifact_5);
+                    //searchResultImgBtn.setId(R.id.artifact_5);
                     break;
                 case 6:
                     searchResultImgBtn.setImageResource(R.drawable.highlight_xv);
-                    searchResultImgBtn.setId(R.id.artifact_6);
+                    //searchResultImgBtn.setId(R.id.artifact_6);
                     break;
                 case 7:
                     searchResultImgBtn.setImageResource(R.drawable.highlight__i);
-                    searchResultImgBtn.setId(R.id.artifact_7);
+                    //searchResultImgBtn.setId(R.id.artifact_7);
                     break;
                 case 8:
                     searchResultImgBtn.setImageResource(R.drawable.highlight__ii);
-                    searchResultImgBtn.setId(R.id.artifact_8);
+                    //searchResultImgBtn.setId(R.id.artifact_8);
                     break;
                 case 9:
                     searchResultImgBtn.setImageResource(R.drawable.highlight__iii);
-                    searchResultImgBtn.setId(R.id.artifact_9);
+                    //searchResultImgBtn.setId(R.id.artifact_9);
                     break;
                 case 10:
                     searchResultImgBtn.setImageResource(R.drawable.highlight__iv);
-                    searchResultImgBtn.setId(R.id.artifact_10);
+                    //searchResultImgBtn.setId(R.id.artifact_10);
                     break;
                 case 11:
                     searchResultImgBtn.setImageResource(R.drawable.highlight__v);
-                    searchResultImgBtn.setId(R.id.artifact_11);
+                    //searchResultImgBtn.setId(R.id.artifact_11);
                     break;
                 case 12:
                     searchResultImgBtn.setImageResource(R.drawable.highlight__xv);
-                    searchResultImgBtn.setId(R.id.artifact_12);
+                    //searchResultImgBtn.setId(R.id.artifact_12);
                     break;
             }
         }
