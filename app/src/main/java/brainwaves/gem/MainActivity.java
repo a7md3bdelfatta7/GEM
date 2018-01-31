@@ -229,12 +229,11 @@ public class MainActivity extends AppCompatActivity
         ArtifactsContract artifact=new ArtifactsContract(getApplicationContext());
         String artifactId=String.valueOf(v.getTag());
         if(artifact.artifactExist(artifactId)){
-               artifact.deleteArtifact(Integer.parseInt(artifactId));
+            artifact.deleteArtifact(Integer.parseInt(artifactId));
             flashButtonOn.setImageResource(R.drawable.add_button_i);
-
             //Toast.makeText(this,"Already Added", Toast.LENGTH_SHORT).show();
         }else {
-            long result= artifact.addNewArtifact(v.getTag()+"");
+            long result= artifact.addNewArtifact(artifactId);
             if (result == -1) {
                 Toast.makeText(this, "Failed to add! try again.", Toast.LENGTH_SHORT).show();
             } else {

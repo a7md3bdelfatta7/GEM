@@ -36,8 +36,10 @@ public class GroupTourActivity extends AppCompatActivity {
     };
 
     String []statues={
-            "Statue 1","Statue 2","Statue 3","Statue 4","Statue 5","Statue 6","Statue 7","Statue 8",
-            "Statue 9","Statue 10","Statue 11","Statue 12"
+            "TUT ANKAMUN MASK","Sphinx of Amenhotep the Second","Anubis Carrying the Moon Disk","Shawabti of Tutankhamun","Crocodile God Sobek",
+            "Goddess Isis Nursing Her Son Horus","Outer Coffin of Queen Meritamun","Bust of Amenemhat the Third in Priestly Costume",
+            "Gold Mask Mummy Cover of King Psusennes the First",
+            "Gold Cover of Psusennes' Mummy","Queen Hatshepsut Offering to Osiris","Fragments of Standing Statue of a King","Statue 12"
     };
 
     ArrayList<String> tour_artifacts=new ArrayList<>();
