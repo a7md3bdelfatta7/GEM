@@ -39,11 +39,8 @@ public class ArtifactsContract {
         cv.put(ArtifactEntry.COLUMN_USER_ID,UserContract.userID);
         cv.put(ArtifactEntry.COLUMN_ARTIFACT_ID,artifactId);
 
-        if(!this.artifactExist(artifactId)){
-            return mDb.insert(ArtifactEntry.TABLE_NAME, null, cv);
-        }else{
-            return 0;
-        }
+        return mDb.insert(ArtifactEntry.TABLE_NAME, null, cv);
+
 
     }
 
