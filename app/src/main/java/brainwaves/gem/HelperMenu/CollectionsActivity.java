@@ -67,6 +67,13 @@ public class CollectionsActivity extends AppCompatActivity {
         });
 
     }
+    public void addArtifactDetails(View v) {
+        Intent intent = new Intent(CollectionsActivity.this,
+                ArtifactsActivity.class);
+
+        intent.putExtra("id",""+v.getTag());
+        startActivity(intent);
+    }
     public void searchOnClick(View v) {
         TextView searchTxtView = (TextView) findViewById(R.id.collection_SearchTextView);
         String searchData = searchTxtView.getText().toString();
@@ -113,51 +120,63 @@ public class CollectionsActivity extends AppCompatActivity {
                 case 1:
                     //searchResultImgBtn.setImageDrawable(getResources().getDrawable(R.drawable.highlight_i));
                     searchResultImgBtn.setImageResource(R.drawable.highlight_i);
-                    //searchResultImgBtn.setId(R.id.artifact_1);
+                    //searchResultImgBtn.setTag("1");
+                    searchResultImgBtn.setTag(R.id.artifact_1);
                     break;
                 case 2:
                     searchResultImgBtn.setImageResource(R.drawable.highlight_ii);
-                    //searchResultImgBtn.setId(R.id.artifact_2);
+                    //searchResultImgBtn.setTag("2");
+                    searchResultImgBtn.setTag(R.id.artifact_2);
                     break;
                 case 3:
                     searchResultImgBtn.setImageResource(R.drawable.highlight_iii);
-                    //searchResultImgBtn.setId(R.id.artifact_3);
+                    //searchResultImgBtn.setTag("3");
+                    searchResultImgBtn.setTag(R.id.artifact_3);
                     break;
                 case 4:
                     searchResultImgBtn.setImageResource(R.drawable.highlight_iv);
-                    //searchResultImgBtn.setId(R.id.artifact_4);
+                    //searchResultImgBtn.setTag("4");
+                    searchResultImgBtn.setTag(R.id.artifact_4);
                     break;
                 case 5:
                     searchResultImgBtn.setImageResource(R.drawable.highlight_v);
-                    //searchResultImgBtn.setId(R.id.artifact_5);
+                    //searchResultImgBtn.setTag("5");
+                    searchResultImgBtn.setTag(R.id.artifact_5);
                     break;
                 case 6:
                     searchResultImgBtn.setImageResource(R.drawable.highlight_xv);
-                    //searchResultImgBtn.setId(R.id.artifact_6);
+                    //searchResultImgBtn.setTag("6");
+                    searchResultImgBtn.setTag(R.id.artifact_6);
                     break;
                 case 7:
                     searchResultImgBtn.setImageResource(R.drawable.highlight__i);
-                    //searchResultImgBtn.setId(R.id.artifact_7);
+                    //searchResultImgBtn.setTag("7");
+                    searchResultImgBtn.setTag(R.id.artifact_7);
                     break;
                 case 8:
                     searchResultImgBtn.setImageResource(R.drawable.highlight__ii);
-                    //searchResultImgBtn.setId(R.id.artifact_8);
+                    //searchResultImgBtn.setTag("8");
+                    searchResultImgBtn.setTag(R.id.artifact_8);
                     break;
                 case 9:
                     searchResultImgBtn.setImageResource(R.drawable.highlight__iii);
-                    //searchResultImgBtn.setId(R.id.artifact_9);
+                    //searchResultImgBtn.setTag("9");
+                    searchResultImgBtn.setTag(R.id.artifact_9);
                     break;
                 case 10:
                     searchResultImgBtn.setImageResource(R.drawable.highlight__iv);
-                    //searchResultImgBtn.setId(R.id.artifact_10);
+                    //searchResultImgBtn.setTag("9");
+                    searchResultImgBtn.setTag(R.id.artifact_10);
                     break;
                 case 11:
                     searchResultImgBtn.setImageResource(R.drawable.highlight__v);
-                    //searchResultImgBtn.setId(R.id.artifact_11);
+                    //searchResultImgBtn.setTag("10");
+                    searchResultImgBtn.setTag(R.id.artifact_11);
                     break;
                 case 12:
                     searchResultImgBtn.setImageResource(R.drawable.highlight__xv);
-                    //searchResultImgBtn.setId(R.id.artifact_12);
+                    //searchResultImgBtn.setTag("11");
+                    searchResultImgBtn.setTag(R.id.artifact_12);
                     break;
             }
         }
