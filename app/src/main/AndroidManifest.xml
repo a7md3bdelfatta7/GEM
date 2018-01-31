@@ -81,6 +81,10 @@
             android:name=".HelperMenu.TourMap"
             android:label="@string/map_activity_title" />
         <activity android:name=".HelperMenu.Ticket"></activity>
+        <activity android:name=".HelperMenu.IndividualTourActivity" />
+        <activity android:name=".HelperMenu.GroupTourActivity" />
+        <activity android:name=".HelperMenu.ViewTourActivity" />
+
     </application>
 
 </manifest>
