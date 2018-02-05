@@ -4,6 +4,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -479,6 +480,100 @@ public class ArtifactsActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
+
+    }
+    public void videoOnClick(View v) {
+        String []artifactsVideoUrl = {"https://www.youtube.com/watch?v=FXk-NbSWDs8",
+        "https://www.youtube.com/watch?v=yKGe3FcmLLg",
+        "https://www.youtube.com/watch?v=lGq0dOH9qEA",
+        "https://www.youtube.com/watch?v=KTrEAvqYSKQ",
+        "https://www.youtube.com/watch?v=lzdTBKHjxQ4",
+        "https://www.youtube.com/watch?v=lGq0dOH9qEA",
+        "https://www.youtube.com/watch?v=X4gr4_aKgyI",
+        "https://www.youtube.com/watch?v=wgNYtrfD1U8",
+        "https://www.youtube.com/watch?v=DKO-rUJkA4M",
+        "https://www.youtube.com/watch?v=DKO-rUJkA4M",
+        "https://www.youtube.com/watch?v=yKGe3FcmLLg",
+        "https://www.youtube.com/watch?v=BRgWQNOu6v4",
+        "https://www.youtube.com/watch?v=ddazR1n7pA4",
+        "https://www.youtube.com/watch?v=K6YlJwPurVg",
+        "https://www.youtube.com/watch?v=6bv-XeM2l4U",
+        "https://www.youtube.com/watch?v=9n62e1HXjIg",
+        "https://www.youtube.com/watch?v=4j5yJRwMu0w",
+        "https://www.youtube.com/watch?v=L8XcVxUeSyc",
+        "https://www.youtube.com/watch?v=EnZKeNim8T8",
+        "https://www.youtube.com/watch?v=kIVbqlS05BQ",
+        "https://www.youtube.com/watch?v=lGq0dOH9qEA",
+        "https://www.youtube.com/watch?v=lGq0dOH9qEA",
+        "https://www.youtube.com/watch?v=LXrdxoWNA7M",
+        "https://www.youtube.com/watch?v=5OBXPmnkNoQ"};
+
+        String []artifactsVideoIds = {"FXk-NbSWDs8",
+                "yKGe3FcmLLg",
+                "lGq0dOH9qEA",
+                "KTrEAvqYSKQ",
+                "lzdTBKHjxQ4",
+                "lGq0dOH9qEA",
+                "X4gr4_aKgyI",
+                "wgNYtrfD1U8",
+                "DKO-rUJkA4M",
+                "DKO-rUJkA4M",
+                "yKGe3FcmLLg",
+                "BRgWQNOu6v4",
+                "ddazR1n7pA4",
+                "K6YlJwPurVg",
+                "6bv-XeM2l4U",
+                "9n62e1HXjIg",
+                "4j5yJRwMu0w",
+                "L8XcVxUeSyc",
+                "EnZKeNim8T8",
+                "kIVbqlS05BQ",
+                "lGq0dOH9qEA",
+                "lGq0dOH9qEA",
+                "LXrdxoWNA7M",
+                "5OBXPmnkNoQ"};
+//        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(artifactsVideoUrl[artifact_num-1]));
+//        startActivity(browserIntent);
+        Intent appIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + artifactsVideoIds[artifact_num-1]));
+        Intent webIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("http://www.youtube.com/watch?v=" + artifactsVideoIds[artifact_num-1]));
+        try {
+            this.startActivity(appIntent);
+        } catch (ActivityNotFoundException ex) {
+            this.startActivity(webIntent);
+        }
+
+    }
+    public void connectionOnClick(View v) {
+        String []artifactsConnectionsUrl = {"https://www.vanityfair.com/culture/2013/04/king-tut-exhibit-new-york",
+                "https://www.britannica.com/biography/Amenhotep-II",
+                "http://www.ancientegyptonline.co.uk/anubis.html",
+                "http://www.touregypt.net/featurestories/ushabti.htm",
+                "http://www.landofpyramids.org/sobek.htm",
+                "https://isiopolis.com/2013/01/26/milk-the-magic-of-isis/",
+                "https://www.flickr.com/photos/24729615@N00/33528187152/in/photostream/",
+                "http://egypttoursinformation.blogspot.com.eg/2015/05/ing-amenemhat-iii-in-priestly-costume.html",
+                "https://www.thecultureconcept.com/the-silver-pharaoh-psusennes-i-facing-the-afterlife-in-style",
+                "http://ib205.tripod.com/psusennes-mummy.html",
+                "http://www.egyptianmyths.net/mythhatshep.htm",
+                "https://www.sav.sk/journals/uploads/05141128Magdolen.pdf",
+                "http://www.globalegyptianmuseum.org/detail.aspx?id=4934",
+                "http://www.touregypt.net/featurestories/coffins.htm",
+                "https://www.pbslearningmedia.org/resource/xir68322/queen-kawit-at-her-toilet-from-the-sarc-xir68322-egyptian/#.WnLrZa6WYps",
+                "https://www.thecultureconcept.com/the-silver-pharaoh-psusennes-i-facing-the-afterlife-in-style",
+                "https://www.ancient.eu/image/3411/",
+                "https://www.google.com/culturalinstitute/beta/asset/sandstone-ba-statue-of-a-woman/9wEPlxMrXHSn1A?hl=en",
+                "https://www.egypttoursplus.com/tomb-of-king-tut/",
+                "http://www.gizapyramids.org/pdf_library/hawass_fs_mokhtar.pdf",
+                "http://www.ancientegyptonline.co.uk/anubis.html",
+                "https://ancientart.as.ua.edu/head-of-a-cow-goddess-hathor/",
+                "http://www.landofpyramids.org/uraeus.htm",
+                "http://www.oneonta.edu/faculty/farberas/arth/arth200/Body/egypt_body.htm"};
+
+
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(artifactsConnectionsUrl[artifact_num-1]));
+        startActivity(browserIntent);
+
 
     }
     public void HighlightsAddTofavouriteonClick(View v) {

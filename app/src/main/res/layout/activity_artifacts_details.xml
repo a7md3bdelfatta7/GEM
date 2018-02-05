@@ -80,6 +80,7 @@
             android:layout_marginRight="100dp"
             android:layout_marginBottom="10dp"
             android:text="VIDEOS"
+            android:onClick="videoOnClick"
             android:textColor="@color/cardview_light_background"
             android:background="@color/defaultColor"/>
         <Button
@@ -91,6 +92,7 @@
             android:text="PHOTOS"
             android:textColor="@color/cardview_light_background"
             android:background="@color/defaultColor"/>
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -99,15 +101,7 @@
             android:layout_marginBottom="10dp"
             android:textColor="@color/cardview_light_background"
             android:background="@color/defaultColor"
-            android:text="AUDIO"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="100dp"
-            android:layout_marginBottom="10dp"
-            android:textColor="@color/cardview_light_background"
-            android:background="@color/defaultColor"
+            android:onClick="connectionOnClick"
             android:text="CONNECTIONS"/>
 
     </LinearLayout>
