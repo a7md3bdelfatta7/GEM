@@ -39,6 +39,11 @@ public class TourGuideActivity extends AppCompatActivity {
     public void getTourGuide(View v){
         tour_list=(RadioGroup)findViewById(R.id.tour_list);
         int id=tour_list.getCheckedRadioButtonId();
+        id=id%7;
+        if(id==0){
+            id=7;
+        }
+
         if(id!=-1) {
             String x = tours[id - 1];
             Toast.makeText(this, x + " on the way", Toast.LENGTH_SHORT).show();
