@@ -1,10 +1,12 @@
 package brainwaves.gem;
 
+import android.app.ActivityManager;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.Uri;
@@ -33,6 +35,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.List;
 
 import brainwaves.gem.HelperMenu.ArtifactsActivity;
 import brainwaves.gem.HelperMenu.CollectionsActivity;
@@ -95,6 +99,31 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
+
+
+///////////////////////////////////////////////
+//        List<ApplicationInfo> packages;
+//        PackageManager pm;
+//        pm = getPackageManager();
+//        //get a list of installed apps.
+//        packages = pm.getInstalledApplications(0);
+//        Context context = getApplicationContext();
+//        ActivityManager mActivityManager = (ActivityManager)context.getSystemService(Context.ACTIVITY_SERVICE);
+//        String myPackage = getApplicationContext().getPackageName();
+//        for (ApplicationInfo packageInfo : packages) {
+//            if((packageInfo.flags & ApplicationInfo.FLAG_SYSTEM)==1)continue;
+//            if(packageInfo.packageName.equals(myPackage)) continue;
+//            mActivityManager.killBackgroundProcesses(packageInfo.packageName);
+//        }
+//
+//
+////////////////////////////////////////
+
+
+
+
+
+
 
 
 
