@@ -66,12 +66,12 @@ public class MainActivity extends AppCompatActivity
 
     // Titles of the individual pages (displayed in tabs)
     private final String[] PAGE_TITLES = new String[] {
-            "Visit",
+            "VISIT",
             "HIGHLIGHTS",
             "TODAY'S EVENT",
             "FOR MEMBERS",
             "STAFF PICKS",
-            "Future EVENTS",
+            "FEATURED EVENTS",
     };
 
     // The fragments that are used as the individual pages
@@ -99,33 +99,6 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
-
-
-///////////////////////////////////////////////
-//        List<ApplicationInfo> packages;
-//        PackageManager pm;
-//        pm = getPackageManager();
-//        //get a list of installed apps.
-//        packages = pm.getInstalledApplications(0);
-//        Context context = getApplicationContext();
-//        ActivityManager mActivityManager = (ActivityManager)context.getSystemService(Context.ACTIVITY_SERVICE);
-//        String myPackage = getApplicationContext().getPackageName();
-//        for (ApplicationInfo packageInfo : packages) {
-//            if((packageInfo.flags & ApplicationInfo.FLAG_SYSTEM)==1)continue;
-//            if(packageInfo.packageName.equals(myPackage)) continue;
-//            mActivityManager.killBackgroundProcesses(packageInfo.packageName);
-//        }
-//
-//
-////////////////////////////////////////
-
-
-
-
-
-
-
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -329,7 +302,30 @@ public class MainActivity extends AppCompatActivity
                     Favourites.class);
             startActivity(Favourites);
         } else if (id == R.id.AR_menu) {
-            PackageManager pm = this.getPackageManager();
+
+
+
+/////////////////////////////////////////////
+            List<ApplicationInfo> packages;
+            PackageManager pm;
+            pm = this.getPackageManager();
+            //get a list of installed apps.
+            packages = pm.getInstalledApplications(0);
+            Context context = getApplicationContext();
+            ActivityManager mActivityManager = (ActivityManager)context.getSystemService(Context.ACTIVITY_SERVICE);
+            String myPackage = getApplicationContext().getPackageName();
+            for (ApplicationInfo packageInfo : packages) {
+                if((packageInfo.flags & ApplicationInfo.FLAG_SYSTEM)==1)continue;
+                if(packageInfo.packageName.equals(myPackage)) continue;
+                mActivityManager.killBackgroundProcesses(packageInfo.packageName);
+            }
+
+
+//////////////////////////////////////
+
+
+
+//            PackageManager pm = this.getPackageManager();
 
             try
             {

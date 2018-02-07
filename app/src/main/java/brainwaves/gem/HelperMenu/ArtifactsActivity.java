@@ -1,9 +1,11 @@
 package brainwaves.gem.HelperMenu;
 
 import android.Manifest;
+import android.app.ActivityManager;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
@@ -459,6 +461,29 @@ public class ArtifactsActivity extends AppCompatActivity {
         });
     }
     public void unlockVR(View v) {
+
+
+        /////////////////////////////////////////////
+        List<ApplicationInfo> packages;
+        PackageManager pm;
+        pm = this.getPackageManager();
+        //get a list of installed apps.
+        packages = pm.getInstalledApplications(0);
+        Context context = getApplicationContext();
+        ActivityManager mActivityManager = (ActivityManager)context.getSystemService(Context.ACTIVITY_SERVICE);
+        String myPackage = getApplicationContext().getPackageName();
+        for (ApplicationInfo packageInfo : packages) {
+            if((packageInfo.flags & ApplicationInfo.FLAG_SYSTEM)==1)continue;
+            if(packageInfo.packageName.equals(myPackage)) continue;
+            mActivityManager.killBackgroundProcesses(packageInfo.packageName);
+        }
+
+
+//////////////////////////////////////
+
+
+
+
         String path = "/storage/emulated/0/";
         File file = new File(path, "VR.txt");
         FileOutputStream stream = null;
@@ -474,7 +499,7 @@ public class ArtifactsActivity extends AppCompatActivity {
         } finally {
             try {
                 stream.close();
-                PackageManager pm = this.getPackageManager();
+                //\PackageManager pm = this.getPackageManager();
 
                 try
                 {
