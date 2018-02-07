@@ -74,35 +74,39 @@
             android:textStyle="bold"
             android:text="@string/related_Links"/>
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="100dp"
             android:layout_marginBottom="10dp"
             android:text="VIDEOS"
             android:onClick="videoOnClick"
+            android:gravity="center"
             android:textColor="@color/cardview_light_background"
-            android:background="@color/defaultColor"/>
+            android:background="@color/defaultColor"
+            android:layout_gravity="center"
+            android:minWidth="200dp"
+            />
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="100dp"
             android:layout_marginBottom="10dp"
             android:text="PHOTOS"
             android:textColor="@color/cardview_light_background"
-            android:background="@color/defaultColor"/>
+            android:background="@color/defaultColor"
+            android:layout_gravity="center"
+            android:minWidth="200dp"
+            />
 
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="100dp"
+            android:minWidth="200dp"
             android:layout_marginBottom="10dp"
             android:textColor="@color/cardview_light_background"
             android:background="@color/defaultColor"
             android:onClick="connectionOnClick"
-            android:text="CONNECTIONS"/>
+            android:text="CONNECTIONS"
+            android:layout_gravity="center"
+            />
 
     </LinearLayout>
 </ScrollView>
