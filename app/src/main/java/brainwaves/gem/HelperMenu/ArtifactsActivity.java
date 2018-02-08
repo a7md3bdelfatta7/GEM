@@ -5,6 +5,8 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.support.v4.app.ActivityCompat;
@@ -34,6 +36,7 @@ import java.util.List;
 
 import brainwaves.gem.MainActivity;
 import brainwaves.gem.R;
+import brainwaves.gem.artifact_video;
 import brainwaves.gem.data.ArtifactsContract;
 import brainwaves.gem.data.ArtifactsFavourite;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
@@ -493,65 +496,80 @@ public class ArtifactsActivity extends AppCompatActivity {
         }
 
     }
-    public void videoOnClick(View v) {
-        String []artifactsVideoUrl = {"https://www.youtube.com/watch?v=FXk-NbSWDs8",
-        "https://www.youtube.com/watch?v=yKGe3FcmLLg",
-        "https://www.youtube.com/watch?v=lGq0dOH9qEA",
-        "https://www.youtube.com/watch?v=KTrEAvqYSKQ",
-        "https://www.youtube.com/watch?v=lzdTBKHjxQ4",
-        "https://www.youtube.com/watch?v=lGq0dOH9qEA",
-        "https://www.youtube.com/watch?v=X4gr4_aKgyI",
-        "https://www.youtube.com/watch?v=wgNYtrfD1U8",
-        "https://www.youtube.com/watch?v=DKO-rUJkA4M",
-        "https://www.youtube.com/watch?v=DKO-rUJkA4M",
-        "https://www.youtube.com/watch?v=yKGe3FcmLLg",
-        "https://www.youtube.com/watch?v=BRgWQNOu6v4",
-        "https://www.youtube.com/watch?v=ddazR1n7pA4",
-        "https://www.youtube.com/watch?v=K6YlJwPurVg",
-        "https://www.youtube.com/watch?v=6bv-XeM2l4U",
-        "https://www.youtube.com/watch?v=9n62e1HXjIg",
-        "https://www.youtube.com/watch?v=4j5yJRwMu0w",
-        "https://www.youtube.com/watch?v=L8XcVxUeSyc",
-        "https://www.youtube.com/watch?v=EnZKeNim8T8",
-        "https://www.youtube.com/watch?v=kIVbqlS05BQ",
-        "https://www.youtube.com/watch?v=lGq0dOH9qEA",
-        "https://www.youtube.com/watch?v=lGq0dOH9qEA",
-        "https://www.youtube.com/watch?v=LXrdxoWNA7M",
-        "https://www.youtube.com/watch?v=5OBXPmnkNoQ"};
 
-        String []artifactsVideoIds = {"FXk-NbSWDs8",
-                "yKGe3FcmLLg",
-                "lGq0dOH9qEA",
-                "KTrEAvqYSKQ",
-                "lzdTBKHjxQ4",
-                "lGq0dOH9qEA",
-                "X4gr4_aKgyI",
-                "wgNYtrfD1U8",
-                "DKO-rUJkA4M",
-                "DKO-rUJkA4M",
-                "yKGe3FcmLLg",
-                "BRgWQNOu6v4",
-                "ddazR1n7pA4",
-                "K6YlJwPurVg",
-                "6bv-XeM2l4U",
-                "9n62e1HXjIg",
-                "4j5yJRwMu0w",
-                "L8XcVxUeSyc",
-                "EnZKeNim8T8",
-                "kIVbqlS05BQ",
-                "lGq0dOH9qEA",
-                "lGq0dOH9qEA",
-                "LXrdxoWNA7M",
-                "5OBXPmnkNoQ"};
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
+    public void videoOnClick(View v) {
+
+        if(!isNetworkAvailable()){
+            Intent intent =new Intent(ArtifactsActivity.this,artifact_video.class);
+            intent.putExtra("artifact_num",artifact_num);
+            startActivity(intent);
+        }else {
+            String[] artifactsVideoUrl = {"https://www.youtube.com/watch?v=FXk-NbSWDs8",
+                    "https://www.youtube.com/watch?v=yKGe3FcmLLg",
+                    "https://www.youtube.com/watch?v=lGq0dOH9qEA",
+                    "https://www.youtube.com/watch?v=KTrEAvqYSKQ",
+                    "https://www.youtube.com/watch?v=lzdTBKHjxQ4",
+                    "https://www.youtube.com/watch?v=lGq0dOH9qEA",
+                    "https://www.youtube.com/watch?v=X4gr4_aKgyI",
+                    "https://www.youtube.com/watch?v=wgNYtrfD1U8",
+                    "https://www.youtube.com/watch?v=DKO-rUJkA4M",
+                    "https://www.youtube.com/watch?v=DKO-rUJkA4M",
+                    "https://www.youtube.com/watch?v=yKGe3FcmLLg",
+                    "https://www.youtube.com/watch?v=BRgWQNOu6v4",
+                    "https://www.youtube.com/watch?v=ddazR1n7pA4",
+                    "https://www.youtube.com/watch?v=K6YlJwPurVg",
+                    "https://www.youtube.com/watch?v=6bv-XeM2l4U",
+                    "https://www.youtube.com/watch?v=9n62e1HXjIg",
+                    "https://www.youtube.com/watch?v=4j5yJRwMu0w",
+                    "https://www.youtube.com/watch?v=L8XcVxUeSyc",
+                    "https://www.youtube.com/watch?v=EnZKeNim8T8",
+                    "https://www.youtube.com/watch?v=kIVbqlS05BQ",
+                    "https://www.youtube.com/watch?v=lGq0dOH9qEA",
+                    "https://www.youtube.com/watch?v=lGq0dOH9qEA",
+                    "https://www.youtube.com/watch?v=LXrdxoWNA7M",
+                    "https://www.youtube.com/watch?v=5OBXPmnkNoQ"};
+
+            String[] artifactsVideoIds = {"FXk-NbSWDs8",
+                    "yKGe3FcmLLg",
+                    "lGq0dOH9qEA",
+                    "KTrEAvqYSKQ",
+                    "lzdTBKHjxQ4",
+                    "lGq0dOH9qEA",
+                    "X4gr4_aKgyI",
+                    "wgNYtrfD1U8",
+                    "DKO-rUJkA4M",
+                    "DKO-rUJkA4M",
+                    "yKGe3FcmLLg",
+                    "BRgWQNOu6v4",
+                    "ddazR1n7pA4",
+                    "K6YlJwPurVg",
+                    "6bv-XeM2l4U",
+                    "9n62e1HXjIg",
+                    "4j5yJRwMu0w",
+                    "L8XcVxUeSyc",
+                    "EnZKeNim8T8",
+                    "kIVbqlS05BQ",
+                    "lGq0dOH9qEA",
+                    "lGq0dOH9qEA",
+                    "LXrdxoWNA7M",
+                    "5OBXPmnkNoQ"};
 //        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(artifactsVideoUrl[artifact_num-1]));
 //        startActivity(browserIntent);
-        Intent appIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + artifactsVideoIds[artifact_num-1]));
-        Intent webIntent = new Intent(Intent.ACTION_VIEW,
-                Uri.parse("http://www.youtube.com/watch?v=" + artifactsVideoIds[artifact_num-1]));
-        try {
-            this.startActivity(appIntent);
-        } catch (ActivityNotFoundException ex) {
-            this.startActivity(webIntent);
+            Intent appIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + artifactsVideoIds[artifact_num - 1]));
+            Intent webIntent = new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("http://www.youtube.com/watch?v=" + artifactsVideoIds[artifact_num - 1]));
+            try {
+                this.startActivity(appIntent);
+            } catch (ActivityNotFoundException ex) {
+                this.startActivity(webIntent);
+            }
         }
 
     }
@@ -584,6 +602,7 @@ public class ArtifactsActivity extends AppCompatActivity {
 
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(artifactsConnectionsUrl[artifact_num-1]));
         startActivity(browserIntent);
+
 
 
     }

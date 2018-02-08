@@ -3,7 +3,9 @@
     package="brainwaves.gem">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:name=".MyApp"
         android:allowBackup="true"
@@ -75,17 +77,23 @@
             android:label="@string/title_activity_checkout" />
         <activity android:name=".EventDetailsActivity" />
         <activity android:name=".HelperMenu.shoppingDetailsActivity" />
-        <activity android:name=".HelperMenu.Favourites"
-            android:label="@string/favourite_title"/>
+        <activity
+            android:name=".HelperMenu.Favourites"
+            android:label="@string/favourite_title" />
         <activity android:name=".HelperMenu.TourGuideActivity" />
         <activity
             android:name=".HelperMenu.TourMap"
             android:label="@string/map_activity_title" />
-        <activity android:name=".HelperMenu.Ticket" android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".HelperMenu.Ticket"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".HelperMenu.IndividualTourActivity" />
         <activity android:name=".HelperMenu.GroupTourActivity" />
-        <activity android:name=".HelperMenu.ViewTourActivity"  />
-
+        <activity android:name=".HelperMenu.ViewTourActivity" />
+        <activity android:name=".artifact_video"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
+            android:theme="@style/AppTheme.NoActionBar"
+            ></activity>
     </application>
 
 </manifest>
