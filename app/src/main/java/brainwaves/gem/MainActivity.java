@@ -56,6 +56,7 @@ import brainwaves.gem.fragments.HighlightsFragment;
 import brainwaves.gem.fragments.TodayEventFragment;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
