@@ -385,13 +385,16 @@ public class ArtifactsActivity extends AppCompatActivity {
     CallbackManager callbackManager;
     public void onButtonShowPopupWindowClick(View view) {
 
+
         callbackManager = CallbackManager.Factory.create();
         //Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.fbpost);
         ShareDialog shareDialog;
         shareDialog = new ShareDialog(this);
         ShareLinkContent linkContent = new ShareLinkContent.Builder()
                 .setContentUrl(Uri.parse("http://www.e-c-h-o.org/images/SchematicGEM.jpg")).setContentTitle("Greatest egyptian museum")
-                .setQuote("Connect on a global scale.")
+                .setQuote("Connect on a global scale.").setShareHashtag(new ShareHashtag.Builder()
+                        .setHashtag("#GEM")
+                        .build()).setRef("GEM APP")
                 .build();
         shareDialog.show(linkContent);
 

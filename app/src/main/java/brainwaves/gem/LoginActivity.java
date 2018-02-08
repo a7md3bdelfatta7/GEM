@@ -137,17 +137,18 @@ public class LoginActivity extends AppCompatActivity {
                                 try {
                                     UserContract user = new UserContract(getApplicationContext());
                                     if (!user.isUserNameExist(object.getString("name"))) {
-                                        long result = user.addNewUser(object.getString("name"), "asdasdasdsad", object.getString("name"),
+                                        long result = user.addNewUser(object.getString("email"), "asdasdasdsad", object.getString("name"),
                                                 object.getString("birthday"), "Egyptian");
-                                        if (result > 0) {
-                                            if (user.login(object.getString("name") , "asdasdasdsad")) {
-                                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                                startActivity(intent);
-                                                ActivityCompat.finishAffinity(LoginActivity.this);
-                                            }
-                                        }
                                     }
+
+                                    if (user.login(object.getString("email") , "asdasdasdsad")) {
+                                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                        startActivity(intent);
+                                        ActivityCompat.finishAffinity(LoginActivity.this);
+                                    }
+
+
                                     String email = object.getString("email");
                                     String birthday = object.getString("birthday"); // 01/31/1980 format
                                 } catch (JSONException e) {
