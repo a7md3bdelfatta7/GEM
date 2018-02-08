@@ -82,6 +82,7 @@ public class UserContract {
 
     }
 
+
     public boolean isUserNameExist(String userName){
 
         String whereClause = ""+UserEntry.COLUMN_USER_NAME+" = ?";

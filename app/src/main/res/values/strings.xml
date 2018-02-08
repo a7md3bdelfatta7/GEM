@@ -178,4 +178,10 @@
     <string name="get_tour">Request Tour Guide</string>
 
 
+    <string name="facebook_app_id">781532365370297</string>
+    <string name="fb_login_protocol_scheme">fb781532365370297</string>
+
+
+
+
 </resources>

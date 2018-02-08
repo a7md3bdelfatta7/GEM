@@ -1,11 +1,14 @@
 package brainwaves.gem.HelperMenu;
 
 import android.Manifest;
+import android.app.ActivityManager;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
-import android.net.ConnectivityManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactoryimport android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
@@ -26,6 +29,13 @@ import android.widget.PopupWindow;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.facebook.CallbackManager;
+import com.facebook.share.model.ShareHashtag;
+import com.facebook.share.model.ShareLinkContent;
+import com.facebook.share.model.SharePhoto;
+import com.facebook.share.model.SharePhotoContent;
+import com.facebook.share.widget.ShareDialog;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -374,34 +384,28 @@ public class ArtifactsActivity extends AppCompatActivity {
     public void shareonClick(View v) {
         Toast.makeText(this,"Done.", Toast.LENGTH_SHORT).show();
     }
+    CallbackManager callbackManager;
     public void onButtonShowPopupWindowClick(View view) {
 
-        // get a reference to the already created main layout
-        ScrollView mainLayout = (ScrollView)
-                findViewById(R.id.colltections_main_layout);
 
-        // inflate the layout of the popup window
-        LayoutInflater inflater = (LayoutInflater)
-                getSystemService(LAYOUT_INFLATER_SERVICE);
-        View popupView = inflater.inflate(R.layout.popup_window, null);
+        callbackManager = CallbackManager.Factory.create();
+        //Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.fbpost);
+        ShareDialog shareDialog;
+        shareDialog = new ShareDialog(this);
+        ShareLinkContent linkContent = new ShareLinkContent.Builder()
+                .setContentUrl(Uri.parse("http://www.e-c-h-o.org/images/SchematicGEM.jpg")).setContentTitle("Greatest egyptian museum")
+                .setQuote("Connect on a global scale.").setShareHashtag(new ShareHashtag.Builder()
+                        .setHashtag("#GEM")
+                        .build()).setRef("GEM APP")
+                .build();
+        shareDialog.show(linkContent);
 
-        // create the popup window
-        int width = LinearLayout.LayoutParams.WRAP_CONTENT;
-        int height = LinearLayout.LayoutParams.WRAP_CONTENT;
-        boolean focusable = true; // lets taps outside the popup also dismiss it
-        final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
 
-        // show the popup window
-        popupWindow.showAtLocation(mainLayout, Gravity.CENTER, 0, 0);
-
-        // dismiss the popup window when touched
-        popupView.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                popupWindow.dismiss();
-                return true;
-            }
-        });
+    }
+    @Override
+    protected void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        callbackManager.onActivityResult(requestCode, resultCode, data);
     }
     public void onButtonMapPopupWindowClick(View view) {
 
@@ -462,6 +466,29 @@ public class ArtifactsActivity extends AppCompatActivity {
         });
     }
     public void unlockVR(View v) {
+
+
+        /////////////////////////////////////////////
+        List<ApplicationInfo> packages;
+        PackageManager pm;
+        pm = this.getPackageManager();
+        //get a list of installed apps.
+        packages = pm.getInstalledApplications(0);
+        Context context = getApplicationContext();
+        ActivityManager mActivityManager = (ActivityManager)context.getSystemService(Context.ACTIVITY_SERVICE);
+        String myPackage = getApplicationContext().getPackageName();
+        for (ApplicationInfo packageInfo : packages) {
+            if((packageInfo.flags & ApplicationInfo.FLAG_SYSTEM)==1)continue;
+            if(packageInfo.packageName.equals(myPackage)) continue;
+            mActivityManager.killBackgroundProcesses(packageInfo.packageName);
+        }
+
+
+//////////////////////////////////////
+
+
+
+
         String path = "/storage/emulated/0/";
         File file = new File(path, "VR.txt");
         FileOutputStream stream = null;
@@ -477,7 +504,7 @@ public class ArtifactsActivity extends AppCompatActivity {
         } finally {
             try {
                 stream.close();
-                PackageManager pm = this.getPackageManager();
+                //\PackageManager pm = this.getPackageManager();
 
                 try
                 {
@@ -505,7 +532,7 @@ public class ArtifactsActivity extends AppCompatActivity {
     }
 
     public void videoOnClick(View v) {
-
+        
         if(!isNetworkAvailable()){
             Intent intent =new Intent(ArtifactsActivity.this,artifact_video.class);
             intent.putExtra("artifact_num",artifact_num);
