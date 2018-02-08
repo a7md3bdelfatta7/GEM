@@ -7,6 +7,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.support.v4.app.ActivityCompat;
@@ -26,6 +28,13 @@ import android.widget.PopupWindow;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.facebook.CallbackManager;
+import com.facebook.share.model.ShareHashtag;
+import com.facebook.share.model.ShareLinkContent;
+import com.facebook.share.model.SharePhoto;
+import com.facebook.share.model.SharePhotoContent;
+import com.facebook.share.widget.ShareDialog;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -373,34 +382,25 @@ public class ArtifactsActivity extends AppCompatActivity {
     public void shareonClick(View v) {
         Toast.makeText(this,"Done.", Toast.LENGTH_SHORT).show();
     }
+    CallbackManager callbackManager;
     public void onButtonShowPopupWindowClick(View view) {
 
-        // get a reference to the already created main layout
-        ScrollView mainLayout = (ScrollView)
-                findViewById(R.id.colltections_main_layout);
+        callbackManager = CallbackManager.Factory.create();
+        //Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.fbpost);
+        ShareDialog shareDialog;
+        shareDialog = new ShareDialog(this);
+        ShareLinkContent linkContent = new ShareLinkContent.Builder()
+                .setContentUrl(Uri.parse("http://www.e-c-h-o.org/images/SchematicGEM.jpg")).setContentTitle("Greatest egyptian museum")
+                .setQuote("Connect on a global scale.")
+                .build();
+        shareDialog.show(linkContent);
 
-        // inflate the layout of the popup window
-        LayoutInflater inflater = (LayoutInflater)
-                getSystemService(LAYOUT_INFLATER_SERVICE);
-        View popupView = inflater.inflate(R.layout.popup_window, null);
 
-        // create the popup window
-        int width = LinearLayout.LayoutParams.WRAP_CONTENT;
-        int height = LinearLayout.LayoutParams.WRAP_CONTENT;
-        boolean focusable = true; // lets taps outside the popup also dismiss it
-        final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
-
-        // show the popup window
-        popupWindow.showAtLocation(mainLayout, Gravity.CENTER, 0, 0);
-
-        // dismiss the popup window when touched
-        popupView.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                popupWindow.dismiss();
-                return true;
-            }
-        });
+    }
+    @Override
+    protected void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        callbackManager.onActivityResult(requestCode, resultCode, data);
     }
     public void onButtonMapPopupWindowClick(View view) {
 
