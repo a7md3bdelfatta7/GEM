@@ -61,9 +61,10 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private final String LOG_TAG = MainActivity.class.getSimpleName();
-    ImageView advertismentImage;
+    //ImageView advertismentImage;
     Animation hyperspaceJumpAnimation;
     ImageView imageView;
+    int tabAddImgID = R.drawable.coca;
 
     // Titles of the individual pages (displayed in tabs)
     private final String[] PAGE_TITLES = new String[] {
@@ -116,7 +117,7 @@ public class MainActivity extends AppCompatActivity
         final View navHeaderView=navigationView.getHeaderView(0);
 
         ////////////////actionbar///////////
-        advertismentImage = (ImageView) findViewById(R.id.advertisement);
+        //advertismentImage = (ImageView) findViewById(R.id.advertisement);
         hyperspaceJumpAnimation = AnimationUtils.loadAnimation(this, R.anim.animation);
         imageView=(ImageView)findViewById(R.id.mapIcon);
         //advertismentImage.startAnimation(hyperspaceJumpAnimation);
@@ -159,31 +160,43 @@ public class MainActivity extends AppCompatActivity
                         super.onTabSelected(tab);
                         int tabIndex = tab.getPosition();
                         int color = Color.parseColor(getResources().getString(0 + R.color.visiColor));
-                        advertismentImage.setImageResource(R.drawable.coca);
+                        //advertismentImage.setImageResource(R.drawable.coca);
                         switch (tabIndex) {
                             case 0:
                                 color = Color.parseColor(getResources().getString(0 + R.color.visiColor));
-                                advertismentImage.setImageResource(R.drawable.coca);
+                                if(imageView.getTag()=="Add")
+                                    imageView.setImageResource(R.drawable.coca);
+                                tabAddImgID = R.drawable.coca;
                                 break;
                             case 1:
                                 color = Color.parseColor(getResources().getString(0 + R.color.highlightColor));
-                                advertismentImage.setImageResource(R.drawable.vodafone);
+                                if(imageView.getTag()=="Add")
+                                    imageView.setImageResource(R.drawable.vodafone);
+                                tabAddImgID = R.drawable.vodafone;
                                 break;
                             case 2:
                                 color = Color.parseColor(getResources().getString(0 + R.color.todayEventColor));
-                                advertismentImage.setImageResource(R.drawable.cadbury);
+                                if(imageView.getTag()=="Add")
+                                    imageView.setImageResource(R.drawable.cadbury);
+                                tabAddImgID = R.drawable.cadbury;
                                 break;
                             case 3:
                                 color = Color.parseColor(getResources().getString(0 + R.color.forMemberColor));
-                                advertismentImage.setImageResource(R.drawable.we);
+                                if(imageView.getTag()=="Add")
+                                    imageView.setImageResource(R.drawable.we);
+                                tabAddImgID = R.drawable.we;
                                 break;
                             case 4:
                                 color = Color.parseColor(getResources().getString(0 + R.color.staffPicksColor));
-                                advertismentImage.setImageResource(R.drawable.pepsi);
+                                if(imageView.getTag()=="Add")
+                                    imageView.setImageResource(R.drawable.pepsi);
+                                tabAddImgID = R.drawable.pepsi;
                                 break;
                             case 5:
                                 color = Color.parseColor(getResources().getString(0 + R.color.featuredEventsColor));
-                                advertismentImage.setImageResource(R.drawable.etisalat);
+                                if(imageView.getTag()=="Add")
+                                    imageView.setImageResource(R.drawable.etisalat);
+                                tabAddImgID = R.drawable.etisalat;
                                 break;
 
                         }
@@ -401,15 +414,14 @@ public class MainActivity extends AppCompatActivity
 
 
     public void advertismentfn(){
-        if(advertismentImage.getVisibility() == View.GONE){
-            imageView.setVisibility(View.GONE);
-            advertismentImage.setVisibility(View.VISIBLE);
-            advertismentImage.startAnimation(hyperspaceJumpAnimation);
-
+        if(imageView.getTag() == "Map"){
+            imageView.setImageResource(tabAddImgID);
+            imageView.setTag("Add");
+            imageView.startAnimation(hyperspaceJumpAnimation);
         }
         else {
-            advertismentImage.setVisibility(View.GONE);
-            imageView.setVisibility(View.VISIBLE);
+            imageView.setTag("Map");
+            imageView.setImageResource(R.drawable.map_icon);
         }
     }
 

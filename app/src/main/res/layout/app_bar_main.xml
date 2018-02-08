@@ -35,16 +35,7 @@
 
                     />
 
-                <ImageView
-                    android:id="@+id/advertisement"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/coca"
-                    android:layout_gravity="right|end"
-                    android:adjustViewBounds="true"
-                    android:padding="10dp"
-                    android:animation="@android:anim/cycle_interpolator"
-                    />
+
 
                 <ImageView
                     android:id="@+id/mapIcon"

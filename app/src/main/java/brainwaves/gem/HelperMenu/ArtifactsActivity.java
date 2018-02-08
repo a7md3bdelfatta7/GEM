@@ -55,6 +55,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 public class ArtifactsActivity extends AppCompatActivity {
 
     int artifact_num;
+    CallbackManager callbackManager; // for using fb
     ImageButton artifactAddedToTourImgButton;
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -385,7 +386,7 @@ public class ArtifactsActivity extends AppCompatActivity {
     public void shareonClick(View v) {
         Toast.makeText(this,"Done.", Toast.LENGTH_SHORT).show();
     }
-    CallbackManager callbackManager;
+
     public void onButtonShowPopupWindowClick(View view) {
 
 
