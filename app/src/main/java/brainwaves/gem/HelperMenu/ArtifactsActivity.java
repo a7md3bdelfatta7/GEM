@@ -8,7 +8,8 @@ import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactoryimport android.net.ConnectivityManager;
+import android.graphics.BitmapFactory;
+import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
@@ -532,7 +533,7 @@ public class ArtifactsActivity extends AppCompatActivity {
     }
 
     public void videoOnClick(View v) {
-        
+
         if(!isNetworkAvailable()){
             Intent intent =new Intent(ArtifactsActivity.this,artifact_video.class);
             intent.putExtra("artifact_num",artifact_num);
