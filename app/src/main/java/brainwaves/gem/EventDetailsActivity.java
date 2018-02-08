@@ -1,6 +1,7 @@
 package brainwaves.gem;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,6 +18,11 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.CallbackManager;
+import com.facebook.share.model.ShareHashtag;
+import com.facebook.share.model.ShareLinkContent;
+import com.facebook.share.widget.ShareDialog;
+
 import org.w3c.dom.Text;
 
 import brainwaves.gem.HelperMenu.MembershipActivity;
@@ -24,7 +30,7 @@ import brainwaves.gem.HelperMenu.MembershipActivity;
 import static android.view.View.VISIBLE;
 
 public class EventDetailsActivity extends AppCompatActivity {
-
+    CallbackManager callbackManager; // for using fb
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -187,31 +193,16 @@ public class EventDetailsActivity extends AppCompatActivity {
     }
     public void onButtonShowPopupWindowClick(View view) {
 
-        // get a reference to the already created main layout
-        ScrollView mainLayout = (ScrollView)
-                findViewById(R.id.eventDetails_main_layout);
-
-        // inflate the layout of the popup window
-        LayoutInflater inflater = (LayoutInflater)
-                getSystemService(LAYOUT_INFLATER_SERVICE);
-        View popupView = inflater.inflate(R.layout.popup_window, null);
-
-        // create the popup window
-        int width = LinearLayout.LayoutParams.WRAP_CONTENT;
-        int height = LinearLayout.LayoutParams.WRAP_CONTENT;
-        boolean focusable = true; // lets taps outside the popup also dismiss it
-        final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
-
-        // show the popup window
-        popupWindow.showAtLocation(mainLayout, Gravity.CENTER, 0, 0);
-
-        // dismiss the popup window when touched
-        popupView.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                popupWindow.dismiss();
-                return true;
-            }
-        });
+        callbackManager = CallbackManager.Factory.create();
+        //Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.fbpost);
+        ShareDialog shareDialog;
+        shareDialog = new ShareDialog(this);
+        ShareLinkContent linkContent = new ShareLinkContent.Builder()
+                .setContentUrl(Uri.parse("http://www.e-c-h-o.org/images/SchematicGEM.jpg")).setContentTitle("Greatest egyptian museum")
+                .setQuote("Connect on a global scale.").setShareHashtag(new ShareHashtag.Builder()
+                        .setHashtag("#GEM")
+                        .build()).setRef("GEM APP")
+                .build();
+        shareDialog.show(linkContent);
     }
 }
