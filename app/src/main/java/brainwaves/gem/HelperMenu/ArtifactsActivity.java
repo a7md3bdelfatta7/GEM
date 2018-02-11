@@ -47,7 +47,7 @@ import java.util.List;
 
 import brainwaves.gem.MainActivity;
 import brainwaves.gem.R;
-import brainwaves.gem.artifact_video;
+//import brainwaves.gem.artifact_video;
 import brainwaves.gem.data.ArtifactsContract;
 import brainwaves.gem.data.ArtifactsFavourite;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
@@ -536,9 +536,9 @@ public class ArtifactsActivity extends AppCompatActivity {
     public void videoOnClick(View v) {
 
         if(!isNetworkAvailable()){
-            Intent intent =new Intent(ArtifactsActivity.this,artifact_video.class);
+           /* Intent intent =new Intent(ArtifactsActivity.this,artifact_video.class);
             intent.putExtra("artifact_num",artifact_num);
-            startActivity(intent);
+            startActivity(intent);*/
         }else {
             String[] artifactsVideoUrl = {"https://www.youtube.com/watch?v=FXk-NbSWDs8",
                     "https://www.youtube.com/watch?v=yKGe3FcmLLg",

@@ -98,8 +98,6 @@ public class MembershipActivity extends AppCompatActivity {
             }
         });
 
-
-
     }
 
 
@@ -170,8 +168,6 @@ public class MembershipActivity extends AppCompatActivity {
         level2.add("Golden membership plus.");
         level2.add("10% off at the Dining room at GEM.");
         level2.add("10% off at GEM store.");
-
-
 
 
 

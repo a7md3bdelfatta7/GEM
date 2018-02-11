@@ -37,6 +37,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.List;
+import java.util.Locale;
 
 import brainwaves.gem.HelperMenu.ArtifactsActivity;
 import brainwaves.gem.HelperMenu.CollectionsActivity;
@@ -67,17 +68,17 @@ public class MainActivity extends AppCompatActivity
     int tabAddImgID = R.drawable.coca;
 
     // Titles of the individual pages (displayed in tabs)
-    private final String[] PAGE_TITLES = new String[] {
+    private String[] PAGE_TITLES = new String[] {
             "VISIT",
             "HIGHLIGHTS",
             "TODAY'S EVENT",
             "FOR MEMBERS",
             "STAFF PICKS",
-            "FEATURED EVENTS",
+            "FEATURED EVENTS"
     };
 
     // The fragments that are used as the individual pages
-    private final Fragment[] PAGES = new Fragment[] {
+    private  Fragment[] PAGES = new Fragment[] {
             new VisitFragment(),
             new HighlightsFragment(),
             new TodayEventFragment(),
@@ -85,6 +86,8 @@ public class MainActivity extends AppCompatActivity
             new StaffPicksFragment(),
             new FeaturedEventsFragment()
     };
+
+
 
     // The ViewPager is responsible for sliding pages (fragments) in and out upon user input
     private ViewPager mViewPager;
@@ -101,6 +104,34 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        mViewPager = (ViewPager) findViewById(R.id.viewpager);
+
+
+        if(isRTL()){
+
+            PAGES=new Fragment[] {
+                    new FeaturedEventsFragment(),
+                    new StaffPicksFragment(),
+                    new ForMembersFragment(),
+                    new TodayEventFragment(),
+                    new HighlightsFragment(),
+                    new VisitFragment(),
+            };
+
+            PAGE_TITLES=new String[] {
+                    "FEATURED EVENTS",
+                    "STAFF PICKS",
+                    "FOR MEMBERS",
+                    "TODAY'S EVENT",
+                    "HIGHLIGHTS",
+                    "VISIT",
+            };
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+                tabLayout.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
+            }
+
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -111,7 +142,6 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        mViewPager = (ViewPager) findViewById(R.id.viewpager);
         mViewPager.setAdapter(new MyPagerAdapter(getFragmentManager()));
 
         final View navHeaderView=navigationView.getHeaderView(0);
@@ -136,7 +166,6 @@ public class MainActivity extends AppCompatActivity
         // Connect the tabs with the ViewPager (the setupWithViewPager method does this for us in
         // both directions, i.e. when a new tab is selected, the ViewPager switches to this page,
         // and when the ViewPager switches to a new page, the corresponding tab is selected)
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
         tabLayout.setupWithViewPager(mViewPager);
 
@@ -223,6 +252,8 @@ public class MainActivity extends AppCompatActivity
         TextView userDetails=(TextView)navHeaderView.findViewById(R.id.user_details);
         fullName.setText(UserContract.fullName);
         userDetails.setText(UserContract.nationality+"-"+UserContract.birthDate);
+        mViewPager.setCurrentItem(0);
+
 
     }
     public void VisitDetailsonClick(View v) {
@@ -423,6 +454,16 @@ public class MainActivity extends AppCompatActivity
             imageView.setTag("Map");
             imageView.setImageResource(R.drawable.map_icon);
         }
+    }
+
+    public static boolean isRTL() {
+        return isRTL(Locale.getDefault());
+    }
+
+    public static boolean isRTL(Locale locale) {
+        final int directionality = Character.getDirectionality(locale.getDisplayName().charAt(0));
+        return directionality == Character.DIRECTIONALITY_RIGHT_TO_LEFT ||
+                directionality == Character.DIRECTIONALITY_RIGHT_TO_LEFT_ARABIC;
     }
 
 

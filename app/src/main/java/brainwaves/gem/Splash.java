@@ -2,6 +2,8 @@ package brainwaves.gem;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -9,6 +11,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Handler;
 import android.view.WindowManager;
+
+import java.util.Locale;
 
 import brainwaves.gem.data.UserContract;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
@@ -30,7 +34,7 @@ public class Splash extends Activity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
-
+        setLocal();
         /* New Handler to start the Menu-Activity
          * and close this Splash-Screen after some seconds.*/
 
@@ -61,5 +65,14 @@ public class Splash extends Activity {
         super.onDestroy();
         Runtime.getRuntime().gc();
         System.gc();
+    }
+
+
+    void setLocal(){
+        Locale locale = new Locale("ar");
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
     }
 }

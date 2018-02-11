@@ -54,7 +54,8 @@
             android:id="@+id/tab_layout"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            app:tabIndicatorColor="#ffffff" />
+            app:tabIndicatorColor="#ffffff"
+            />
 
     </android.support.design.widget.AppBarLayout>
 
