@@ -18,7 +18,7 @@ public class Favourites extends AppCompatActivity {
     int []artifactsIDs = {R.id.artifact_1,R.id.artifact_2,R.id.artifact_3,
             R.id.artifact_4,R.id.artifact_5,R.id.artifact_6,R.id.artifact_7,R.id.artifact_8,R.id.artifact_9,
             R.id.artifact_10,R.id.artifact_11,R.id.artifact_12,R.id.artifact_13,R.id.artifact_14,R.id.artifact_15,R.id.artifact_16,
-            R.id.artifact_17,R.id.artifact_18,R.id.artifact_19,R.id.artifact_20,R.id.artifact_21,R.id.artifact_22};
+            R.id.artifact_17,R.id.artifact_18,R.id.artifact_19,R.id.artifact_20,R.id.artifact_21,R.id.artifact_22,R.id.artifact_23,R.id.artifact_24};
 
     int []artifactsSource = {R.drawable.highlight_i,
             R.drawable.highlight_ii,
@@ -43,7 +43,6 @@ public class Favourites extends AppCompatActivity {
             R.drawable.staff__iii,
             R.drawable.staff__iv,
             R.drawable.staff__v,
-            R.drawable.staff__iii,
             R.drawable.staff__xv
     };
 

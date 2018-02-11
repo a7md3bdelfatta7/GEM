@@ -1,10 +1,16 @@
 package brainwaves.gem.HelperMenu;
 
 import android.Manifest;
+import android.app.ActivityManager;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.support.v4.app.ActivityCompat;
@@ -25,6 +31,13 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.CallbackManager;
+import com.facebook.share.model.ShareHashtag;
+import com.facebook.share.model.ShareLinkContent;
+import com.facebook.share.model.SharePhoto;
+import com.facebook.share.model.SharePhotoContent;
+import com.facebook.share.widget.ShareDialog;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -34,6 +47,7 @@ import java.util.List;
 
 import brainwaves.gem.MainActivity;
 import brainwaves.gem.R;
+import brainwaves.gem.artifact_video;
 import brainwaves.gem.data.ArtifactsContract;
 import brainwaves.gem.data.ArtifactsFavourite;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
@@ -41,6 +55,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 public class ArtifactsActivity extends AppCompatActivity {
 
     int artifact_num;
+    CallbackManager callbackManager; // for using fb
     ImageButton artifactAddedToTourImgButton;
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -371,34 +386,28 @@ public class ArtifactsActivity extends AppCompatActivity {
     public void shareonClick(View v) {
         Toast.makeText(this,"Done.", Toast.LENGTH_SHORT).show();
     }
+
     public void onButtonShowPopupWindowClick(View view) {
 
-        // get a reference to the already created main layout
-        ScrollView mainLayout = (ScrollView)
-                findViewById(R.id.colltections_main_layout);
 
-        // inflate the layout of the popup window
-        LayoutInflater inflater = (LayoutInflater)
-                getSystemService(LAYOUT_INFLATER_SERVICE);
-        View popupView = inflater.inflate(R.layout.popup_window, null);
+        callbackManager = CallbackManager.Factory.create();
+        //Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.fbpost);
+        ShareDialog shareDialog;
+        shareDialog = new ShareDialog(this);
+        ShareLinkContent linkContent = new ShareLinkContent.Builder()
+                .setContentUrl(Uri.parse("http://www.e-c-h-o.org/images/SchematicGEM.jpg")).setContentTitle("Greatest egyptian museum")
+                .setQuote("Connect on a global scale.").setShareHashtag(new ShareHashtag.Builder()
+                        .setHashtag("#GEM")
+                        .build()).setRef("GEM APP")
+                .build();
+        shareDialog.show(linkContent);
 
-        // create the popup window
-        int width = LinearLayout.LayoutParams.WRAP_CONTENT;
-        int height = LinearLayout.LayoutParams.WRAP_CONTENT;
-        boolean focusable = true; // lets taps outside the popup also dismiss it
-        final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
 
-        // show the popup window
-        popupWindow.showAtLocation(mainLayout, Gravity.CENTER, 0, 0);
-
-        // dismiss the popup window when touched
-        popupView.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                popupWindow.dismiss();
-                return true;
-            }
-        });
+    }
+    @Override
+    protected void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        callbackManager.onActivityResult(requestCode, resultCode, data);
     }
     public void onButtonMapPopupWindowClick(View view) {
 
@@ -459,6 +468,29 @@ public class ArtifactsActivity extends AppCompatActivity {
         });
     }
     public void unlockVR(View v) {
+
+
+        /////////////////////////////////////////////
+        List<ApplicationInfo> packages;
+        PackageManager pm;
+        pm = this.getPackageManager();
+        //get a list of installed apps.
+        packages = pm.getInstalledApplications(0);
+        Context context = getApplicationContext();
+        ActivityManager mActivityManager = (ActivityManager)context.getSystemService(Context.ACTIVITY_SERVICE);
+        String myPackage = getApplicationContext().getPackageName();
+        for (ApplicationInfo packageInfo : packages) {
+            if((packageInfo.flags & ApplicationInfo.FLAG_SYSTEM)==1)continue;
+            if(packageInfo.packageName.equals(myPackage)) continue;
+            mActivityManager.killBackgroundProcesses(packageInfo.packageName);
+        }
+
+
+//////////////////////////////////////
+
+
+
+
         String path = "/storage/emulated/0/";
         File file = new File(path, "VR.txt");
         FileOutputStream stream = null;
@@ -474,7 +506,7 @@ public class ArtifactsActivity extends AppCompatActivity {
         } finally {
             try {
                 stream.close();
-                PackageManager pm = this.getPackageManager();
+                //\PackageManager pm = this.getPackageManager();
 
                 try
                 {
@@ -493,65 +525,80 @@ public class ArtifactsActivity extends AppCompatActivity {
         }
 
     }
-    public void videoOnClick(View v) {
-        String []artifactsVideoUrl = {"https://www.youtube.com/watch?v=FXk-NbSWDs8",
-        "https://www.youtube.com/watch?v=yKGe3FcmLLg",
-        "https://www.youtube.com/watch?v=lGq0dOH9qEA",
-        "https://www.youtube.com/watch?v=KTrEAvqYSKQ",
-        "https://www.youtube.com/watch?v=lzdTBKHjxQ4",
-        "https://www.youtube.com/watch?v=lGq0dOH9qEA",
-        "https://www.youtube.com/watch?v=X4gr4_aKgyI",
-        "https://www.youtube.com/watch?v=wgNYtrfD1U8",
-        "https://www.youtube.com/watch?v=DKO-rUJkA4M",
-        "https://www.youtube.com/watch?v=DKO-rUJkA4M",
-        "https://www.youtube.com/watch?v=yKGe3FcmLLg",
-        "https://www.youtube.com/watch?v=BRgWQNOu6v4",
-        "https://www.youtube.com/watch?v=ddazR1n7pA4",
-        "https://www.youtube.com/watch?v=K6YlJwPurVg",
-        "https://www.youtube.com/watch?v=6bv-XeM2l4U",
-        "https://www.youtube.com/watch?v=9n62e1HXjIg",
-        "https://www.youtube.com/watch?v=4j5yJRwMu0w",
-        "https://www.youtube.com/watch?v=L8XcVxUeSyc",
-        "https://www.youtube.com/watch?v=EnZKeNim8T8",
-        "https://www.youtube.com/watch?v=kIVbqlS05BQ",
-        "https://www.youtube.com/watch?v=lGq0dOH9qEA",
-        "https://www.youtube.com/watch?v=lGq0dOH9qEA",
-        "https://www.youtube.com/watch?v=LXrdxoWNA7M",
-        "https://www.youtube.com/watch?v=5OBXPmnkNoQ"};
 
-        String []artifactsVideoIds = {"FXk-NbSWDs8",
-                "yKGe3FcmLLg",
-                "lGq0dOH9qEA",
-                "KTrEAvqYSKQ",
-                "lzdTBKHjxQ4",
-                "lGq0dOH9qEA",
-                "X4gr4_aKgyI",
-                "wgNYtrfD1U8",
-                "DKO-rUJkA4M",
-                "DKO-rUJkA4M",
-                "yKGe3FcmLLg",
-                "BRgWQNOu6v4",
-                "ddazR1n7pA4",
-                "K6YlJwPurVg",
-                "6bv-XeM2l4U",
-                "9n62e1HXjIg",
-                "4j5yJRwMu0w",
-                "L8XcVxUeSyc",
-                "EnZKeNim8T8",
-                "kIVbqlS05BQ",
-                "lGq0dOH9qEA",
-                "lGq0dOH9qEA",
-                "LXrdxoWNA7M",
-                "5OBXPmnkNoQ"};
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
+    public void videoOnClick(View v) {
+
+        if(!isNetworkAvailable()){
+            Intent intent =new Intent(ArtifactsActivity.this,artifact_video.class);
+            intent.putExtra("artifact_num",artifact_num);
+            startActivity(intent);
+        }else {
+            String[] artifactsVideoUrl = {"https://www.youtube.com/watch?v=FXk-NbSWDs8",
+                    "https://www.youtube.com/watch?v=yKGe3FcmLLg",
+                    "https://www.youtube.com/watch?v=lGq0dOH9qEA",
+                    "https://www.youtube.com/watch?v=KTrEAvqYSKQ",
+                    "https://www.youtube.com/watch?v=lzdTBKHjxQ4",
+                    "https://www.youtube.com/watch?v=lGq0dOH9qEA",
+                    "https://www.youtube.com/watch?v=X4gr4_aKgyI",
+                    "https://www.youtube.com/watch?v=wgNYtrfD1U8",
+                    "https://www.youtube.com/watch?v=DKO-rUJkA4M",
+                    "https://www.youtube.com/watch?v=DKO-rUJkA4M",
+                    "https://www.youtube.com/watch?v=yKGe3FcmLLg",
+                    "https://www.youtube.com/watch?v=BRgWQNOu6v4",
+                    "https://www.youtube.com/watch?v=ddazR1n7pA4",
+                    "https://www.youtube.com/watch?v=K6YlJwPurVg",
+                    "https://www.youtube.com/watch?v=6bv-XeM2l4U",
+                    "https://www.youtube.com/watch?v=9n62e1HXjIg",
+                    "https://www.youtube.com/watch?v=4j5yJRwMu0w",
+                    "https://www.youtube.com/watch?v=L8XcVxUeSyc",
+                    "https://www.youtube.com/watch?v=EnZKeNim8T8",
+                    "https://www.youtube.com/watch?v=kIVbqlS05BQ",
+                    "https://www.youtube.com/watch?v=lGq0dOH9qEA",
+                    "https://www.youtube.com/watch?v=lGq0dOH9qEA",
+                    "https://www.youtube.com/watch?v=LXrdxoWNA7M",
+                    "https://www.youtube.com/watch?v=5OBXPmnkNoQ"};
+
+            String[] artifactsVideoIds = {"FXk-NbSWDs8",
+                    "yKGe3FcmLLg",
+                    "lGq0dOH9qEA",
+                    "KTrEAvqYSKQ",
+                    "lzdTBKHjxQ4",
+                    "lGq0dOH9qEA",
+                    "X4gr4_aKgyI",
+                    "wgNYtrfD1U8",
+                    "DKO-rUJkA4M",
+                    "DKO-rUJkA4M",
+                    "yKGe3FcmLLg",
+                    "BRgWQNOu6v4",
+                    "ddazR1n7pA4",
+                    "K6YlJwPurVg",
+                    "6bv-XeM2l4U",
+                    "9n62e1HXjIg",
+                    "4j5yJRwMu0w",
+                    "L8XcVxUeSyc",
+                    "EnZKeNim8T8",
+                    "kIVbqlS05BQ",
+                    "lGq0dOH9qEA",
+                    "lGq0dOH9qEA",
+                    "LXrdxoWNA7M",
+                    "5OBXPmnkNoQ"};
 //        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(artifactsVideoUrl[artifact_num-1]));
 //        startActivity(browserIntent);
-        Intent appIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + artifactsVideoIds[artifact_num-1]));
-        Intent webIntent = new Intent(Intent.ACTION_VIEW,
-                Uri.parse("http://www.youtube.com/watch?v=" + artifactsVideoIds[artifact_num-1]));
-        try {
-            this.startActivity(appIntent);
-        } catch (ActivityNotFoundException ex) {
-            this.startActivity(webIntent);
+            Intent appIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + artifactsVideoIds[artifact_num - 1]));
+            Intent webIntent = new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("http://www.youtube.com/watch?v=" + artifactsVideoIds[artifact_num - 1]));
+            try {
+                this.startActivity(appIntent);
+            } catch (ActivityNotFoundException ex) {
+                this.startActivity(webIntent);
+            }
         }
 
     }
@@ -584,6 +631,7 @@ public class ArtifactsActivity extends AppCompatActivity {
 
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(artifactsConnectionsUrl[artifact_num-1]));
         startActivity(browserIntent);
+
 
 
     }
