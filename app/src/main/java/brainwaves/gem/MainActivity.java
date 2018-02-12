@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity
     // The ViewPager is responsible for sliding pages (fragments) in and out upon user input
     private ViewPager mViewPager;
     private TabLayout tabLayout;
-
+    private boolean isRtlLayout;
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
 
 
-        initalizeTabs();
+        initializeTabs();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -152,44 +152,64 @@ public class MainActivity extends AppCompatActivity
                         //advertismentImage.setImageResource(R.drawable.coca);
                         switch (tabIndex) {
                             case 0:
-                                color = Color.parseColor(getResources().getString(0 + R.color.visiColor));
-                                if(imageView.getTag()=="Add")
-                                    imageView.setImageResource(R.drawable.coca);
-                                tabAddImgID = R.drawable.coca;
+                                if(!isRTL()){
+                                    color = Color.parseColor(getResources().getString(0 + R.color.visiColor));
+                                    tabAddImgID = R.drawable.coca;
+                                }else{
+                                    color = Color.parseColor(getResources().getString(0 + R.color.featuredEventsColor));
+                                    tabAddImgID = R.drawable.etisalat;
+                                }
                                 break;
                             case 1:
-                                color = Color.parseColor(getResources().getString(0 + R.color.highlightColor));
-                                if(imageView.getTag()=="Add")
-                                    imageView.setImageResource(R.drawable.vodafone);
-                                tabAddImgID = R.drawable.vodafone;
+                                if(!isRTL()) {
+                                    color = Color.parseColor(getResources().getString(0 + R.color.highlightColor));
+                                    tabAddImgID = R.drawable.vodafone;
+                                }else{
+                                    color = Color.parseColor(getResources().getString(0 + R.color.staffPicksColor));
+                                    tabAddImgID = R.drawable.pepsi;
+                                }
                                 break;
                             case 2:
-                                color = Color.parseColor(getResources().getString(0 + R.color.todayEventColor));
-                                if(imageView.getTag()=="Add")
-                                    imageView.setImageResource(R.drawable.cadbury);
-                                tabAddImgID = R.drawable.cadbury;
+                                if(!isRTL()) {
+                                    color = Color.parseColor(getResources().getString(0 + R.color.todayEventColor));
+                                    tabAddImgID = R.drawable.cadbury;
+                                }else{
+                                    color = Color.parseColor(getResources().getString(0 + R.color.forMemberColor));
+                                    tabAddImgID = R.drawable.we;
+                                }
                                 break;
                             case 3:
-                                color = Color.parseColor(getResources().getString(0 + R.color.forMemberColor));
-                                if(imageView.getTag()=="Add")
-                                    imageView.setImageResource(R.drawable.we);
-                                tabAddImgID = R.drawable.we;
+                                if(!isRTL()) {
+                                    color = Color.parseColor(getResources().getString(0 + R.color.forMemberColor));
+                                    tabAddImgID = R.drawable.we;
+                                }else{
+                                    color = Color.parseColor(getResources().getString(0 + R.color.todayEventColor));
+                                    tabAddImgID = R.drawable.cadbury;
+                                }
                                 break;
                             case 4:
-                                color = Color.parseColor(getResources().getString(0 + R.color.staffPicksColor));
-                                if(imageView.getTag()=="Add")
-                                    imageView.setImageResource(R.drawable.pepsi);
-                                tabAddImgID = R.drawable.pepsi;
+                                if(!isRTL()) {
+                                    color = Color.parseColor(getResources().getString(0 + R.color.staffPicksColor));
+                                    tabAddImgID = R.drawable.pepsi;
+                                }else{
+                                    color = Color.parseColor(getResources().getString(0 + R.color.highlightColor));
+                                    tabAddImgID = R.drawable.vodafone;
+                                }
                                 break;
                             case 5:
-                                color = Color.parseColor(getResources().getString(0 + R.color.featuredEventsColor));
-                                if(imageView.getTag()=="Add")
-                                    imageView.setImageResource(R.drawable.etisalat);
-                                tabAddImgID = R.drawable.etisalat;
+                                if(!isRTL()) {
+                                    color = Color.parseColor(getResources().getString(0 + R.color.featuredEventsColor));
+                                    tabAddImgID = R.drawable.etisalat;
+                                }else{
+                                    color = Color.parseColor(getResources().getString(0 + R.color.visiColor));
+                                    tabAddImgID = R.drawable.coca;
+                                }
                                 break;
+                            default:
 
                         }
-
+                        if(imageView.getTag()=="Add")
+                            imageView.setImageResource(tabAddImgID);
                         appBarLayout.setBackgroundColor(color);
                         navHeaderView.setBackgroundColor(color);
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -428,9 +448,9 @@ public class MainActivity extends AppCompatActivity
                 directionality == Character.DIRECTIONALITY_RIGHT_TO_LEFT_ARABIC;
     }
 
-    public void initalizeTabs(){
+    public void initializeTabs(){
         if(isRTL()){
-
+            isRtlLayout=true;
             PAGES=new Fragment[] {
                     new FeaturedEventsFragment(),
                     new StaffPicksFragment(),
