@@ -83,14 +83,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@color/cardview_light_background"
-                            android:onClick="addArtifactToTour"
                             android:src="@drawable/highlight_ii"
+                            android:onClick="addArtifactToTour"
                             android:adjustViewBounds="true"
                             android:id="@+id/artifact_2"
                             android:scaleType="fitXY"/>
-
                         <ImageButton
                             android:layout_width="25dp"
+                            android:layout_alignParentTop="true"
                             android:layout_height="40dp"
                             android:background="@null"
                             android:src="@drawable/add_button_i"
@@ -98,9 +98,8 @@
                             android:scaleType="fitCenter"
                             android:id="@+id/add_tour_2"
                             android:onClick="HighlightsAddToTouronClick"
-                            android:layout_alignParentTop="true"
                             android:layout_alignParentRight="true"
-                            android:layout_alignParentEnd="true"
+                            android:layout_marginBottom="0dp"
                             android:tag="2" />
                     </RelativeLayout>
 
@@ -397,18 +396,18 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
-                    <ImageButton
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/highlight__iv"
-                        android:onClick="addArtifactToTour"
-                        android:background="@color/cardview_light_background"
-                        android:adjustViewBounds="true"
-                        android:id="@+id/artifact_10"
-                        android:scaleType="fitXY"/>
-
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:onClick="addArtifactToTour"
+                            android:background="@color/cardview_light_background"
+                            android:src="@drawable/highlight__iv"
+                            android:adjustViewBounds="true"
+                            android:id="@+id/artifact_10"
+                            android:scaleType="fitXY"/>
                         <ImageButton
                             android:layout_width="25dp"
+                            android:layout_alignParentTop="true"
                             android:layout_height="40dp"
                             android:background="@null"
                             android:src="@drawable/add_button_i"
@@ -416,10 +415,9 @@
                             android:scaleType="fitCenter"
                             android:id="@+id/add_tour_10"
                             android:onClick="HighlightsAddToTouronClick"
-                            android:tag="10"
-                            android:layout_alignParentTop="true"
                             android:layout_alignParentRight="true"
-                            android:layout_alignParentEnd="true" />
+                            android:layout_marginBottom="0dp"
+                            android:tag="10" />
                     </RelativeLayout>
 
                 </LinearLayout>
