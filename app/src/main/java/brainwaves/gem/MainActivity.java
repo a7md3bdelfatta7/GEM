@@ -252,7 +252,7 @@ public class MainActivity extends AppCompatActivity
         TextView userDetails=(TextView)navHeaderView.findViewById(R.id.user_details);
         fullName.setText(UserContract.fullName);
         userDetails.setText(UserContract.nationality+"-"+UserContract.birthDate);
-        mViewPager.setCurrentItem(0);
+        mViewPager.setCurrentItem(PAGES.length-1);
 
 
     }
@@ -437,9 +437,11 @@ public class MainActivity extends AppCompatActivity
 
 
     public void nextPage(View v){
-
-        mViewPager.setCurrentItem(mViewPager.getCurrentItem()+1);
-
+        if(isRTL()) {
+            mViewPager.setCurrentItem(mViewPager.getCurrentItem() - 1);
+        }else{
+            mViewPager.setCurrentItem(mViewPager.getCurrentItem() + 1);
+        }
     }
 
 
