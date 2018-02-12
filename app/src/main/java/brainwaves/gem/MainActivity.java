@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
@@ -66,31 +67,13 @@ public class MainActivity extends AppCompatActivity
     Animation hyperspaceJumpAnimation;
     ImageView imageView;
     int tabAddImgID = R.drawable.coca;
-
     // Titles of the individual pages (displayed in tabs)
-    private String[] PAGE_TITLES = new String[] {
-            "VISIT",
-            "HIGHLIGHTS",
-            "TODAY'S EVENT",
-            "FOR MEMBERS",
-            "STAFF PICKS",
-            "FEATURED EVENTS"
-    };
-
+    private String[] PAGE_TITLES = new String[] {};
     // The fragments that are used as the individual pages
-    private  Fragment[] PAGES = new Fragment[] {
-            new VisitFragment(),
-            new HighlightsFragment(),
-            new TodayEventFragment(),
-            new ForMembersFragment(),
-            new StaffPicksFragment(),
-            new FeaturedEventsFragment()
-    };
-
-
-
+    private  Fragment[] PAGES = new Fragment[] {};
     // The ViewPager is responsible for sliding pages (fragments) in and out upon user input
     private ViewPager mViewPager;
+    private TabLayout tabLayout;
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -104,34 +87,11 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
 
 
-        if(isRTL()){
-
-            PAGES=new Fragment[] {
-                    new FeaturedEventsFragment(),
-                    new StaffPicksFragment(),
-                    new ForMembersFragment(),
-                    new TodayEventFragment(),
-                    new HighlightsFragment(),
-                    new VisitFragment(),
-            };
-
-            PAGE_TITLES=new String[] {
-                    "FEATURED EVENTS",
-                    "STAFF PICKS",
-                    "FOR MEMBERS",
-                    "TODAY'S EVENT",
-                    "HIGHLIGHTS",
-                    "VISIT",
-            };
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-                tabLayout.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
-            }
-
-        }
+        initalizeTabs();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -252,9 +212,9 @@ public class MainActivity extends AppCompatActivity
         TextView userDetails=(TextView)navHeaderView.findViewById(R.id.user_details);
         fullName.setText(UserContract.fullName);
         userDetails.setText(UserContract.nationality+"-"+UserContract.birthDate);
-        mViewPager.setCurrentItem(PAGES.length-1);
-
-
+        if(isRTL()) {
+            mViewPager.setCurrentItem(PAGES.length - 1);
+        }
     }
     public void VisitDetailsonClick(View v) {
         Intent intent = new Intent(MainActivity.this,
@@ -468,6 +428,52 @@ public class MainActivity extends AppCompatActivity
                 directionality == Character.DIRECTIONALITY_RIGHT_TO_LEFT_ARABIC;
     }
 
+    public void initalizeTabs(){
+        if(isRTL()){
+
+            PAGES=new Fragment[] {
+                    new FeaturedEventsFragment(),
+                    new StaffPicksFragment(),
+                    new ForMembersFragment(),
+                    new TodayEventFragment(),
+                    new HighlightsFragment(),
+                    new VisitFragment(),
+            };
+
+            PAGE_TITLES=new String[] {
+                    getString(R.string.featured_events_tab),
+                    getString(R.string.staff_picks_tab),
+                    getString(R.string.for_members_tab),
+                    getString(R.string.today_event),
+                    getString(R.string.highlight_tab),
+                    getString(R.string.visit_tab),
+            };
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+                tabLayout.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
+            }
+
+        }else{
+
+            PAGES=new Fragment[] {
+                    new VisitFragment(),
+                    new HighlightsFragment(),
+                    new TodayEventFragment(),
+                    new ForMembersFragment(),
+                    new StaffPicksFragment(),
+                    new FeaturedEventsFragment(),
+            };
+
+            PAGE_TITLES=new String[] {
+                    getString(R.string.featured_events_tab),
+                    getString(R.string.highlight_tab),
+                    getString(R.string.today_event),
+                    getString(R.string.for_members_tab),
+                    getString(R.string.staff_picks_tab),
+                    getString(R.string.featured_events_tab),
+            };
+        }
+
+    }
 
 
 
