@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_artifact_video"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="brainwaves.gem.artifact_video"
+    android:gravity="center"
+    android:background="@android:color/white"
+
+    >
+
+    <com.afollestad.easyvideoplayer.EasyVideoPlayer xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:evp_autoPlay="true"
+        />
+
+    <TextView
+        android:id="@+id/no_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sorry there is no offline video now for this artifact."
+        android:textAlignment="center"
+        android:visibility="gone"
+        />
+
+
+</RelativeLayout>
