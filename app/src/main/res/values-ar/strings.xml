@@ -182,6 +182,13 @@
     <string name="facebook_app_id">781532365370297</string>
     <string name="fb_login_protocol_scheme">fb781532365370297</string>
 
+    <!-- Tab Names -->
+    <string name="visit_tab">الزيارات</string>
+    <string name="highlight_tab">الرئيسيه</string>
+    <string name="today_event">احداث اليوم</string>
+    <string name="for_members_tab">للاعضاء</string>
+    <string name="staff_picks_tab">اختيارات العاملين</string>
+    <string name="featured_events_tab">احداث مختاره</string>
 
 
 

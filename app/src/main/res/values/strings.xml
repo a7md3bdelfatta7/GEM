@@ -181,7 +181,12 @@
     <string name="facebook_app_id">781532365370297</string>
     <string name="fb_login_protocol_scheme">fb781532365370297</string>
 
-
-
+    <!-- Tab Names -->
+    <string name="visit_tab">Visit</string>
+    <string name="highlight_tab">Highlight</string>
+    <string name="today_event">Today Event</string>
+    <string name="for_members_tab">For Members</string>
+    <string name="staff_picks_tab">Staff Picks</string>
+    <string name="featured_events_tab">Featured Events</string>
 
 </resources>
