@@ -484,7 +484,7 @@ public class MainActivity extends AppCompatActivity
             };
 
             PAGE_TITLES=new String[] {
-                    getString(R.string.featured_events_tab),
+                    getString(R.string.visit_tab),
                     getString(R.string.highlight_tab),
                     getString(R.string.today_event),
                     getString(R.string.for_members_tab),

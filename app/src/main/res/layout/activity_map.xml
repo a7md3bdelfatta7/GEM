@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context="brainwaves.gem.Map"
     android:background="@android:color/white"
+    android:layoutDirection="ltr"
     >
 
 
@@ -16,6 +17,7 @@
             android:layout_height="match_parent"
             android:src="@drawable/map"
             android:scaleType="fitXY"
+            android:layoutDirection="ltr"
             />
 
 </RelativeLayout>
