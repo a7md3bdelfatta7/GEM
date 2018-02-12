@@ -25,8 +25,8 @@
     <string name="collection_kings">KINGS COLLECTIONS \n</string>
     <string name="collection_status">\nSTATUES COLLECTIONS \n</string>
     <string-array name="lang_array">
-        <item>ENGLISH</item>
         <item>العربيه</item>
+        <item>English</item>
     </string-array>
     <string name="title_activity_visit">Visit</string>
     <string name="title_activity_artifactsDetails">Details</string>

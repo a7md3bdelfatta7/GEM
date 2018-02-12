@@ -34,7 +34,7 @@ public class Splash extends Activity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
-        setLocal();
+       // setLocal();
         /* New Handler to start the Menu-Activity
          * and close this Splash-Screen after some seconds.*/
 
@@ -68,11 +68,5 @@ public class Splash extends Activity {
     }
 
 
-    void setLocal(){
-        Locale locale = new Locale("ar");
-        Locale.setDefault(locale);
-        Configuration config = new Configuration();
-        config.locale = locale;
-        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
-    }
+
 }
