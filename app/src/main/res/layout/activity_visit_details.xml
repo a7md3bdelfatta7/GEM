@@ -21,7 +21,7 @@
             android:layout_margin="15dp"
             android:textSize="30dp"
             android:textStyle="bold"
-            android:text="@string/main_hall_i"/>
+            android:text="@string/main_hall_title"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
             android:layout_marginLeft="12dp"
             android:textSize="20dp"
             android:textColor="#000000"
-            android:text="Open seven days"/>
+            android:text="@string/main_hall_opened"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -38,14 +38,8 @@
             android:layout_marginLeft="15dp"
             android:textSize="15dp"
             android:layout_marginTop="12dp"
-            android:text="Sunday - Thursday : 10:00AM - 6:00PM"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
-            android:textSize="15dp"
-            android:text="Firday and Saturday: 10:00AM - 6:00PM"/>
+            android:text="@string/main_hall_openedTime"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -53,14 +47,8 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="15dp"
             android:textSize="15dp"
-            android:text="Closed Prophet Mohammed\'s Birthday"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
-            android:textSize="15dp"
-            android:text="Thursday, November 30,2017"/>
+            android:text="@string/main_hall_vacations"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -69,22 +57,7 @@
             android:layout_marginTop="20dp"
             android:textColor="@color/defaultColor"
             android:textSize="15dp"
-            android:text="Alexandria Desert Rd, Kafr Nassar"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
-            android:textColor="@color/defaultColor"
-            android:textSize="15dp"
-            android:text="Al Haram, Giza Governante"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
-            android:textColor="@color/defaultColor"
-            android:textSize="15dp"
-            android:text="+202 3377 68 96"/>
+            android:text="@string/main_hall_location"/>
+
     </LinearLayout>
 </ScrollView>

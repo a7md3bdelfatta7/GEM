@@ -89,110 +89,65 @@ public class ArtifactsActivity extends AppCompatActivity {
             case R.id.artifact_1:
                 artifact_num = 1;
                 img.setImageResource(R.drawable.highlight_i);
-                aritfactDetailsTitle.setText("TUT ANKAMUN MASK");
-                artifactActionBar.setText("TUT ANKAMUN MASK");
-                aritfactDetailsText.setText("This mask of Tutankhamun is an example of the high est artistic and technical achievements of the an-cient Egyptians in the New Kingdom.\n" +
-                        "            \nCovering the head of the wrapped mummy in its coffin and activated by a magical spell, no.151b from the Book of the Dead, the mask ensured more pro-tection for the king's body.\n" +
-                        "            \nThe exact portrayal of the king's facial features achieved here made it possible for his soul to recog nize him and return to his mummified body, thus en uring his resurrection.\n" +
-                        "            \nhe head is covered by the royal headdress and the forehead bears the emblems of kingship and protec tion: the vulture and uraeus, or cobra.\n" +
-                        "            \nThe gold sheets used in this wonderful mask are joinec together by heating and hammering. The eyes are of obsidian and quartz and the eyebrows and eyelids are inlaid with lapis lazuli. The broad inlaid collar of semiprecious stones and colored glass ends in falcon heads.\n" +
-                        "            \n\nDimensions: Height 54 cm Width 39.3 cm\n");
+                aritfactDetailsTitle.setText(R.string.artifact_title_1);
+                artifactActionBar.setText(R.string.artifact_title_1);
+                aritfactDetailsText.setText(R.string.artifact_info_1);
                 break;
             case R.id.artifact_2:
                 artifact_num = 2;
                 img.setImageResource(R.drawable.highlight_ii);
-                aritfactDetailsTitle.setText("Sphinx of Amenhotep the Second");
-                artifactActionBar.setText("Sphinx of Amenhotep the Second");
-                aritfactDetailsText.setText("A sphinx has the body and strength of a lion and the head or face of a man, symbolizing wisdom and intelligence. \n" +
-                        "\n" +
-                        "The ancient Egyptians sculpted different kinds of sphinxes with a human head, a ram head, or a human face with the mane of a lion. Sphinxes represent various deities, especially Amun-Re, identified with the kings who reigned when the sphinxes were made. \n" +
-                        "\n" +
-                        "The human heads or faces usually have the facial features of these kings. This sphinx portrays King Amenhotep the Second.\n");
+                aritfactDetailsTitle.setText(R.string.artifact_title_2);
+                artifactActionBar.setText(R.string.artifact_title_2);
+                aritfactDetailsText.setText(R.string.artifact_info_2);
                 break;
             case R.id.artifact_3:
                 artifact_num = 3;
                 img.setImageResource(R.drawable.highlight_iii);
-                aritfactDetailsTitle.setText("Anubis Carrying the Moon Disk");
-                artifactActionBar.setText("Anubis Carrying the Moon Disk");
-                aritfactDetailsText.setText("Anubis, the black jackal, was the animal that personified the deity who was believed to protect the cemetery, and thus became the patron deity of mummification. Anubis was depicted in funerary scenes guiding the deceased to Osiris in the court of justice. Embalmers performing the mummification of the corpses wore jackal masks. \n" +
-                        "\n" +
-                        "In the legend of the divine birth of Queen Hatshepsut and King Amenhotep the third, Anubis is represented rolling or bringing the disk of the moon and wishing the young royal children long life. In modern times, ceremonies performed on the seventh day of a child's birth contain a step, in which the newly born child is put in a sieve and is shaken and asked to \"obey his mother and not to obey his father.\" \n" +
-                        "\n" +
-                        "On this cartonnage piece, the jackal-headed god comes, carrying the disk of the moon, and wishing the deceased long life. He wears a gilded collar, an unusual short kilt with a long tail hanging from the front and sandals. A long, wide white drapery hangs from behind and reaches the feet.\n" +
-                        "Dimensions:  Width 13.5 cm  Height 33.5 cm\n");
+                aritfactDetailsTitle.setText(R.string.artifact_title_3);
+                artifactActionBar.setText(R.string.artifact_title_3);
+                aritfactDetailsText.setText(R.string.artifact_info_3);
                 break;
             case R.id.artifact_4:
                 artifact_num = 4;
                 img.setImageResource(R.drawable.highlight_iv);
-                aritfactDetailsTitle.setText("Shawabti of Tutankhamun");
-                artifactActionBar.setText("Shawabti of Tutankhamun");
-                aritfactDetailsText.setText("The Shawabti, or funerary, figures were intended to perform work in the place of the deceased in the afterlife. They were usually made of faience, wood, or pottery and were various sizes. \n" +
-                        "\n" +
-                        "They were divided according to their functions and to the Egyptian calendar as follows: 365 workmen, each for one day of the year, and 36 overseers, each as a chief of a week of ten days or ten workers. In the tomb of Tutankhamun, 12 supplementary foremen were added, one for each month, totaling 413. \n" +
-                        "\n" +
-                        "This Shawabti of gilded wood is an image of the young king wearing the Khepresh crown of ceremonies and processions and the uraeus. It is adorned with a broad collar cut in gold leaf and the two insignia of Osiris.\n");
+                aritfactDetailsTitle.setText(R.string.artifact_title_4);
+                artifactActionBar.setText(R.string.artifact_title_4);
+                aritfactDetailsText.setText(R.string.artifact_info_4);
                 break;
             case R.id.artifact_5:
                 artifact_num = 5;
                 img.setImageResource(R.drawable.highlight_v);
-                aritfactDetailsTitle.setText("Crocodile God Sobek");
-                artifactActionBar.setText("Crocodile God Sobek");
-                aritfactDetailsText.setText("The River Nile and the canals were the main roads of ancient Egypt, although sailing was a great risk because of the crocodiles and hippopotami. Egyptians, therefore, wanted to ward off the danger from crocodiles. They built temples for the cult of the crocodile god Sobek at Esna, Kom Ombo, the Faiyum region, and other places. Each temple had a pool or small underground chambers, in which a live crocodile was kept to receive the offerings and prayers. \n" +
-                        "Sobek was associated with the sun god Re. In the Book of the Dead, spells were compiled for the deceased person \"for driving off the crocodile that comes to take away the deceased's magic from him in the realm of the dead\" (spell 31). \n" +
-                        "This statue was placed in one of the god's temples by a pious worshipper. It was easy to pray and place offerings in front of the statue. The figure, together with the base, was cut from a single block. The mouth is closed, and the details of the body were carved in relief, crossed and striped. Few details, however, can be seen on the figure.\n" +
-                        "Dimensions:  Length 9 cm  Height 6.5 cm\n");
+                aritfactDetailsTitle.setText(R.string.artifact_title_5);
+                artifactActionBar.setText(R.string.artifact_title_5);
+                aritfactDetailsText.setText(R.string.artifact_info_5);
                 break;
             case R.id.artifact_6:
                 artifact_num = 6;
                 img.setImageResource(R.drawable.highlight_xv);
-                aritfactDetailsTitle.setText("Goddess Isis Nursing Her Son Horus");
-                artifactActionBar.setText("Goddess Isis Nursing Her Son Horus");
-                aritfactDetailsText.setText("Isis was the wife of the god Osiris and mother of the falcon god Horus. The divine triad was one of the most important and famous groups of deities in ancient Egypt. Isis was often represented nursing her son Horus and became the symbol of motherhood and protection. She was also the goddess of charm and protected people from evil and from magic. \n" +
-                        "\n" +
-                        "This is a statue of the goddess carrying the child Horus and nursing him in a symbolic way. In this form, she was also identified with the cow Hathor, the mother goddess. There is a similarity between the statues of Isis nursing her son Horus and the later Christian images of the Madonna and Child. On the goddess's head are the two horns of the cow Hathor with the sun disk between them.\n" +
-                        "\n" +
-                        "Dimensions:  Height 32 cm\n");
+                aritfactDetailsTitle.setText(R.string.artifact_title_6);
+                artifactActionBar.setText(R.string.artifact_title_6);
+                aritfactDetailsText.setText(R.string.artifact_info_6);
                 break;
             case R.id.artifact_7:
                 artifact_num = 7;
                 img.setImageResource(R.drawable.highlight__i);
-                aritfactDetailsTitle.setText("Outer Coffin of Queen Meritamun");
-                artifactActionBar.setText("Outer Coffin of Queen Meritamun");
-                aritfactDetailsText.setText("This giant coffin of Queen Meritamun, wife of Amenhotep the First of the Eighteenth Dynasty, is considered to be one of the finest coffins ever made in Egypt. It depicts the deceased queen, wearing a long wig, the ends of which with their two locks almost reach her chest. \n" +
-                        "\n" +
-                        "Her arms are crossed on her chest; each hand holds a lotus scepter, which is the symbol of resurrection. A collar with incised parallel lines shows between the locks of hair. The rest of the lid is decorated with long parallel feather designs. \n" +
-                        "\n" +
-                        "These designs are exquisitely carved directly into the wood, rather than being modeled or inscribed on the gesso, or plaster of Paris covering, of the coffin. \n" +
-                        "In the center of the lid there is a long vertical painted hieroglyphic inscription. It invokes the god Osiris to grant offerings to the queen and \"every beautiful and pure thing and the sweet breath of the North\".\n" +
-                        "Dimensions:  Length 3.1 cm  Width 87 cm\n");
+                aritfactDetailsTitle.setText(R.string.artifact_title_7);
+                artifactActionBar.setText(R.string.artifact_title_7);
+                aritfactDetailsText.setText(R.string.artifact_info_7);
                 break;
             case R.id.artifact_8:
                 artifact_num = 8;
                 img.setImageResource(R.drawable.highlight__ii);
-                aritfactDetailsTitle.setText("Bust of Amenemhat the Third in Priestly Costume");
-                artifactActionBar.setText("Bust of Amenemhat the Third in Priestly Costume");
-                aritfactDetailsText.setText("This is the upper part of a gray granite, larger than life-size statue of King Amenemhat the Third. It depicts the king as a high priest wearing the panther skin. \n" +
-                        "\n" +
-                        "The high cheekbones, wrinkled face, and bitter, pouted mouth identify the statue as belonging to the Twelfth Dynasty ruler, King Amenemhat the Third. This statue had been formerly attributed to a Hyksos king of the Seventeenth Dynasty. \n" +
-                        "\n" +
-                        "This statue portrays the king as standard-bearer for the first time. \n" +
-                        "\n" +
-                        "This depiction was frequently used in the later Ramesside period.\n" +
-                        "Dimensions:  Height 100 cm  Width 99 cm\n");
+                aritfactDetailsTitle.setText(R.string.artifact_title_8);
+                artifactActionBar.setText(R.string.artifact_title_8);
+                aritfactDetailsText.setText(R.string.artifact_info_8);
                 break;
             case R.id.artifact_9:
                 artifact_num = 9;
                 img.setImageResource(R.drawable.highlight__iii);
-                aritfactDetailsTitle.setText("Gold Mask Mummy Cover of King Psusennes the First");
-                artifactActionBar.setText("Gold Mask Mummy Cover of King Psusennes the First");
-                aritfactDetailsText.setText("In this gold mask mummy cover, Psusennes the First appears with the royal headdress surmounted by the uraeus, or royal cobra. He wears a divine plaited false beard. \n" +
-                        "The mask is made of two pieces of beaten gold, soldered and joined together by five nails that can be seen from the back. \n" +
-                        "\n" +
-                        "The king wears the royal Nemes headdress, usually made of linen, surmounted by the sacred uraeus, the royal cobra. This protected the king against his opponents and enemies in life and after death. \n" +
-                        "\n" +
-                        "The king wears a divine plaited false beard, which is the symbol of dignity. He also wears a broad Usekh collar incised with floral decorations. The inlays of the eyelids and eyebrows and the straps fixing the beard are of glass paste. The eyes are made of black and white stone.\n" +
-                        "\n" +
-                        "Dimensions:  Height 45 cm  Width 38 cm\n");
+                aritfactDetailsTitle.setText(R.string.artifact_title_9);
+                artifactActionBar.setText(R.string.artifact_title_9);
+                aritfactDetailsText.setText(R.string.artifact_info_9);
                 break;
             case R.id.artifact_10:
                 artifact_num = 10;
