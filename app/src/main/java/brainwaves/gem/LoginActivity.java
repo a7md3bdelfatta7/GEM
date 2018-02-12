@@ -76,7 +76,6 @@ public class LoginActivity extends AppCompatActivity {
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                     ActivityCompat.finishAffinity(LoginActivity.this);
-
                 }else{
                     TextView resultMessage=(TextView)findViewById(R.id.resultMessage);
                     resultMessage.setText("Wrong User Name or Password");

@@ -21,7 +21,7 @@ public class Splash extends Activity {
 
     /** Duration of wait **/
     private final int SPLASH_DISPLAY_LENGTH = 1000;
-
+    private Context context;
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
@@ -37,12 +37,12 @@ public class Splash extends Activity {
        // setLocal();
         /* New Handler to start the Menu-Activity
          * and close this Splash-Screen after some seconds.*/
-
+        context=getApplicationContext();
         new Handler().postDelayed(new Runnable(){
             @Override
             public void run() {
 
-
+                loadDefaultLang();
                 SharedPreferences sharedPref = getSharedPreferences(getResources().getString(R.string.gem_pref_key),MODE_PRIVATE);
                 boolean loggedIn = sharedPref.getBoolean(getResources().getString(R.string.logged_in_key),false);
                 Intent mainIntent;
@@ -57,6 +57,7 @@ public class Splash extends Activity {
                 Splash.this.startActivity(mainIntent);
                 Splash.this.finish();
 
+
             }
         }, SPLASH_DISPLAY_LENGTH);
     }
@@ -66,6 +67,23 @@ public class Splash extends Activity {
         Runtime.getRuntime().gc();
         System.gc();
     }
+
+    public void setLocale(String lang) {
+        Locale locale = new Locale(lang);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+    }
+
+
+    void loadDefaultLang(){
+        SharedPreferences sharedPref = context.getSharedPreferences(context.getResources().getString(R.string.gem_pref_key),Context.MODE_PRIVATE);
+        String lang=sharedPref.getString(context.getResources().getString(R.string.app_lang_key),getString(R.string.app_default_lang));
+        setLocale(lang);
+    }
+
+
 
 
 

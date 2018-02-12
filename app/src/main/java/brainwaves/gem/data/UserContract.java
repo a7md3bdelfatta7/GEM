@@ -22,7 +22,6 @@ public class UserContract {
     public static String fullName="";
     public static String birthDate="";
     public static String nationality="";
-
     Context context;
     public UserContract(Context context){
         this.context=context;
@@ -127,6 +126,7 @@ public class UserContract {
         fullName=sharedPref.getString(context.getResources().getString(R.string.full_name_key),fullName);
         birthDate=sharedPref.getString(context.getResources().getString(R.string.birth_date_key),birthDate);
         nationality=sharedPref.getString(context.getResources().getString(R.string.nationality_key),nationality);
+
     }
 
     public void deleteSharedPreference(){

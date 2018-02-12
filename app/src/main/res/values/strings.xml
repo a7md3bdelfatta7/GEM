@@ -404,13 +404,15 @@
     <string name="become_member">Become A MEMBER</string>
     <string name="subscribe">Subscribe</string>
 
-    <string name="gem_pref_key">LOGGED_IN</string>
-    <string name="logged_in_key">LOGGED_IN</string>
-    <string name="user_id_key">USER_id_KEY</string>
-    <string name="user_name_key">USER_NAME_KEY</string>
-    <string name="full_name_key">full_NAME_KEY</string>
-    <string name="nationality_key">nationality_KEY</string>
-    <string name="birth_date_key">birth_date_KEY</string>
+    <string name="gem_pref_key" translatable="false">gem_pref_keys</string>
+    <string name="logged_in_key" translatable="false">LOGGED_IN</string>
+    <string name="user_id_key" translatable="false">USER_id_KEY</string>
+    <string name="user_name_key" translatable="false">USER_NAME_KEY</string>
+    <string name="full_name_key" translatable="false">full_NAME_KEY</string>
+    <string name="nationality_key" translatable="false">nationality_KEY</string>
+    <string name="birth_date_key" translatable="false">birth_date_KEY</string>
+    <string name="app_lang_key" translatable="false">language_KEY</string>
+    <string name="app_default_lang" translatable="false">en</string>
 
     <string name="create_tour">Create Tour</string>
     <string name="build_tour">Build Tour</string>
