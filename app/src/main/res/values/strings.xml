@@ -201,12 +201,63 @@
         \nDimensions:  Height 3.5 cm  Width 3.8 cm
     </string>
     <!-- Artifact 17 details activity -->
-    <string name="artifact_title_17">Amulet in the Shape of Winged Vulture</string>
-    <string name="artifact_info_17">This amulet depicts the vulture Nekhbet, patron goddess of Upper Egypt. It is in the form of a miniature wide Usekh collar and is made of beaten gold with a counterweight. It was found among many pieces of jewelry belonging to King Psusennes the First. \n
-        \nThe amulet was made to be hung on the king's garments by passing a wire or a string through a loop at the back of the amulet. \n
-        \nThe details of the vulture's feathers, the wings and claws are all elaborately incised. The claws are holding the Shen rings of the universal power.\n
-        \nDimensions:  Height 3.5 cm  Width 3.8 cm
+    <string name="artifact_title_17">Sphinx of Amenemhat the Third</string>
+    <string name="artifact_info_17">Seven sphinxes of Amenemhat were found in Tanis in the eastern Delta. They were thus called the Tanite sphinxes. They evoke the superhuman power of the king and emphasize his fearful appearance.
+        The vigorous face of the pharaoh is characterized by his prominent cheekbones, protuberant mouth and deeply furrowed cheeks, which create an effect of strength. Instead of the traditional Nemes headdress, his face is framed by a massive lion's mane that increases the sense of his majesty. \n
+        The statues rest on a tall and solid base decorated with cartouches of several sovereigns such as the Hyksos king Nehsy, Ramesses the Second, Merenptah and Psusennes, who all, over the centuries, usurped the group of sphinxes, fascinated by their idea. Egyptologists had mistankenly called them \"the Hyksos sphinxes\" because of their strange visage and the different names of the usurpers containing a Hyksos ruler too.\n
+        Dimensions:  Length 220 cm  Height 75 cm
     </string>
+    <!-- Artifact 18 details activity -->
+    <string name="artifact_title_18">Meroitic Ba Statue of a Woman</string>
+    <string name="artifact_info_18">This Ba statue depicts the soul as a bird with a human head. The statue depicts a lady with long wings standing on a flat pedestal that is slipped into a roughly executed base.
+        Her facial features are defined by low relief lines that indicate the eyelids, the small smiling lips, and the large ears. \n
+        \nThe three vertical cuts on each of her cheeks illustrate a Nubian custom. A round hole was cut on top of her head to hold a sun disk. \n
+        \nShe wears a painted collar around her neck. The upper part of her body is nude and a long, wide skirt reveals only the front of her sandaled feet, which are carefully portrayed. Her arms are held to her sides and her right hand holds a cylindrical object. \n
+        \nThe Ba statue was originally Egyptian, but placing this type of statue outside the tomb became common in Nubia.\n
+        \nDimensions:  Height 66 cm  Length 44 cm
+    </string>
+    <!-- Artifact 19 details activity -->
+    <string name="artifact_title_19">Statue of In-Heret-Shu as a Mummy</string>
+    <string name="artifact_info_19">The statue is one of several gilded wooden statues of deities found in the tomb of Tutankhamun. It depicts the god In-Heret-Shu standing on a rectangular base.
+        \nHe is portrayed in the form of a mummy and his body is completely enveloped in a cloak. He wears a three-part wig on his head topped by four high feathers. His arms are crossed on his chest, which is adorned by a large pectoral. His body is entirely gilded, except for his eyes, eyebrows, and false beard.\n
+        \nDimensions:  Height 74.5 cm
+    </string>
+    <!-- Artifact 20 details activity -->
+    <string name="artifact_title_20">Statue of Khufu-iam and his Wife</string>
+    <string name="artifact_info_20">Khufu-iam and his wife are shown seated on a backless seat. The husband's hands are on his knees and he holds a small staff in his left hand. He wears a short curly wig covering his ears and a short overlapping kilt with wavy pleats, which was a fashionable garment during his period.
+        \nHis wife sits next to him, resting her right arm on his right shoulder, a common pose in Ancient Egyptian statuary that shows strong family ties. \n
+        She wears a wide wig of medium length over her natural hair, which is partly visible.\n
+        Dimensions:  Height 45 cm  Width 27.5 cm
+    </string>
+    <!-- Artifact 21 details activity -->
+    <string name="artifact_title_21">Statue of the God Anubis with His Young Ones</string>
+    <string name="artifact_info_21">The jackal was the sacred animal of the god Wepwawet and Anubis, the god of mummification. The sculpture of this sacred animal with his young ones is unique.
+        The group is portrayed on a rectangular base on which the jackal is lying on his side. Two of the four young jackals are held in his paws, one sits between the paw and the tail, and the other is held under the jackal's face. \n
+        A scene of this type depicts the concept of paternal or maternal protection, which was synonymous with birth.\n
+        Dimensions:  Height 5 cm  Length 8 cm
+    </string>
+    <!-- Artifact 22 details activity -->
+    <string name="artifact_title_22">Statue of Goddess Hathor as a Cow</string>
+    <string name="artifact_info_22">This statue of Hathor is a life-size depiction of a cow, her sacred animal. It was dedicated by Amenhotep the Second to Hathor and his father Tuthmosis the Third.
+        \nThe cow is represented here coming out of the marshes as if to provide the deceased king with food offerings. Between her horns are the royal cobra uraeus, the sun disk, and two feathers. The cow's body has colored spots. \n
+        \nThe small figure standing in front, beneath the cow's head, is that of the king. He is also depicted in relief being suckled by the cow to regain life and vitality.\n
+        \nDimensions:  Height 2.2 cm  Length 2.3 cm
+    </string>
+    <!-- Artifact 23 details activity -->
+    <string name="artifact_title_23">Statue of a Uraeus</string>
+    <string name="artifact_info_23">The uraeus, or royal cobra is fixed to a base. As always, the cobra is depicted with its hood extended, rearing up to powerfully strike any enemy of the king.
+        \nOn its head, it wears the horns and the sun disk. In this form, the cobra is linked to the sun god Re as it surrounds his solar disk within its coils. \n
+        \nIt also represents his fiery eye, which brings destruction to the hostile snakes of the underworld that might threaten the sun god on his nightly journey. The head and body are very well modeled.\n
+        \nDimensions:  Length 121 cm
+    </string>
+    <!-- Artifact 24 details activity -->
+    <string name="artifact_title_24">Statue of King Khafra</string>
+    <string name="artifact_info_24">Khafra was one of the most famous kings of the Old Kingdom. He had many statues made of hard stone, which exhibit the marvelous skill of the artists during that time.
+        \nThese statues were made to receive the offerings made to the king by his cult priests and courtiers. They were also used during funerary rituals such as the ceremonies of purification and the Opening of the Mouth. These ceremonies were performed symbolically beside the statues of the deceased king before and after his burial. \n
+        \nHere, the king is represented on the throne with his names inscribed in a cartouche and the Serekh, or palace facade, on both sides of his legs. He is wearing the royal headdress, called the \"Nemes\" in Egyptian, and the royal Shendyt kilt.\n
+        \n\nDimensions:  Height 120 cm
+    </string>
+
 
     <string name="staff_art_of_statue">Art of statue</string>
     <string name="staff_art_of_statue_items">Browse our selections of the\nmost beatiful status\n</string>

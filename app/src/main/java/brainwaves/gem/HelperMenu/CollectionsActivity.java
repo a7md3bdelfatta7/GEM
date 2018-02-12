@@ -84,18 +84,18 @@ public class CollectionsActivity extends AppCompatActivity {
         ImageButton searchResultImgBtn = (ImageButton) findViewById(collectionResultLayout.getChildAt(0).getId());
 
         ArrayList<String> artifacts = new ArrayList<String>();
-        artifacts.add("tut ankamum mask");
-        artifacts.add("sphinx of amenhotep the second");
-        artifacts.add("anubis carrying the moon disk");
-        artifacts.add("shawabti of tutankhamun");
-        artifacts.add("crocodile god sobek");
-        artifacts.add("goddess isis nursing her son horus");
-        artifacts.add("outer coffin of queen meritamun");
-        artifacts.add("bust of amenemhat the third in priestly costume");
-        artifacts.add("gold mask mummy cover of king psusennes the First");
-        artifacts.add("gold cover of psusennes' mummy");
-        artifacts.add("queen hatshepsut offering to osiris");
-        artifacts.add("fragments of standing statue of a king");
+        artifacts.add(getString(R.string.artifact_title_1).toLowerCase().trim());
+        artifacts.add(getString(R.string.artifact_title_2).toLowerCase().trim());
+        artifacts.add(getString(R.string.artifact_title_3).toLowerCase().trim());
+        artifacts.add(getString(R.string.artifact_title_4).toLowerCase().trim());
+        artifacts.add(getString(R.string.artifact_title_5).toLowerCase().trim());
+        artifacts.add(getString(R.string.artifact_title_6).toLowerCase().trim());
+        artifacts.add(getString(R.string.artifact_title_7).toLowerCase().trim());
+        artifacts.add(getString(R.string.artifact_title_8).toLowerCase().trim());
+        artifacts.add(getString(R.string.artifact_title_9).toLowerCase().trim());
+        artifacts.add(getString(R.string.artifact_title_10).toLowerCase().trim());
+        artifacts.add(getString(R.string.artifact_title_11).toLowerCase().trim());
+        artifacts.add(getString(R.string.artifact_title_12).toLowerCase().trim());
 
 
         searchData = searchData.toLowerCase();
@@ -118,64 +118,51 @@ public class CollectionsActivity extends AppCompatActivity {
 
             switch (artifactsIndex) {
                 case 1:
-                    //searchResultImgBtn.setImageDrawable(getResources().getDrawable(R.drawable.highlight_i));
                     searchResultImgBtn.setImageResource(R.drawable.highlight_i);
-                    //searchResultImgBtn.setTag("1");
                     searchResultImgBtn.setTag(R.id.artifact_1);
                     break;
                 case 2:
                     searchResultImgBtn.setImageResource(R.drawable.highlight_ii);
-                    //searchResultImgBtn.setTag("2");
                     searchResultImgBtn.setTag(R.id.artifact_2);
                     break;
                 case 3:
                     searchResultImgBtn.setImageResource(R.drawable.highlight_iii);
-                    //searchResultImgBtn.setTag("3");
                     searchResultImgBtn.setTag(R.id.artifact_3);
                     break;
                 case 4:
                     searchResultImgBtn.setImageResource(R.drawable.highlight_iv);
-                    //searchResultImgBtn.setTag("4");
                     searchResultImgBtn.setTag(R.id.artifact_4);
                     break;
                 case 5:
                     searchResultImgBtn.setImageResource(R.drawable.highlight_v);
-                    //searchResultImgBtn.setTag("5");
                     searchResultImgBtn.setTag(R.id.artifact_5);
                     break;
                 case 6:
                     searchResultImgBtn.setImageResource(R.drawable.highlight_xv);
-                    //searchResultImgBtn.setTag("6");
                     searchResultImgBtn.setTag(R.id.artifact_6);
                     break;
                 case 7:
                     searchResultImgBtn.setImageResource(R.drawable.highlight__i);
-                    //searchResultImgBtn.setTag("7");
                     searchResultImgBtn.setTag(R.id.artifact_7);
                     break;
                 case 8:
                     searchResultImgBtn.setImageResource(R.drawable.highlight__ii);
-                    //searchResultImgBtn.setTag("8");
                     searchResultImgBtn.setTag(R.id.artifact_8);
                     break;
                 case 9:
                     searchResultImgBtn.setImageResource(R.drawable.highlight__iii);
-                    //searchResultImgBtn.setTag("9");
                     searchResultImgBtn.setTag(R.id.artifact_9);
                     break;
                 case 10:
                     searchResultImgBtn.setImageResource(R.drawable.highlight__iv);
-                    //searchResultImgBtn.setTag("9");
                     searchResultImgBtn.setTag(R.id.artifact_10);
                     break;
                 case 11:
                     searchResultImgBtn.setImageResource(R.drawable.highlight__v);
-                    //searchResultImgBtn.setTag("10");
                     searchResultImgBtn.setTag(R.id.artifact_11);
                     break;
                 case 12:
                     searchResultImgBtn.setImageResource(R.drawable.highlight__xv);
-                    //searchResultImgBtn.setTag("11");
                     searchResultImgBtn.setTag(R.id.artifact_12);
                     break;
             }

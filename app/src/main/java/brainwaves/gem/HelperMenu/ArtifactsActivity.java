@@ -152,184 +152,107 @@ public class ArtifactsActivity extends AppCompatActivity {
             case R.id.artifact_10:
                 artifact_num = 10;
                 img.setImageResource(R.drawable.highlight__iv);
-                aritfactDetailsTitle.setText("Gold Cover of Psusennes' Mummy");
-                artifactActionBar.setText("Gold Cover of Psusennes' Mummy");
-                aritfactDetailsText.setText("This gold sheet covered the mummy of King Psusennes the first, who lived during the Twenty-First Dynasty. His tomb, which contained amazing treasures, was discovered at Tanis. \n" +
-                        "The mummy had been placed in three sarcophagi for protection. The smallest is made of silver; the second is made of black granite, and the third, and largest, is pink granite. \n" +
-                        "A gold mask hid the face of the mummy and the body was covered with this sheet of gold, which is decorated in the center with a winged ram holding in his claws the shen signs, symbols of eternity. \n" +
-                        "\n" +
-                        "The upper part of the cover, corresponding to the torso, is decorated with two hands holding the insignia of the god Osiris: the crook and the flail. The rest of the cover is decorated with simulated mummy bandages.\n");
+                aritfactDetailsTitle.setText(R.string.artifact_title_10);
+                artifactActionBar.setText(R.string.artifact_title_10);
+                aritfactDetailsText.setText(R.string.artifact_info_10);
                 break;
             case R.id.artifact_11:
                 artifact_num = 11;
                 img.setImageResource(R.drawable.highlight__v);
-                aritfactDetailsTitle.setText("Queen Hatshepsut Offering to Osiris");
-                artifactActionBar.setText("Queen Hatshepsut Offering to Osiris");
-                aritfactDetailsText.setText("On this flake, the artist intended to show respect for the queen's majesty and drew her as a masculine figure, kneeling and wearing the Khepresh helmet-like crown of ceremonies. She is offering two jars of wine and cool water to the god Osiris of the underworld (not shown). \n" +
-                        "The queen wears a collar and a short kilt fastened with a belt. The text refers to \"Maat-Ka-Ra (the throne name of Hatshepsut) beloved of Osiris,\" and \"offering wine and cool water\". The drawing is brightly colored and the primarily red sketch lines, and some corrections in the proportions are shown.\n" +
-                        "\n" +
-                        "Dimensions:  Width 8 cm  Height 15 cm\n");
+                aritfactDetailsTitle.setText(R.string.artifact_title_11);
+                artifactActionBar.setText(R.string.artifact_title_11);
+                aritfactDetailsText.setText(R.string.artifact_info_11);
                 break;
             case R.id.artifact_12:
                 artifact_num = 12;
                 img.setImageResource(R.drawable.highlight__xv);
-                aritfactDetailsTitle.setText("Fragments of Standing Statue of a King");
-                artifactActionBar.setText("Fragments of Standing Statue of a King");
-                aritfactDetailsText.setText("The statue portrays a king standing on a small base. His left leg is forward, in the tradition of Egyptian statuary. He wears the White Crown of Upper Egypt and the short royal kilt called the Shendyt. His left arm is by his side, the right arm is bent, and he is holding the royal mace. \n" +
-                        "The artist succeeded in carving the facial features and the ceremonial beard in this hard stone. Judging by its artistic style despite the bad state of its preservation, it is possible to attribute this statuette to King Nefer-ef-Re of the Fifth Dynasty.\n" +
-                        "Dimensions:  Height 21 cm\n");
+                aritfactDetailsTitle.setText(R.string.artifact_title_12);
+                artifactActionBar.setText(R.string.artifact_title_12);
+                aritfactDetailsText.setText(R.string.artifact_info_12);
                 break;
             case R.id.artifact_13:
                 artifact_num = 13;
                 img.setImageResource(R.drawable.staff_i);
-                aritfactDetailsTitle.setText("Sarcophagus of Isis");
-                artifactActionBar.setText("Sarcophagus of Isis");
-                aritfactDetailsText.setText("Isis was the daughter of Khonsu and probably a second wife of Khabekhnet. \n" +
-                        "\n" +
-                        "The coffin is made in the image of Isis. Her face is long. She wears an elaborately curled wig crowned by a wide floral headband. A large and colorful floral collar covers her entire chest and rosettes mark her breasts. Jewelry further enhances Isis's beauty. She wears earrings that are made of bone or ivory. She also has rings on her fingers and bracelets on her wrists. \n" +
-                        "Isis is clothed with a long garment made of a single large piece of fringed linen. It was first wrapped around her torso, then draped over her shoulders and secured with a knot. In both hands, Isis clasps delicate tendrils of a creeper vine. This plant probably had a symbolic relationship with birth and rejuvenation. \n" +
-                        "\n" +
-                        "Hieroglyphic inscriptions are written around the box and the lid.\n" +
-                        "Dimensions:  Length 190 cm\n");
+                aritfactDetailsTitle.setText(R.string.artifact_title_13);
+                artifactActionBar.setText(R.string.artifact_title_13);
+                aritfactDetailsText.setText(R.string.artifact_info_13);
                 break;
             case R.id.artifact_14:
                 artifact_num = 14;
                 img.setImageResource(R.drawable.staff_ii);
-                aritfactDetailsTitle.setText("Sarcophagus with Cover Depicting the Deceased");
-                artifactActionBar.setText("Sarcophagus with Cover Depicting the Deceased");
-                aritfactDetailsText.setText("The sarcophagus is in the shape of a mummy. The cover portrays the deceased with all his accessories and his decorated shroud. \n" +
-                        "\n" +
-                        "He wears a long wig reaching his chest that leaves the ears exposed. He also wears a false beard, and a large collar with many lines. Under the collar, a winged goddess and two eyes of Horus are depicted for his protection. \n" +
-                        "\n" +
-                        "His hands are flat on his body, which is covered with many crossed hieroglyphic bands. The bands bear the magical formula from the Book of the Dead to protect the deceased. \n" +
-                        "\n" +
-                        "On the bottom of the cover, Anubis, the god of mummification and the necropolis, is portrayed twice. The two depictions face each other.\n" +
-                        "Dimensions:  Height 70 cm  Length 250 cm  Width 90 cm\n");
+                aritfactDetailsTitle.setText(R.string.artifact_title_14);
+                artifactActionBar.setText(R.string.artifact_title_14);
+                aritfactDetailsText.setText(R.string.artifact_info_14);
                 break;
             case R.id.artifact_15:
                 artifact_num = 15;
                 img.setImageResource(R.drawable.staff_iii);
-                aritfactDetailsTitle.setText("Sarcophagus of Queen Kawit");
-                artifactActionBar.setText("Sarcophagus of Queen Kawit");
-                aritfactDetailsText.setText("The sarcophagus of Queen Kawit, who was the wife of King Montuhotep the Second, was one of the most noteworthy in terms of the low-relief sculpture in the Theban court. \n" +
-                        "The outer faces of this limestone sarcophagus are decorated with scenes from daily life, such as the queen applying makeup. Other scenes depict offerings and the afterlife. \n" +
-                        "\n" +
-                        "At the place of Queen Kawit's head, there is a palace facade with the central doors decorated with Udjat eyes to permit the deceased to communicate with the world of living. \n" +
-                        "The elongated bodies and the coarse facial features reflect the Theban ideal of feminine beauty.\n" +
-                        "\n" +
-                        "Dimensions:  Height 119 cm  Length 262 cm  Width 119 cm\n");
+                aritfactDetailsTitle.setText(R.string.artifact_title_15);
+                artifactActionBar.setText(R.string.artifact_title_15);
+                aritfactDetailsText.setText(R.string.artifact_info_15);
                 break;
             case R.id.artifact_16:
                 artifact_num = 16;
                 img.setImageResource(R.drawable.staff_iv);
-                aritfactDetailsTitle.setText("Amulet in the Shape of Winged Vulture");
-                artifactActionBar.setText("Amulet in the Shape of Winged Vulture");
-                aritfactDetailsText.setText("This amulet depicts the vulture Nekhbet, patron goddess of Upper Egypt. It is in the form of a miniature wide Usekh collar and is made of beaten gold with a counterweight. It was found among many pieces of jewelry belonging to King Psusennes the First. \n" +
-                        "\n" +
-                        "The amulet was made to be hung on the king's garments by passing a wire or a string through a loop at the back of the amulet. \n" +
-                        "\n" +
-                        "The details of the vulture's feathers, the wings and claws are all elaborately incised. The claws are holding the Shen rings of the universal power.\n" +
-                        "\n" +
-                        "Dimensions:  Height 3.5 cm  Width 3.8 cm\n");
+                aritfactDetailsTitle.setText(R.string.artifact_title_16);
+                artifactActionBar.setText(R.string.artifact_title_16);
+                aritfactDetailsText.setText(R.string.artifact_info_16);
                 break;
             case R.id.artifact_17:
                 artifact_num = 17;
                 img.setImageResource(R.drawable.staff_v);
-                aritfactDetailsTitle.setText("Sphinx of Amenemhat the Third");
-                artifactActionBar.setText("Sphinx of Amenemhat the Third");
-                aritfactDetailsText.setText("Seven sphinxes of Amenemhat were found in Tanis in the eastern Delta. They were thus called the Tanite sphinxes. They evoke the superhuman power of the king and emphasize his fearful appearance. \n" +
-                        "The vigorous face of the pharaoh is characterized by his prominent cheekbones, protuberant mouth and deeply furrowed cheeks, which create an effect of strength. Instead of the traditional Nemes headdress, his face is framed by a massive lion's mane that increases the sense of his majesty. \n" +
-                        "The statues rest on a tall and solid base decorated with cartouches of several sovereigns such as the Hyksos king Nehsy, Ramesses the Second, Merenptah and Psusennes, who all, over the centuries, usurped the group of sphinxes, fascinated by their idea. Egyptologists had mistankenly called them \"the Hyksos sphinxes\" because of their strange visage and the different names of the usurpers containing a Hyksos ruler too.\n" +
-                        "Dimensions:  Length 220 cm  Height 75 cm\n");
+                aritfactDetailsTitle.setText(R.string.artifact_title_17);
+                artifactActionBar.setText(R.string.artifact_title_17);
+                aritfactDetailsText.setText(R.string.artifact_info_17);
                 break;
             case R.id.artifact_18:
                 artifact_num = 18;
                 img.setImageResource(R.drawable.staff_xv);
-                aritfactDetailsTitle.setText("Meroitic Ba Statue of a Woman");
-                artifactActionBar.setText("Meroitic Ba Statue of a Woman");
-                aritfactDetailsText.setText("This Ba statue depicts the soul as a bird with a human head. The statue depicts a lady with long wings standing on a flat pedestal that is slipped into a roughly executed base. \n" +
-                        "Her facial features are defined by low relief lines that indicate the eyelids, the small smiling lips, and the large ears. \n" +
-                        "The three vertical cuts on each of her cheeks illustrate a Nubian custom. A round hole was cut on top of her head to hold a sun disk. \n" +
-                        "She wears a painted collar around her neck. The upper part of her body is nude and a long, wide skirt reveals only the front of her sandaled feet, which are carefully portrayed. Her arms are held to her sides and her right hand holds a cylindrical object. \n" +
-                        "The Ba statue was originally Egyptian, but placing this type of statue outside the tomb became common in Nubia.\n" +
-                        "\n" +
-                        "Dimensions:  Height 66 cm  Length 44 cm\n");
+                aritfactDetailsTitle.setText(R.string.artifact_title_18);
+                artifactActionBar.setText(R.string.artifact_title_18);
+                aritfactDetailsText.setText(R.string.artifact_info_18);
                 break;
             case R.id.artifact_19:
                 artifact_num = 19;
                 img.setImageResource(R.drawable.staff__i);
-                aritfactDetailsTitle.setText("Statue of In-Heret-Shu as a Mummy");
-                artifactActionBar.setText("Statue of In-Heret-Shu as a Mummy");
-                aritfactDetailsText.setText("The statue is one of several gilded wooden statues of deities found in the tomb of Tutankhamun. It depicts the god In-Heret-Shu standing on a rectangular base. \n" +
-                        "\n" +
-                        "He is portrayed in the form of a mummy and his body is completely enveloped in a cloak. He wears a three-part wig on his head topped by four high feathers. His arms are crossed on his chest, which is adorned by a large pectoral. His body is entirely gilded, except for his eyes, eyebrows, and false beard.\n" +
-                        "\n" +
-                        "Dimensions:  Height 74.5 cm\n");
+                aritfactDetailsTitle.setText(R.string.artifact_title_19);
+                artifactActionBar.setText(R.string.artifact_title_19);
+                aritfactDetailsText.setText(R.string.artifact_info_19);
                 break;
             case R.id.artifact_20:
                 artifact_num = 20;
                 img.setImageResource(R.drawable.staff__ii);
-                aritfactDetailsTitle.setText("Statue of Khufu-iam and his Wife");
-                artifactActionBar.setText("Statue of Khufu-iam and his Wife");
-                aritfactDetailsText.setText("Khufu-iam and his wife are shown seated on a backless seat. The husband's hands are on his knees and he holds a small staff in his left hand. He wears a short curly wig covering his ears and a short overlapping kilt with wavy pleats, which was a fashionable garment during his period. \n" +
-                        "\n" +
-                        "His wife sits next to him, resting her right arm on his right shoulder, a common pose in Ancient Egyptian statuary that shows strong family ties. \n" +
-                        "\n" +
-                        "She wears a wide wig of medium length over her natural hair, which is partly visible.\n" +
-                        "Dimensions:  Height 45 cm  Width 27.5 cm\n");
+                aritfactDetailsTitle.setText(R.string.artifact_title_20);
+                artifactActionBar.setText(R.string.artifact_title_20);
+                aritfactDetailsText.setText(R.string.artifact_info_20);
                 break;
             case R.id.artifact_21:
                 artifact_num = 21;
                 img.setImageResource(R.drawable.staff__iii);
-                aritfactDetailsTitle.setText("Statue of the God Anubis with His Young Ones");
-                artifactActionBar.setText("Statue of the God Anubis with His Young Ones");
-                aritfactDetailsText.setText("The jackal was the sacred animal of the god Wepwawet and Anubis, the god of mummification. The sculpture of this sacred animal with his young ones is unique. \n" +
-                        "\n" +
-                        "The group is portrayed on a rectangular base on which the jackal is lying on his side. Two of the four young jackals are held in his paws, one sits between the paw and the tail, and the other is held under the jackal's face. \n" +
-                        "\n" +
-                        "A scene of this type depicts the concept of paternal or maternal protection, which was synonymous with birth.\n" +
-                        "\n" +
-                        "Dimensions:  Height 5 cm  Length 8 cm\n");
+                aritfactDetailsTitle.setText(R.string.artifact_title_21);
+                artifactActionBar.setText(R.string.artifact_title_21);
+                aritfactDetailsText.setText(R.string.artifact_info_21);
                 break;
             case R.id.artifact_22:
                 artifact_num = 22;
                 img.setImageResource(R.drawable.staff__iv);
-                aritfactDetailsTitle.setText("Statue of Goddess Hathor as a Cow");
-                artifactActionBar.setText("Statue of Goddess Hathor as a Cow");
-                aritfactDetailsText.setText("This statue of Hathor is a life-size depiction of a cow, her sacred animal. It was dedicated by Amenhotep the Second to Hathor and his father Tuthmosis the Third. \n" +
-                        "\n" +
-                        "The cow is represented here coming out of the marshes as if to provide the deceased king with food offerings. Between her horns are the royal cobra uraeus, the sun disk, and two feathers. The cow's body has colored spots. \n" +
-                        "\n" +
-                        "The small figure standing in front, beneath the cow's head, is that of the king. He is also depicted in relief being suckled by the cow to regain life and vitality.\n" +
-                        "\n" +
-                        "Dimensions:  Height 2.2 cm  Length 2.3 cm\n");
+                aritfactDetailsTitle.setText(R.string.artifact_title_22);
+                artifactActionBar.setText(R.string.artifact_title_22);
+                aritfactDetailsText.setText(R.string.artifact_info_22);
                 break;
             case R.id.artifact_23:
                 artifact_num = 23;
                 img.setImageResource(R.drawable.staff__v);
-                aritfactDetailsTitle.setText("Statue of a Uraeus");
-                artifactActionBar.setText("Statue of a Uraeus");
-                aritfactDetailsText.setText("The uraeus, or royal cobra is fixed to a base. As always, the cobra is depicted with its hood extended, rearing up to powerfully strike any enemy of the king. \n" +
-                        "\n" +
-                        "On its head, it wears the horns and the sun disk. In this form, the cobra is linked to the sun god Re as it surrounds his solar disk within its coils. \n" +
-                        "\n" +
-                        "It also represents his fiery eye, which brings destruction to the hostile snakes of the underworld that might threaten the sun god on his nightly journey. The head and body are very well modeled.\n" +
-                        "\n" +
-                        "Dimensions:  Length 121 cm\n");
+                aritfactDetailsTitle.setText(R.string.artifact_title_23);
+                artifactActionBar.setText(R.string.artifact_title_23);
+                aritfactDetailsText.setText(R.string.artifact_info_23);
                 break;
             case R.id.artifact_24:
                 artifact_num = 24;
                 img.setImageResource(R.drawable.staff__xv);
-                aritfactDetailsTitle.setText("Statue of King Khafra");
-                artifactActionBar.setText("Statue of King Khafra");
-                aritfactDetailsText.setText("Khafra was one of the most famous kings of the Old Kingdom. He had many statues made of hard stone, which exhibit the marvelous skill of the artists during that time. \n" +
-                        "\n" +
-                        "These statues were made to receive the offerings made to the king by his cult priests and courtiers. They were also used during funerary rituals such as the ceremonies of purification and the Opening of the Mouth. These ceremonies were performed symbolically beside the statues of the deceased king before and after his burial. \n" +
-                        "\n" +
-                        "Here, the king is represented on the throne with his names inscribed in a cartouche and the Serekh, or palace facade, on both sides of his legs. He is wearing the royal headdress, called the \"Nemes\" in Egyptian, and the royal Shendyt kilt.\n" +
-                        "\n" +
-                        "\n" +
-                        "Dimensions:  Height 120 cm\n");
+                aritfactDetailsTitle.setText(R.string.artifact_title_24);
+                artifactActionBar.setText(R.string.artifact_title_24);
+                aritfactDetailsText.setText(R.string.artifact_info_24);
                 break;
         }
         if(artifact_num>12)
