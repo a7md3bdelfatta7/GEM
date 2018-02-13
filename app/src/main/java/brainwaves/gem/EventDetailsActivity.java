@@ -128,32 +128,28 @@ public class EventDetailsActivity extends AppCompatActivity {
                 eventTitle.setText(R.string.event1_topic);
                 eventDetails.setText(R.string.temp_text);
                 break;
-
             case R.id.today_event2:
                 eventDetailsImage.setImageResource(R.drawable.todaysevent_ii);
                 actionBarTitle.setText(R.string.event2_topic);
                 eventTitle.setText(R.string.event2_topic);
                 eventDetails.setText(R.string.temp_text);
                 break;
-
             case R.id.today_event3:
                 eventDetailsImage.setImageResource(R.drawable.todaysevent_iii);
                 actionBarTitle.setText(R.string.event3_topic);
                 eventTitle.setText(R.string.event3_topic);
                 eventDetails.setText(R.string.temp_text);
                 break;
-
-
-
         }
 
         Button subscribeButton=(Button)findViewById(R.id.subscribeButton);
+        final TextView subscribeNum=(TextView)findViewById(R.id.subscribe_num);
+        subscribeNum.setText(getString(R.string.going_event) + " : 90");
 
         subscribeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TextView subscribeNum=(TextView)findViewById(R.id.subscribe_num);
-                subscribeNum.setText("Going : 91");
+                subscribeNum.setText(getString(R.string.going_event) + " : 91");
                 view.setVisibility(View.INVISIBLE);
             }
         });

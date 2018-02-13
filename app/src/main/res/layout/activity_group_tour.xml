@@ -24,7 +24,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tour Name"
+                android:text="@string/tour_name"
                 android:textSize="20sp"
                 android:layout_margin="5dp"
                 />
@@ -401,7 +401,7 @@
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Add"
+                        android:text="@string/add_tour"
                         android:layout_weight="1"
                         android:onClick="inviteClient"
                         />
@@ -428,17 +428,19 @@
                     android:layout_margin="10dp"
                     android:id="@+id/tour_type"
                     >
+
                     <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Shortest Path"
+                        android:text="@string/shortest_path"
                         android:id="@+id/collections_filter_kings"
                         android:textSize="15sp"
                         />
+
                     <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Oldest "
+                        android:text="@string/oldest"
                         android:id="@+id/collections_filter_status"
                         android:textSize="15sp"
                         />

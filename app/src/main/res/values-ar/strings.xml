@@ -192,6 +192,13 @@
     <string name="staff_picks_tab">اختيارات العاملين</string>
     <string name="featured_events_tab">احداث مختاره</string>
 
+    <string name="going_event">يذهب</string>
 
+    <string name="individual_tour">Individual</string>
+    <string name="group_tour">Group</string>
+    <string name="tour_guide">Tour Guide</string>
+
+    <string name="shortest_path">Shortest Path</string>
+    <string name="oldest">Oldest</string>
 
 </resources>

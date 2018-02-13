@@ -24,7 +24,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tour Name"
+                android:text="@string/tour_name"
                 android:textSize="20sp"
                 android:layout_margin="5dp"
                 />
@@ -393,13 +393,13 @@
                     <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Shortest Path"
+                        android:text="@string/shortest_path"
                         android:textSize="15sp"
                         />
                     <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Oldest "
+                        android:text="@string/oldest"
                         android:textSize="15sp"
                         />
                 </RadioGroup>
