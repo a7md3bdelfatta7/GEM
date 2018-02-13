@@ -148,7 +148,7 @@
     <string name="featured_event4_topic">King Tutankhamun Tour</string>
     <string name="featured_event4_note">Guided Tour</string>
 
-    <string name="map_activity_title">Museum Map</string>
+    <string name="map_activity_title">خريطه المتحف</string>
     <string name="favourite_title">FAVOURITE</string>
     <string name="tour_activity_title">TOUR PLANNING</string>
 
@@ -185,19 +185,24 @@
     <string name="fb_login_protocol_scheme">fb781532365370297</string>
 
     <!-- Tab Names -->
-    <string name="visit_tab">Visit</string>
-    <string name="highlight_tab">Highlight</string>
-    <string name="today_event">Today Event</string>
-    <string name="for_members_tab">For Members</string>
-    <string name="staff_picks_tab">Staff Picks</string>
-    <string name="featured_events_tab">Featured Events</string>
-    <string name="going_event">Going</string>
+    <string name="visit_tab">الزيارات</string>
+    <string name="highlight_tab">الرئيسيه</string>
+    <string name="today_event">احداث اليوم</string>
+    <string name="for_members_tab">للاعضاء</string>
+    <string name="staff_picks_tab">اختيارات العاملين</string>
+    <string name="featured_events_tab">احداث مختاره</string>
+
+    <string name="going_event">يذهب</string>
 
     <string name="individual_tour">Individual</string>
     <string name="group_tour">Group</string>
     <string name="tour_guide">Tour Guide</string>
 
     <string name="tour_name">Tour Name</string>
-    <string name="add_tour">Add</string>
+    <string name="shortest_path">Shortest Path</string>
+    <string name="oldest">Oldest</string>
 
+    <string name="individual_tour_title">Create Individual Tour</string>
+    <string name="group_tour_title">Create Group Tour</string>
+    <string name="tour_guide_title">Tour Guide</string>
 </resources>
