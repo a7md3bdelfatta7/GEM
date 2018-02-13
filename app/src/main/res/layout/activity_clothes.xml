@@ -16,7 +16,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="MEN"
+                android:text="@string/shopping_clothes_Men"
                 android:textSize="25dp"
                 android:layout_marginBottom="11dp"/>
                 <LinearLayout
@@ -46,7 +46,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_weight="5"
                                 android:gravity="center"
-                                android:text="MEN T-SHIRT\nPRICE : $18"/>
+                                android:text="@string/shopping_clothes_Men_Item_Info"/>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -70,7 +70,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_weight="5"
                                 android:gravity="center"
-                                android:text="MEN T-SHIRT\nPRICE : $18"/>
+                                android:text="@string/shopping_clothes_Men_Item_Info"/>
                         </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
@@ -97,7 +97,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_weight="5"
                                 android:gravity="center"
-                                android:text="MEN T-SHIRT\nPRICE : $18"/>
+                                android:text="@string/shopping_clothes_Men_Item_Info"/>
                         </LinearLayout>
                        <TextView
                            android:layout_width="match_parent"
@@ -121,7 +121,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="WOMEN"
+                android:text="@string/shopping_clothes_Women"
                 android:textSize="25dp"
                 android:layout_marginBottom="11dp"/>
             <LinearLayout
@@ -151,7 +151,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="5"
                             android:gravity="center"
-                            android:text="MEN T-SHIRT\nPRICE : $18"/>
+                            android:text="@string/shopping_clothes_Women_Item_Info"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -175,7 +175,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="5"
                             android:gravity="center"
-                            android:text="MEN T-SHIRT\nPRICE : $18"/>
+                            android:text="@string/shopping_clothes_Women_Item_Info"/>
                     </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
@@ -201,7 +201,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="5"
                             android:gravity="center"
-                            android:text="MEN T-SHIRT\nPRICE : $18"/>
+                            android:text="@string/shopping_clothes_Women_Item_Info"/>
                     </LinearLayout>
                     <TextView
                         android:layout_width="match_parent"
@@ -225,7 +225,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="KIDS"
+                android:text="@string/shopping_clothes_Kids"
                 android:textSize="25dp"
                 android:layout_marginBottom="11dp"/>
             <LinearLayout
@@ -255,7 +255,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="5"
                             android:gravity="center"
-                            android:text="MEN T-SHIRT\nPRICE : $18"/>
+                            android:text="@string/shopping_clothes_Kid_Item_Info"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -279,7 +279,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="5"
                             android:gravity="center"
-                            android:text="MEN T-SHIRT\nPRICE : $18"/>
+                            android:text="@string/shopping_clothes_Kid_Item_Info"/>
                     </LinearLayout>
                 </LinearLayout>
 
