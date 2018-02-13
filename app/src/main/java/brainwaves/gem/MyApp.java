@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Typeface;
 import android.os.Build;
+import android.support.v7.app.ActionBar;
 import android.util.Log;
 
 import java.lang.reflect.Field;
@@ -32,7 +33,7 @@ public class MyApp extends Application {
                 .setFontAttrId(R.attr.fontPath)
                 .build()
         );
-
+        
     }
 
     @Override

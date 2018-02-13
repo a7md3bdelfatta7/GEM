@@ -38,9 +38,8 @@
             android:layout_width="6dp"
             android:layout_height="match_parent"
             android:layout_gravity="left"
-            android:src="@drawable/main_page_shadow"
+            android:src="@drawable/main_page_shadow_ar"
             android:scaleType="fitXY"
-            android:visibility="gone"
             />
 
 

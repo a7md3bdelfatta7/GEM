@@ -74,7 +74,7 @@
     <!-- today's event fragment -->
 
     <!-- event 1-->
-    <string name="event1_time">1:00PM</string>
+    <string name="event1_time">12:00PM</string>
     <string name="event1_topic">الملك توت عنخ امون</string>
     <string name="event1_note">حدث مجاني</string>
 
