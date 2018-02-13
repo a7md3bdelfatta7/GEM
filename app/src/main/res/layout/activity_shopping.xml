@@ -24,7 +24,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textColor="@color/cardview_light_background"
-                    android:text="Clothes"
+                    android:text="@string/shopping_Clothes"
                     android:gravity="center"
                     android:textSize="20dp"
                     android:rotation="270"/>
@@ -64,7 +64,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Artifacts"
+                    android:text="@string/shopping_artifacts"
                     android:textColor="@color/cardview_light_background"
                     android:layout_marginRight="0dp"
                     android:gravity="center"
@@ -88,7 +88,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textColor="@color/cardview_light_background"
-                    android:text="Books"
+                    android:text="@string/shopping_Books"
                     android:gravity="center"
                     android:textSize="22dp"
                     android:rotation="270"/>
