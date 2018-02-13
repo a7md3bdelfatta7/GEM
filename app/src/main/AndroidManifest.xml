@@ -100,7 +100,10 @@
         <activity
             android:name=".HelperMenu.Favourites"
             android:label="@string/favourite_title" />
-        <activity android:name=".HelperMenu.TourGuideActivity" />
+        <activity
+            android:name=".HelperMenu.TourGuideActivity"
+            android:label="@string/tour_guide_title"
+            />
         <activity
             android:name=".HelperMenu.TourMap"
             android:label="@string/map_activity_title" />
@@ -108,8 +111,14 @@
         <activity
             android:name=".HelperMenu.Ticket"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".HelperMenu.IndividualTourActivity" />
-        <activity android:name=".HelperMenu.GroupTourActivity" />
+        <activity
+            android:name=".HelperMenu.IndividualTourActivity"
+            android:label="@string/individual_tour_title"
+            />
+        <activity
+            android:name=".HelperMenu.GroupTourActivity"
+            android:label="@string/group_tour_title"
+            />
         <activity android:name=".HelperMenu.ViewTourActivity" />
         <activity android:name=".artifact_video"
             android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"

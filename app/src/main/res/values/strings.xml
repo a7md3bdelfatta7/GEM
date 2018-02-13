@@ -490,11 +490,12 @@
     <string name="tour_guide">Tour Guide</string>
 
     <string name="tour_name">Tour Name</string>
-    <string name="add_tour">Add</string>
+    <string name="shortest_path">Shortest Path</string>
+    <string name="oldest">Oldest</string>
 
-
-
-
-
+    <string name="individual_tour_title">Create Individual Tour</string>
+    <string name="group_tour_title">Create Group Tour</string>
+    <string name="tour_guide_title">Tour Guide</string>
+    <string name="add_users">Add</string>
 
 </resources>
