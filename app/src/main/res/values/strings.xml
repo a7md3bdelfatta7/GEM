@@ -466,5 +466,18 @@
     <string name="for_members_tab">For Members</string>
     <string name="staff_picks_tab">Staff Picks</string>
     <string name="featured_events_tab">Featured Events</string>
+    <string name="going_event">Going</string>
+
+    <string name="individual_tour">Individual</string>
+    <string name="group_tour">Group</string>
+    <string name="tour_guide">Tour Guide</string>
+
+    <string name="tour_name">Tour Name</string>
+    <string name="add_tour">Add</string>
+
+
+
+
+
 
 </resources>

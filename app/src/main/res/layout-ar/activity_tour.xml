@@ -13,8 +13,7 @@
         android:orientation="horizontal"
         android:padding="6dp"
         android:weightSum="2"
-        android:gravity="right"
-
+        android:gravity="left"
         >
 
         <Button
