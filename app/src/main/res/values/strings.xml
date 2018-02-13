@@ -258,21 +258,27 @@
         \nDimensions:  Height 120 cm
     </string>
 
-
+    <!-- Staffpicks-->
     <string name="staff_art_of_statue">Art of statue</string>
     <string name="staff_art_of_statue_items">Browse our selections of the\nmost beatiful status\n</string>
     <string name="staff_favorite_selection">\nFavorite Selection</string>
     <string name="staff_favorite_selection_items">You may want to check some\nof the favories\n</string>
 
+
+    <!--collection-->
     <string name="collection_str">Collections/</string>
     <string name="itemsNumber">50,000 record</string>
     <string name="filter_button">Filter</string>
     <string name="collection_kings">KINGS COLLECTIONS \n</string>
     <string name="collection_status">\nSTATUES COLLECTIONS \n</string>
+
+
     <string-array name="lang_array">
         <item>ENGLISH</item>
         <item>العربيه</item>
     </string-array>
+
+    <!--Pages name-->
     <string name="title_activity_visit">Visit</string>
     <string name="title_activity_artifactsDetails">Details</string>
     <string name="title_activity_collections">Collections</string>
@@ -283,8 +289,13 @@
     <string name="title_activity_checkout">Checkout</string>
     <string name="title_activity_quiz">Quiz</string>
     <string name="title_activity_membership">Membership</string>
+
+
+    <!--Quiz-->
     <string name="quiz_word">QUIZ NO.1</string>
     <string name="quiz">How old was Tutankamun when died?</string>
+
+    <!--membership-->
     <string name="membership_benefits">Membership Benefits</string>
     <string name="membership_benefits_items"><itme>&#8226; Free express admission for you and children under 18.</itme>
         <itme>\n&#8226; Free admission for your guest(s) on every visit.</itme>
@@ -293,6 +304,9 @@
         <itme>\n&#8226; 10% off at the Dining room at GEM.</itme>
         <itme>\n&#8226; 10% off at GEM store.</itme>
     </string>
+
+
+    
     <string name="choose_category">Choose Category</string>
     <string name="membership_count_word">Membership Count</string>
     <string name="membership_count">$100 - $600</string>
