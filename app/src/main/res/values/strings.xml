@@ -310,12 +310,28 @@
     <string name="shopping_details_info">A T-shirt (or t shirt, or tee) is a style of unisex fabric shirt named after the T shape of its body and sleeves. It normally has short sleeves and a round neckline, known as a crew neck, which lacks a collar. T-shirts are generally made of a light, inexpensive fabric and are easy to clean.</string>
 
 
+
+    <!--shipping-->
+    <string name="shipping_total">TOTAL</string>
+    <string name="shipping_subTotal">Sub-total</string>
+    <string name="shipping_price">$18.00</string>
+    <string name="shipping_Checkout">CHECKOUT</string>
+    <string name="shipping_accepted">WE ACCEPT:</string>
+
+
     <!--Quiz-->
     <string name="quiz_word">QUIZ NO.1</string>
     <string name="quiz">How old was Tutankamun when died?</string>
+    <string name="quiz_answer_i">16 YEARS OLD</string>
+    <string name="quiz_answer_ii">18 YEARS OLD</string>
+    <string name="quiz_answer_iii">19 YEARS OLD</string>
 
     <!--membership-->
     <string name="membership_benefits">Membership Benefits</string>
+    <string name="Memebership_student">students</string>
+    <string name="Memebership_egyptian">Egyptian</string>
+    <string name="Memebership_foreign">Foreign</string>
+
     <string name="membership_benefits_items"><itme>&#8226; Free express admission for you and children under 18.</itme>
         <itme>\n&#8226; Free admission for your guest(s) on every visit.</itme>
         <itme>\n&#8226; Early access to exhibitions and special viewing hours.</itme>
@@ -324,12 +340,13 @@
         <itme>\n&#8226; 10% off at GEM store.</itme>
     </string>
     <string name="choose_category">Choose Category</string>
-    <string name="membership_count_word">Membership Count</string>
-    <string name="membership_count">$100 - $600</string>
     <string name="membership_duration">Duration</string>
     <string name="membership_duration_items_i">3 Months</string>
     <string name="membership_duration_items_ii">6 Months</string>
     <string name="membership_duration_items_iii">1 Year</string>
+
+
+
     <string name="related_Links">RELATED</string>
     <!-- login activity -->
     <string name="login">LOGIN</string>

@@ -36,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="25dp"
-            android:text="16 YEARS OLD"
+            android:text="@string/quiz_answer_i"
             android:id="@+id/firstAnswer"
             android:background="@color/defaultColor"
             android:layout_marginRight="25dp"
@@ -44,7 +44,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="18 YEARS OLD"
+            android:text="@string/quiz_answer_ii"
             android:id="@+id/secondAnswer"
             android:background="@color/defaultColor"
             android:layout_marginTop="5dp"
@@ -53,7 +53,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="19 YEARS OLD"
+            android:text="@string/quiz_answer_iii"
             android:id="@+id/thirdAnswer"
             android:background="@color/defaultColor"
             android:layout_marginTop="5dp"
