@@ -310,7 +310,6 @@
     <string name="shopping_details_info">A T-shirt (or t shirt, or tee) is a style of unisex fabric shirt named after the T shape of its body and sleeves. It normally has short sleeves and a round neckline, known as a crew neck, which lacks a collar. T-shirts are generally made of a light, inexpensive fabric and are easy to clean.</string>
 
 
-
     <!--shipping-->
     <string name="shipping_total">TOTAL</string>
     <string name="shipping_subTotal">Sub-total</string>
@@ -344,7 +343,6 @@
     <string name="membership_duration_items_i">3 Months</string>
     <string name="membership_duration_items_ii">6 Months</string>
     <string name="membership_duration_items_iii">1 Year</string>
-
 
 
     <string name="related_Links">RELATED</string>
@@ -505,9 +503,8 @@
     <string name="add_artifact_tour_message">Please Add Artifacts to Tour</string>
     <string name="build_tour_criteria_message">Please Select Build Tour Based On</string>
     <string name="enter_tour_name_message">Please Enter Tour Name!</string>
-
-
-
+    <string name="select_tour_guide_message">Please Select Tour Guide</string>
+    <string name="tour_guide_in_way">on the way</string>
 
 
 </resources>

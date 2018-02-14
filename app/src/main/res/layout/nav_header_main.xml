@@ -29,7 +29,7 @@
         <ImageView
             android:layout_height="80dp"
             android:layout_width="90dp"
-            android:id="@+id/imageView1"
+            android:id="@+id/user_pic"
             android:src="@drawable/man"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"

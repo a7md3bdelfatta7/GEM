@@ -31,7 +31,6 @@ public class TourGuideActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_tour_guide);
-        getSupportActionBar().setTitle("Tour Guide");
         tour_list=(RadioGroup)findViewById(R.id.tour_list);
 
     }
@@ -46,9 +45,9 @@ public class TourGuideActivity extends AppCompatActivity {
 
         if(id!=-1) {
             String x = tours[id - 1];
-            Toast.makeText(this, x + " on the way", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, x +" "+ getString(R.string.tour_guide_in_way), Toast.LENGTH_SHORT).show();
         }else{
-            Toast.makeText(this, "Please Select Tour Guide.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,getString(R.string.select_tour_guide_message), Toast.LENGTH_SHORT).show();
         }
     }
 

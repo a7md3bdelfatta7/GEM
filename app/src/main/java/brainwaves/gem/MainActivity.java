@@ -6,8 +6,10 @@ import android.app.FragmentManager;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.net.Uri;
@@ -75,6 +77,8 @@ public class MainActivity extends AppCompatActivity
     private ViewPager mViewPager;
     private TabLayout tabLayout;
     private boolean isRtlLayout;
+    ImageView user_pic;
+
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
@@ -89,7 +93,6 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
         tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
-
 
         initializeTabs();
 
@@ -232,6 +235,15 @@ public class MainActivity extends AppCompatActivity
         TextView userDetails=(TextView)navHeaderView.findViewById(R.id.user_details);
         fullName.setText(UserContract.fullName);
         userDetails.setText(UserContract.nationality+"-"+UserContract.birthDate);
+        user_pic=(ImageView) navHeaderView.findViewById(R.id.user_pic);
+        user_pic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,UserProfile.class);
+                startActivity(intent);
+            }
+        });
+
         if(isRTL()) {
             mViewPager.setCurrentItem(PAGES.length - 1);
         }
@@ -269,6 +281,11 @@ public class MainActivity extends AppCompatActivity
             }
         }
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 
     @Override
