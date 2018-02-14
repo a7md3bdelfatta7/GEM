@@ -116,21 +116,27 @@ public class RegisterationActivity extends AppCompatActivity {
 
                 UserContract user = new UserContract(getApplicationContext());
 
-
-                if (!user.isUserNameExist(userName.getText().toString())) {
-                    long result = user.addNewUser(userName.getText().toString(), password.getText().toString(), name.getText().toString(),
-                            birthDate, nationality.getText().toString());
-                    if (result > 0) {
-                        if (user.login(userName.getText().toString(), password.getText().toString())) {
-                            Intent intent = new Intent(RegisterationActivity.this, MainActivity.class);
-                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                            startActivity(intent);
-                            ActivityCompat.finishAffinity(RegisterationActivity.this);
-                        }
-                    }
-                } else {
+                if(name.getText().toString().equals("") || userName.getText().toString().equals("") || password.getText().toString().equals("") ||
+                        nationality.getText().toString().equals("")){
                     TextView resultMessage = (TextView) findViewById(R.id.resultMessage);
-                    resultMessage.setText("UserName is exist! try another one");
+                    resultMessage.setText(getString(R.string.registration_message));
+                }else {
+
+                    if (!user.isUserNameExist(userName.getText().toString())) {
+                        long result = user.addNewUser(userName.getText().toString(), password.getText().toString(), name.getText().toString(),
+                                birthDate, nationality.getText().toString());
+                        if (result > 0) {
+                            if (user.login(userName.getText().toString(), password.getText().toString())) {
+                                Intent intent = new Intent(RegisterationActivity.this, MainActivity.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                startActivity(intent);
+                                ActivityCompat.finishAffinity(RegisterationActivity.this);
+                            }
+                        }
+                    } else {
+                        TextView resultMessage = (TextView) findViewById(R.id.resultMessage);
+                        resultMessage.setText(getString(R.string.username_exist));
+                    }
                 }
 
 

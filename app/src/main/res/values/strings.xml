@@ -498,4 +498,8 @@
     <string name="tour_guide_title">Tour Guide</string>
     <string name="add_users">Add</string>
 
+
+    <string name="registration_message">All fields are required! \n Please enter all fields and try again</string>
+    <string name="username_exist">UserName is exist! try another one</string>
+
 </resources>
