@@ -153,17 +153,17 @@ public class GroupTourActivity extends AppCompatActivity {
                             finish();
                         }
                     }else{
-                        Toast.makeText(this,tourName.getText().toString()+" Already Exist.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this,tourName.getText().toString()+getString(R.string.artifact_already_added), Toast.LENGTH_SHORT).show();
                     }
                 }else{
-                    Toast.makeText(this, "Please Add Artifacts to Tour", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, getString(R.string.add_artifact_tour_message), Toast.LENGTH_SHORT).show();
                 }
             }else{
-                Toast.makeText(this, "Please Select Build Tour Based On", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,getString(R.string.build_tour_criteria_message), Toast.LENGTH_SHORT).show();
             }
 
         }else{
-            Toast.makeText(this, "Please Enter Tour Name!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.enter_tour_name_message), Toast.LENGTH_SHORT).show();
         }
 
     }

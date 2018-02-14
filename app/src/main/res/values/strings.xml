@@ -501,5 +501,13 @@
 
     <string name="registration_message">All fields are required! \n Please enter all fields and try again</string>
     <string name="username_exist">UserName is exist! try another one</string>
+    <string name="artifact_already_added">Aready Added!</string>
+    <string name="add_artifact_tour_message">Please Add Artifacts to Tour</string>
+    <string name="build_tour_criteria_message">Please Select Build Tour Based On</string>
+    <string name="enter_tour_name_message">Please Enter Tour Name!</string>
+
+
+
+
 
 </resources>
