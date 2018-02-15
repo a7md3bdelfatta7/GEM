@@ -207,4 +207,9 @@
     <string name="tour_guide_title">Tour Guide</string>
     <string name="add_users">Add</string>
 
+    <string-array name="currency_array">
+        <item>جنيه</item>
+        <item>دولار</item>
+    </string-array>
+
 </resources>

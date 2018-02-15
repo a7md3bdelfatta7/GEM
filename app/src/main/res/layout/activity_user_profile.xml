@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context="brainwaves.gem.UserProfile">
 
-    <include layout="@layout/nav_header_main"/>
+    <include android:id="@+id/profileHeader" layout="@layout/nav_header_main"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,6 +15,7 @@
         android:orientation="vertical"
         tools:context="brainwaves.gem.LoginActivity"
         android:fillViewport="true"
+
         >
 
         <LinearLayout
@@ -27,17 +28,19 @@
             android:paddingRight="10dp"
             android:paddingTop="@dimen/activity_vertical_margin"
             android:orientation="vertical"
+            android:layout_margin="5dp"
             >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
                 >
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1.5"
+                    android:layout_weight="2"
                     android:orientation="vertical"
                     >
                     <TextView
@@ -55,11 +58,14 @@
                     android:layout_weight="1"
                     android:orientation="vertical"
                     >
+
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textPersonName"
-                        android:ems="10"
+                        android:textSize="15sp"
+                        android:padding="3dp"
+                        android:text="Ahmed Abdelfattah"
                         android:id="@+id/name_edittext"
                         android:background="@drawable/edittext_red_bg"
                         android:textColor="@android:color/black"
@@ -73,16 +79,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
 
                 >
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1.5"
+                    android:layout_weight="2"
                     android:orientation="vertical"
                     >
+
                     <TextView
                         android:text="@string/birthday"
                         android:layout_width="wrap_content"
@@ -116,10 +123,9 @@
                                 android:layout_height="wrap_content"
                                 android:paddingTop="5dip"
                                 android:paddingBottom="5dip"
-                                android:backgroundTint="@android:color/black"
+                                android:backgroundTint="@color/defaultColor"
                                 android:dropDownWidth="50dp"
                                 android:spinnerMode="dropdown"
-                                android:popupBackground="@color/defaultColor"
                                 android:textAlignment="center"
 
                                 />
@@ -137,10 +143,9 @@
                                 android:layout_height="wrap_content"
                                 android:paddingTop="5dip"
                                 android:paddingBottom="5dip"
-                                android:backgroundTint="@android:color/black"
+                                android:backgroundTint="@color/defaultColor"
                                 android:dropDownWidth="50dp"
                                 android:spinnerMode="dropdown"
-                                android:popupBackground="@color/defaultColor"
                                 android:textAlignment="center"
 
 
@@ -159,10 +164,9 @@
                                 android:layout_height="wrap_content"
                                 android:paddingTop="5dip"
                                 android:paddingBottom="5dip"
-                                android:backgroundTint="@android:color/black"
+                                android:backgroundTint="@color/defaultColor"
                                 android:dropDownWidth="70dp"
                                 android:spinnerMode="dropdown"
-                                android:popupBackground="@color/defaultColor"
                                 android:textAlignment="center"
 
                                 />
@@ -179,13 +183,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
 
                 >
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1.5"
+                    android:layout_weight="2"
                     android:orientation="vertical"
                     >
                     <TextView
@@ -203,11 +208,13 @@
                     android:layout_weight="1"
                     android:orientation="vertical"
                     >
+
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textPersonName"
-                        android:ems="10"
+                        android:textSize="15sp"
+                        android:padding="3dp"
                         android:id="@+id/nationality_edittext"
                         android:background="@drawable/edittext_red_bg"
                         android:textColor="@android:color/black"
@@ -218,39 +225,103 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:text="@string/language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/edittext_red_bg"
+                    >
+
+                    <Spinner
+                        android:id="@+id/lang_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dip"
+                        android:paddingBottom="5dip"
+                        android:backgroundTint="@color/defaultColor"
+                        android:dropDownWidth="match_parent"
+                        android:spinnerMode="dropdown"
+                        />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/edittext_red_bg">
-                <Spinner
-                    android:id="@+id/lang_spinner"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+
+                >
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingTop="5dip"
-                    android:paddingBottom="5dip"
-                    android:backgroundTint="@color/defaultColor"
-                    android:dropDownWidth="match_parent"
-                    android:spinnerMode="dropdown"
-                    />
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:text="@string/currency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/edittext_red_bg"
+                    >
+
+                    <Spinner
+                        android:id="@+id/currency_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dip"
+                        android:paddingBottom="5dip"
+                        android:backgroundTint="@color/defaultColor"
+                        android:dropDownWidth="match_parent"
+                        android:spinnerMode="dropdown"
+                        />
+                </LinearLayout>
+
+
+
             </LinearLayout>
 
 
-
-
-            <Button
-                android:text="@string/go"
-                android:layout_width="60dp"
-                android:maxWidth="10dp"
-                android:layout_height="30dp"
-                android:id="@+id/signup_button"
-                android:background="@color/defaultColor"
-                android:textColor="@android:color/white"
-                android:textSize="18sp"
-                android:letterSpacing="0.1"
-                android:layout_gravity="end"
-                android:layout_marginTop="5dp"
-                />
 
             <TextView
                 android:layout_width="match_parent"
@@ -259,6 +330,21 @@
                 android:layout_marginTop="15dp"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
+                android:visibility="gone"
+                />
+
+
+            <Button
+                android:text="@string/save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/save_profile_btn"
+                android:background="@color/defaultColor"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:letterSpacing="0.1"
+                android:layout_gravity="end"
+                android:layout_marginTop="5dp"
                 />
 
         </LinearLayout>

@@ -105,6 +105,23 @@ public class UserContract {
         return false;
     }
 
+
+    public int editUser(){
+     //   saveSharedPreferences();
+        ContentValues cv = new ContentValues();
+        cv.put(UserEntry.COLUMN_Full_NAME, fullName);
+        cv.put(UserEntry.COLUMN_BIRTH_DAY, birthDate);
+        cv.put(UserEntry.COLUMN_NATIONALITY, nationality);
+
+        String whereClause = ""+UserEntry._ID+" = ?";
+        String[] whereArgs = new String[] {
+                userID
+        };
+
+        return mDb.update(UserEntry.TABLE_NAME,cv,whereClause,whereArgs);
+
+    }
+
     public void saveSharedPreferences(){
         SharedPreferences sharedPref = context.getSharedPreferences(context.getResources().
                 getString(R.string.gem_pref_key),Context.MODE_PRIVATE);
