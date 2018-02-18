@@ -113,7 +113,7 @@ public class UserProfile extends AppCompatActivity implements AdapterView.OnItem
 
     void initSpinner(){
 
-        String[] date_tokens=UserContract.birthDate.split("-");
+        String[] date_tokens=UserContract.birthDate.split("/");
 
         ArrayList<String> years = new ArrayList<String>();
         int thisYear = Calendar.getInstance().get(Calendar.YEAR);

@@ -111,8 +111,8 @@ public class RegisterationActivity extends AppCompatActivity {
                 EditText name = (EditText) findViewById(R.id.name_edittext);
                 EditText nationality = (EditText) findViewById(R.id.nationality_edittext);
                 String birthDate = daySpinner.getSelectedItem().toString();
-                birthDate += "-" + monthSpinner.getSelectedItem().toString();
-                birthDate += "-" + yearSpinner.getSelectedItem().toString();
+                birthDate += "/" + monthSpinner.getSelectedItem().toString();
+                birthDate += "/" + yearSpinner.getSelectedItem().toString();
 
                 UserContract user = new UserContract(getApplicationContext());
 

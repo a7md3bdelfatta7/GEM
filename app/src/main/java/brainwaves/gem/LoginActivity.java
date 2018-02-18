@@ -138,6 +138,7 @@ public class LoginActivity extends AppCompatActivity {
                                     if (!user.isUserNameExist(object.getString("name"))) {
                                         long result = user.addNewUser(object.getString("email"), "asdasdasdsad", object.getString("name"),
                                                 object.getString("birthday"), "Egyptian");
+
                                     }
 
                                     if (user.login(object.getString("email") , "asdasdasdsad")) {
