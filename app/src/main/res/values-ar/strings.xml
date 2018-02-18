@@ -208,8 +208,9 @@
     <string name="add_users">Add</string>
 
     <string-array name="currency_array">
-        <item>جنيه</item>
         <item>دولار</item>
+        <item>جنيه</item>
+        <item>يورو</item>
     </string-array>
 
 </resources>

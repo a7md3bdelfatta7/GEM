@@ -31,7 +31,6 @@ public class UserProfile extends AppCompatActivity implements AdapterView.OnItem
     Spinner yearSpinner;
     Spinner monthSpinner;
     Spinner daySpinner;
-
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,8 +46,9 @@ public class UserProfile extends AppCompatActivity implements AdapterView.OnItem
         EditText nationality=(EditText)findViewById(R.id.nationality_edittext);
         nationality.setText(UserContract.nationality);
 
+        String x=UserContract.currency_index;
+        initDateSpinner();
 
-        initSpinner();
 
         Spinner spinner = (Spinner) findViewById(R.id.lang_spinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
@@ -60,7 +60,7 @@ public class UserProfile extends AppCompatActivity implements AdapterView.OnItem
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
 
-        Spinner currencySpinner = (Spinner) findViewById(R.id.currency_spinner);
+        final Spinner currencySpinner = (Spinner) findViewById(R.id.currency_spinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> currencyAdapter = ArrayAdapter.createFromResource(this,
                 R.array.currency_array, android.R.layout.simple_spinner_item);
@@ -68,6 +68,7 @@ public class UserProfile extends AppCompatActivity implements AdapterView.OnItem
         currencyAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         currencySpinner.setAdapter(currencyAdapter);
+        currencySpinner.setSelection(Integer.parseInt(UserContract.currency_index));
 
         View profileHeader=(View)findViewById(R.id.profileHeader);
         TextView fullName=(TextView)profileHeader.findViewById(R.id.full_name);
@@ -82,8 +83,8 @@ public class UserProfile extends AppCompatActivity implements AdapterView.OnItem
                 EditText name = (EditText) findViewById(R.id.name_edittext);
                 EditText nationality = (EditText) findViewById(R.id.nationality_edittext);
                 String birthDate = daySpinner.getSelectedItem().toString();
-                birthDate += "-" + monthSpinner.getSelectedItem().toString();
-                birthDate += "-" + yearSpinner.getSelectedItem().toString();
+                birthDate += "/" + monthSpinner.getSelectedItem().toString();
+                birthDate += "/" + yearSpinner.getSelectedItem().toString();
 
                 UserContract user = new UserContract(getApplicationContext());
 
@@ -96,14 +97,13 @@ public class UserProfile extends AppCompatActivity implements AdapterView.OnItem
                         UserContract.fullName=name.getText().toString();
                         UserContract.nationality=nationality.getText().toString();
                         UserContract.birthDate=birthDate;
-
+                        UserContract.currency_index=String.valueOf(currencySpinner.getSelectedItemId());
                         int result = user.editUser();
                         if (result>0) {
                             Intent intent = new Intent(UserProfile.this,MainActivity.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             startActivity(intent);
                         }
-
                 }
             }
         });
@@ -111,7 +111,7 @@ public class UserProfile extends AppCompatActivity implements AdapterView.OnItem
     }
 
 
-    void initSpinner(){
+    void initDateSpinner(){
 
         String[] date_tokens=UserContract.birthDate.split("/");
 

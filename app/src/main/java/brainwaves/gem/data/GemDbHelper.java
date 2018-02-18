@@ -33,7 +33,8 @@ public class GemDbHelper extends SQLiteOpenHelper {
                 UserEntry.COLUMN_PASSWORD + " TEXT NOT NULL, " +
                 UserEntry.COLUMN_Full_NAME + " TEXT NOT NULL, " +
                 UserEntry.COLUMN_BIRTH_DAY + " TEXT NOT NULL, " +
-                UserEntry.COLUMN_NATIONALITY + " TEXT NOT NULL" +
+                 UserEntry.COLUMN_NATIONALITY + " TEXT NOT NULL," +
+                 UserEntry.COLUMN_CURRENCY + " TEXT NOT NULL" +
 
                 "); ";
 

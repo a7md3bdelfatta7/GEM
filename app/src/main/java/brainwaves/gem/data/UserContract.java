@@ -22,6 +22,8 @@ public class UserContract {
     public static String fullName="";
     public static String birthDate="";
     public static String nationality="";
+    public static String currency_index ="";
+
     Context context;
     public UserContract(Context context){
         this.context=context;
@@ -36,7 +38,7 @@ public class UserContract {
         public static final String COLUMN_Full_NAME = "fullName";
         public static final String COLUMN_BIRTH_DAY = "birthDay";
         public static final String COLUMN_NATIONALITY = "nationality";
-
+        public static final String COLUMN_CURRENCY = "currency_index";
     }
 
     public boolean login(String userName, String password){
@@ -63,6 +65,7 @@ public class UserContract {
             fullName=cursor.getString(cursor.getColumnIndex(UserEntry.COLUMN_Full_NAME));
             birthDate=cursor.getString(cursor.getColumnIndex(UserEntry.COLUMN_BIRTH_DAY));
             nationality=cursor.getString(cursor.getColumnIndex(UserEntry.COLUMN_NATIONALITY));
+            currency_index =cursor.getString(cursor.getColumnIndex(UserEntry.COLUMN_CURRENCY));
             saveSharedPreferences();
             return true;
         }
@@ -76,6 +79,7 @@ public class UserContract {
         cv.put(UserEntry.COLUMN_Full_NAME, fullName);
         cv.put(UserEntry.COLUMN_BIRTH_DAY, birthDate);
         cv.put(UserEntry.COLUMN_NATIONALITY, nationality);
+        cv.put(UserEntry.COLUMN_CURRENCY,context.getResources().getString(R.string.default_currency_index));
 
         return mDb.insert(UserEntry.TABLE_NAME, null, cv);
 
@@ -112,6 +116,7 @@ public class UserContract {
         cv.put(UserEntry.COLUMN_Full_NAME, fullName);
         cv.put(UserEntry.COLUMN_BIRTH_DAY, birthDate);
         cv.put(UserEntry.COLUMN_NATIONALITY, nationality);
+        cv.put(UserEntry.COLUMN_CURRENCY, currency_index);
 
         String whereClause = ""+UserEntry._ID+" = ?";
         String[] whereArgs = new String[] {
@@ -127,6 +132,7 @@ public class UserContract {
                 getString(R.string.gem_pref_key),Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putBoolean(context.getResources().getString(R.string.logged_in_key),true);
+        editor.putString(context.getResources().getString(R.string.currency_index_key), currency_index);
         editor.putString(context.getResources().getString(R.string.user_name_key),userName);
         editor.putString(context.getResources().getString(R.string.user_id_key),userID);
         editor.putString(context.getResources().getString(R.string.full_name_key),fullName);
@@ -143,7 +149,8 @@ public class UserContract {
         fullName=sharedPref.getString(context.getResources().getString(R.string.full_name_key),fullName);
         birthDate=sharedPref.getString(context.getResources().getString(R.string.birth_date_key),birthDate);
         nationality=sharedPref.getString(context.getResources().getString(R.string.nationality_key),nationality);
-
+        currency_index =sharedPref.getString(context.getResources().getString(R.string.currency_index_key),
+                context.getResources().getString(R.string.default_currency_index));
     }
 
     public void deleteSharedPreference(){
