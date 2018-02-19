@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">GEM</string>
 
@@ -6,41 +5,333 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <!-- Visit activity -->
+    <!-- Main Hall activity -->
     <string name="main_hall">Main Hall\nopen today untill 6:00PM</string>
-    <string name="main_hall_i">MAIN HALL</string>
+    <string name="main_hall_title">MAIN HALL</string>
+    <string name="main_hall_opened">Open seven days</string>
+    <string name="main_hall_openedTime">
+        <item>Sunday - Thursday : 10:00AM - 6:00PM</item>
+        <item>\nFirday and Saturday: 10:00AM - 6:00PM</item>
+    </string>
+    <string name="main_hall_vacations">
+        <item>Closed Prophet Mohammed\'s Birthday</item>
+        <item>\nThursday, November 30,2017</item>
+    </string>
+    <string name="main_hall_location">
+        <item>Alexandria Desert Rd, Kafr Nassar</item>
+        <item>\nAl Haram, Giza Governante</item>
+        <item>\n+202 3377 68 96</item>
+    </string>
+    <!-- Main 2 activity -->
     <string name="second_hall">Main 2\nopen today untill 6:00PM</string>
+    <string name="second_hall_title">MAIN HALL</string>
+    <string name="second_hall_opened">Open seven days</string>
+    <string name="second_hall_openedTime">
+        <item>Sunday - Thursday : 10:00AM - 6:00PM</item>
+        <item>\nFirday and Saturday: 10:00AM - 6:00PM</item>
+    </string>
+    <string name="second_hall_vacations">
+        <item>Closed Prophet Mohammed\'s Birthday</item>
+        <item>\nThursday, November 30,2017</item>
+    </string>
+    <string name="second_hall_location">
+        <item>Alexandria Desert Rd, Kafr Nassar</item>
+        <item>\nAl Haram, Giza Governante</item>
+        <item>\n+202 3377 68 96</item>
+    </string>
+    <!-- Main 3 activity -->
     <string name="third_hall">Main 3\nopen today untill 6:00PM</string>
+    <string name="third_hall_title">MAIN HALL</string>
+    <string name="third_hall_opened">Open seven days</string>
+    <string name="third_hall_openedTime">
+        <item>Sunday - Thursday : 10:00AM - 6:00PM</item>
+        <item>\nFirday and Saturday: 10:00AM - 6:00PM</item>
+    </string>
+    <string name="third_hall_vacations">
+        <item>Closed Prophet Mohammed\'s Birthday</item>
+        <item>\nThursday, November 30,2017</item>
+    </string>
+    <string name="third_hall_location">
+        <item>Alexandria Desert Rd, Kafr Nassar</item>
+        <item>\nAl Haram, Giza Governante</item>
+        <item>\n+202 3377 68 96</item>
+    </string>
+    <!-- Main 4 activity -->
     <string name="fourth_hall">Main 4\nopen today untill 6:00PM</string>
+    <string name="fourth_hall_title">MAIN HALL</string>
+    <string name="fourth_hall_opened">Open seven days</string>
+    <string name="fourth_hall_openedTime">
+        <item>Sunday - Thursday : 10:00AM - 6:00PM</item>
+        <item>\nFirday and Saturday: 10:00AM - 6:00PM</item>
+    </string>
+    <string name="fourth_hall_vacations">
+        <item>Closed Prophet Mohammed\'s Birthday</item>
+        <item>\nThursday, November 30,2017</item>
+    </string>
+    <string name="fourth_hall_location">
+        <item>Alexandria Desert Rd, Kafr Nassar</item>
+        <item>\nAl Haram, Giza Governante</item>
+        <item>\n+202 3377 68 96</item>
+    </string>
+
+    <!-- Highlight activity -->
     <string name="highlights_must_see">The Must-Sees</string>
     <string name="highlights_must_see_items">Browse few of the GEM\'s most\ncompelling works\n</string>
-    <string name="staff_art_of_statue">Art of statue</string>
-    <string name="staff_art_of_statue_items">Browse our selections of the\nmost beatiful status\n</string>
-    <string name="staff_favorite_selection">\nFavorite Selection</string>
-    <string name="staff_favorite_selection_items">You may want to check some\nof the favories\n</string>
     <string name="highlights_family_favorites">\nFamily Favorites</string>
     <string name="highlights_family_favorites_items">You may want to check some\nof the most family vaforites\n</string>
-    <string name="collection_str">Collections/</string>
-    <string name="itemsNumber">50,000 record</string>
-    <string name="filter_button">Filter</string>
-    <string name="collection_kings">KINGS COLLECTIONS \n</string>
-    <string name="collection_status">\nSTATUES COLLECTIONS \n</string>
+
+    <!-- Artifacts details activity -->
+    <!-- Artifact 1 details activity -->
+    <string name="artifact_title_1">قناع توت عنخ أمون</string>
+    <string name="artifact_info_1">This mask of Tutankhamun is an example of the high est artistic and technical achievements of the an-cient Egyptians in the New Kingdom.
+        \nCovering the head of the wrapped mummy in its coffin and activated by a magical spell, no.151b from the Book of the Dead, the mask ensured more pro-tection for the king\'s body.
+        \nThe exact portrayal of the king\'s facial features achieved here made it possible for his soul to recog nize him and return to his mummified body, thus en uring his resurrection.
+        \nhe head is covered by the royal headdress and the forehead bears the emblems of kingship and protec tion: the vulture and uraeus, or cobra.
+        \nThe gold sheets used in this wonderful mask are joinec together by heating and hammering. The eyes are of obsidian and quartz and the eyebrows and eyelids are inlaid with lapis lazuli. The broad inlaid collar of semiprecious stones and colored glass ends in falcon heads.
+        \nDimensions: Height 54 cm Width 39.3 cm</string>
+
+    <!-- Artifact 2 details activity -->
+    <string name="artifact_title_2">Sphinx of Amenhotep the Second</string>
+    <string name="artifact_info_2">A sphinx has the body and strength of a lion and the head or face of a man, symbolizing wisdom and intelligence.
+        \nThe ancient Egyptians sculpted different kinds of sphinxes with a human head, a ram head, or a human face with the mane of a lion. Sphinxes represent various deities, especially Amun-Re, identified with the kings who reigned when the sphinxes were made. 
+        \nThe human heads or faces usually have the facial features of these kings. This sphinx portrays King Amenhotep the Second.
+    </string>
+    <!-- Artifact 3 details activity -->
+    <string name="artifact_title_3">أنوبيس حاملا قرص القمر</string>
+    <string name="artifact_info_3">كان أنوبيس، ابن آوى الأسود، الحيوان الذي جسد المعبود الذي افترض أنه يحمي الجبانة , وعلى هذا أصبح المعبود الراعي للتحنيط. وكان أنوبيس يصور في المشاهد الجنائزية وهو يرشد المتوفى إلى أوزوريس في ساحة العدالة. وكان المحنطون للجثث يرتدون أقنعة بشكل رأس ابن آوى .
+        \nولقد صور أنوبيس في أسطورة الولادة الإلهية للملكة حتشبسوت والملك أمنحوتب الثالث، وهو يدحرج قرص القمر ويتمنى للطفلين الملكيين طول العمر. في عصرنا الحالى، تعقد الحفلات في اليوم السابع للولادة؛ حيث يوضع المولود في غربال ويهز ويطلب منه أن "يطيع أمه ولا يطيع أباه "
+        \nولقد صور المعبود الذي برأس ابن آوى، على قطعة الكارتوناج المعروضة، وقد أتى حاملا قرص القمر؛ متمنيا للمتوفى طول البقاء في الحياة الآخرة. وهو يرتدي صدرية ذهبية، ونقبة قصيرة بذيل طويل يتدلى من الأمام، وزوجا من الصنادل. وتتدلى قطعة قماش بيضاء عريضة من الخلف، ملامسة للقدمين
+        \nالأبعاد:  العرض ١٣.٥ سم  الارتفاع ٣٣.٥ سم
+    </string>
+
+    <!-- Artifact 4 details activity -->
+    <string name="artifact_title_4">اوشابتي للملك توت عنخ آمون</string>
+    <string name="artifact_info_4">كانت تماثيل الأوشابتي تصنع لتقوم بإنجاز المهام بالنيابة عن المتوفى فى العالم الآخر. وكانت عادة من القاشاني أو الخشب أو الفخار.
+        \nوتقسم وفق واجباتها وحساب التقويم المصري كما يلي: ثلاثمائة وخمسة وستون عاملا بعدد أيام السنة المصرية القديمة، بحيث يعمل كل واحد منهم لمدة يوم واحد في السنة، وستة وثلاثون رئيسا يعمل كل منهم رئيسا عشرة أيام، أو على عشرة تماثيل، ومع ذلك فقد زيد في قبر توت عنخ آمون اثنا عشر رئيس عمال إضافي لكل شهر واحد، بمجموع أربعمائة وثلاثة عشر، وكانت تلك التماثيل الصغيرة من مواد شتى وأحجام مختلفة.
+        \nوهذا الشوابتي من الخشب المذهب، انما يمثل الملك الصبي مختالا في تاج الخبرش الخاص بالاحتفالات والمواكب، والمزين بالكوبرا الملكية ، ويتحلى بقلادة عريضة قطعت من صفائح الذهب، ويمسك صولجاني أوزوريس.
+    </string>
+    <!-- Artifact 5 details activity -->
+    <string name="artifact_title_5">الإله التمساح سوبك</string>
+    <string name="artifact_info_5">كان نهر النيل، مع قنواته الفرعية، طريق النقل الرئيسي في مصر القديمة؛ على الرغم من خطورة الملاحة به، بسبب التماسيح وأفراس النهر. لذلك أراد المصريون إبعاد خطر التماسيح؛ بأن شيدوا المعابد لديانة الإله التمساح "سوبك" في مناطق إسنا وكوم امبو والفيوم، وغير ذلك من المناطق. وكانت توجد بكل معبد بحيرة أو غرف جوفية؛ حيث كان يحتفظ بتمساح حي، لكي يتلقى القرابين والصلوات.
+        \nوارتبط سوبك بإله الشمس رع. وجمعت تعاويذ في كتاب الموتى من أجل المتوفى، تمكنه من "طرد التمساح الذي يأتي لكي يجرده من السحر الذي يتحصن به في عالم الموتى" -(التعويذة رقم 31). .
+        \nوقد أقام أحد المخلصين لعبادة سوبك هذا التمثال المعروض بأحد معابد هذا الإله. وكان من اليسير التعبد ووضع القرابين أمام التمثال. وقد قطع التمثال، مع القاعدة، من كتلة واحدة. والفم مغلق، ونحتت تفاصيل البدن في نقش بارز؛ متقاطع ومخطط. ومع ذلك، لا ترى سوى تفاصيل قليلة على التمثال.
+        \nالأبعاد: الطول ٩ سم  الارتفاع ٦.٥ سم
+    </string>
+    <!-- Artifact 6 details activity -->
+    <string name="artifact_title_6">الإلهة إيزيس ترضع وليدها حورس</string>
+    <string name="artifact_info_6">كانت إيزيس زوجة للإله أوزوريس، وأم الإله الصقر حورس. وكان الثالوث المقدس أحد أهم وأشهر مجاميع الآلهة في مصر القديمة. وكانت إيزيس كثيرا ما تمثل وهي ترضع وليدها حورس، فصارت رمزا للأمومة والحماية. وقد كانت إيزيس أيضا إلهة للسحر والجمال وحمت الناس من الشر ومن السحر.
+        \nوتحمل إيزيس في هذا التمثال الطفل حورس، وترضعه بطريقة رمزية. وهي ترتبط في هذه الهيئة بالبقرة حتحور، المعبودة الأم. وهناك تشابه بين تماثيل إيزيس التي ترضع وليدها حورس، وما ظهر فيما بعد من الصور المسيحية للسيدة العذراء والطفل يسوع. وفى التمثال يظهر على رأس الإلهة قرنا البقرة حتحور وبينهما قرص الشمس.
+        \nالأبعاد:  الارتفاع ٣٢ سم
+    </string>
+    <!-- Artifact 7 details activity -->
+    <string name="artifact_title_7">التابوت الخارجي للملكة مريت-أمون</string>
+    <string name="artifact_info_7">يعد هذا التابوت الخارجي الخاص بالملكة مريت-امون زوجة أمنحتب الأول واحداً من أجمل التوابيت التي صنعت في مصر. وقد نقش عليه شكلاً للملكة واضعة على رأسها شعراً مستعاراً طويلاً ينتهي بخصلتين تنسدلان حتى الصدر الذي تتقاطع عليه ذراعاها.
+        \nوتمسك الملكة في كل يد صولجاناً من اللوتس رمزاً للبعث. وتتحلى الملكة بقلادة ذات خطوط متوازية تظهر حول الرقبة بين خصلتي الشعر المنسدلتين. اما باقي التابوت فهو مزين بأشكال ريش متوازية.
+        \nوقد نحتت هذه الأشكال في الخشب مباشرة وليس على طبقة الجص التي تغطي التابوت.
+        \nوقد نحتت هذه الأشكال في الخشب مباشرة وليس على طبقة الجص التي تغطي التابوت.
+        \nالأبعاد:  الطول ٣.١ سم  العرض ٨٧ سم
+
+    </string>
+    <!-- Artifact 8 details activity -->
+    <string name="artifact_title_8">الجزء العلوي من تمثال لأمنمحات الثالث في زي الكاهن</string>
+    <string name="artifact_info_8">الجزء الأعلى من تمثال يفوق الحجم الطبيعي، من الجرانيت الرمادي، للملك أمنمحات الثالث، وهو يمثل الملك، كاهنا أكبر متشحا بجلد فهد.
+        \nوقد نسبت تلك القطعة على امتداد أمد بعيد إلى ملك من عصر الهكسوس، من الأسرة السابعة عشرة، غير أن دراسة قسمات الوجه قد حسمت نسبتها إلى الملك أمنمحات الثالث، من الأسرة الثانية عشرة.
+        \nفعظام الخدين المرتفعة، والوجه المجعد، والفم المزموم، كلها سمات أرجعت تاريخ التمثال إلى الأسرة الثانية عشرة، وليس السابعة عشرة.
+        \nوتعد دليلاً على أول تماثيل لملك حامل اللواء، الذي كثر نحتها في عصر الرعامسة.
+        \nالأبعاد:  الارتفاع ١٠٠ سم   العرض ٩٩ سم
+    </string>
+    <!-- Artifact 9 details activity -->
+    <string name="artifact_title_9">القناع الذهبى المغطى لمومياء الملك بسوسنيس الأول</string>
+    <string name="artifact_info_9">يظهر الملك بسوسنيس الأول على القناع الذهبي لابساً غطاء الرأس الملكي يعلوه الصل المقدس، كما يضع لحية مستعارة مضفرة.
+        \nيتكون القناع من قطعتين من الذهب المطروق، وقد قويتا ووصلتا معاً بخمسة مسامير ظاهرة من الخلف.
+        \nويرتدي الملك غطاء الرأس الملكي المعروف باسم النمس، والذي كان عادة من الكتان، يعلوه الصل المقدس لحماية الملك من خصومه وأعدائه في حياته وبعد وفاته.
+        \nويضع الملك لحية مستعارة مضفرة كرمز لنبله. كما يلبس القلادة الكبيرة المسماة بالأوسخ منقوش عليها زخارف نباتية. وقد استخدمت العجائن الزجاجية في تطعيم الجفون والحواجب والرباط الذي يثبت اللحية. أما العينان فهي من حجر أسود وأبيض.
+        \nالأبعاد:  الارتفاع ٤٥ سم   العرض ٣٨ سم
+    </string>
+    <!-- Artifact 10 details activity -->
+    <string name="artifact_title_10">الغطاء الذهبي لمومياء بسوسينيس</string>
+    <string name="artifact_info_10">صفيحة من الذهب كانت تغطي مومياء الملك بسوسينيس الأول الذي عاش خلال عصر الأسرة الحادية والعشرين. ولقد اكتشفت مقبرته في تانيس، وكانت تضم كنوزاً رائعة. .
+        \nولقد وضعت المومياء داخل ثلاثة توابيت لحمايتها؛ وصنعت أصغرها من الفضة وأوسطها من الجرانيت الأسود وأكبرها من الجرانيت الوردي.
+        \nوأخفى القناع الذهبي وجه المومياء، بينما غطي الجسد بهذه الصفيحة الذهبية التي زينت في وسطها بكبش مجنح يمسك بعلامات "شن" التي ترمز للأبدية.
+        \nوقد زخرف الجزء العلوي، الذي يقابل الصدر بيدين تمسكان رمز الإله أوزوريس، الصولجان والمذبة، ونقش باقي الغطاء بشكل يحاكي أربطة المومياء.
+    </string>
+    <!-- Artifact 11 details activity -->
+    <string name="artifact_title_11">الملكة حتشبسوت تقدم القرابين إلى أوزوريس</string>
+    <string name="artifact_info_11">لوحة رقيقة أراد الفنان أن يظهر بها مبلغ احترامه لجلالة الملكة، فرسمها في شكل ذكر راكع، يرتدي تاج احتفالات في شكل تاج خبرش. وهي تقدم جرتين من الخمر والماء البارد إلى الإله أوزوريس، إله العالم الآخر (غير مرسوم).
+        \nوترتدي الملكة طوق عنق ونقبة قصيرة ربطت بحزام. ويشير النص المنقوش إلى، ماعت كا رع، اسم العرش لحتشبسوت، حبيبة أوزوريس، وهي، تقدم الخمر والماء البارد. ورسمت اللوحة بألوان زاهية، ويظهر التخطيط الأولي باللون الأحمر؛ كما تظهر تصحيحات في النسب.
+        \nالأبعاد:  العرض ٨ سم  الارتفاع ١٥ سم
+    </string>
+    <!-- Artifact 12 details activity -->
+    <string name="artifact_title_12">بقايا تمثال لملك واقف</string>
+    <string name="artifact_info_12">يصور التمثال ملكاً يقف على قاعدة صغيرة. ويقدم رجله اليسرى للأمام طبقا للتقاليد المصرية القديمة. ويرتدى التاج الأبيض لمصر العليا والنقبة الملكية القصيرة "شنديت" وذراعه الأيسر الى جانبه، أما الذراع الأيمن فينثنى حاملا صولجان السلطة
+        \nوقد نجح النحات فى تجسيد ملامح الوجه واللحية المستعارة من هذا الحجر القاسى. وعلى الرغم من حالة التمثال المتدهورة الا أن الأسلوب الفني الذي نفذ به هذا التمثال يشير إلى إنه الملك "نفر - اف - رع" من الأسرة الخامسة.
+        \nالأبعاد:  الارتفاع ٢١ س
+    </string>
+    <!-- Artifact 13 details activity -->
+    <string name="artifact_title_13">تابوت إيزيس</string>
+    <string name="artifact_info_13">إيزيس هي ابنة للمدعو خنسو، وربما كانت زوجة ثانية لخع-بخنت.
+        \nصنع هذا التابوت على صورة إيزيس بوجهها الطويل، واضعة على رأسها شعراً مستعاراً مموجاً بشريط عريض مزين بزخارف نباتية. كما يزين صدرها قلادة عريضة بزخارف نباتية أيضاً. ويزين أذنها قرط مصنوع من العظم أو العاج، كما تضع إيزيس خواتم فى أصابعها وأساور في معصميها
+        \nوترتدي رداءاً طويلأ مصنوعاً من قطعة واحدة من الكتان الذي ينتهي بشراشيب. ويلتف هذا الرداء خول جذعها ويغطى كتفها وقد احكم التفافه بعقدة، وتمسك إيزيس بيدها فرع نبات، ربما كان له علاقة بالميلاد والبعث
+        \nويحيط بالتابوت نقوش هيروغليفية.
+        \nالأبعاد:  الطول ١٩٠ سم
+    </string>
+    <!-- Artifact 14 details activity -->
+    <string name="artifact_title_14">تابوت حجرى بغطاء يصور الموتى</string>
+    <string name="artifact_info_14">هذا التابوت على شكل مومياء، أما الغطاء فيصور الميت ومعه كل الملحقات التي يحتاجها، وكذلك الكفن.
+        \nكما يصور الميت مرتدياً شعراً مستعاراً طويلاً يصل إلى صدره وتبدو أذنيه واضحتين، ويرتدي أيضاً لحية مستعارة وقلادة عريضة مخططة. ويظهر تحت القلادة ربة بأجنحة وكذلك عيني "حورس" لحمايته.
+        \nأما اليدان فممدوتان على الجسم المغطى بأشرطة عليها كتابة هيروغليفية. وهذه الأشرطة تحمل الصيغة السحرية المنقولة من كتاب الموتى والتي تحمي الميت
+        \nويبدو "أنوبيس" رب التحنيط وأمامه المقبرة في منظرين متقابلين منقوشين أسفل الغطاء..
+        \nالأبعاد:  الارتفاع ٧٠ سم  الطول ٢٥٠ سم   العرض ٩٠ سم
+    </string>
+    <!-- Artifact 15 details activity -->
+    <string name="artifact_title_15">تابوت الملكة كاويت</string>
+    <string name="artifact_info_15">يعد تابوت الملكة كاويت، زوجة الملك منتوحتب الثانى، من أبرز التوابيت فى البلاط الطيبى، من حيث طريقة النحت الغائر
+        \nزينت الأسطح الخارجية لهذا التابوت من الحجر الجيري بمناظر الحياة اليومية مثل تزيين الملكة. كما أن هناك مناظر تصور القرابين والحياة الأخرى. .
+        \nوفي موقع رأس الملكة كاويت منظر لواجهة القصر الملكي على بابه صورة عيني الأوجات وذلك لعون كاويت على رؤية العالم الخارجي.
+        \nالأجساد الممشوقة وملامح الوجه الصارمة تعكس المثل الأعلى للجمال الأنثوى فى طيبة.
+        \nالأبعاد:  الارتفاع ١١٩ سم الطول ٢٦٢ سم   العرض ١١٩ سم
+    </string>
+    <!-- Artifact 16 details activity -->
+    <string name="artifact_title_16">تعويذة في شكل نسر مجنح</string>
+    <string name="artifact_info_16">تعويذة تصور النسرة "نخبت" ربة مصر العليا. التعويذة تأخذ شكل طوق "أوسخ" عريض و هي مصنوعة من الذهب المطروق مع ثقل للتوازن. عثر على التعويذة بين قطع عديدة من الحلي التي تخص الملك بسوسينيس الأول.
+        \nوقد صنعت التعويذة بغرض تزيين ثياب الملك؛ وذلك بإمرار سلك أو خيط خلال الحلقة الموجودة خلف التعويذة.
+        \nوقد نفذت تفاصيل الريش والأجنحة والمخالب بدقة عالية وإتقان تام. المخالب تقبض على حلقات "شن" التي ترمز إلى القوة الكونية.
+        \nالأبعاد:  الارتفاع ٣.٥ سم   العرض ٣.٨ سم
+    </string>
+    <!-- Artifact 17 details activity -->
+    <string name="artifact_title_17">تماثيل أبي الهول لأمنمحات الثالث</string>
+    <string name="artifact_info_17">عثر على سبعة تماثيل، على هيئة أبي الهول، بتانيس في شرق الدلتا؛ حيث يشار إليها باسم "تماثيل أبي الهول التانيسية". وتعكس هذه التماثيل القوة الخارقة للملك، وتؤكد على مظهره المخيف.
+        \nويميز الوجه الصارم للفرعون بروز عظام الوجه ونتوء الفم وعمق تجاعيد الوجه؛ وهي قسمات تعلن عن القوة. وقد حل في هذه التماثيل عرف أسد ضخم يحيط بوجه الفرعون، محل غطاء الرأس التقليدي "النمس"؛ لكي يسبغ عليه مزيدا من الجلال.
+        \nTوتستقر التماثيل على قاعدة صلبة مزينة بخراطيش لعدد من الملوك؛ مثل نحسي ملك الهكسوس، ورمسيس الثاني، ومرنبتاح، وبسوسنيس؛ الذين استولوا على هذه المجموعة من تماثيل أبي الهول عبر العصور، مشدوهين بجمالها. علماء المصريات ارتكبوا خطأ بتسميتها تماثيل "أبى الهول للهكسوس" بسبب الملامح الغريبة وأسماء المغتصبين التى تضمنت أيضاً الحكام الهكسوس.
+        \nالأبعاد:  الطول ٢٢٠ سم  الارتفاع ٧٥ سم
+    </string>
+    <!-- Artifact 18 details activity -->
+    <string name="artifact_title_18">تمثال "با" مروي لامرأة</string>
+    <string name="artifact_info_18">يصور تمثال البا هذا الروح على هيئة طائر برأس آدمية. ونرى هنا سيدة بجناحين طويلين وهي تقف على قاعدة مسطحة ثبتت في قاعدة أخرى أكبر منفذة بشكل بدائي.
+        \nوحددت ملامح وجهها بخطوط نقش غائر؛ تبين جفني العينين والشفتين الباسمتين الصغيرتين والأذنين الكبيرتين. وقد قطع ثقب مستدير في قمة رأسها؛ لكي يثبت به قرص الشمس.
+        \nوهناك ثلاثة خطوط قطعت رأسيا على كل خد من خديها؛ اشارة إلى العادة النوبية. والجزء العلوي من بدنها عار، بينما غطي الجزء السفلي بنقبة طويلة تظهر فقط مقدمة قدميها اللذين مثلا بعناية، مثلما مثل الصندل الذي ترتديه.
+        \nوصورت السيدة أيضا في التمثال بعقد حول عنقها وقد تدلى ذراعاها إلى جانبيها، وتمسك في يدها اليمنى شيئا أسطوانيا.
+        \nوترجع فكرة تمثيل الروح في هيئة طائر برأس بشري إلى أصل مصري قديم، ومع ذلك فإن وضع تمثال على هذا النحو أمام المقبرة كان شائعا في بلاد النوبة..
+        \nالأبعاد:  الارتفاع ٦٦ سم  الطول ٤٤ سم
+    </string>
+    <!-- Artifact 19 details activity -->
+    <string name="artifact_title_19">تمثال "إن-حرت-شو" على شكل مومياء</string>
+    <string name="artifact_info_19">يعتبر هذا التمثال المذهب أحد التماثيل العديدة للأرباب وجدت في مقبرة "توت عنخ آمون"، وهو تمثال للمعبود "إن-حرت-شو" على قاعدة مستطيلة.
+        \nويبدو على شكل مومياء يحيط بها عباءة، كما يضع على رأسة شعراً مستعاراً من ثلاثة أجزاء، مزيناً بأربع ريشات طويلة، ويديه معقودتان على صدره المزين بصدريه كبيرة، وقد تم تغشية الجسم بالذهب فيما عدا العينين والحاجبين ولحيته المستعارة.
+        \nالأبعاد:  الارتفاع ٧٤.٥ سم
+    </string>
+    <!-- Artifact 20 details activity -->
+    <string name="artifact_title_20">تمثال "خوفو-إيام" وزوجته</string>
+    <string name="artifact_info_20">يجلس "خوفو-إيام" وزوجته على مقعد لا ظهر له ويمسك "خوفو-إيام" شيئاً صغيراً في يده اليسرى ربما يكون منديلاً واليدين ممدوتين على ركبتيه كما أنه يرتدي شعراً مستعاراً قصيراً ونقبة أنيقة لها ثنيات.
+        \nوتجلس زوجته بجواره تضع ذراعها الأيمن على كتفة الأيمن وهو وضع تقليدي يظهر كثيرا في تماثيل مصر القديمة وهي تشير إلى قوة الترابط في الأسرة.
+        \nوترتدي زوجة "خوفو-إيام" شعراً مستعاراً متوسط الطول فوق شعرها الطبيعي الذي يبدو جزئياً أسفل ذلك الشعر المستعار.
+        \nالأبعاد:  الارتفاع ٤٥ سم   العرض ٢٧.٥ سم
+    </string>
+    <!-- Artifact 21 details activity -->
+    <string name="artifact_title_21">تمثال الرب أنوبيس مع أبنائه</string>
+    <string name="artifact_info_21">ابن آوي هو الحيوان المقدس للرب وبواووت وأنوبيس رب التحنيط. ويشير التمثال إلى هذا الحيوان المقدس مع أبنائه الأربعة، وهو تحفة فنية رائعة.
+        \nوتصور المجموعة على قاعدة مستطيلة حيث يرقد ابن آوي على جانبه، ويحتضن اثنان من إبنائه بين مخالبه، إحدهما يجلس بين المخالب والذيل والأخر يجلس قرب وجهه. ويشير التمثال الى الأبوة والأمومة المرتبطة بالميلاد.
+
+        \nالأبعاد:  الارتفاع ٥ سم  الطول ٨ سم
+    </string>
+    <!-- Artifact 22 details activity -->
+    <string name="artifact_title_22">تمثال الربة حتحور على هيئة بقرة</string>
+    <string name="artifact_info_22">هذا التمثال لحتحور ممثلا في شكل بقرة كبيرة حيث أن البقرة هي حيوانها المقدس وهو مهدى من الملك أمنحتب الثاني لأبيه تحتمس الثالث ولحتحور.
+        \nوتمثل البقرة هنا قادمة من الوديان مانحة الطعام للفرعون المتوفى، بين قرنيها الحية المقدسة "الكوبرا" وقرص الشمس وريشتين. ويظهر جسم البقرة وهو مغطى ببقع ملونة.
+        \nويبدو الملك تحتمس الثالث واقفاً أسفل رأس البقرة ومرسوماً مرة أخرى يرضع من ضرعها ليستمد الحياة.
+        \nالأبعاد:  الارتفاع ٢.٢ سم   الطول ٢.٣ سم
+    </string>
+    <!-- Artifact 23 details activity -->
+    <string name="artifact_title_23">تمثال الكوبرا</string>
+    <string name="artifact_info_23">ثبت هذا الصل أو الكوبرا الملكية الى قاعدة، وكما هى العادة فقد صورت برأس منتصبة متحفزة للرد بعنف على أى عدو للملك.
+        \nوبناء على مظهرها، التى زينت فيه رأسها بقرنى بقرة يحصران فيما بينهما قرص الشمس، فقد ارتبطت الكوبرا هنا برب الشمس رع، حيث تحوط قرصه بانحناءة جسمها.
+        \nوهى فى نفس الوقت تمثل عينه النارية التى تدمر ثعابين العالم الآخر المهاجمة التى يمكن أن تهدد رب الشمس إبان رحلته الليلية. ومن الملاحظ فى هذا التمثال روعة فى تشكيل الرأس والجسم.
+        \nالأبعاد: الطول ١٢١ سم
+    </string>
+    <!-- Artifact 24 details activity -->
+    <string name="artifact_title_24">تمثال الملك خفرع</string>
+    <string name="artifact_info_24">كان خفرع من أشهر ملوك الدولة القديمة. وقد عثر له على العديد من التماثيل المنحوتة في أحجار صلبة، الأمر الذي يعكس المهارة العجيبة التي تمتع بها الفنانون في ذلك العصر.
+        \nوكان الغرض من نحت هذه التماثيل هو أن تتلقى القرابين التي يقدمها كهنة عبادة الملك وموظفو البلاط لروحه. كما استخدمت هذه التماثيل خلال الطقوس الجنائزية مثل طقس التطهير وطقس فتح الفم، حيث كانت هذه الطقوس تنفذ بطريقة رمزية على التماثيل قبل وبعد الدفن.
+        \nوفي هذا التمثال مُثل الملك جالساً على كرسي العرش وقد نقشت أسماؤه داخل الخرطوش وواجهة القصر المعروفة باسم السرخ وذلك على جانبي ساقيه. ويلبس خفرع غطاء الرأس الملكي المسمى بالنمس والنقبة الملكية الشنديت.
+        \nالأبعاد:  الارتفاع ١٢٠ سم
+    </string>
+
+    <!-- Staffpicks-->
+    <string name="staff_art_of_statue">فن التماثيل</string>
+    <string name="staff_art_of_statue_items">تصفح اختياراتنا من \nالأثار الأكثر جمالا\n</string>
+    <string name="staff_favorite_selection">\nالقائمة المفضلة</string>
+    <string name="staff_favorite_selection_items">قد ترغب في التحقق من بعض \nالأشياء المفضلة\n</string>
+
+
+    <!--collection-->
+    <string name="collection_str">المجموعات /</string>
+    <string name="itemsNumber">50,000 قطعة</string>
+    <string name="filter_button">اختر المجموعة</string>
+    <string name="collection_kings">مجموعةالملوك  \n</string>
+    <string name="collection_status">\nمجموعة التماثيل \n</string>
+
+
     <string-array name="lang_array">
         <item>العربيه</item>
-        <item>English</item>
+        <item>ENGLISH</item>
     </string-array>
-    <string name="title_activity_visit">Visit</string>
-    <string name="title_activity_artifactsDetails">Details</string>
-    <string name="title_activity_collections">Collections</string>
-    <string name="title_activity_shop">Shop</string>
-    <string name="title_activity_clothes">Clothes</string>
-    <string name="title_activity_artifacts">Artifacts</string>
-    <string name="title_activity_books">Books</string>
-    <string name="title_activity_checkout">Checkout</string>
-    <string name="title_activity_quiz">Quiz</string>
-    <string name="title_activity_membership">Membership</string>
-    <string name="quiz_word">QUIZ NO.1</string>
-    <string name="quiz">How old was Tutankamun when died?</string>
-    <string name="membership_benefits">Membership Benefits</string>
+
+    <!--Pages name-->
+    <string name="title_activity_visit">الزيارات</string>
+    <string name="title_activity_artifactsDetails">التفاصيل</string>
+    <string name="title_activity_collections">المجموعات</string>
+    <string name="title_activity_shop">السوق</string>
+    <string name="title_activity_clothes">ملابس</string>
+    <string name="title_activity_artifacts">الأثار</string>
+    <string name="title_activity_books">كتب</string>
+    <string name="title_activity_checkout">الدفع</string>
+    <string name="title_activity_quiz">اختبار</string>
+    <string name="title_activity_membership">العضوية</string>
+
+
+    <!--shopping-->
+    <string name="shopping_Clothes">ملابس</string>
+    <string name="shopping_artifacts">الأثار</string>
+    <string name="shopping_Books">كتب</string>
+    <!--clothes-->
+    <string name="shopping_clothes_Men">رجالي</string>
+    <string name="shopping_clothes_Men_Item_Info">تي شيرت رجالي\nالسعر : $18</string>
+    <string name="shopping_clothes_Women">حريمي</string>
+    <string name="shopping_clothes_Women_Item_Info">تي شيرت حريمي\nالسعر : $18</string>
+    <string name="shopping_clothes_Kids">اطفال</string>
+    <string name="shopping_clothes_Kid_Item_Info">تي شيرت اطفال\nالسعر $18</string>
+    <string name="shopping_artifacts_title">الأثار</string>
+    <string name="shopping_artifacts_Item_Info">الأثار\nالسعر : $18</string>
+    <string name="shopping_details_title">تفاصيل</string>
+    <string name="shopping_details_orderBtn">اطلب</string>
+    <string name="shopping_details_price">السعر : $18</string>
+    <string name="shopping_details_info">تي شيرت هو نمط من قميص للجنسين النسيج اسمه على شكل T من الجسم والأكمام. وعادة ما يكون الأكمام قصيرة وخط العنق جولة، والمعروفة باسم الرقبة الطاقم،القمصان مصنوعة عموما من نسيج خفيف وغير مكلف وسهلة التنظيف.</string>
+
+
+
+    <!--shipping-->
+    <string name="shipping_total">المجموع</string>
+    <string name="shipping_subTotal">المجموع الفرعي</string>
+    <string name="shipping_price">$18.00</string>
+    <string name="shipping_Checkout">الدفع</string>
+    <string name="shipping_accepted">موافق:</string>
+
+
+    <!--Quiz-->
+    <string name="quiz_word">اختبار رقم 1</string>
+    <string name="quiz">كم كان عمر توت عنخ أمون عندما مات؟</string>
+    <string name="quiz_answer_i">16 سنة</string>
+    <string name="quiz_answer_ii">18 سنة</string>
+    <string name="quiz_answer_iii">19 سنة</string>
+
+    <!--membership-->
+    <string name="membership_benefits">مميزات الأعضاء</string>
+    <string name="Memebership_student">طالب</string>
+    <string name="Memebership_egyptian">مصري</string>
+    <string name="Memebership_foreign">غير مصري</string>
+
     <string name="membership_benefits_items"><itme>&#8226; Free express admission for you and children under 18.</itme>
         <itme>\n&#8226; Free admission for your guest(s) on every visit.</itme>
         <itme>\n&#8226; Early access to exhibitions and special viewing hours.</itme>
@@ -48,116 +339,117 @@
         <itme>\n&#8226; 10% off at the Dining room at GEM.</itme>
         <itme>\n&#8226; 10% off at GEM store.</itme>
     </string>
-    <string name="choose_category">Choose Category</string>
-    <string name="membership_count_word">Membership Count</string>
-    <string name="membership_count">$100 - $600</string>
-    <string name="membership_duration">Duration</string>
-    <string name="membership_duration_items_i">3 Months</string>
-    <string name="membership_duration_items_ii">6 Months</string>
-    <string name="membership_duration_items_iii">1 Year</string>
+    <string name="choose_category">اختر قائمة</string>
+    <string name="membership_duration">المدة</string>
+    <string name="membership_duration_items_i">3 اشهر</string>
+    <string name="membership_duration_items_ii">6 اشهر</string>
+    <string name="membership_duration_items_iii">1 سنة</string>
+
+
+
     <string name="related_Links">RELATED</string>
     <!-- login activity -->
     <string name="login">تسجيل الدخول</string>
-    <string name="username">اسم المستخدم</string>
-    <string name="Password">كلمه المرور </string>
-    <string name="forget_password">هل نسيت كلمه المرور</string>
-    <string name="enter">دخول</string>
+    <string name="username">اسم المستخدم </string>
+    <string name="Password">كلمة المرور  </string>
+    <string name="forget_password">نسيت كلمة المرور</string>
+    <string name="enter">أدخل</string>
 
     <!-- registration activity -->
-    <string name="signup">SIGN UP</string>
-    <string name="name">Name</string>
-    <string name="birthday">Birthday</string>
-    <string name="nationality">Nationlaity</string>
-    <string name="go">GO</string>
+    <string name="signup">مستخدم جديد</string>
+    <string name="name">الأسم</string>
+    <string name="birthday">تاريخ الميلاد</string>
+    <string name="nationality">الجنسية</string>
+    <string name="go">أدخل</string>
 
 
     <!-- today's event fragment -->
 
     <!-- event 1-->
-    <string name="event1_time">12:00PM</string>
-    <string name="event1_topic">الملك توت عنخ امون</string>
-    <string name="event1_note">حدث مجاني</string>
+    <string name="event1_time">1:00PM</string>
+    <string name="event1_topic">الملك توت عنخ أمون</string>
+    <string name="event1_note">الحدث مجاني</string>
 
     <!-- event 2-->
     <string name="event2_time">3:00PM</string>
-    <string name="event2_topic">Art and Decoration in Ancient Egypt</string>
-    <string name="event2_note">Paid Event</string>
+    <string name="event2_topic">الفن والديكور في مصر القديمة</string>
+    <string name="event2_note">حدث مدفوع</string>
 
     <!-- event 3-->
     <string name="event3_time">5:00PM</string>
-    <string name="event3_topic">3D Movie of Tutankamun</string>
-    <string name="event3_note">For Kids</string>
+    <string name="event3_topic">فيلم ثلاثي الأبعاد لتوت عنخ أمون</string>
+    <string name="event3_note">للأطفال</string>
 
     <!-- event 4-->
     <string name="event4_time">6:00PM</string>
-    <string name="event4_topic">Nefertiti</string>
-    <string name="event4_note">Guided Tour</string>
+    <string name="event4_topic">نفرتيتي</string>
+    <string name="event4_note">مرشد سياحي</string>
     `
     <!-- event 5-->
     <string name="event5_time">8:00PM</string>
-    <string name="event5_topic">Narmer</string>
-    <string name="event5_note">Guided Tour</string>
+    <string name="event5_topic">نارمر</string>
+    <string name="event5_note">مرشد سياحي</string>
 
     <!-- event 6-->
     <string name="event6_time">8:00PM</string>
     <string name="event6_topic">Hor-Aha</string>
-    <string name="event6_note">Guided Tour</string>
+    <string name="event6_note">مرشد سياحي</string>
 
 
     <!-- for member  fragment -->
 
     <!-- event 1-->
     <string name="member_event1_time">Nov 04</string>
-    <string name="member_event1_topic">Shopping Event</string>
-    <string name="member_event1_note">For Members Only</string>
+    <string name="member_event1_topic">مهرجان التسوق </string>
+    <string name="member_event1_note">للأعضاء فقط</string>
 
     <!-- event 2-->
     <string name="member_event2_time">Nov 06</string>
-    <string name="member_event2_topic">Private Guided Tour</string>
-    <string name="member_event2_note">For Members Only</string>
+    <string name="member_event2_topic">جولة خاصة</string>
+    <string name="member_event2_note">للأعضاء فقط</string>
 
 
     <!-- event 3-->
     <string name="member_event3_time">Nov 12</string>
-    <string name="member_event3_topic">Private Guided Tour</string>
-    <string name="member_event3_note">For Members Only</string>
+    <string name="member_event3_topic">جولة خاصة</string>
+    <string name="member_event3_note">للأعضاء فقط</string>
 
 
     <!-- featured events  fragment -->
 
     <!-- event 1-->
-    <string name="featured_event1_time">DEC 05</string>
-    <string name="featured_event1_topic">Ancient Egyptian Art</string>
-    <string name="featured_event1_note">Guided Tour</string>
+    <string name="featured_event1_time">ديسمبر 05</string>
+    <string name="featured_event1_topic">فن مصر الفرعونية</string>
+    <string name="featured_event1_note">مرشد سياحي</string>
 
 
     <!-- event 2-->
-    <string name="featured_event2_time">DEC 10</string>
-    <string name="featured_event2_topic">Music in Old Egypt</string>
-    <string name="featured_event2_note">Guided Tour</string>
+    <string name="featured_event2_time">ديسمبر 10</string>
+    <string name="featured_event2_topic">الموسيقى في مصر القديمة</string>
+    <string name="featured_event2_note">مرشد سياحي</string>
 
 
     <!-- event 3-->
-    <string name="featured_event3_time">DEC 15</string>
-    <string name="featured_event3_topic">King Khufu Tour</string>
-    <string name="featured_event3_note">Guided Tour</string>
+    <string name="featured_event3_time">ديسمبر 15</string>
+    <string name="featured_event3_topic">جولة الملك خوفو</string>
+    <string name="featured_event3_note">مرشد سياحي</string>
 
 
     <!-- event 4-->
-    <string name="featured_event4_time">DEC 18</string>
-    <string name="featured_event4_topic">King Tutankhamun Tour</string>
-    <string name="featured_event4_note">Guided Tour</string>
+    <string name="featured_event4_time">ديسمبر 18</string>
+    <string name="featured_event4_topic">جولة الملك توت عنخ أمون</string>
+    <string name="featured_event4_note">مرشد سياحي</string>
 
-    <string name="map_activity_title">خريطه المتحف</string>
-    <string name="favourite_title">FAVOURITE</string>
-    <string name="tour_activity_title">TOUR PLANNING</string>
+    <string name="map_activity_title">خريطة المتحف</string>
+    <string name="favourite_title">المفضل</string>
+    <string name="tour_activity_title">تنظيم الجولات</string>
 
     <string name="app_theme">Select Theme</string>
 
     <string name="temp_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</string>
 
-    <string name="become_member">Become A MEMBER</string>
-    <string name="subscribe">Subscribe</string>
+    <string name="become_member">اصبح عضوا</string>
+    <string name="subscribe">الاشتراك</string>
 
     <string name="gem_pref_key" translatable="false">gem_pref_keys</string>
     <string name="logged_in_key" translatable="false">LOGGED_IN</string>
@@ -185,13 +477,12 @@
     <string name="fb_login_protocol_scheme">fb781532365370297</string>
 
     <!-- Tab Names -->
-    <string name="visit_tab">الزيارات</string>
-    <string name="highlight_tab">الرئيسيه</string>
-    <string name="today_event">احداث اليوم</string>
-    <string name="for_members_tab">للاعضاء</string>
-    <string name="staff_picks_tab">اختيارات العاملين</string>
-    <string name="featured_events_tab">احداث مختاره</string>
-
+    <string name="visit_tab">Visit</string>
+    <string name="highlight_tab">Highlight</string>
+    <string name="today_event">Today Event</string>
+    <string name="for_members_tab">For Members</string>
+    <string name="staff_picks_tab">Staff Picks</string>
+    <string name="featured_events_tab">Featured Events</string>
     <string name="going_event">يذهب</string>
 
     <string name="individual_tour">Individual</string>

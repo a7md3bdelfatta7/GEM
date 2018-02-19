@@ -18,6 +18,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -108,13 +109,15 @@ public class UserProfile extends AppCompatActivity implements AdapterView.OnItem
             }
         });
 
+        String []currencies=context.getResources().getStringArray(R.array.currency_array);
+        String currency=currencies[Integer.parseInt(UserContract.currency_index)];
+        Toast.makeText(context,currency, Toast.LENGTH_SHORT).show();
     }
 
 
     void initDateSpinner(){
 
         String[] date_tokens=UserContract.birthDate.split("/");
-
         ArrayList<String> years = new ArrayList<String>();
         int thisYear = Calendar.getInstance().get(Calendar.YEAR);
         for (int i = 1900; i <= thisYear; i++) {
@@ -188,7 +191,6 @@ public class UserProfile extends AppCompatActivity implements AdapterView.OnItem
         Intent refresh = new Intent(this, UserProfile.class);
         startActivity(refresh);
         finish();
-
 
     }
 
