@@ -8,95 +8,95 @@
 
     <!-- Visit activity -->
     <!-- Main Hall activity -->
-    <string name="main_hall">Main Hall\nopen today untill 6:00PM</string>
-    <string name="main_hall_title">MAIN HALL</string>
-    <string name="main_hall_opened">Open seven days</string>
+    <string name="main_hall">القاعة الرئيسية \n6:00 Pm متاح زيارته للساعة</string>
+    <string name="main_hall_title">القاعة الرئيسية</string>
+    <string name="main_hall_opened">متاح للزيارة كل ايام الأسبوع </string>
     <string name="main_hall_openedTime">
-        <item>Sunday - Thursday : 10:00AM - 6:00PM</item>
-        <item>\nFirday and Saturday: 10:00AM - 6:00PM</item>
+        <item>الأحد - الخميس : 10:00AM - 6:00PM</item>
+        <item>\nالجمعة و السبت: 10:00AM - 6:00PM</item>
     </string>
     <string name="main_hall_vacations">
-        <item>Closed Prophet Mohammed\'s Birthday</item>
-        <item>\nThursday, November 30,2017</item>
+        <item>مغلق بمناسبة المولد النبوي الشريف</item>
+        <item>\nالخميس , نوفمبر 30,2017</item>
     </string>
     <string name="main_hall_location">
-        <item>Alexandria Desert Rd, Kafr Nassar</item>
-        <item>\nAl Haram, Giza Governante</item>
+        <item>طريق الأسكندرية الصحراوي, كفر نصار</item>
+        <item>\nالهرم, محافظة الجيزة</item>
         <item>\n+202 3377 68 96</item>
     </string>
     <!-- Main 2 activity -->
-    <string name="second_hall">Main 2\nopen today untill 6:00PM</string>
-    <string name="second_hall_title">MAIN HALL</string>
-    <string name="second_hall_opened">Open seven days</string>
+    <string name="second_hall">قاعة 2\nمتاح زيارته للساعة 6:00PM</string>
+    <string name="second_hall_title">قاعة 2   </string>
+    <string name="second_hall_opened">متاح للزيارة كل ايام الأسبوع </string>
     <string name="second_hall_openedTime">
-        <item>Sunday - Thursday : 10:00AM - 6:00PM</item>
-        <item>\nFirday and Saturday: 10:00AM - 6:00PM</item>
+        <item>الأحد - الخميس  : 10:00AM - 6:00PM</item>
+        <item>\nالجمعة و السبت: 10:00AM - 6:00PM</item>
     </string>
     <string name="second_hall_vacations">
-        <item>Closed Prophet Mohammed\'s Birthday</item>
-        <item>\nThursday, November 30,2017</item>
+        <item>مغلق بمناسبة المولد النبوي الشريف</item>
+        <item>\nالخميس , نوفمبر 30,2017</item>
     </string>
     <string name="second_hall_location">
-        <item>Alexandria Desert Rd, Kafr Nassar</item>
-        <item>\nAl Haram, Giza Governante</item>
+        <item>طريق الأسكندرية الصحراوي, كفر نصار</item>
+        <item>\nالهرم, محافظة الجيزة</item>
         <item>\n+202 3377 68 96</item>
     </string>
     <!-- Main 3 activity -->
-    <string name="third_hall">Main 3\nopen today untill 6:00PM</string>
-    <string name="third_hall_title">MAIN HALL</string>
-    <string name="third_hall_opened">Open seven days</string>
+    <string name="third_hall">قاعة 3\nمتاح زيارته للساعة 6:00PM</string>
+    <string name="third_hall_title">قاعة 3  </string>
+    <string name="third_hall_opened">متاح للزيارة كل ايام الأسبوع </string>
     <string name="third_hall_openedTime">
-        <item>Sunday - Thursday : 10:00AM - 6:00PM</item>
-        <item>\nFirday and Saturday: 10:00AM - 6:00PM</item>
+        <item>الأحد - الخميس  : 10:00AM - 6:00PM</item>
+        <item>\nالجمعة و السبت: 10:00AM - 6:00PM</item>
     </string>
     <string name="third_hall_vacations">
-        <item>Closed Prophet Mohammed\'s Birthday</item>
-        <item>\nThursday, November 30,2017</item>
+        <item>مغلق بمناسبة المولد النبوي الشريف</item>
+        <item>\nالخميس , نوفمبر 30,2017</item>
     </string>
     <string name="third_hall_location">
-        <item>Alexandria Desert Rd, Kafr Nassar</item>
-        <item>\nAl Haram, Giza Governante</item>
+        <item>طريق الأسكندرية الصحراوي, كفر نصار</item>
+        <item>\nالهرم, محافظة الجيزة</item>
         <item>\n+202 3377 68 96</item>
     </string>
     <!-- Main 4 activity -->
-    <string name="fourth_hall">Main 4\nopen today untill 6:00PM</string>
-    <string name="fourth_hall_title">MAIN HALL</string>
-    <string name="fourth_hall_opened">Open seven days</string>
+    <string name="fourth_hall">قاعة 4\nمتاح زيارته للساعة 6:00PM</string>
+    <string name="fourth_hall_title">قاعة 4  </string>
+    <string name="fourth_hall_opened">متاح للزيارة كل ايام الأسبوع </string>
     <string name="fourth_hall_openedTime">
-        <item>Sunday - Thursday : 10:00AM - 6:00PM</item>
-        <item>\nFirday and Saturday: 10:00AM - 6:00PM</item>
+        <item>الأحد – الخميس : 10:00AM - 6:00PM</item>
+        <item>\nالجمعة و السبت: 10:00AM - 6:00PM</item>
     </string>
     <string name="fourth_hall_vacations">
-        <item>Closed Prophet Mohammed\'s Birthday</item>
-        <item>\nThursday, November 30,2017</item>
+        <item>مغلق بمناسبة المولد النبوي الشريف</item>
+        <item>\nالخميس , نوفمبر 30,2017</item>
     </string>
     <string name="fourth_hall_location">
-        <item>Alexandria Desert Rd, Kafr Nassar</item>
-        <item>\nAl Haram, Giza Governante</item>
+        <item>طريق الأسكندرية الصحراوي, كفر نصار</item>
+        <item>\nالهرم, محافظة الجيزة</item>
         <item>\n+202 3377 68 96</item>
     </string>
 
     <!-- Highlight activity -->
-    <string name="highlights_must_see">The Must-Sees</string>
-    <string name="highlights_must_see_items">Browse few of the GEM\'s most\ncompelling works\n</string>
-    <string name="highlights_family_favorites">\nFamily Favorites</string>
-    <string name="highlights_family_favorites_items">You may want to check some\nof the most family vaforites\n</string>
+    <string name="highlights_must_see">لا تفوت هذه زيارة</string>
+    <string name="highlights_must_see_items">تصفح قليل من أعمال المتحف \n الأكثر رواجا\n</string>
+    <string name="highlights_family_favorites">\nما تفضله العائلة</string>
+    <string name="highlights_family_favorites_items">قد تحب تصفح بعض \nمما تفضله العائلة\n</string>
 
     <!-- Artifacts details activity -->
     <!-- Artifact 1 details activity -->
     <string name="artifact_title_1">قناع توت عنخ أمون</string>
-    <string name="artifact_info_1">This mask of Tutankhamun is an example of the high est artistic and technical achievements of the an-cient Egyptians in the New Kingdom.
-        \nCovering the head of the wrapped mummy in its coffin and activated by a magical spell, no.151b from the Book of the Dead, the mask ensured more pro-tection for the king\'s body.
-        \nThe exact portrayal of the king\'s facial features achieved here made it possible for his soul to recog nize him and return to his mummified body, thus en uring his resurrection.
-        \nhe head is covered by the royal headdress and the forehead bears the emblems of kingship and protec tion: the vulture and uraeus, or cobra.
-        \nThe gold sheets used in this wonderful mask are joinec together by heating and hammering. The eyes are of obsidian and quartz and the eyebrows and eyelids are inlaid with lapis lazuli. The broad inlaid collar of semiprecious stones and colored glass ends in falcon heads.
-        \nDimensions: Height 54 cm Width 39.3 cm</string>
+    <string name="artifact_info_1">هذا القناع من توت عنخ آمون هو مثال على الإنجازات الفنية والفنية العالية للمصريين المؤثرين في المملكة الجديدة.
+        \nتغطي رأس المومياء ملفوفة في تابوتها وتفعيلها من قبل موجة سحرية، No.151b من كتاب الموتى، وكفل القناع أكثر المؤيدة للحصانة لجسم الملك.
+        \nالصورة الدقيقة لملامح الوجه الملك التي تحققت هنا جعلت من الممكن لروحه أن يعيد له العودة والعودة إلى جسده المحنط، وبالتالي إن أورينغ قيامة له.
+        \nرأسه مغطى بغطاء الرأس الملكي والجبهة تحمل شعارات الملوك والحماية: النسر و أوراوس، أو الكوبرا..
+        \nأوراق الذهب المستخدمة في هذا القناع الرائع هي جوينيك معا عن طريق التسخين والتدقرج. والعيون هي من السجاد والكوارتز والحاجبين والجفون هي مطعمة مع اللازورد اللازورد. وينتهي طوق مطعمة واسعة من الأحجار شبه الكريمة والزجاج الملون في رؤساء الصقر.
+        \nالابعاد : الارتفاع 54 cm العرض 39.3 cm</string>
 
     <!-- Artifact 2 details activity -->
-    <string name="artifact_title_2">Sphinx of Amenhotep the Second</string>
-    <string name="artifact_info_2">A sphinx has the body and strength of a lion and the head or face of a man, symbolizing wisdom and intelligence.
-        \nThe ancient Egyptians sculpted different kinds of sphinxes with a human head, a ram head, or a human face with the mane of a lion. Sphinxes represent various deities, especially Amun-Re, identified with the kings who reigned when the sphinxes were made. 
-        \nThe human heads or faces usually have the facial features of these kings. This sphinx portrays King Amenhotep the Second.
+    <string name="artifact_title_2">أبو الهول من أمنحتب الثاني</string>
+    <string name="artifact_info_2">أبو الهول لديه الجسم وقوة الأسد والرأس أو وجه رجل، ترمز إلى الحكمة والذكاء.
+        \n        قام المصريون القدماء بنحت أنواع مختلفة من آباء الهول مع رأس إنساني أو رأس كبش أو وجه إنساني برفقة أسد. أبو الهول تمثل الآلهة المختلفة، وخاصة آمون-ري، التي تم تحديدها مع الملوك الذين حكموا عند جعل أبو الهول.
+        \n        الرؤوس أو الوجوه البشرية عادة ما تكون ملامح الوجه لهؤلاء الملوك. هذا أبو الهول يصور الملك أمنحتب الثاني.
     </string>
     <!-- Artifact 3 details activity -->
     <string name="artifact_title_3">أنوبيس حاملا قرص القمر</string>
@@ -259,7 +259,7 @@
     </string>
 
     <!-- Staffpicks-->
-    <string name="staff_art_of_statue">فن التماثيل</string>
+    <string name="staff_art_of_statue">فن الأثار </string>
     <string name="staff_art_of_statue_items">تصفح اختياراتنا من \nالأثار الأكثر جمالا\n</string>
     <string name="staff_favorite_selection">\nالقائمة المفضلة</string>
     <string name="staff_favorite_selection_items">قد ترغب في التحقق من بعض \nالأشياء المفضلة\n</string>
@@ -274,8 +274,8 @@
 
 
     <string-array name="lang_array">
-        <item>العربيه</item>
         <item>ENGLISH</item>
+        <item>العربيه</item>
     </string-array>
 
     <!--Pages name-->
@@ -290,6 +290,15 @@
     <string name="title_activity_quiz">اختبار</string>
     <string name="title_activity_membership">العضوية</string>
 
+    <!--menu-->
+    <string name="menu_collections">المجموعات</string>
+    <string name="menu_shop">المتجر</string>
+    <string name="menu_quiz">الاختبار</string>
+    <string name="menu_membership">العضوية</string>
+    <string name="menu_getTicket">شراء التذكره</string>
+    <string name="menu_ar">الواقع الافتراضى</string>
+    <string name="menu_favourites">المفضلة</string>
+    <string name="menu_logout">الخروج</string>
 
     <!--shopping-->
     <string name="shopping_Clothes">ملابس</string>
@@ -332,12 +341,12 @@
     <string name="Memebership_egyptian">مصري</string>
     <string name="Memebership_foreign">غير مصري</string>
 
-    <string name="membership_benefits_items"><itme>&#8226; Free express admission for you and children under 18.</itme>
-        <itme>\n&#8226; Free admission for your guest(s) on every visit.</itme>
-        <itme>\n&#8226; Early access to exhibitions and special viewing hours.</itme>
-        <itme>\n&#8226; Invitation to buy ticket to members only events and parties.</itme>
-        <itme>\n&#8226; 10% off at the Dining room at GEM.</itme>
-        <itme>\n&#8226; 10% off at GEM store.</itme>
+    <string name="membership_benefits_items"><itme>&#8226; دخول مجاني صريح لك وللأطفال دون سن 18 عاما.</itme>
+        <itme>\n&#8226; دخول مجاني لضيف في كل زيارة.</itme>
+        <itme>\n&#8226; امكانية الدخول المبكر للمعارض و ساعات حصرية للمشاهدة.</itme>
+        <itme>\n&#8226; امكانية شراء تذاكر لأحداث و حفلات الأعضاء فقط.</itme>
+        <itme>\n&#8226; 10% تخفيض على أماكن الأكل في المتحف.</itme>
+        <itme>\n&#8226; 10% تخفيض على محلات المتحف.</itme>
     </string>
     <string name="choose_category">اختر قائمة</string>
     <string name="membership_duration">المدة</string>
@@ -461,47 +470,55 @@
     <string name="app_lang_key" translatable="false">language_KEY</string>
     <string name="app_default_lang" translatable="false">en</string>
 
-    <string name="create_tour">Create Tour</string>
-    <string name="build_tour">Build Tour</string>
-    <string name="select_artifacts">Add artifacts to your tour</string>
-    <string name="view_map">View on map</string>
-    <string name="start_tour">Start Tour</string>
-    <string name="tour_criteria">Build Tour Based On.</string>
-    <string name="added_artifacts">Added Artifacts</string>
-    <string name="invite_users">Invite</string>
-    <string name="select_tour_guide">Select Tour Guide</string>
-    <string name="get_tour">Request Tour Guide</string>
+    <string name="create_tour">انشاء جولة </string>
+    <string name="build_tour">تخطيط للجولة </string>
+    <string name="select_artifacts">اضف أثار للجولة </string>
+    <string name="view_map">مكانه على الخريطة </string>
+    <string name="start_tour">ابدأ الجولة </string>
+    <string name="tour_criteria">تخطيط الجولة بناءً على </string>
+    <string name="added_artifacts">الأثار المختارة </string>
+    <string name="invite_users">ادعو اصدقائك </string>
+    <string name="select_tour_guide">اختر مرشد سياحي </string>
+    <string name="get_tour">اطلب مرشد سياحي </string>
 
 
     <string name="facebook_app_id">781532365370297</string>
     <string name="fb_login_protocol_scheme">fb781532365370297</string>
 
     <!-- Tab Names -->
-    <string name="visit_tab">Visit</string>
-    <string name="highlight_tab">Highlight</string>
-    <string name="today_event">Today Event</string>
-    <string name="for_members_tab">For Members</string>
-    <string name="staff_picks_tab">Staff Picks</string>
-    <string name="featured_events_tab">Featured Events</string>
-    <string name="going_event">يذهب</string>
+    <string name="visit_tab">الزيارات </string>
+    <string name="highlight_tab">لا تفوت هذه زيارة</string>
+    <string name="today_event">أحداث اليوم </string>
+    <string name="for_members_tab">للأعضاء </string>
+    <string name="staff_picks_tab">فن الأثار </string>
+    <string name="featured_events_tab">الأحداث المميزة </string>
+    <string name="going_event">سأذهب </string>
 
-    <string name="individual_tour">Individual</string>
-    <string name="group_tour">Group</string>
-    <string name="tour_guide">Tour Guide</string>
+    <string name="individual_tour">فردي</string>
+    <string name="group_tour">مجموعة</string>
+    <string name="tour_guide">مرشد سياحي </string>
 
-    <string name="tour_name">Tour Name</string>
-    <string name="shortest_path">Shortest Path</string>
-    <string name="oldest">Oldest</string>
+    <string name="tour_name">اسم الجولة</string>
+    <string name="shortest_path">اقصر طريق</string>
+    <string name="oldest">من الأقدم  </string>
 
-    <string name="individual_tour_title">Create Individual Tour</string>
-    <string name="group_tour_title">Create Group Tour</string>
-    <string name="tour_guide_title">Tour Guide</string>
-    <string name="add_users">Add</string>
+    <string name="individual_tour_title">جولة فردية</string>
+    <string name="group_tour_title">جولة مع المجموعة</string>
+    <string name="tour_guide_title">جولة مع مرشد سياحي</string>
+    <string name="add_users">أضف</string>
 
-    <string-array name="currency_array">
-        <item>دولار</item>
-        <item>جنيه</item>
-        <item>يورو</item>
-    </string-array>
+
+    <string name="registration_message">كل الخانات مطلوبة \n من فضلك أملئ الفراغات و حاول مرة أخرى</string>
+    <string name="username_exist">هذا الإسم موجود, جرب اسم اخر</string>
+    <string name="artifact_already_added">تمت الإضافة</string>
+    <string name="add_artifact_tour_message">من فضلك أضف الأثار لجولتك </string>
+    <string name="build_tour_criteria_message">اختر تخطيط للجولة بناء على</string>
+    <string name="enter_tour_name_message">اختر اسم للجولة!</string>
+    <string name="select_tour_guide_message">اختر مرشد سياحي</string>
+    <string name="tour_guide_in_way">في الطريق</string>
+    <string name="language">اللغة</string>
+    <string name="currency">العملة</string>
+    <string name="save">حفظ</string>
+
 
 </resources>

@@ -291,6 +291,18 @@
     <string name="title_activity_membership">Membership</string>
 
 
+    <!--menu-->
+    <string name="menu_collections">COLLECTIONS</string>
+    <string name="menu_shop">SHOP</string>
+    <string name="menu_quiz">QUIZ</string>
+    <string name="menu_membership">MEMBERSHIP</string>
+    <string name="menu_getTicket">GET TICKET</string>
+    <string name="menu_ar">AUGMENTED REALITY</string>
+    <string name="menu_favourites">FAVOURITES</string>
+    <string name="menu_logout">LOGOUT</string>
+
+
+
     <!--shopping-->
     <string name="shopping_Clothes">Clothes</string>
     <string name="shopping_artifacts">Artifacts</string>

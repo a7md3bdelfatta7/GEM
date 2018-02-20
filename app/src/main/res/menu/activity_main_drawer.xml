@@ -4,31 +4,31 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/collections_menu"
-            android:title="COLLECTIONS" />
+            android:title="@string/menu_collections" />
         <item
             android:id="@+id/shop_menu"
-            android:title="SHOP" />
+            android:title="@string/menu_shop" />
         <item
             android:id="@+id/quiz_menu"
-            android:title="QUIZ" />
+            android:title="@string/menu_quiz" />
         <item
             android:id="@+id/membership_menu"
-            android:title="MEMBERSHIP" />
+            android:title="@string/menu_membership" />
         <item
             android:id="@+id/tour_menu"
             android:title="@string/tour_activity_title" />
         <item
             android:id="@+id/ticket_menu"
-            android:title="GET TICKET" />
+            android:title="@string/menu_getTicket" />
         <item
             android:id="@+id/AR_menu"
-            android:title="AUGMENTED REALITY" />
+            android:title="@string/menu_ar" />
         <item
             android:id="@+id/Favourite_menu"
-            android:title="FAVOURITES" />
+            android:title="@string/menu_favourites" />
         <item
             android:id="@+id/logout_menu"
-            android:title="LOGOUT" />
+            android:title="@string/menu_logout" />
 
 
     </group>
