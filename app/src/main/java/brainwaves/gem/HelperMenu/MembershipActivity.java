@@ -148,26 +148,26 @@ public class MembershipActivity extends AppCompatActivity {
         listDataChild = new HashMap<String, List<String>>();
 
         // Adding child data
-        listDataHeader.add("Silver membership");
-        listDataHeader.add("Golden membership");
-        listDataHeader.add("Platinum membership");
+        listDataHeader.add(getResources().getString(R.string.membership_silver));
+        listDataHeader.add(getResources().getString(R.string.membership_golden));
+        listDataHeader.add(getResources().getString(R.string.membership_platinum));
 
         // Adding child data
         List<String> level0 = new ArrayList<String>();
-        level0.add("Free express admission for you and children under 18.");
-        level0.add("Free admission for your guest(s) on every visit.");
+        level0.add(getResources().getString(R.string.membership_benefits_items_i));
+        level0.add(getResources().getString(R.string.membership_benefits_items_ii));
 
 
         List<String> level1 = new ArrayList<String>();
         level1.add("Silver membership plus.");
-        level1.add("Early access to exhibitions and special viewing hours.");
-        level1.add("Invitation to buy ticket to members only events and parties.");
+        level1.add(getResources().getString(R.string.membership_benefits_items_iii));
+        level1.add(getResources().getString(R.string.membership_benefits_items_iiii));
 
 
         List<String> level2 = new ArrayList<String>();
         level2.add("Golden membership plus.");
-        level2.add("10% off at the Dining room at GEM.");
-        level2.add("10% off at GEM store.");
+        level2.add(getResources().getString(R.string.membership_benefits_items_iiiii));
+        level2.add(getResources().getString(R.string.membership_benefits_items_iiiiii));
 
 
 

@@ -343,19 +343,23 @@
     <string name="Memebership_egyptian">Egyptian</string>
     <string name="Memebership_foreign">Foreign</string>
 
-    <string name="membership_benefits_items"><itme>&#8226; Free express admission for you and children under 18.</itme>
-        <itme>\n&#8226; Free admission for your guest(s) on every visit.</itme>
-        <itme>\n&#8226; Early access to exhibitions and special viewing hours.</itme>
-        <itme>\n&#8226; Invitation to buy ticket to members only events and parties.</itme>
-        <itme>\n&#8226; 10% off at the Dining room at GEM.</itme>
-        <itme>\n&#8226; 10% off at GEM store.</itme>
-    </string>
+
+    <string name="membership_silver">Silver membership</string>
+    <string name="membership_benefits_items_i"> Free express admission for you and children under 18.</string>
+    <string name="membership_benefits_items_ii">Free admission for your guest(s) on every visit.</string>
+    <string name="membership_golden">Golden membership</string>
+    <string name="membership_benefits_items_iii"> Early access to exhibitions and special viewing hours.</string>
+    <string name="membership_benefits_items_iiii"> Invitation to buy ticket to members only events and parties.</string>
+    <string name="membership_platinum">Platinum membership</string>
+    <string name="membership_benefits_items_iiiii"> 10% off at the Dining room at GEM.</string>
+    <string name="membership_benefits_items_iiiiii"> 10% off at GEM store.</string>
+
     <string name="choose_category">Choose Category</string>
     <string name="membership_duration">Duration</string>
     <string name="membership_duration_items_i">3 Months</string>
     <string name="membership_duration_items_ii">6 Months</string>
     <string name="membership_duration_items_iii">1 Year</string>
-
+    <string name="membership_submit">submit</string>
 
     <string name="related_Links">RELATED</string>
     <!-- login activity -->

@@ -341,20 +341,28 @@
     <string name="Memebership_egyptian">مصري</string>
     <string name="Memebership_foreign">غير مصري</string>
 
-    <string name="membership_benefits_items"><itme>&#8226; دخول مجاني صريح لك وللأطفال دون سن 18 عاما.</itme>
-        <itme>\n&#8226; دخول مجاني لضيف في كل زيارة.</itme>
-        <itme>\n&#8226; امكانية الدخول المبكر للمعارض و ساعات حصرية للمشاهدة.</itme>
-        <itme>\n&#8226; امكانية شراء تذاكر لأحداث و حفلات الأعضاء فقط.</itme>
-        <itme>\n&#8226; 10% تخفيض على أماكن الأكل في المتحف.</itme>
-        <itme>\n&#8226; 10% تخفيض على محلات المتحف.</itme>
-    </string>
+
+    <string name="membership_silver">عضوية الفضة</string>
+    <string name="membership_benefits_items_i">  دخول مجاني صريح لك وللأطفال دون سن 18 عاما.</string>
+    <string name="membership_benefits_items_ii"> دخول مجاني لضيف في كل زيارة.</string>
+    <string name="membership_golden">عضوية الذهبيه</string>
+    <string name="membership_benefits_items_iii"> امكانية الدخول المبكر للمعارض و ساعات حصرية للمشاهدة.</string>
+    <string name="membership_benefits_items_iiii"> امكانية شراء تذاكر لأحداث و حفلات الأعضاء فقط.</string>
+    <string name="membership_platinum">عضوية البلاتين</string>
+    <string name="membership_benefits_items_iiiii"> 10% تخفيض على أماكن الأكل في المتحف.</string>
+    <string name="membership_benefits_items_iiiiii"> 10% تخفيض على محلات المتحف.</string>
+
+
+
+
+
     <string name="choose_category">اختر قائمة</string>
     <string name="membership_duration">المدة</string>
     <string name="membership_duration_items_i">3 اشهر</string>
     <string name="membership_duration_items_ii">6 اشهر</string>
     <string name="membership_duration_items_iii">1 سنة</string>
 
-
+    <string name="membership_submit">تسجيل</string>
 
     <string name="related_Links">RELATED</string>
     <!-- login activity -->
