@@ -269,8 +269,8 @@
     <string name="collection_str">المجموعات /</string>
     <string name="itemsNumber">50,000 قطعة</string>
     <string name="filter_button">اختر المجموعة</string>
-    <string name="collection_kings">مجموعةالملوك  \n</string>
-    <string name="collection_status">\nمجموعة التماثيل \n</string>
+    <string name="collection_kings">مجموعةالملوك</string>
+    <string name="collection_status">مجموعة التماثيل</string>
 
 
     <string-array name="lang_array">

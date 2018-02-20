@@ -60,13 +60,13 @@
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="KINGS COLLECTIONS"
+                    android:text="@string/collection_kings"
                     android:id="@+id/collections_filter_kings"
                     android:onClick="onFilterRadioButtonClicked"/>
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="STATUS COLLECTIONS"
+                    android:text="@string/collection_status"
                     android:id="@+id/collections_filter_status"
                     android:onClick="onFilterRadioButtonClicked"/>
             </RadioGroup>
@@ -86,6 +86,8 @@
                 android:text="@string/collection_kings"
                 android:textStyle="bold"
                 android:textSize="20dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
                 android:layout_height="wrap_content"/>
 
             <LinearLayout
@@ -226,6 +228,8 @@
                 android:text="@string/collection_status"
                 android:textStyle="bold"
                 android:textSize="20dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
                 android:layout_height="wrap_content"/>
 
 
