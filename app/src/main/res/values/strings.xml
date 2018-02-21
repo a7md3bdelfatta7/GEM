@@ -534,4 +534,8 @@
     </string-array>
 
 
+    <!--choose type login or register-->
+    <string name="Sign_in">SIGN IN</string>
+    <string name="New_Visitor">New visitor</string>
+
 </resources>

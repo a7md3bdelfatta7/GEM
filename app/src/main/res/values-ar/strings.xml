@@ -529,4 +529,9 @@
     <string name="save">حفظ</string>
 
 
+
+    <!--choose type login or register-->
+    <string name="Sign_in">تسجيل دخول</string>
+    <string name="New_Visitor">زائر جديد</string>
+
 </resources>

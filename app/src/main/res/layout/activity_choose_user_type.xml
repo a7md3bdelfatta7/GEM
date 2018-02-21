@@ -26,7 +26,7 @@
         />
 
     <Button
-        android:text="SIGN IN"
+        android:text="@string/Sign_in"
         android:layout_width="173dp"
         android:layout_height="wrap_content"
         android:id="@+id/signin_button"
@@ -41,7 +41,7 @@
         android:layout_marginBottom="15dp"
         />
     <Button
-        android:text="NEW VISITOR"
+        android:text="@string/New_Visitor"
         android:layout_width="173dp"
         android:layout_height="wrap_content"
         android:id="@+id/new_visitor_button"
