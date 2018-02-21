@@ -77,7 +77,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginBottom="10dp"
-            android:text="VIDEOS"
+            android:text="@string/artifact_related_videos"
             android:onClick="videoOnClick"
             android:gravity="center"
             android:textColor="@color/cardview_light_background"
@@ -89,7 +89,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginBottom="10dp"
-            android:text="PHOTOS"
+            android:text="@string/artifact_related_photos"
             android:textColor="@color/cardview_light_background"
             android:background="@color/defaultColor"
             android:layout_gravity="center"
@@ -104,7 +104,7 @@
             android:textColor="@color/cardview_light_background"
             android:background="@color/defaultColor"
             android:onClick="connectionOnClick"
-            android:text="CONNECTIONS"
+            android:text="@string/artifact_related_connections"
             android:layout_gravity="center"
             />
 

@@ -83,6 +83,9 @@
     <string name="highlights_family_favorites_items">You may want to check some\nof the most family vaforites\n</string>
 
     <!-- Artifacts details activity -->
+    <string name="artifact_related_videos">VIDEOS</string>
+    <string name="artifact_related_photos">PHOTOS</string>
+    <string name="artifact_related_connections">CONNECTIONS</string>
     <!-- Artifact 1 details activity -->
     <string name="artifact_title_1">TUT ANKAMUN MASK</string>
     <string name="artifact_info_1">This mask of Tutankhamun is an example of the high est artistic and technical achievements of the an-cient Egyptians in the New Kingdom.
@@ -316,6 +319,8 @@
     <string name="shopping_clothes_Kid_Item_Info">Kid T-SHIRT\nPRICE : $18</string>
     <string name="shopping_artifacts_title">ARTIFACTS</string>
     <string name="shopping_artifacts_Item_Info">ARTIFACTS\nPRICE : $18</string>
+    <string name="shopping_books_title">MOST VIEWED BOOKS</string>
+    <string name="shopping_books_Item_Info">BOOK\nPRICE : $18</string>
     <string name="shopping_details_title">Details</string>
     <string name="shopping_details_orderBtn">Order</string>
     <string name="shopping_details_price">PRICE : $18</string>

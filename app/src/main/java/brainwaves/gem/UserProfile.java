@@ -152,7 +152,6 @@ public class UserProfile extends AppCompatActivity implements AdapterView.OnItem
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
         if(i==1){
             swapLang();
         }

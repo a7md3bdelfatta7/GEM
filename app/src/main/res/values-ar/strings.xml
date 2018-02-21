@@ -83,6 +83,9 @@
     <string name="highlights_family_favorites_items">قد تحب تصفح بعض \nمما تفضله العائلة\n</string>
 
     <!-- Artifacts details activity -->
+    <string name="artifact_related_videos">الفديوهات</string>
+    <string name="artifact_related_photos">صور</string>
+    <string name="artifact_related_connections">روابط</string>
     <!-- Artifact 1 details activity -->
     <string name="artifact_title_1">قناع توت عنخ أمون</string>
     <string name="artifact_info_1">هذا القناع من توت عنخ آمون هو مثال على الإنجازات الفنية والفنية العالية للمصريين المؤثرين في المملكة الجديدة.
@@ -274,8 +277,8 @@
 
 
     <string-array name="lang_array">
-        <item>ENGLISH</item>
         <item>العربيه</item>
+        <item>ENGLISH</item>
     </string-array>
 
     <!--Pages name-->
@@ -313,6 +316,8 @@
     <string name="shopping_clothes_Kid_Item_Info">تي شيرت اطفال\nالسعر $18</string>
     <string name="shopping_artifacts_title">الأثار</string>
     <string name="shopping_artifacts_Item_Info">الأثار\nالسعر : $18</string>
+    <string name="shopping_books_title">اكثر الكتب تداولآ</string>
+    <string name="shopping_books_Item_Info">الكتاب\nالسعر : $</string>
     <string name="shopping_details_title">تفاصيل</string>
     <string name="shopping_details_orderBtn">اطلب</string>
     <string name="shopping_details_price">السعر : $18</string>
@@ -364,7 +369,7 @@
 
     <string name="membership_submit">تسجيل</string>
 
-    <string name="related_Links">RELATED</string>
+    <string name="related_Links">ذات صلة</string>
     <!-- login activity -->
     <string name="login">تسجيل الدخول</string>
     <string name="username">اسم المستخدم </string>
