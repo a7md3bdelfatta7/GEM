@@ -4,6 +4,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Path;
+import android.graphics.Rect;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
@@ -112,6 +116,36 @@ public class UserProfile extends AppCompatActivity implements AdapterView.OnItem
         String []currencies=context.getResources().getStringArray(R.array.currency_array);
         String currency=currencies[Integer.parseInt(UserContract.currency_index)];
         Toast.makeText(context,currency, Toast.LENGTH_SHORT).show();
+
+        ImageView user_pic = (ImageView)findViewById(R.id.user_pic);
+        if(UserContract.pp !=null){
+            UserContract.pp = getRoundedShape(UserContract.pp);
+            user_pic.setImageBitmap(UserContract.pp);
+        }
+    }
+    public Bitmap getRoundedShape(Bitmap scaleBitmapImage) {
+        // TODO Auto-generated method stub
+        int targetWidth = 500;
+        int targetHeight = 500;
+        Bitmap targetBitmap = Bitmap.createBitmap(targetWidth,
+                targetHeight,Bitmap.Config.ARGB_8888);
+
+        Canvas canvas = new Canvas(targetBitmap);
+        Path path = new Path();
+        path.addCircle(((float) targetWidth - 1) / 2,
+                ((float) targetHeight - 1) / 2,
+                (Math.min(((float) targetWidth),
+                        ((float) targetHeight)) / 2),
+                Path.Direction.CCW);
+
+        canvas.clipPath(path);
+        Bitmap sourceBitmap = scaleBitmapImage;
+        canvas.drawBitmap(sourceBitmap,
+                new Rect(0, 0, sourceBitmap.getWidth(),
+                        sourceBitmap.getHeight()),
+                new Rect(0, 0, targetWidth,
+                        targetHeight), null);
+        return targetBitmap;
     }
 
 

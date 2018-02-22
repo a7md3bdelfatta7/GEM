@@ -153,11 +153,6 @@ public class LoginActivity extends AppCompatActivity {
 
                                     if (user.login(object.getString("email") , "asdasdasdsad")) {
                                         new RetrieveFeedTask().execute(object.getString("id")); //getFacebookProfilePicture(object.getString("id"));
-
-                                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                        startActivity(intent);
-                                        ActivityCompat.finishAffinity(LoginActivity.this);
                                     }
 
 
@@ -212,7 +207,10 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         protected void onPostExecute(Bitmap feed) {
-            //UserContract.pp = feed;
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            ActivityCompat.finishAffinity(LoginActivity.this);
         }
     }
     @Override
