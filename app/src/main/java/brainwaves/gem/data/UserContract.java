@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
 import android.provider.BaseColumns;
 
 import brainwaves.gem.R;
@@ -23,7 +24,7 @@ public class UserContract {
     public static String birthDate="";
     public static String nationality="";
     public static String currency_index ="";
-
+    public static Bitmap pp = null;// profile picture fb
     Context context;
     public UserContract(Context context){
         this.context=context;

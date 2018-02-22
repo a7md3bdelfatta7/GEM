@@ -236,6 +236,9 @@ public class MainActivity extends AppCompatActivity
         fullName.setText(UserContract.fullName);
         userDetails.setText(UserContract.nationality+"-"+UserContract.birthDate);
         user_pic=(ImageView) navHeaderView.findViewById(R.id.user_pic);
+        if(UserContract.pp !=null){
+            user_pic.setImageBitmap(UserContract.pp);
+        }
         user_pic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
