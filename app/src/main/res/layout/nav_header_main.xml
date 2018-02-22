@@ -31,6 +31,7 @@
             android:layout_width="90dp"
             android:id="@+id/user_pic"
             android:src="@drawable/man"
+            android:background="@drawable/rounded"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"

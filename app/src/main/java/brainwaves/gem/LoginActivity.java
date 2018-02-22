@@ -6,7 +6,10 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
+import android.os.AsyncTask;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +19,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,12 +38,17 @@ import com.facebook.login.widget.LoginButton;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 
 import brainwaves.gem.data.UserContract;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
+import static brainwaves.gem.data.UserContract.userID;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -134,6 +143,7 @@ public class LoginActivity extends AppCompatActivity {
 
                                 // Application code
                                 try {
+
                                     UserContract user = new UserContract(getApplicationContext());
                                     if (!user.isUserNameExist(object.getString("name"))) {
                                         long result = user.addNewUser(object.getString("email"), "asdasdasdsad", object.getString("name"),
@@ -142,10 +152,7 @@ public class LoginActivity extends AppCompatActivity {
                                     }
 
                                     if (user.login(object.getString("email") , "asdasdasdsad")) {
-                                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                        startActivity(intent);
-                                        ActivityCompat.finishAffinity(LoginActivity.this);
+                                        new RetrieveFeedTask().execute(object.getString("id")); //getFacebookProfilePicture(object.getString("id"));
                                     }
 
 
@@ -176,6 +183,35 @@ public class LoginActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    class RetrieveFeedTask extends AsyncTask<String, Void, Bitmap> {
+
+        private Exception exception;
+
+        protected Bitmap doInBackground(String... urls) {
+            URL imageURL = null;
+            Bitmap bitmap = null;
+            try {
+                imageURL = new URL("https://graph.facebook.com/" + urls[0] + "/picture?type=large");
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
+            try {
+                bitmap = BitmapFactory.decodeStream(imageURL.openConnection().getInputStream());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            UserContract.pp = bitmap;
+            return bitmap;
+        }
+
+        protected void onPostExecute(Bitmap feed) {
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            ActivityCompat.finishAffinity(LoginActivity.this);
+        }
     }
     @Override
     protected  void onDestroy() {

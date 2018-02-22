@@ -11,7 +11,11 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Path;
+import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -236,6 +240,10 @@ public class MainActivity extends AppCompatActivity
         fullName.setText(UserContract.fullName);
         userDetails.setText(UserContract.nationality+"-"+UserContract.birthDate);
         user_pic=(ImageView) navHeaderView.findViewById(R.id.user_pic);
+        if(UserContract.pp !=null){
+            UserContract.pp = getRoundedShape(UserContract.pp);
+            user_pic.setImageBitmap(UserContract.pp);
+        }
         user_pic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -513,6 +521,30 @@ public class MainActivity extends AppCompatActivity
     }
 
 
+    public Bitmap getRoundedShape(Bitmap scaleBitmapImage) {
+        // TODO Auto-generated method stub
+        int targetWidth = 500;
+        int targetHeight = 500;
+        Bitmap targetBitmap = Bitmap.createBitmap(targetWidth,
+                targetHeight,Bitmap.Config.ARGB_8888);
+
+        Canvas canvas = new Canvas(targetBitmap);
+        Path path = new Path();
+        path.addCircle(((float) targetWidth - 1) / 2,
+                ((float) targetHeight - 1) / 2,
+                (Math.min(((float) targetWidth),
+                        ((float) targetHeight)) / 2),
+                Path.Direction.CCW);
+
+        canvas.clipPath(path);
+        Bitmap sourceBitmap = scaleBitmapImage;
+        canvas.drawBitmap(sourceBitmap,
+                new Rect(0, 0, sourceBitmap.getWidth(),
+                        sourceBitmap.getHeight()),
+                new Rect(0, 0, targetWidth,
+                        targetHeight), null);
+        return targetBitmap;
+    }
 
 
 }
