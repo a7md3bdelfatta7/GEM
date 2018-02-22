@@ -40,8 +40,8 @@ public class MembershipActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_membership);
-
         Button submitButton = (Button) findViewById(R.id.membership_submit);
+        getSupportActionBar().setTitle(getResources().getString(R.string.title_activity_membership));
 
 
         // get the listview

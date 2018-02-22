@@ -64,6 +64,9 @@ public class Favourites extends AppCompatActivity {
                 imgBtn.setVisibility(View.VISIBLE);
             }
         }
+
+        getSupportActionBar().setTitle(getResources().getString(R.string.favourite_title));
+
     }
     @Override
     public void onResume(){

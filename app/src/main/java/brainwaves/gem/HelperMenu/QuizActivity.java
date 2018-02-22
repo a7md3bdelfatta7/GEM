@@ -31,6 +31,9 @@ public class QuizActivity extends AppCompatActivity {
                 // Code here executes on main thread after user presses button
             }
         });
+
+        getSupportActionBar().setTitle(getResources().getString(R.string.title_activity_quiz));
+
     }
     @Override
     protected  void onDestroy() {

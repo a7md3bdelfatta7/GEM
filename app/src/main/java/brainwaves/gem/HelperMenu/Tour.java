@@ -43,6 +43,7 @@ public class Tour extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_tour);
+        getSupportActionBar().setTitle(getResources().getString(R.string.tour_activity_title));
 
         tourListView=(ListView)findViewById(R.id.user_tour_list);
 

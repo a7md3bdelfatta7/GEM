@@ -34,6 +34,8 @@ public class CollectionsActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_collections);
+        getSupportActionBar().setTitle(getResources().getString(R.string.title_activity_collections));
+
         //result for research
         collectionResultLayout = (LinearLayout) findViewById(R.id.collection_SearchResultLV);
         collectionResultLayout.setVisibility(View.GONE);
