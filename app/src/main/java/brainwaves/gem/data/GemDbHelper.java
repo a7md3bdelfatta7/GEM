@@ -15,12 +15,13 @@ import  brainwaves.gem.data.TourContract.TourEntry;
 public class GemDbHelper extends SQLiteOpenHelper {
 
     private static  final String DB_NAME="gem.db";
-
+    Context context;
     // If you change the database schema, you must increment the database version
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     public GemDbHelper(Context context) {
         super(context, DB_NAME,null, DATABASE_VERSION);
+        this.context=context;
     }
 
     @Override
@@ -75,6 +76,11 @@ public class GemDbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+
+    this.context.deleteDatabase(GemDbHelper.DB_NAME);
+
+
+
 
     }
 }

@@ -37,6 +37,10 @@ import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.model.SharePhoto;
 import com.facebook.share.model.SharePhotoContent;
 import com.facebook.share.widget.ShareDialog;
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.appindexing.Thing;
+import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -57,6 +61,14 @@ public class ArtifactsActivity extends AppCompatActivity {
     int artifact_num;
     CallbackManager callbackManager; // for using fb
     ImageButton artifactAddedToTourImgButton;
+    public static final int MY_PERMISSIONS_REQUEST_EXTERNAL_STORAGE=1;
+
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    private GoogleApiClient client;
+
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
@@ -74,7 +86,7 @@ public class ArtifactsActivity extends AppCompatActivity {
         }
 
         artifactAddedToTourImgButton = (ImageButton) findViewById(R.id.add_tourBtn);
-        ActionBar actionBar=getSupportActionBar();
+        ActionBar actionBar = getSupportActionBar();
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.artifacts_actionbar);
 
@@ -84,8 +96,8 @@ public class ArtifactsActivity extends AppCompatActivity {
         TextView artifactActionBar = (TextView) findViewById(R.id.artifactNameActionBar);
         TextView aritfactDetailsText = (TextView) findViewById(R.id.artifact_details_text);
         TextView aritfactDetailsTitle = (TextView) findViewById(R.id.artifact_details_title);
-        artifact_num=0;
-        switch (Integer.parseInt(id)){
+        artifact_num = 0;
+        switch (Integer.parseInt(id)) {
             case R.id.artifact_1:
                 artifact_num = 1;
                 img.setImageResource(R.drawable.highlight_i);
@@ -255,14 +267,17 @@ public class ArtifactsActivity extends AppCompatActivity {
                 aritfactDetailsText.setText(R.string.artifact_info_24);
                 break;
         }
-        if(artifact_num>12)
+        if (artifact_num > 12)
             artifactAddedToTourImgButton.setVisibility(View.GONE);
         highlightToFavourites();
         highlightTotour();
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
     public void shareonClick(View v) {
-        Toast.makeText(this,"Done.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Done.", Toast.LENGTH_SHORT).show();
     }
 
     public void onButtonShowPopupWindowClick(View view) {
@@ -282,11 +297,13 @@ public class ArtifactsActivity extends AppCompatActivity {
 
 
     }
+
     @Override
     protected void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         callbackManager.onActivityResult(requestCode, resultCode, data);
     }
+
     public void onButtonMapPopupWindowClick(View view) {
 
         // get a reference to the already created main layout
@@ -316,7 +333,39 @@ public class ArtifactsActivity extends AppCompatActivity {
             }
         });
     }
+
     public void onButtonVRPopupWindowClick(View view) {
+
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
+            // Permission is not granted
+            if (Build.VERSION.SDK_INT >= 23) {
+                int permissionCheck = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE);
+                if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, MY_PERMISSIONS_REQUEST_EXTERNAL_STORAGE);
+                }
+            }
+        } else {
+            fun();
+        }
+
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST_EXTERNAL_STORAGE: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    fun();
+                }
+                return;
+            }
+        }
+    }
+
+    public void fun() {
 
         // get a reference to the already created main layout
         ScrollView mainLayout = (ScrollView)
@@ -344,9 +393,11 @@ public class ArtifactsActivity extends AppCompatActivity {
                 return true;
             }
         });
-    }
-    public void unlockVR(View v) {
 
+
+    }
+
+    public void unlockVR(View v) {
 
         /////////////////////////////////////////////
         List<ApplicationInfo> packages;
@@ -355,18 +406,15 @@ public class ArtifactsActivity extends AppCompatActivity {
         //get a list of installed apps.
         packages = pm.getInstalledApplications(0);
         Context context = getApplicationContext();
-        ActivityManager mActivityManager = (ActivityManager)context.getSystemService(Context.ACTIVITY_SERVICE);
+        ActivityManager mActivityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
         String myPackage = getApplicationContext().getPackageName();
         for (ApplicationInfo packageInfo : packages) {
-            if((packageInfo.flags & ApplicationInfo.FLAG_SYSTEM)==1)continue;
-            if(packageInfo.packageName.equals(myPackage)) continue;
+            if ((packageInfo.flags & ApplicationInfo.FLAG_SYSTEM) == 1) continue;
+            if (packageInfo.packageName.equals(myPackage)) continue;
             mActivityManager.killBackgroundProcesses(packageInfo.packageName);
         }
 
-
 //////////////////////////////////////
-
-
 
 
         String path = "/storage/emulated/0/";
@@ -386,16 +434,12 @@ public class ArtifactsActivity extends AppCompatActivity {
                 stream.close();
                 //\PackageManager pm = this.getPackageManager();
 
-                try
-                {
+                try {
                     Intent it = pm.getLaunchIntentForPackage("com.BrainWaves.GEM");
 
                     if (null != it)
                         this.startActivity(it);
-                }
-
-                catch (ActivityNotFoundException e)
-                {
+                } catch (ActivityNotFoundException e) {
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -413,11 +457,11 @@ public class ArtifactsActivity extends AppCompatActivity {
 
     public void videoOnClick(View v) {
 
-        if(!isNetworkAvailable()){
-            Intent intent =new Intent(ArtifactsActivity.this,artifact_video.class);
-            intent.putExtra("artifact_num",artifact_num);
+        if (!isNetworkAvailable()) {
+            Intent intent = new Intent(ArtifactsActivity.this, artifact_video.class);
+            intent.putExtra("artifact_num", artifact_num);
             startActivity(intent);
-        }else {
+        } else {
             String[] artifactsVideoUrl = {"https://www.youtube.com/watch?v=FXk-NbSWDs8",
                     "https://www.youtube.com/watch?v=yKGe3FcmLLg",
                     "https://www.youtube.com/watch?v=lGq0dOH9qEA",
@@ -480,8 +524,9 @@ public class ArtifactsActivity extends AppCompatActivity {
         }
 
     }
+
     public void connectionOnClick(View v) {
-        String []artifactsConnectionsUrl = {"https://www.vanityfair.com/culture/2013/04/king-tut-exhibit-new-york",
+        String[] artifactsConnectionsUrl = {"https://www.vanityfair.com/culture/2013/04/king-tut-exhibit-new-york",
                 "https://www.britannica.com/biography/Amenhotep-II",
                 "http://www.ancientegyptonline.co.uk/anubis.html",
                 "http://www.touregypt.net/featurestories/ushabti.htm",
@@ -507,21 +552,20 @@ public class ArtifactsActivity extends AppCompatActivity {
                 "http://www.oneonta.edu/faculty/farberas/arth/arth200/Body/egypt_body.htm"};
 
 
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(artifactsConnectionsUrl[artifact_num-1]));
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(artifactsConnectionsUrl[artifact_num - 1]));
         startActivity(browserIntent);
 
 
-
     }
+
     public void HighlightsAddTofavouriteonClick(View v) {
         ImageButton flashButtonOn = (ImageButton) findViewById(R.id.favouritesActionBar);
-        ArtifactsFavourite artifactFavourite=new ArtifactsFavourite(getApplicationContext());
+        ArtifactsFavourite artifactFavourite = new ArtifactsFavourite(getApplicationContext());
 
-        if(artifactFavourite.artifactExist(artifact_num+"")){
+        if (artifactFavourite.artifactExist(artifact_num + "")) {
             artifactFavourite.deleteArtifact(artifact_num);
             flashButtonOn.setImageResource(R.drawable.favourite_blank);
-        }
-        else {
+        } else {
             flashButtonOn.setImageResource(R.drawable.favourite_red);
             long result = artifactFavourite.addNewArtifact(artifact_num + "");
             if (result == -1) {
@@ -535,13 +579,12 @@ public class ArtifactsActivity extends AppCompatActivity {
 
     public void HighlightsAddToTouronClick(View v) {
         ImageButton flashButtonOn = (ImageButton) findViewById(R.id.add_tourBtn);
-        ArtifactsContract artifact=new ArtifactsContract(getApplicationContext());
+        ArtifactsContract artifact = new ArtifactsContract(getApplicationContext());
 
-        if(artifact.artifactExist(artifact_num+"")){
+        if (artifact.artifactExist(artifact_num + "")) {
             artifact.deleteArtifact(artifact_num);
             flashButtonOn.setImageResource(R.drawable.add_button_i);
-        }
-        else {
+        } else {
             flashButtonOn.setImageResource(R.drawable.add_button_ii);
             long result = artifact.addNewArtifact(artifact_num + "");
             if (result == -1) {
@@ -553,23 +596,24 @@ public class ArtifactsActivity extends AppCompatActivity {
     }
 
 
-    public void highlightToFavourites(){
+    public void highlightToFavourites() {
         ImageButton flashButtonOn = (ImageButton) findViewById(R.id.favouritesActionBar);
-        ArtifactsFavourite artifactFavourite=new ArtifactsFavourite(getApplicationContext());
-        if(artifactFavourite.artifactExist(artifact_num+"")){
+        ArtifactsFavourite artifactFavourite = new ArtifactsFavourite(getApplicationContext());
+        if (artifactFavourite.artifactExist(artifact_num + "")) {
             flashButtonOn.setImageResource(R.drawable.favourite_red);
         }
     }
-    public void highlightTotour(){
+
+    public void highlightTotour() {
         ImageButton flashButtonOn = (ImageButton) findViewById(R.id.add_tourBtn);
-        ArtifactsContract artifact =new ArtifactsContract(getApplicationContext());
-        if(artifact.artifactExist(artifact_num+"")){
+        ArtifactsContract artifact = new ArtifactsContract(getApplicationContext());
+        if (artifact.artifactExist(artifact_num + "")) {
             flashButtonOn.setImageResource(R.drawable.add_button_ii);
         }
     }
 
     @Override
-    protected  void onDestroy() {
+    protected void onDestroy() {
         super.onDestroy();
         Runtime.getRuntime().gc();
         System.gc();
@@ -597,14 +641,41 @@ public class ArtifactsActivity extends AppCompatActivity {
         return true;
     }
 
+
+
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    public Action getIndexApiAction() {
+        Thing object = new Thing.Builder()
+                .setName("Artifacts Page") // TODO: Define a title for the content shown.
+                // TODO: Make sure this auto-generated URL is correct.
+                .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
+                .build();
+        return new Action.Builder(Action.TYPE_VIEW)
+                .setObject(object)
+                .setActionStatus(Action.STATUS_TYPE_COMPLETED)
+                .build();
+    }
+
     @Override
-    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
-        if (requestCode == 100) {
-            if (grantResults.length > 0
-                    && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                // do something
-            }
-            return;
-        }
+    public void onStart() {
+        super.onStart();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client.connect();
+        AppIndex.AppIndexApi.start(client, getIndexApiAction());
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        AppIndex.AppIndexApi.end(client, getIndexApiAction());
+        client.disconnect();
     }
 }

@@ -24,12 +24,18 @@ public class UserContract {
     public static String birthDate="";
     public static String nationality="";
     public static String currency_index ="";
+    public static boolean deleteSharedPreference=false;
+
     public static Bitmap pp = null;// profile picture fb
     Context context;
     public UserContract(Context context){
         this.context=context;
         GemDbHelper dbHelper = new GemDbHelper(context);
         mDb = dbHelper.getWritableDatabase();
+
+        if(deleteSharedPreference==true){
+            this.deleteSharedPreference();
+        }
     }
 
     public class UserEntry implements BaseColumns {
@@ -160,6 +166,7 @@ public class UserContract {
         SharedPreferences.Editor editor = preferences.edit();
         editor.clear();
         editor.commit();
+
     }
 
 
