@@ -43,6 +43,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.login.LoginManager;
+
 import java.util.List;
 import java.util.Locale;
 
@@ -392,6 +394,7 @@ public class MainActivity extends AppCompatActivity
         }else if (id == R.id.logout_menu) {
             UserContract user=new UserContract(getApplicationContext());
             user.deleteSharedPreference();
+            LoginManager.getInstance().logOut();
             Intent intent=new Intent(MainActivity.this,ChooseLangActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);

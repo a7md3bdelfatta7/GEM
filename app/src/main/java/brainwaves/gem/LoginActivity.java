@@ -54,6 +54,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private SQLiteDatabase mDb;
     CallbackManager callbackManager = CallbackManager.Factory.create();
+
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
@@ -67,26 +68,25 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
 
-
-        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/gothicb0_bold.ttf");
-        Button signInButton=(Button)findViewById(R.id.signin_button);
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/gothicb0_bold.ttf");
+        Button signInButton = (Button) findViewById(R.id.signin_button);
         signInButton.setTypeface(custom_font);
 
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText userName=(EditText)findViewById(R.id.username_edittext);
-                EditText password=(EditText)findViewById(R.id.password_edittext);
-                UserContract user= new UserContract(getApplicationContext());
+                EditText userName = (EditText) findViewById(R.id.username_edittext);
+                EditText password = (EditText) findViewById(R.id.password_edittext);
+                UserContract user = new UserContract(getApplicationContext());
 
-                boolean userExist=user.login(userName.getText().toString(),password.getText().toString());
-                if(userExist){
-                    Intent intent=new Intent(LoginActivity.this,MainActivity.class);
+                boolean userExist = user.login(userName.getText().toString(), password.getText().toString());
+                if (userExist) {
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                     ActivityCompat.finishAffinity(LoginActivity.this);
-                }else{
-                    TextView resultMessage=(TextView)findViewById(R.id.resultMessage);
+                } else {
+                    TextView resultMessage = (TextView) findViewById(R.id.resultMessage);
                     resultMessage.setText("Wrong User Name or Password");
                 }
             }
@@ -126,14 +126,14 @@ public class LoginActivity extends AppCompatActivity {
 
 
         LoginButton loginButton = (LoginButton) findViewById(R.id.login_button);
-        loginButton.setReadPermissions(Arrays.asList( "public_profile", "email", "user_birthday", "user_friends"));
+        loginButton.setReadPermissions(Arrays.asList("public_profile", "email", "user_birthday", "user_friends"));
         // If you are using in a fragment, call loginButton.setFragment(this);
 
         // Callback registration
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-                Toast.makeText(getApplicationContext(),"Success",Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
                 GraphRequest request = GraphRequest.newMeRequest(
                         loginResult.getAccessToken(),
                         new GraphRequest.GraphJSONObjectCallback() {
@@ -151,10 +151,9 @@ public class LoginActivity extends AppCompatActivity {
 
                                     }
 
-                                    if (user.login(object.getString("email") , "asdasdasdsad")) {
+                                    if (user.login(object.getString("email"), "asdasdasdsad")) {
                                         new RetrieveFeedTask().execute(object.getString("id")); //getFacebookProfilePicture(object.getString("id"));
                                     }
-
 
                                     String email = object.getString("email");
                                     String birthday = object.getString("birthday"); // 01/31/1980 format
@@ -172,16 +171,15 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onCancel() {
-                Toast.makeText(getApplicationContext(),"Cancel",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Cancel", Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void onError(FacebookException exception) {
-                Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
 
             }
         });
-
 
     }
 
@@ -213,8 +211,9 @@ public class LoginActivity extends AppCompatActivity {
             ActivityCompat.finishAffinity(LoginActivity.this);
         }
     }
+
     @Override
-    protected  void onDestroy() {
+    protected void onDestroy() {
         super.onDestroy();
         Runtime.getRuntime().gc();
         System.gc();
